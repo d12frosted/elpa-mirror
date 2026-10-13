@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
  (auctex
-  . [(14 2 0 0 20261007 11) ((emacs (28 1)))
+  . [(14 2 0 0 20261013 12) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "deadd50c293503f93420c2d048288215cd717ad7"))])
+      (:commit . "31736b15989dee40b1f4463f3aeb8fb95bbdf6cb"))])
  (auctex-cont-latexmk
   . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1101,7 +1101,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
-  . [(1 24 0 20261009 23)
+  . [(1 24 0 20261013 24)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
       (seq (2 23)) (xref (1 7 0)))
@@ -1110,7 +1110,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "2194fbe5b67ea850f4d3a640f20cb0e9c3f6a009"))])
+      (:commit . "2abc21d084d78000e8403122cbb2de3f029bd87c"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -2465,14 +2465,14 @@
       (:authors ("Michael Heerdegen" . "michael_heerdegen@web.de"))
       (:commit . "643a866f578d04d81a1fa6fd6a61dd49d80c23b3"))])
  (orderless
-  . [(1 8 0 20260927 0) ((emacs (27 1)) (compat (31)))
+  . [(1 8 0 20261013 1) ((emacs (27 1)) (compat (31)))
      "Completion style for matching regexps in any order" tar
      ((:url . "https://github.com/oantolin/orderless")
       (:keywords "matching" "completion")
       (:maintainer ("Omar Antolín Camarena" . "omar@matem.unam.mx")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-      (:commit . "3d2c2e6468ddf51e69c78e8212e5fd9006d2ce8a"))])
+      (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
   . [(10 0 -1 0 20261012 607) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
