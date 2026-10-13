@@ -657,13 +657,13 @@
       (:authors ("Sylvain Benner" . "sylvain.benner@gmail.com"))
       (:commit . "3c65fecd9917a41eaf6460f22187e2323821f3ce"))])
  (evil-matchit
-  . [(4 1 0 0 20260412 3556) ((emacs (27 1)))
+  . [(4 1 1 0 20261012 1) ((emacs (27 1)))
      "Vim matchit ported to Evil" tar
      ((:url . "http://github.com/redguardtoo/evil-matchit")
       (:keywords "matchit" "vim" "evil")
       (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
-      (:commit . "dd03aacd8602ffd2cd9b67d0072092f8d57d5e01"))])
+      (:commit . "1a8f5b950a9496c76297020dda6afdf448913cdc"))])
  (evil-nerd-commenter
   . [(3 6 1 0 20260507 41457) ((emacs (26 1)))
      "Comment/uncomment lines efficiently. Like Nerd Commenter in Vim"
@@ -1065,7 +1065,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "eb7f3a91146d07c4c06cf7eed5efd4a30c289807"))])
  (hermes
-  . [(0 8 0 0 20261011 28)
+  . [(0 9 0 0 20261012 50)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1073,7 +1073,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "0507cfe9bf1e7924846ef671cb90b4db144e24a4"))])
+      (:commit . "bb3317c08d4fc3d7016c284e8c85e5c39b9634e6"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -2001,7 +2001,7 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "3ed24d3e9f57e5b3a7915dd46ce5219557e1033d"))])
  (swift-mode
-  . [(10 0 0 0 20260902 39) ((emacs (25 2)))
+  . [(10 0 0 0 20261012 41) ((emacs (25 2)))
      "Major-mode for Apple's Swift programming language" tar
      ((:url . "https://github.com/swift-emacs/swift-mode")
       (:keywords "languages" "swift")
@@ -2010,7 +2010,7 @@
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
 		("Arthur Evstifeev" . "lod@pisem.net"))
-      (:commit . "a81a6e5edc3077ea34ded55a6179f5d6166a3008"))])
+      (:commit . "b94652eff55e67b4461da504c68db25c872df94c"))])
  (symbol-overlay
   . [(4 3 0 20260703 4) ((emacs (24 3)) (seq (2 2)))
      "Highlight symbols with keymap-enabled overlays" tar

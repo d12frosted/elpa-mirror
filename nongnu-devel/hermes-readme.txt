@@ -70,33 +70,82 @@ gateway.
 
   `M-x hermes' opens the dashboard.  `M-x hermes-project-chat' switches
   to a live chat for the current project or creates one at its root;
-  with `C-u' it always creates another.  Project-chat names stay
-  anchored to that launching project while the header reports the
-  gateway working directory.  Customize
-  `hermes-chat-buffer-name-function' to replace the default complete
-  naming convention.  A direct or resumed remote chat uses the editor
-  directory in its initial buffer name while its gateway cwd is unknown.
-  Its header stays detached, and the editor path is not sent to the
-  gateway.  `M-x hermes-chat' always opens a new chat buffer:
+  with `C-u' it always creates another.  Chat buffers are named after
+  their project, using `project-name' when the directory exists locally
+  and its basename otherwise; a linked Git worktree takes its main
+  repository's name.  A project chat is named after its launching
+  project; any other chat after the project of the first gateway working
+  directory it reports.  Later gateway directory changes, such as the
+  agent moving into a worktree, never rename the buffer: the header
+  shows the abbreviated cwd whenever it differs from the project root.
+  Customize `hermes-chat-buffer-name-function' to replace the default
+  complete naming convention.  A direct or resumed remote chat uses the
+  editor directory in its initial buffer name while its gateway cwd is
+  unknown.  Its header stays detached, and the editor path is not sent
+  to the gateway.  `M-x hermes-switch-to-chat' offers chats grouped by
+  project, most recently used first, annotated with session title, state
+  and any divergent cwd.  `M-x hermes-chat' always opens a new chat
+  buffer:
   • `RET' to send.
   • `/' for slash commands.
-  • `C-c C-o' for the actions menu.
+  • `C-c C-o' for the actions menu; in the transcript or an empty
+    composer, `?' opens it too.  An empty composer shows these key hints
+    until you type (`hermes-chat-composer-placeholder'); the hint is
+    never buffer text.
+  • In the transcript, `n' and `p' move between your turns, and `M-x
+    imenu' lists them by first line.  `SPC' and `DEL' (or `S-SPC')
+    scroll like `view-mode'.  `w' copies: with an active region it is
+    `kill-ring-save'; inside a fenced code block it copies just the
+    code, without fences; elsewhere it copies the Markdown source of the
+    reply or message at point.  In the composer these keys keep their
+    ordinary editing meaning.
+  • The menu's Show group hides or shows expanded tool output (`O') and
+    reasoning (`E') in the whole chat at once, without moving point, and
+    expands (`+') or collapses (`-') every disclosure.  Hiding wins over
+    an entry's own expansion until you expand an entry of that kind by
+    hand.
+  • `C-c C-c' interrupts the running turn, as in `shell-mode'; when
+    nothing is running it only says so.  `C-c C-k' still interrupts and
+    sends the draft.
+  • The menu's Aside group offers the side question (`y', `/btw'), a
+    background task (`G', `/bg') and Stop processes (`!', `/stop').
+    Session (`S') holds New, Rename and List sessions plus a Fork group:
+    Branch (`b'), Hand off (`H') and Compress (`z', `/compress'; `C-u'
+    asks for a focus topic).  Activity (`B') lists queue, workers, tasks
+    and output; Directory (`w') sets the chat's working directory.
+  • Stop processes asks the connected Hermes instance to stop every
+    terminal process registered with it, across all of its chats, not
+    only this one.  It does not cancel the running model turn or
+    delegated workers; use `C-c C-c' or the Workers view for those.
+  • Approval prompts name the tool and show the full command.  Opened
+    with `C-c C-a' or the `[Answer]' button they take one key: `o=nce,
+    =s=ession, =a=lways or =d=eny; =q' or `C-g' leaves the request
+    pending.  An approval that opens by itself instead needs a choice
+    submitted with `RET' (empty input leaves it pending), so typing
+    meant for the composer cannot approve anything.  Clarification
+    readers ask the actual question.  While a prompt is pending, its
+    transcript line keeps an `[Answer]' button that reopens the reader.
   • Each chat pins its resolved spawned or remote transport mode.  A
     spawned chat starts from the editor's `default-directory'; a remote
     chat does not.
-  • Passive gateway cwd updates change the header and a direct chat's
-    buffer name, but leave `default-directory' alone.
+  • Passive gateway cwd updates change the header, but leave the buffer
+    name and `default-directory' alone.
   • “Set directory” browses or accepts a path in the gateway's
     namespace.  On success, the backend-returned path becomes both the
-    gateway cwd and the buffer's `default-directory'; a project chat
-    keeps its launch-root name.
+    gateway cwd and the buffer's `default-directory'; the buffer keeps
+    its project name.
   • `C-c C-o M m' (or bare `/model') fetches model choices from the
     owning dashboard each time.  `/model' argument completion stays
     cached and nonblocking; opening the picker refreshes that cache
     after backend changes.  The profile browser's model picker also
     fetches fresh choices each time.  Failed fetches do not offer stale
-    cached choices.  The dashboard may maintain its own provider
-    catalogue cache.
+    cached choices.  Choices are one completion list grouped by provider
+    (with `completions-group', Vertico or similar), annotated with the
+    context window, price and capabilities the catalogue reports.  The
+    current model is marked `• current' and is the default; exact values
+    such as `claude · OpenRouter (openrouter)' keep same-named models
+    from different providers distinct.  The dashboard may maintain its
+    own provider catalogue cache.
   • `M-x hermes-close' closes local connections and Hermes buffers for
     restart, discarding the frontend model catalogue cache.
     Reconnecting alone retains completion data; the picker still fetches
@@ -471,7 +520,7 @@ gateway.
 
   Completed tool outputs with published file paths, and closed HTML/SVG
   code blocks in assistant replies, offer `[Preview]' buttons.  The chat
-  actions menu also provides /Workspace → Preview output/.  Previewing
+  actions menu also provides /Activity → Preview output/.  Previewing
   never reads a backend path from the local filesystem: it requests
   current bytes from the owning chat's managed-files API, with a 4 MiB
   limit.  The server's file policy may refuse paths outside its managed
@@ -528,7 +577,7 @@ gateway.
 2.13 Live tasks
 ───────────────
 
-  Use /Workspace → Live tasks/ in the chat actions menu, or `M-x
+  Use /Activity → Live tasks/ in the chat actions menu, or `M-x
   hermes-chat-show-todos', to open the session-owned checklist.  It
   follows backend task snapshots without changing the chat draft or
   moving focus.  The panel is read-only: pending tasks stay pending when
@@ -536,8 +585,29 @@ gateway.
   completion.  Backends without a restored task snapshot can still
   populate the panel from live tool results.
 
+  When a turn produces a task list, the transcript gains one collapsed
+  `▸ Tasks 3/5 · now: ITEM' line for that turn, updated in place as the
+  list changes.  The arrow expands it to the items (`☑' done, `▶' in
+  progress, `☐' pending); activating the label opens the live task
+  panel.
 
-2.14 Conversation commands and file references
+
+2.14 Turn status and queued messages
+────────────────────────────────────
+
+  While a turn runs, the rule above the composer shows its state,
+  elapsed time, current tool, task progress and queued count, for
+  example `● Running 0:42 · terminal: make check · ☐ 3/5 · 2 queued'.
+  Narrow windows drop the tool first, then the task progress.  After a
+  turn ends the rule shows its duration (`✓ 12s') for
+  `hermes-chat-status-rule-linger' seconds.  The clock ticks only while
+  the chat is visible.
+
+  Queued messages are listed as dim lines just above the rule, one per
+  message; activate a line to open the queue panel on that message.
+
+
+2.15 Conversation commands and file references
 ──────────────────────────────────────────────
 
   `/btw QUESTION' asks a side question over the current conversation
@@ -557,8 +627,9 @@ gateway.
 
   Composer `@' completion reads the attached session's backend
   workspace, not Emacs's local project.  Try `@src/mo', `@file:src/mo'
-  or `@folder:src' and invoke completion again after the asynchronous
-  lookup finishes.  Accepted candidates become explicit, quoted backend
+  or `@folder:src' and press `TAB'; when the asynchronous lookup
+  finishes, completion reopens once if the composer, point and session
+  are unchanged.  Accepted candidates become explicit, quoted backend
   references.  Paths that cannot be represented by the backend parser
   are not offered.  This is reference completion, not a local-file
   upload; literal bare `@path' text does not attach file contents.
@@ -569,7 +640,7 @@ gateway.
   directories remain explicit.
 
 
-2.15 Session pins and named workspaces
+2.16 Session pins and named workspaces
 ──────────────────────────────────────
 
   In `M-x hermes-list-sessions', `k' toggles the selected session's
@@ -603,7 +674,7 @@ gateway.
   available.
 
 
-2.16 Hosted Group Chats
+2.17 Hosted Group Chats
 ───────────────────────
 
   `M-x hermes-list-groups' reads rooms hosted by the selected backend.

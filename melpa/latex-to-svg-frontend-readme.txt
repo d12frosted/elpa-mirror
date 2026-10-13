@@ -44,7 +44,8 @@ so they never show a stale number, and are click-to-jump to the defining
 equation.
 
 Move point into a preview and it reveals its LaTeX source; leaving re-shows
-the preview, or re-renders it if the text changed.  Newly typed math renders
+the preview, or re-renders it if the text changed.  Point right after the
+closing delimiter is still in the preview.  Newly typed math renders
 the moment the cursor leaves it (`--render-on-leave', on `post-command-hook'),
 never while still inside — so half-typed equations are not compiled.  That
 same discrete leave event reconciles numbers and references synchronously;
