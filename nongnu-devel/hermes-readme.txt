@@ -103,7 +103,10 @@ gateway.
     reasoning (`E') in the whole chat at once, without moving point, and
     expands (`+') or collapses (`-') every disclosure.  Hiding wins over
     an entry's own expansion until you expand an entry of that kind by
-    hand.
+    hand.  When the backend profile does not capture reasoning (its
+    `display.show_reasoning' is off), showing reasoning says so; `M-x
+    hermes-chat-enable-backend-reasoning' turns it on in that profile's
+    saved config, for all of its sessions, after confirmation.
   • `C-c C-c' interrupts the running turn, as in `shell-mode'; when
     nothing is running it only says so.  `C-c C-k' still interrupts and
     sends the draft.
@@ -113,6 +116,21 @@ gateway.
     Branch (`b'), Hand off (`H') and Compress (`z', `/compress'; `C-u'
     asks for a focus topic).  Activity (`B') lists queue, workers, tasks
     and output; Directory (`w') sets the chat's working directory.
+  • `C-c C-g' (or Session menu, `g') shows this session's goal, loop and
+    heartbeat as the backend reports them.  `n' and `p' move through
+    sections and criteria, `g' refreshes (resuming a disconnected
+    session), and `?'  offers only the actions valid now: pause, resume,
+    release a wait, add or remove criteria, stop or clear.  Clearing
+    asks first; resuming a goal sends its next step, as `/goal resume'
+    does.  The header shows a running or paused loop and goal with
+    budget and cadence, e.g. `Loop 2/5 · every 10m · next 14:05 · Goal
+    3/20 turns', marks paused, waiting and parked ones, and shows
+    nothing when none runs.  It catches up after each turn, tick notice
+    and due tick.  Start them with `/goal' and `/loop' as usual.  A chat
+    whose session was running automation resumes it when the socket
+    reconnects, retrying briefly while the backend settles; other chats
+    stay lazy.  The released backend can add and remove criteria but not
+    mark one done.
   • Stop processes asks the connected Hermes instance to stop every
     terminal process registered with it, across all of its chats, not
     only this one.  It does not cancel the running model turn or
@@ -674,7 +692,29 @@ gateway.
   available.
 
 
-2.17 Hosted Group Chats
+2.17 Connector authorization during chat
+────────────────────────────────────────
+
+  A running connector tool can request authorization or repair.  Its
+  card shows backend status and the account alias beneath that tool
+  call, or as a separate transcript entry until the tool row arrives.
+  Activate `Authorize' with `RET' or the mouse to open the browser.  On
+  a card, `?' lists currently valid actions: `o' opens the link, `g'
+  checks authorization now, `a' approves a pending install, `r' retries
+  a failed or expired link, `d' skips that connector, and `c' lets the
+  tool continue with the outcomes reached so far.  The backend watches
+  authorization; opening a link does not mark it connected.  An install
+  that needs credentials names them; enter those in Hermes Desktop.
+
+  Pending operations are restored from `session.resume' after
+  reconnecting a running chat.  Operation sequence numbers reject older
+  updates.  Connector credentials are neither collected nor persisted by
+  the client.  This feature requires the backend connector service;
+  provider OAuth, MCP setup, and the account/catalog/policy browsers are
+  separate features.
+
+
+2.18 Hosted Group Chats
 ───────────────────────
 
   `M-x hermes-list-groups' reads rooms hosted by the selected backend.

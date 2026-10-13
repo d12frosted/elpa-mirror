@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20261011 73) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20261013 76) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,16 +1056,16 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "eb7f3a91146d07c4c06cf7eed5efd4a30c289807"))])
+      (:commit . "8c1d8e28f45c44837c73bae9f4d246da0dd9f840"))])
  (helm-core
-  . [(4 0 7 0 20261011 73) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20261013 76) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "eb7f3a91146d07c4c06cf7eed5efd4a30c289807"))])
+      (:commit . "8c1d8e28f45c44837c73bae9f4d246da0dd9f840"))])
  (hermes
-  . [(0 9 0 0 20261012 50)
+  . [(0 9 0 0 20261013 82)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1073,7 +1073,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "bb3317c08d4fc3d7016c284e8c85e5c39b9634e6"))])
+      (:commit . "9481b1141bdcde70be9a9cb95ea1baa2b7f54b2e"))])
  (hideshowvis
   . [(0 9 0 20251119 95800) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1918,11 +1918,11 @@
       (:keywords "languages" "lisp" "slime")
       (:commit . "56d528fefd8057a025437b4330ebf506f46ca27d"))])
  (sly
-  . [(1 0 43 0 20261006 147) ((emacs (24 5)))
+  . [(1 0 43 0 20261013 150) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
      ((:url . "https://github.com/joaotavora/sly")
       (:keywords "languages" "lisp" "sly")
-      (:commit . "191fe38eaa83e4e7556a940aa4b234666215cced"))])
+      (:commit . "9b3477a5dc6c9a4496d4fbb6804349961e861835"))])
  (smartparens
   . [(1 11 0 0 20260129 121419) ((dash (2 13 0)))
      "Automatic insertion, wrapping and paredit-like navigation with user defined pairs."
