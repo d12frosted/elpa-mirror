@@ -778,10 +778,6 @@
   ┌────
   │ (condition-case err
   │     (llm-chat my-provider my-prompt)
-  │   (llm-tool-unknown-tool
-  │    (message "Unknown tool requested: %s" (plist-get (cdr err) :tool)))
-  │   (llm-tool-call-error
-  │    (message "Tool call error: %s" err))
   │   (llm-invalid-argument
   │    (message "Invalid argument: %s" (error-message-string err)))
   │   (llm-provider-error
@@ -909,6 +905,38 @@
 
 
 [GTPel] <https://github.com/karthink/gptel>
+
+7.6.1 Tool calling errors
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  In the case of tool calling, there could be specific problems that
+  happen due to model quality issues such as an unknown tool being
+  called, or called with the wrong arguments.  If that happens, we can't
+  raise an error because that leaves the prompt in an invalid state.
+  Success or failure, the result must be sent back to the model as a
+  tool result, so the next call can succeed.  There still may be errors
+  thrown when using tools, but only normal errors such as
+  authentication, overload, or similar errors that can happen on any
+  call.
+
+  The actual errors are actually returned if you use `multi-output'.
+  Errors will be returned in the `:errors' property.
+
+  When an error happens, instead of the return value of the tool
+  function, the error string is returned.  This can happen with just
+  some tools, while others have succeeded.  An example response is:
+
+  ┌────
+  │ (:tool-uses ((:name "capital_of_country" :args (("country" . "France" )))
+  │              (:name "find_capital" :args (("country" . "Germany"))))
+  │             :tool-results (("capital_of_country" . "Paris")
+  │                            ("find_capital" . "Unknown tool"))
+  │             :errors ((llm-tool-unknown-tool . (:tool "find_capital"))))
+  └────
+
+  For similar reasons, any error raised during calling a tool call
+  function will return a string error as the tool call result, so will
+  look like a success.
 
 
 7.7 Media input
