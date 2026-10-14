@@ -62,14 +62,18 @@ valid body LaTeX and decides inline vs display by the delimiters it uses
 The backend is deliberately unaware of that distinction.
 
 Returns an image now when one can be produced synchronously (cache /
-on-disk SVG), else nil after scheduling an asynchronous
-compile; CALLBACK (a zero-argument function) is invoked once the SVG is
-ready, so the caller can re-query and place the image.  Concurrent
-requests for the same equation are coalesced onto a single compile.
+on-disk SVG), else nil after scheduling an asynchronous compile.
+CALLBACK, a function of one argument, is called once for that
+request: with nil once the SVG is ready, so the caller can re-query
+and place the image, or with a plist that describes the failure:
+its kind, engine, message, line and column in LATEX, and log.
+Concurrent requests for the same equation are coalesced onto a
+single compile.
 
 A formula the engine rejects is recorded and not compiled again;
-`:fallback latex' typesets it with LaTeX instead, and
-`latex-to-svg-backend-engine-used' says which engine drew a picture.
+`:fallback latex' typesets it with LaTeX instead,
+`latex-to-svg-backend-engine-used' says which engine drew a picture,
+and `latex-to-svg-backend-failure' returns a recorded failure.
 
 The backend reads no faces and no frames.  The caller passes the
 tint as `:color' and the x-height of the text as `:x-height', both

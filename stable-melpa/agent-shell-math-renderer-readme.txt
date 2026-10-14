@@ -30,6 +30,7 @@ unclosed block still needs streaming protection.
 When `agent-shell-math-renderer-render-submitted-prompts' is non-nil,
 submitted prompts are rendered after they are sent, using the same
 delimiter, inline-math, and fenced-math handling as agent responses.
+The prompts a restored session replays are rendered the same way.
 This path obtains the same markdown context through agent-shell's
 public `agent-shell-markdown-context', so it stays in sync with the
 streaming render hook and uses no private agent-shell API.
