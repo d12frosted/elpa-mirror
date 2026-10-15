@@ -1538,12 +1538,12 @@
      ((:url . "http://github.com/bastibe/org-journal")
       (:commit . "6460f6f2b0835b4b8aa87d5fdf40cac7deb319f5"))])
  (org-mime
-  . [(0 3 5 0 20261006 1) ((emacs (29 1)))
+  . [(0 3 5 0 20261015 3) ((emacs (29 1)))
      "org html export for text/html MIME emails" tar
      ((:url . "http://github.com/org-mime/org-mime")
       (:keywords "mime" "mail" "email" "html")
       (:maintainer "Chen Bin" . "chb_shAThotmailDOTcom")
-      (:commit . "926bf4e60405e171c79758e017de99b1005926b1"))])
+      (:commit . "8447fe96f95c17d52e60e0ef14a8ae49e0880dce"))])
  (org-present
   . [(0 1 0 20220806 144744) ((org (7)))
      "Minimalist presentation minor-mode for Emacs org-mode." tar
@@ -1912,11 +1912,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
  (slime
-  . [(2 32 -4 0 20261014 77) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20261015 78) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "579d609ecb3e4df695f2c45c9ab47229bab13a2e"))])
+      (:commit . "73699f4b39b4718eaeeb11677c051e6334cd0d50"))])
  (sly
   . [(1 0 43 0 20261013 150) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar

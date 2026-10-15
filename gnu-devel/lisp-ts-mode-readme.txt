@@ -10,6 +10,8 @@ Table of Contents
 
 1. Why?
 2. Getting started
+.. 1. Activating Sly/Slime
+.. 2. TL;DR example `use-package'
 3. `FORMAT' directive indentation
 4. Font lock
 
@@ -114,6 +116,53 @@ Table of Contents
 [straight.el] <https://github.com/radian-software/straight.el>
 
 [gaudy-cl] <https://codeberg.org/zshaftel/gaudy-cl>
+
+2.1 Activating Sly/Slime
+────────────────────────
+
+  Sly and Slime add themselves to `lisp-mode-hook', but you'll need to
+  add the appropriate functions to `lisp-ts-mode-hook' manually. Put the
+  following in the `:config' section of `use-package'.
+  • Slime
+    ┌────
+    │ (require 'slime)
+    │ (add-hook 'lisp-ts-mode-hook #'slime-lisp-mode-hook)
+    │ (with-eval-after-load 'slime-cl-indent
+    │   (add-hook 'lisp-ts-mode-hook #'common-lisp-lisp-mode-hook))
+    └────
+  • Sly
+    ┌────
+    │ (require 'sly)
+    │ (add-hook 'lisp-ts-mode-hook #'sly-editing-mode)
+    │ (with-eval-after-load 'sly-cl-indent
+    │   (add-hook 'lisp-ts-mode-hook #'sly--lisp-indent-lisp-mode-hook))
+    └────
+
+
+2.2 TL;DR example `use-package'
+───────────────────────────────
+
+  ┌────
+  │ (use-package lisp-ts-mode
+  │   :ensure t
+  │   :init
+  │   (setf (alist-get 'lisp-mode major-mode-remap-alist) 'lisp-ts-mode)
+  │   :config
+  │   (setf (alist-get 'lisp-ts-mode font-lock-ignore)
+  │         lisp-ts-mode-font-lock-ignore-keywords)
+  │   ;; for Slime
+  │   (require 'slime)
+  │   (add-hook 'lisp-ts-mode-hook #'slime-lisp-mode-hook)
+  │   (with-eval-after-load 'slime-cl-indent
+  │     (add-hook 'lisp-ts-mode-hook #'common-lisp-lisp-mode-hook))
+  │   ;; OR for Sly
+  │   (require 'sly)
+  │   (add-hook 'lisp-ts-mode-hook #'sly-editing-mode)
+  │   (with-eval-after-load 'sly-cl-indent
+  │     (add-hook 'lisp-ts-mode-hook #'sly--lisp-indent-lisp-mode-hook))
+  │   ;; if you're not using `gaudy-cl-mode'
+  │   (add-hook 'lisp-ts-mode-hook #'lisp-ts-format-support-mode))
+  └────
 
 
 3 `FORMAT' directive indentation

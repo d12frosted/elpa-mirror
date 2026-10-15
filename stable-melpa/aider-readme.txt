@@ -1,38 +1,21 @@
-Boost your programming efficiency! This package + Aider (https://aider.chat/)
-brings AI-assisted programming capabilities *inside* Emacs! Aider works seamlessly
+Tired of coding alone? This package + Aider (https://aider.chat/)
+brings an AI pair programmer *inside* Emacs! Aider works seamlessly
 with both *new* and *existing* codebases in your local Git repo,
-using AI models (Claude, ChatGPT, Gemini, even local ones!) to assist you. It
+using AI models (Claude, ChatGPT, even local ones!) to help you. It
 can suggest improvements, squash bugs, or even write whole new
-sections of code. Enhance your coding with AI without ever leaving
+sections of code. Boost your coding with AI, without ever leaving
 your Emacs comfort zone. The package also supports AI-assisted Agile
 development workflows and AI-assisted code reading to help you understand
 complex codebases faster and more thoroughly.
 
-To use aider.el, you need to install the Aider command line tool: https://aider.chat/#getting-started
-After that, configure it with (use sonnet as example):
+In-editor Aider experience:
+- Manages Aider sessions per Git repo.
+- Menu for AI-assisted coding
 
-(use-package aider
-  :config
-  ;; For latest claude sonnet model
-  (setq aider-args '("--model" "sonnet" "--no-auto-accept-architect"))
-  (setenv "ANTHROPIC_API_KEY" anthropic-api-key)
-  (global-set-key (kbd "C-c a") 'aider-transient-menu))
-
-For more details, see https://github.com/tninja/aider.el
-
-If you like the feature of this package, but wish to use Claude Code / Gemini CLI / or OpenAI Codex, please take a look at https://github.com/tninja/ai-code-interface.el
-
-Comparing to its forked peer (aidermacs), Aider.el has brought in lots of application-level features and tools to enhance daily programming. These include:
-  - AI-assisted agile development methodologies (like TDD, refactoring and legacy code handling based on established software engineering books)
-  - Code / module reading AI assistant
-  - Diff extraction and AI code review tools
-  - Let aider to fix the errors reported by flycheck
-  - Expand context by adding current file's dependencies/dependents
-  - Software planning / brainstorming discussion capabilities
-  - Prompt candidates for code change / document change / question ask
-  - Run current script to validate AI's change
-  - Code / repo evolution analysis with git blame and git log
-  - Utilities for bootstrapping new files and projects.
-  - Organize project with repo specific Aider prompt file
-  - Snippets from community and aider use experience and pattern
-Besides of that, aider.el focus on simplicity. It has much less configurations (transparent to aider config), simplified menu.
+Alternatives to aidermacs:
+- More Focus on build prompts using your code (buffer/selection).
+- Reuse prompts easily, fuzzy search with helm.
+- Organize project with repo specific Aider prompt file
+- More Focus on code quality tool (Code Review, Agile + AI).
+- Snippets for community prompts.
+- Less configurations, simplified menu.
