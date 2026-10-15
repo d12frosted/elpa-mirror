@@ -5,7 +5,7 @@ Updating /mnt/store/melpa/working/hyperbole/
 Checking out dcede820d7589f10ac9096d0a0af929e8c44e8fd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hyperbole/
-  to /tmp/hyperbole-Dee01z/hyperbole-20261014.2135/
+  to /tmp/hyperbole-RTpxHw/hyperbole-20261014.2135/
     .dir-locals.el -> .dir-locals.el
     hact.el -> hact.el
     hactypes.el -> hactypes.el
@@ -85,7 +85,9 @@ Copying files (->) and directories (=>)
     DEMO -> DEMO
     DEMO-ROLO.otl -> DEMO-ROLO.otl
     FAST-DEMO -> FAST-DEMO
+    README.in.md -> README.in.md
     README.md -> README.md
+    README.md.html -> README.md.html
     _hypb -> _hypb
     .hypb -> .hypb
     hyrolo.py -> hyrolo.py
@@ -113,6 +115,7 @@ Copying files (->) and directories (=>)
     man/hyperbole.info -> man/hyperbole.info
     man/hyperbole.html -> man/hyperbole.html
     man/hyperbole.pdf -> man/hyperbole.pdf
+    man/use-package -> man/use-package
     man/im/C-hh.png -> man/im/C-hh.png
     man/im/demo.png -> man/im/demo.png
     man/im/hyperbole-cv.png -> man/im/hyperbole-cv.png
@@ -200,7 +203,9 @@ Created hyperbole-20261014.2135.tar containing:
   hyperbole-20261014.2135/HY-WHY.kotl
   hyperbole-20261014.2135/MANIFEST
   hyperbole-20261014.2135/Makefile
+  hyperbole-20261014.2135/README.in.md
   hyperbole-20261014.2135/README.md
+  hyperbole-20261014.2135/README.md.html
   hyperbole-20261014.2135/_hypb
   hyperbole-20261014.2135/dir
   hyperbole-20261014.2135/hact.el
@@ -315,6 +320,7 @@ Created hyperbole-20261014.2135.tar containing:
   hyperbole-20261014.2135/man/im/wgrid-2x3.png
   hyperbole-20261014.2135/man/im/wgrid-3x5.png
   hyperbole-20261014.2135/man/im/wgrid-4x6.png
+  hyperbole-20261014.2135/man/use-package
   hyperbole-20261014.2135/set.el
   hyperbole-20261014.2135/smart-clib-sym
   hyperbole-20261014.2135/test/
@@ -361,4 +367,4 @@ Created hyperbole-20261014.2135.tar containing:
   hyperbole-20261014.2135/test/smart-org-tests.el
   hyperbole-20261014.2135/test/test-helpers-tests.el
   hyperbole-20261014.2135/topwin.py
-Built hyperbole in 20.463s, finished at 2026-10-15T17:24:49+0000
+Built hyperbole in 19.611s, finished at 2026-10-15T21:40:38+0000

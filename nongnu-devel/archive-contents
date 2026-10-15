@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20261013 76) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20261015 79) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "8c1d8e28f45c44837c73bae9f4d246da0dd9f840"))])
+      (:commit . "789a3abafc0beb83c375fb780f1de6478dd88af8"))])
  (helm-core
-  . [(4 0 7 0 20261013 76) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20261015 79) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "8c1d8e28f45c44837c73bae9f4d246da0dd9f840"))])
+      (:commit . "789a3abafc0beb83c375fb780f1de6478dd88af8"))])
  (hermes
   . [(0 9 0 0 20261013 97)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -2036,12 +2036,12 @@
       (:url . "https://elpa.nongnu.org/nongnu/tablist.html")
       (:commit . "faab7a035ef2258cc4ea2182f67e3aedab7e2af9"))])
  (tabspaces
-  . [(1 11 0 0 20260908 2) ((emacs (27 1)) (project (0 8 1)))
+  . [(1 11 0 0 20261015 3) ((emacs (27 1)) (project (0 8 1)))
      "Leverage tab-bar and project for buffer-isolated workspaces" tar
      ((:url . "https://codeberg.org/mclear-tools/tabspaces")
       (:keywords "convenience" "frames")
       (:authors ("Colin McLear" . "mclear@fastmail.com"))
-      (:commit . "2bfb7361b8d82f660eca8bd2e131b5ca53d56916"))])
+      (:commit . "d45bf0db847ed7de47b85dee61926506e3c1995a"))])
  (tangotango-theme
   . [(0 0 7 0 20241117 114955) nil
      "Tango Palette color theme for Emacs 24." tar
