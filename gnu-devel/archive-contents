@@ -611,21 +611,21 @@
        ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
       (:commit . "75a8c811874c231b49729e76c696824463e54402"))])
  (corfu
-  . [(2 16 0 20261014 1) ((emacs (29 1)) (compat (31)))
+  . [(2 16 0 20261014 2) ((emacs (29 1)) (compat (31)))
      "COmpletion in Region FUnction" tar
      ((:url . "https://github.com/minad/corfu")
       (:keywords "abbrev" "convenience" "matching" "completion" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "92c1febc7fabacc07b6c4b5b100d9367d9c0404e"))])
+      (:commit . "9c2bf9add6c182ae524eb378d0d0f45ecc805eef"))])
  (coterm
-  . [(1 6 0 20261006 6) ((emacs (26 1)) (compat (28 1 2 0)))
+  . [(1 6 0 20261013 7) ((emacs (26 1)) (compat (28 1 2 0)))
      "Terminal emulation for comint" tar
      ((:url . "https://repo.or.cz/emacs-coterm.git")
       (:keywords "processes")
       (:maintainer "Miha Rihtaršič" . "miha@kamnitnik.top")
       (:authors ("Miha Rihtaršič" . "miha@kamnitnik.top"))
-      (:commit . "3ab69bc7a3254041852e611f318a249f80fd6705"))])
+      (:commit . "c656702c7297bd9c335664782d93af54b50d7bc8"))])
  (counsel
   . [(0 15 1 0 20260913 36)
      ((emacs (24 5)) (ivy (0 15 1)) (swiper (0 15 1)))
@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 2 0 0 20261008 21) ((emacs (28)))
+  . [(9 3 0 0 20261014 0) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "98aed932e8f0dce9678c13892c46821229ef7315"))])
+      (:commit . "dca2c6f5c6c655a826b62c09c588a6fc9a3fba96"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -1902,12 +1902,12 @@
       (:url . "https://elpa.gnu.org/packages/json-mode.html")
       (:commit . "2eb4b83db23e61fa2112688148aeedbacfc3c18e"))])
  (jsonrpc
-  . [(1 0 29 0 20260623 0) ((emacs (25 2))) "JSON-RPC library" tar
+  . [(1 0 29 0 20261014 1) ((emacs (25 2))) "JSON-RPC library" tar
      ((:keywords "processes" "languages" "extensions")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
-      (:commit . "b24ed25b39f346370e1b90eebe86fcacdd4e48e3"))])
+      (:commit . "15380fee2c3c5288e314ac1e89491c440c4a095e"))])
  (jumpc
   . [(3 1 0 20231015 14814) nil "jump to previous insertion points"
      tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261014 608) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261014 609) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "9436f840c72d9a6d8df2b6bdb542aa9746952795"))])
+      (:commit . "c2e6ea620ec1c33d30d680d967921e45b6cdadd8"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar

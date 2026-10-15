@@ -41,8 +41,8 @@ display of information fast and easy.  That is Hyperbole's purpose.
 
 ----
 
-See the "INSTALL" file for installation instructions and the "README.md" file
-for general information.
+See "README.md#Installation" for installation instructions and the
+"README.md" file for general information.
 
 There is no need to manually edit this file unless there are specific
 customizations you would like to make, such as whether a Hyperbole Action

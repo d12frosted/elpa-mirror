@@ -31,6 +31,24 @@ Non-automatic exit of char mode is indicated by "Line".
 The command `coterm-char-mode-cycle' is a handy command to cycle between
 automatic char-mode, char-mode enabled and char-mode disabled.
 
+Shell integration:
+
+Optionally, you can configure your shell to demarcate prompts and
+command output through OSC 133 escape sequences.  To do so, add the
+following to your shell init, say ~/.bashrc:
+
+  case "$TERM" in eterm-*)
+    PS0='\e]133;C\a'"$PS0"
+    PS1='\[\e]133;D;$?\a\]'"$PS1"
+  esac
+
+If coterm sees any of those sequences, it disables the heuristic
+`coterm-auto-char-mode' and uses only the OSC 133 information to
+decide when to switch between char and line mode.
+
+The above settings will also cause coterm to display the exit
+status of each command in the mode line.  If you wish to disable
+that feature, leave out the ";$?" part in PS1.
 
 Installation:
 
@@ -66,7 +84,7 @@ Coterm also provides `coterm-auto-char-mode' which aims to eliminate the
 need to manually enable and disable char mode.
 
 
-Some common probles:
+Some common problems:
 
 If some TUI programs misbehave, try checking your TERM environment variable
 with 'echo $TERM' in your coterm enabled M-x shell.  It should normally be

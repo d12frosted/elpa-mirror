@@ -39,6 +39,8 @@ Vanilla
 - virtual-comment-paste: paste the last removed comment to current line
 - virtual-comment-realign: realign the comments if they are misplaced
 - virtual-comment-persist: manually persist project comments
+- virtual-comment-merge-project: merge .evc on disk (or another file, with a
+  prefix argument) into the in-memory comments of the project and save
 - virtual-comment-show: show all comments of current project in a derived mode
 - virtual-comment-show-delete-display-unit-at-point: delete comment from virtual-comment-show buffer
 - virtual-comment-show-set-filter: filter virtual-comment-show buffer by #tags
