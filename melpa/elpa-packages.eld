@@ -4434,7 +4434,7 @@
   (ox-reveal-layouts :url "https://github.com/GerardoCendejas/ox-reveal-layouts")
   (ox-review :url "https://github.com/masfj/ox-review")
   (ox-rfc :url "https://github.com/choppsv1/org-rfc-export")
-  (ox-rss :url "https://github.com/bhw-foss/ox-rss")
+  (ox-rss :url "https://github.com/bhwdev/ox-rss")
   (ox-rst :url "https://github.com/msnoigrs/ox-rst")
   (ox-slack :url "https://github.com/titaniumbones/ox-slack")
   (ox-spectacle :url "https://github.com/lorniu/ox-spectacle")
