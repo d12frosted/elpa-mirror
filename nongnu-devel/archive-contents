@@ -25,7 +25,7 @@
 		("Bas Alberts" . "bas@anti.computer"))
       (:commit . "afe3bf43fab7ff988419762f851129048c396ccc"))])
  (aidermacs
-  . [(1 13 0 20260908 5)
+  . [(1 13 0 20261016 6)
      ((emacs (26 1)) (transient (0 3 0)) (compat (30 0 2 0))
       (markdown-mode (2 7)))
      "AI pair programming with Aider" tar
@@ -34,7 +34,7 @@
 		 "tools")
       (:maintainer "Mingde Zeng" . "matthewzmd@posteo.net")
       (:authors ("Mingde Zeng" . "matthewzmd@posteo.net"))
-      (:commit . "b9a2512e54d8366a0b0472c418d1d2610c98c3ae"))])
+      (:commit . "03ec5747b87920678d0b0ad8bc798ec0e5923125"))])
  (alect-themes
   . [(0 11 0 20260928 15) ((emacs (25 0)))
      "Configurable light, dark and black themes" tar
@@ -1028,11 +1028,11 @@
       (:keywords "markup" "languages" "html")
       (:commit . "3bb4a96535eb5c81dbe6a43bfa8d67a778d449c0"))])
  (haskell-mode
-  . [(17 5 0 20260904 72) ((emacs (25 1))) "A Haskell editing mode"
+  . [(17 5 0 20261016 73) ((emacs (25 1))) "A Haskell editing mode"
      tar
      ((:url . "https://github.com/haskell/haskell-mode")
       (:keywords "haskell" "cabal" "ghc" "repl" "languages")
-      (:commit . "4bdd38c22d8a54d3284b517e889863a1d3971998"))])
+      (:commit . "f957090cfb2fb8757a06750c6438561b21419f86"))])
  (haskell-tng-mode
   . [(0 0 1 0 20230522 221126) ((emacs (27 1)) (popup (0 5 3)))
      "Major mode for editing Haskell" tar
@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20261015 79) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20261016 80) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "789a3abafc0beb83c375fb780f1de6478dd88af8"))])
+      (:commit . "9c1a5007870bc944dbefd327ff452eb0fe755c97"))])
  (helm-core
-  . [(4 0 7 0 20261015 79) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20261016 80) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "789a3abafc0beb83c375fb780f1de6478dd88af8"))])
+      (:commit . "9c1a5007870bc944dbefd327ff452eb0fe755c97"))])
  (hermes
   . [(0 9 0 0 20261013 97)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261013 46)
+  . [(4 7 1 0 20261016 47)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "be42a74513f15221dc364aa668822e05890e3a2f"))])
+      (:commit . "830b1932ed92951715ff12eb894d3dcf4dca0fce"))])
  (magit-section
-  . [(4 7 1 0 20261013 46)
+  . [(4 7 1 0 20261016 47)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "be42a74513f15221dc364aa668822e05890e3a2f"))])
+      (:commit . "830b1932ed92951715ff12eb894d3dcf4dca0fce"))])
  (markdown-mode
   . [(2 9 -3 0 20261009 24) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar

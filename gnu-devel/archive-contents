@@ -90,13 +90,13 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "a437a45868f94b77362c6b913c5ee8e67b273c42"))])
  (agitate
-  . [(0 0 20260424 102016) ((emacs (28 1)))
+  . [(0 0 20261016 53) ((emacs (28 1)))
      "Extras for diff-mode, vc-git, log-edit, log-view" tar
      ((:url . "https://github.com/protesilaos/agitate")
       (:keywords "convenience" "version control" "git")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "d2c1cc4d7776fed96a2552501e8edf22b593b851"))])
+      (:commit . "13a109a2617043863d2b79a00c456b4045490984"))])
  (ahungry-theme
   . [(1 10 0 0 20211231 115425) ((emacs (24)))
      "Ahungry color theme for Emacs.  Make sure to (load-theme 'ahungry)."
@@ -125,13 +125,13 @@
       (:url . "https://elpa.gnu.org/packages/all.html")
       (:commit . "55aa1ac8853d81040aec0b3a2bd43200923146fd"))])
  (altcaps
-  . [(1 3 0 0 20260918 7) ((emacs (27 1)))
+  . [(1 3 0 0 20261016 8) ((emacs (27 1)))
      "Apply alternating letter casing to convey sarcasm or mockery"
      tar
      ((:url . "https://github.com/protesilaos/altcaps")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "54adb411c9e2d5767851bb8b70d34cc8cba0f77c"))])
+      (:commit . "d5771830e4f02190218fbe90a3a1c80f4e227d70"))])
  (ampc
   . [(0 2 0 20240220 181558) ((emacs (24 3)))
      "Asynchronous Music Player Controller" tar
@@ -266,12 +266,12 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "85261a928ae0ec3b41e639f05291ffd6bf7c231c"))])
  (beframe
-  . [(1 6 0 0 20260917 0) ((emacs (28 1))) "Isolate buffers per frame"
+  . [(1 6 0 0 20261016 1) ((emacs (28 1))) "Isolate buffers per frame"
      tar
      ((:url . "https://github.com/protesilaos/beframe")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "6467a15db1144b8157cc73e21a491ceffa87e74a"))])
+      (:commit . "212eb3c09dc396f3ff38011b97b549ce37251ee3"))])
  (bicep-ts-mode
   . [(0 1 4 0 20260825 88) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
@@ -486,7 +486,7 @@
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
       (:commit . "b99013b81712edbb94fdb57cce083d32ad06fbb8"))])
  (colorful-mode
-  . [(1 2 5 0 20261015 22)
+  . [(1 2 6 0 20261016 0)
      ((emacs (28 1)) (compat (31)) (cl-lib (1 0)))
      "Preview any color in your buffer in real time" tar
      ((:url . "https://github.com/DevelopmentCool2449/colorful-mode")
@@ -494,7 +494,7 @@
       (:maintainer ("Jen-Chieh" . "jcs090218@gmail.com")
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
       (:authors ("Elias G. Perez" . "eg642616@gmail.com"))
-      (:commit . "577c300433f9562980be2437852b591e15cb9c0b"))])
+      (:commit . "439e679f7a60e6107e5402bb6fe4cbb561b9fe94"))])
  (comint-mime
   . [(0 7 0 20241116 123039)
      ((emacs (28 1)) (compat (29 1)) (mathjax (0 1)))
@@ -577,13 +577,13 @@
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:commit . "a64569f377b8bc0f62e1d2ae0f3ee48ba4a7cc1c"))])
  (consult-denote
-  . [(0 5 1 0 20260704 0)
+  . [(0 5 1 0 20261016 2)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
      ((:url . "https://github.com/protesilaos/consult-denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "0fbd723e7f4d824902b0a4b712b92c66a1eaf97e"))])
+      (:commit . "7291a3ad6f767a510aa6ea0f46f2d5e46fd34f89"))])
  (consult-hoogle
   . [(0 8 0 0 20260723 0) ((emacs (28 1)) (consult (2 0)))
      "Hoogle frontend using consult" tar
@@ -700,13 +700,13 @@
       (:url . "https://elpa.gnu.org/packages/cursor-undo.html")
       (:commit . "e82084c3d491ff7199e14cc8da69c250b9bda492"))])
  (cursory
-  . [(1 2 0 0 20260701 4) ((emacs (29 1)))
+  . [(1 2 0 0 20261016 5) ((emacs (29 1)))
      "Manage cursor styles using presets" tar
      ((:url . "https://github.com/protesilaos/cursory")
       (:keywords "convenience" "cursor")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "3061ee2e2b38b42b57338b8fbb8f7d7d336c20f4"))])
+      (:commit . "3f381309f461920ce931085045d456db63b13949"))])
  (cus-abbrev
   . [(0 1 0 20250307 190425) ((emacs (29 1)))
      "Easy Customization interface for Abbrevs" tar
@@ -769,26 +769,26 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20261015 175) ((emacs (28 1)))
+  . [(4 2 3 0 20261016 177) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "2fb56379245c5e84771cc6bc8aff40b978d0981c"))])
+      (:commit . "b580d01da23fff3e17150f246e2d24816899b2a4"))])
  (denote-journal
-  . [(0 3 0 0 20260520 123338) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0 0 20261016 1) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
      ((:url . "https://github.com/protesilaos/denote-journal")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "374224ad2b3162c1fa92bb9ecdb61f157a781c4b"))])
+      (:commit . "cef2713abe4129974ff2007f72007e49e3b8081e"))])
  (denote-markdown
-  . [(0 3 0 0 20261010 2) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0 0 20261016 3) ((emacs (28 1)) (denote (4 0 0)))
      "Extensions that better integrate Denote with Markdown" tar
      ((:url . "https://github.com/protesilaos/denote-markdown")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "1a1b832fafbb32d695370e383c7d285de88bb83a"))])
+      (:commit . "872a2e157f293171d1ef78f577b3cf1dae6e7b13"))])
  (denote-menu
   . [(1 4 0 0 20250829 94810) ((emacs (28 1)) (denote (3 0 0)))
      "View denote files in a tabulated list." tar
@@ -797,12 +797,12 @@
       (:authors ("Mohamed Suliman" . "sulimanm@tcd.ie"))
       (:commit . "9bf3bed5e0f59621a98169bbbd4b359d3a039b22"))])
  (denote-org
-  . [(0 3 0 0 20261010 6) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0 0 20261016 7) ((emacs (28 1)) (denote (4 0 0)))
      "Denote extensions for Org mode" tar
      ((:url . "https://github.com/protesilaos/denote-org")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "dca4c968afbcc213c161937ce895e5337987f57c"))])
+      (:commit . "bf72744331f8bc3d565d1e23ebc200174cd88bb4"))])
  (denote-review
   . [(1 0 7 0 20260409 90040) ((emacs (28 1)) (denote (4 1 3)))
      "implements review process for denote notes" tar
@@ -820,19 +820,19 @@
       (:authors ("Lucas Quintana" . "lmq10@protonmail.com"))
       (:commit . "7ae1f43470fc375c8add5f8c78f8e7d1d7c2da42"))])
  (denote-sequence
-  . [(0 3 3 0 20260523 202058) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 3 0 20261016 1) ((emacs (28 1)) (denote (4 0 0)))
      "Sequence notes or Folgezettel with Denote" tar
      ((:url . "https://github.com/protesilaos/denote-sequence")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "841cf148a56a6c62fb483d5529a45c689b04049e"))])
+      (:commit . "2f9d669c44659b0ddf0ef0604382448bb7426a09"))])
  (denote-silo
-  . [(0 3 2 0 20260705 4) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 2 0 20261016 5) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for using Denote in multiple silos" tar
      ((:url . "https://github.com/protesilaos/denote-silo")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "bbff480f6e0865513dd3a97094bdb50b4d000573"))])
+      (:commit . "f6a0eb0ceb661ff222612f0d1fe065ee567ee402"))])
  (detached
   . [(0 10 1 0 20221129 143049) ((emacs (27 1)))
      "A package to launch, and manage, detached processes" tar
@@ -926,13 +926,13 @@
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "91d57e3a4c5104c66a3abc18e281ee55e8979176"))])
  (dired-preview
-  . [(0 7 0 0 20260921 2) ((emacs (28 1)))
+  . [(0 7 0 0 20261016 3) ((emacs (28 1)))
      "Automatically preview files in Dired" tar
      ((:url . "https://github.com/protesilaos/dired-preview")
       (:keywords "files" "convenience")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "0d6de0301df38ff6b44d7641e93142f180b5ad3a"))])
+      (:commit . "e10e648299da82f6da46918a79506a8f0c3cc124"))])
  (dired-sidebar
   . [(2 0 1 0 20260806 3) ((emacs (29 1)) (compat (30 0 0 0)))
      "Tree browser leveraging dired" tar
@@ -1012,13 +1012,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 3 0 0 20261015 11) ((emacs (29 1)))
+  . [(1 3 0 0 20261016 14) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "641ef8c961896234016d2f8654af1b0358b32225"))])
+      (:commit . "be6a7a1accedc837bad9f3f5ccd6e72daab8365a"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -1093,13 +1093,13 @@
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
       (:commit . "4850e9c7a465684a0fdb79a6be83055e0ef9537b"))])
  (ef-themes
-  . [(2 2 1 0 20260814 0) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(2 2 1 0 20261016 1) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
      ((:url . "https://github.com/protesilaos/ef-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
+      (:commit . "786ed6cf752158cf798d157d3b51a3fd9a9448ee"))])
  (eglot
   . [(1 24 0 20261013 24)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
@@ -1421,12 +1421,12 @@
       (:authors ("Manuel Uberti" . "manuel.uberti@mailbox.org"))
       (:commit . "45726057e5df8907a76f0d43e72c479d4ff8ecfd"))])
  (fontaine
-  . [(3 1 0 0 20260629 0) ((emacs (29 1)))
+  . [(3 1 0 0 20261016 1) ((emacs (29 1)))
      "Set font configurations using presets" tar
      ((:url . "https://github.com/protesilaos/fontaine")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "8cf9f6693e2a780b530ff5fd9920863b751d5bd5"))])
+      (:commit . "b497b86ff0502715c15757716df75fee01e3cfd4"))])
  (forgejo
   . [(0 2 3 0 20260715 17) ((emacs (29 1)) (keymap-popup (0 2 1)))
      "Emacs Forgejo Front-end" tar
@@ -1468,13 +1468,13 @@
       (:authors ("Yuan Fu" . "casouri@gmail.com"))
       (:commit . "d7c243ac3be2a67986f53f3dc31ba1426e82b771"))])
  (futur
-  . [(2 0 0 20260822 4) ((emacs (27 1)))
+  . [(2 1 0 20261016 0) ((emacs (27 1)))
      "Future/promise-based async library" tar
      ((:url . "https://elpa.gnu.org/packages/futur.html")
       (:keywords "concurrency" "async" "promises" "futures")
       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
       (:authors ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-      (:commit . "bcfc5c34b6a616d80bfbc41772a8f3a65e39b01a"))])
+      (:commit . "aca9a958ff533122eef4e22721471263389eccc4"))])
  (gcmh
   . [(0 2 1 0 20201116 225142) ((emacs (24)))
      "the Garbage Collector Magic Hack" tar
@@ -2011,13 +2011,13 @@
       (:url . "https://elpa.gnu.org/packages/lex.html")
       (:commit . "ccbfa1da2d773e07c9f1e0451b70b23f721fa7d5"))])
  (lin
-  . [(2 0 0 0 20260424 102712) ((emacs (27 1)))
+  . [(2 0 0 0 20261016 9) ((emacs (27 1)))
      "Make `hl-line-mode' more suitable for selection interfaces" tar
      ((:url . "https://github.com/protesilaos/lin")
       (:keywords "convenience" "faces" "theme")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "65556a218fe138516ebe557726fe6e4b8b60f539"))])
+      (:commit . "60d337a00be4e2e04dd4e181bc5d5e01ebc59324"))])
  (lisp-ts-mode
   . [(0 4 0 0 20261015 9)
      ((emacs (30 2)) (cond-star (1 0)) (compat (31)))
@@ -2094,14 +2094,14 @@
        ("Alexey Veretennikov" . "alexey.veretennikov@gmail.com"))
       (:commit . "f47c53a24a9d262898517c71284337821dad7ea9"))])
  (logos
-  . [(1 2 0 0 20260424 102714) ((emacs (27 1)))
+  . [(1 2 0 0 20261016 9) ((emacs (27 1)))
      "Simple focus mode and extras" tar
      ((:url . "https://github.com/protesilaos/logos")
       (:keywords "convenience" "focus" "writing" "presentation"
 		 "narrowing")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "dc6f238d9c9da807a187842259fc7e810cad5ab6"))])
+      (:commit . "6925193b4992093883d999b22bf73f9d40be7fa2"))])
  (luwak
   . [(1 0 0 0 20221125 50733) ((emacs (28)))
      "Web browser based on lynx -dump." tar
@@ -2182,12 +2182,12 @@
 		("Eric M. Ludlam" . "eludlam@mathworks.com"))
       (:commit . "8c647ab2e395da6216eab46afe112e7af3317fc5"))])
  (mct
-  . [(1 1 1 0 20260903 2) ((emacs (29 4)))
+  . [(1 1 1 0 20261016 3) ((emacs (29 4)))
      "Minibuffer Confines Transcended" tar
      ((:url . "https://github.com/protesilaos/mct")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "7784f2ab24e9db6a2dc98472b673befe0b5c52bc"))])
+      (:commit . "9d59109bb1b16f4891debf40a41077daaabdb043"))])
  (memory-usage
   . [(0 2 0 20201201 223908) nil
      "Analyze the memory usage of Emacs in various ways" tar
@@ -2273,13 +2273,13 @@
       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
       (:commit . "dc0bd20750f34340448ba1c7be4ed2b62af0f78c"))])
  (modus-themes
-  . [(5 3 0 0 20261015 69) ((emacs (28 1)))
+  . [(5 3 0 0 20261016 70) ((emacs (28 1)))
      "Elegant, highly legible and customizable themes" tar
      ((:url . "https://github.com/protesilaos/modus-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "6272f81ae3fee14e267441a14337be45e904adad"))])
+      (:commit . "d0e67bfa7abe1871a9513b6bf509c40595c6bc4f"))])
  (mpdired
   . [(4 0 20260915 0) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
@@ -2394,13 +2394,13 @@
       (:authors ("John Heidemann" . "johnh@isi.edu"))
       (:commit . "2a25d79f7e5d9ab7298ba40e11e78d1f2ded06d2"))])
  (notmuch-indicator
-  . [(1 3 0 0 20261002 3) ((emacs (27 1)))
+  . [(1 3 0 0 20261016 4) ((emacs (27 1)))
      "Display mode line indicator with notmuch-count(1) output" tar
      ((:url . "https://github.com/protesilaos/notmuch-indicator")
       (:keywords "convenience" "mail")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "82214b1bc1a3ee8c4cd389a9e12493b5004b3ec4"))])
+      (:commit . "216fd7ea2f65e3b6bab671499322e5c5cb40fe56"))])
  (ntlm
   . [(2 1 0 0 20260101 125434) ((emacs (27 1)))
      "NTLM (NT LanManager) authentication support" tar
@@ -2844,13 +2844,13 @@
       (:url . "https://elpa.gnu.org/packages/pspp-mode.html")
       (:commit . "faf56c519049f0fbce3ab0a57e90702dd9f82da4"))])
  (pulsar
-  . [(1 4 1 0 20260904 7) ((emacs (28 1)))
+  . [(1 4 1 0 20261016 8) ((emacs (28 1)))
      "Pulse highlight on demand or after select functions" tar
      ((:url . "https://github.com/protesilaos/pulsar")
       (:keywords "convenience" "pulse" "highlight")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "b82c595ff67b127ea1bcb2a17aa423d72cbbe8c4"))])
+      (:commit . "83d53271a0ec2728ef36b45704d47bafd170e814"))])
  (pyim
   . [(5 3 6 0 20251230 80953)
      ((emacs (27 1)) (async (1 6)) (xr (1 13)))
@@ -3197,13 +3197,13 @@
       (:authors ("Alex Kost" . "alezost@gmail.com"))
       (:commit . "52f4d32080cca50da0f88b2141d597827c7341cf"))])
  (show-font
-  . [(1 0 0 0 20260424 102736) ((emacs (29 1)))
+  . [(1 0 0 0 20261016 3) ((emacs (29 1)))
      "Show font features in a buffer" tar
      ((:url . "https://github.com/protesilaos/show-font")
       (:keywords "convenience" "writing" "font")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "e3941cc657272f2d2450dbdfad42f355d37611af"))])
+      (:commit . "011f7cf929e717ee42fea885f0a24efe0158e978"))])
  (sisu-mode
   . [(7 1 8 0 20221221 82114) nil "Major mode for SiSU markup text"
      tar
@@ -3298,13 +3298,13 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "04186129f2dccf48e288639b78adeb9c0e94be54"))])
  (spacious-padding
-  . [(0 9 0 0 20260920 0) ((emacs (28 1)))
+  . [(0 9 0 0 20261016 1) ((emacs (28 1)))
      "Increase the padding/spacing of frames and windows" tar
      ((:url . "https://github.com/protesilaos/spacious-padding")
       (:keywords "convenience" "focus" "writing" "presentation")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "b390a5b95a6398ff83f8eeb623b29147f42582a7"))])
+      (:commit . "30a7c463dd9f0f0632a7ab4fa7174f534ded9110"))])
  (speedrect
   . [(0 7 0 20241220 133155) ((emacs (29 1)) (compat (30)))
      "Fast modal rectangle commands" tar
@@ -3367,13 +3367,13 @@
       (:authors ("Christian Johansson" . "christian@cvj.se"))
       (:commit . "d33b081828c9a13730ff2af8dc548ad6eeeea61f"))])
  (standard-themes
-  . [(3 0 2 0 20260424 102741) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(3 0 2 0 20261016 33) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Like the default theme but more consistent" tar
      ((:url . "https://github.com/protesilaos/standard-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "b0f9a45f42e3e7fba50ae43cac81d2675de8dcab"))])
+      (:commit . "f2ba99f2c2f807521c4bde1e1259149f6992323f"))])
  (stream
   . [(2 4 0 0 20250102 122330) ((emacs (25)))
      "Implementation of streams" tar
@@ -3383,12 +3383,12 @@
       (:url . "https://elpa.gnu.org/packages/stream.html")
       (:commit . "b9b3ad5c38063703cfa5a06522031e631c49b7e3"))])
  (substitute
-  . [(0 6 1 0 20260825 3) ((emacs (27 1)))
+  . [(0 6 1 0 20261016 4) ((emacs (27 1)))
      "Efficiently replace targets in the buffer or context" tar
      ((:url . "https://github.com/protesilaos/substitute")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "ef962007ed7bc8e5c84f3639b373785e784da5d9"))])
+      (:commit . "ae6ff81e7448c32f0bedde8db5b4a3e03b6d4226"))])
  (svg
   . [(1 1 0 20260101 125434) ((emacs (25)))
      "SVG image creation functions" tar
@@ -3439,12 +3439,12 @@
       (:authors ("Tassilo Horn" . "tsdh@gnu.org"))
       (:commit . "3ac4e522231a052e9beaa2d25478090d1215c7ae"))])
  (sxhkdrc-mode
-  . [(1 2 0 0 20260923 19) ((emacs (27 1)))
+  . [(1 2 0 0 20261016 20) ((emacs (27 1)))
      "Major mode for sxhkdrc files (Simple X Hot Key Daemon)" tar
      ((:url . "https://github.com/protesilaos/sxhkdrc-mode")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "5be7052de4acb30f9337e0a46ead1dc023e792f6"))])
+      (:commit . "74d26669c02d332a643cc03b51af841b8a2b1589"))])
  (system-packages
   . [(1 1 2 0 20251213 72223) ((emacs (24 3)))
      "functions to manage system packages" tar
@@ -3576,7 +3576,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "c107480fca7e42737c51b2afaa33ac31e92a7290"))])
  (tmr
-  . [(1 4 0 0 20260823 2) ((emacs (29 1)))
+  . [(1 4 0 0 20261016 3) ((emacs (29 1)))
      "Set timers using a convenient notation" tar
      ((:url . "https://github.com/protesilaos/tmr")
       (:keywords "convenience" "timer")
@@ -3585,7 +3585,7 @@
 		("Damien Cassou" . "damien@cassou.me")
 		("Daniel Mendler" . "mail@daniel-mendler.de")
 		("Steven Allen" . "steven@stebalien.com"))
-      (:commit . "b967e413e295045bbf12ec0e2c90932ec2bc8780"))])
+      (:commit . "d0867636f6cd231e142b9550a73ad6ab0a1d095a"))])
  (tomelr
   . [(0 4 3 0 20220511 213722)
      ((emacs (26 3)) (map (3 2 1)) (seq (2 23)))
