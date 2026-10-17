@@ -1012,13 +1012,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 3 0 0 20261016 14) ((emacs (29 1)))
+  . [(1 3 0 0 20261017 15) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "be6a7a1accedc837bad9f3f5ccd6e72daab8365a"))])
+      (:commit . "4dc539cd148a9405a94d8073780ca3a0a7031d85"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -2474,13 +2474,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261017 619) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261017 944) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "d4ee12d8bed471b215e8e140c50e690149ae4432"))])
+      (:commit . "30b4404a984d981e9f3875d6767f9b312df15dfa"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -3973,13 +3973,13 @@
       (:authors ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
       (:commit . "6037848ee495a67510d8b43f1fbe319b76dbd859"))])
  (websocket
-  . [(1 16 0 20260228 205745) ((cl-lib (0 5)))
+  . [(1 16 0 20261017 6) ((cl-lib (0 5)))
      "Emacs WebSocket client and server" tar
      ((:url . "https://github.com/ahyatt/emacs-websocket")
       (:keywords "communication" "websocket" "server")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "2195e1247ecb04c30321702aa5f5618a51c329c5"))])
+      (:commit . "7fb3686dd02aed5bd52bc847ef26a4346f149456"))])
  (which-key
   . [(3 6 1 0 20260101 125434) ((emacs (25 1)))
      "Display available keybindings in popup" tar
