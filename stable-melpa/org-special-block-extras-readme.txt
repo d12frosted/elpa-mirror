@@ -34,7 +34,7 @@ The .el files are the source of truth; org-special-block-extras.org is the
 manual, with further examples demonstrating these blocks.
 
 Full documentation can be found at
-https://alhassy.github.io/org-special-block-extras
+https://alhassy.com/org-special-block-extras
 
 ; Design: Implementation strategy, trade-offs, and constraints
 
@@ -91,7 +91,7 @@ them live in org-links.el, org-color-links.el, org-details-block.el, org-box-blo
 org-parallel-block.el, org-proof-block.el, org-align-block.el, org-margin-blocks.el, org-quote-block.el,
 org-solution-block.el, org-demo-block.el, org-spoiler-block.el, org-remark-block.el, org-style-block.el,
 org-substitution-blocks.el, and org-latex-definitions-block.el ---one file per family of blocks; this file
-requires them all and defines the mode.  The graph block, org-graph/org-graph-block.el,
+requires them all and defines the mode.  The graph block, org-graph-block.el,
 needs Graphviz and so is opt-in: (require 'org-graph-block); see graphs-README.org.
 
 

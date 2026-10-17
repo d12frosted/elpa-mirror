@@ -7,7 +7,7 @@ Usage:
 
   (unless (display-graphic-p)
     (require 'evil-terminal-cursor-changer)
-    (etcc-on))
+    (evil-terminal-cursor-changer-activate))
 
 With evil-mode, it works out of the box since evil sets `cursor-type'
 per state.  Without evil, just set `cursor-type' directly:
