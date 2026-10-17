@@ -2,43 +2,65 @@
  • Building package org-special-block-extras
 From https://github.com/alhassy/org-special-block-extras
 Updating /mnt/store/melpa/working/org-special-block-extras/
-Checking out ab6edb56b6931e80a5ea1a6d5bc6a0afb06241cd
+Checking out 0e419abeab4036e3ff8a4e5e7170c5b1eb481aa7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-special-block-extras/
-  to /tmp/org-special-block-extras-dtAnut/org-special-block-extras-20261016.1905/
+  to /tmp/org-special-block-extras-DJtccv/org-special-block-extras-20261017.325/
+    org-align-block.el -> org-align-block.el
+    org-block-header-args.el -> org-block-header-args.el
     org-box-block.el -> org-box-block.el
     org-callout-blocks.el -> org-callout-blocks.el
     org-color-links.el -> org-color-links.el
     org-ctrl-c-ctrl-c-for-special-block.el -> org-ctrl-c-ctrl-c-for-special-block.el
-    org-defblock-misc.el -> org-defblock-misc.el
     org-defblock.el -> org-defblock.el
     org-deflink.el -> org-deflink.el
     org-deftag.el -> org-deftag.el
+    org-demo-block.el -> org-demo-block.el
     org-details-block.el -> org-details-block.el
+    org-latex-definitions-block.el -> org-latex-definitions-block.el
     org-links.el -> org-links.el
+    org-margin-blocks.el -> org-margin-blocks.el
     org-parallel-block.el -> org-parallel-block.el
     org-proof-block.el -> org-proof-block.el
+    org-quote-block.el -> org-quote-block.el
+    org-remark-block.el -> org-remark-block.el
+    org-solution-block.el -> org-solution-block.el
     org-special-block-at-point.el -> org-special-block-at-point.el
     org-special-block-extras.el -> org-special-block-extras.el
     org-special-block-indirect-edit.el -> org-special-block-indirect-edit.el
     org-special-block-split.el -> org-special-block-split.el
-Created org-special-block-extras-20261016.1905.tar containing:
-  org-special-block-extras-20261016.1905/
-  org-special-block-extras-20261016.1905/org-box-block.el
-  org-special-block-extras-20261016.1905/org-callout-blocks.el
-  org-special-block-extras-20261016.1905/org-color-links.el
-  org-special-block-extras-20261016.1905/org-ctrl-c-ctrl-c-for-special-block.el
-  org-special-block-extras-20261016.1905/org-defblock-misc.el
-  org-special-block-extras-20261016.1905/org-defblock.el
-  org-special-block-extras-20261016.1905/org-deflink.el
-  org-special-block-extras-20261016.1905/org-deftag.el
-  org-special-block-extras-20261016.1905/org-details-block.el
-  org-special-block-extras-20261016.1905/org-links.el
-  org-special-block-extras-20261016.1905/org-parallel-block.el
-  org-special-block-extras-20261016.1905/org-proof-block.el
-  org-special-block-extras-20261016.1905/org-special-block-at-point.el
-  org-special-block-extras-20261016.1905/org-special-block-extras-pkg.el
-  org-special-block-extras-20261016.1905/org-special-block-extras.el
-  org-special-block-extras-20261016.1905/org-special-block-indirect-edit.el
-  org-special-block-extras-20261016.1905/org-special-block-split.el
-Built org-special-block-extras in 2.889s, finished at 2026-10-16T19:10:42+0000
+    org-spoiler-block.el -> org-spoiler-block.el
+    org-style-block.el -> org-style-block.el
+    org-substitution-blocks.el -> org-substitution-blocks.el
+    org-thread-blockcall.el -> org-thread-blockcall.el
+Created org-special-block-extras-20261017.325.tar containing:
+  org-special-block-extras-20261017.325/
+  org-special-block-extras-20261017.325/org-align-block.el
+  org-special-block-extras-20261017.325/org-block-header-args.el
+  org-special-block-extras-20261017.325/org-box-block.el
+  org-special-block-extras-20261017.325/org-callout-blocks.el
+  org-special-block-extras-20261017.325/org-color-links.el
+  org-special-block-extras-20261017.325/org-ctrl-c-ctrl-c-for-special-block.el
+  org-special-block-extras-20261017.325/org-defblock.el
+  org-special-block-extras-20261017.325/org-deflink.el
+  org-special-block-extras-20261017.325/org-deftag.el
+  org-special-block-extras-20261017.325/org-demo-block.el
+  org-special-block-extras-20261017.325/org-details-block.el
+  org-special-block-extras-20261017.325/org-latex-definitions-block.el
+  org-special-block-extras-20261017.325/org-links.el
+  org-special-block-extras-20261017.325/org-margin-blocks.el
+  org-special-block-extras-20261017.325/org-parallel-block.el
+  org-special-block-extras-20261017.325/org-proof-block.el
+  org-special-block-extras-20261017.325/org-quote-block.el
+  org-special-block-extras-20261017.325/org-remark-block.el
+  org-special-block-extras-20261017.325/org-solution-block.el
+  org-special-block-extras-20261017.325/org-special-block-at-point.el
+  org-special-block-extras-20261017.325/org-special-block-extras-pkg.el
+  org-special-block-extras-20261017.325/org-special-block-extras.el
+  org-special-block-extras-20261017.325/org-special-block-indirect-edit.el
+  org-special-block-extras-20261017.325/org-special-block-split.el
+  org-special-block-extras-20261017.325/org-spoiler-block.el
+  org-special-block-extras-20261017.325/org-style-block.el
+  org-special-block-extras-20261017.325/org-substitution-blocks.el
+  org-special-block-extras-20261017.325/org-thread-blockcall.el
+Built org-special-block-extras in 4.590s, finished at 2026-10-17T03:29:01+0000
