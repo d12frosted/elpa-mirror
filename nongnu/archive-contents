@@ -716,14 +716,14 @@
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
       (:commit . "84e57b17520edbadbdca17e0b2dba50c56134d74"))])
  (flx
-  . [(0 6 3) ((cl-lib (0 3))) "fuzzy matching with good sorting" tar
+  . [(0 6 4) ((emacs (24 3))) "Fuzzy matching with good sorting" tar
      ((:url . "https://github.com/lewang/flx")
-      (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
+      (:commit . "be738f439fa779c5a5def44569202d2d7c6b0547"))])
  (flx-ido
-  . [(0 6 3) ((emacs (24 1)) (flx (0 1)) (cl-lib (0 3)))
-     "flx integration for ido" tar
+  . [(0 6 4) ((emacs (24 3)) (flx (0 6 4))) "Flx integration for ido"
+     tar
      ((:url . "https://github.com/lewang/flx")
-      (:commit . "dc6e4cec66ab05d536ec2cc6f5f324c019e8f8c0"))])
+      (:commit . "be738f439fa779c5a5def44569202d2d7c6b0547"))])
  (flycheck
   . [(39 0) ((emacs (28 1)) (seq (2 24))) "On-the-fly syntax checking"
      tar
