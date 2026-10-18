@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261016 47)
+  . [(4 7 1 0 20261018 49)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "830b1932ed92951715ff12eb894d3dcf4dca0fce"))])
+      (:commit . "5616506921afb39933f02ccba2c2f8b769b7efff"))])
  (magit-section
-  . [(4 7 1 0 20261016 47)
+  . [(4 7 1 0 20261018 49)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "830b1932ed92951715ff12eb894d3dcf4dca0fce"))])
+      (:commit . "5616506921afb39933f02ccba2c2f8b769b7efff"))])
  (markdown-mode
   . [(2 9 -3 0 20261009 24) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1374,6 +1374,14 @@
       (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "1d22840d588be29aa57eca36f28a32bede331550"))])
+ (markdown-ts-appear
+  . [(0 3 0 0 20261018 2) ((emacs (31 1)))
+     "Reveal Markdown source at point" tar
+     ((:url . "https://github.com/Thysrael/markdown-ts-appear")
+      (:keywords "text" "convenience")
+      (:maintainer "Thysrael" . "thysrael@163.com")
+      (:authors ("Thysrael" . "thysrael@163.com"))
+      (:commit . "913205c69344abb57014e9800d685b8cd982dee3"))])
  (mastodon
   . [(2 1 7 0 20261007 81)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
@@ -1912,11 +1920,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
  (slime
-  . [(2 32 -4 0 20261015 78) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20261017 79) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "73699f4b39b4718eaeeb11677c051e6334cd0d50"))])
+      (:commit . "abaa3d07cc05470ec471511a3626a48d25f198fd"))])
  (sly
   . [(1 0 43 0 20261013 150) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
@@ -2170,12 +2178,11 @@
       (:authors ("Mark Tran" . "mark.tran@gmail.com"))
       (:commit . "7345ab821739aafa2ec079a71fa7de350a869f0e"))])
  (undo-fu
-  . [(0 5 0 20260308 113123) ((emacs (25 1))) "Undo helper with redo"
-     tar
+  . [(0 5 0 20261018 39) ((emacs (25 1))) "Undo helper with redo" tar
      ((:url . "https://codeberg.org/ideasman42/emacs-undo-fu")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
-      (:commit . "5684ef2aef5f60176472916b21869cf221e018cc"))])
+      (:commit . "81cf03e81775a67a1386fd51bca7414508ff9c22"))])
  (undo-fu-session
   . [(0 8 0 20260209 75408) ((emacs (28 1)))
      "Persistent undo, available between sessions" tar
@@ -2216,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 0 -4 0 20261010 250) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 0 -4 0 20261017 267) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "e1a00b9c9143dad6182cfb3069bc040a6434077e"))])
+      (:commit . "e9772d8b718c9849b1707d1950825dfc579c138a"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
