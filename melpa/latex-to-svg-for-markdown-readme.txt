@@ -1,7 +1,7 @@
 
 Markdown adaptor for `latex-to-svg-frontend': a thin layer that tells the
 shared core what counts as "code" in a Markdown buffer (so math inside code
-is not previewed) and enables the core.  All the actual work — detection,
+is not previewed) and how to unfold a jump target, and enables the core.  All the actual work — detection,
 overlays, numbering, references, reveal-on-cursor, refresh — lives in
 `latex-to-svg-frontend'.
 

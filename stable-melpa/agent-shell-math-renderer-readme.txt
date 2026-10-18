@@ -42,8 +42,8 @@ math, fenced blocks, streaming watermark) and image *placement* (via
 equation to a color- and size-independent SVG (cached on disk by
 content, tinted and scaled at display time).  Compilation is
 asynchronous; the image is overlaid when ready.  When a program of
-the engine is not found, the backend warns once per session, naming
-the engine and the program, and the source stays as text.  The engine
+the engine is not found, the backend warns, naming the engine and
+the program, and the source stays as text.  The engine
 that typesets (LaTeX, RaTeX without a TeX installation, or texres) is
 chosen by `agent-shell-math-renderer-engine'.  Backend settings (programs,
 preamble, cache directory, font scale) live in the
