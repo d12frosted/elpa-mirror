@@ -982,7 +982,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20261013 28)
+  . [(0 9 9 6 0 20261018 29)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -991,7 +991,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "8c6a4846893d18820f2d994084f5b95918cd5c0f"))])
+      (:commit . "e7cebe4621533a036840d47c9741682bb687d808"))])
  (graphql-mode
   . [(1 0 0 0 20261013 39) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261018 49)
+  . [(4 7 1 0 20261018 51)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "5616506921afb39933f02ccba2c2f8b769b7efff"))])
+      (:commit . "fade602ed5621094402cab2068979164362ae6d4"))])
  (magit-section
-  . [(4 7 1 0 20261018 49)
+  . [(4 7 1 0 20261018 51)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "5616506921afb39933f02ccba2c2f8b769b7efff"))])
+      (:commit . "fade602ed5621094402cab2068979164362ae6d4"))])
  (markdown-mode
   . [(2 9 -3 0 20261009 24) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1920,11 +1920,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
  (slime
-  . [(2 32 -4 0 20261017 79) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20261018 80) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "abaa3d07cc05470ec471511a3626a48d25f198fd"))])
+      (:commit . "4d998729d930af2a026c1fe67f8ff772b5f53d6a"))])
  (sly
   . [(1 0 43 0 20261013 150) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
@@ -2178,11 +2178,11 @@
       (:authors ("Mark Tran" . "mark.tran@gmail.com"))
       (:commit . "7345ab821739aafa2ec079a71fa7de350a869f0e"))])
  (undo-fu
-  . [(0 5 0 20261018 39) ((emacs (25 1))) "Undo helper with redo" tar
+  . [(0 5 0 20261018 40) ((emacs (25 1))) "Undo helper with redo" tar
      ((:url . "https://codeberg.org/ideasman42/emacs-undo-fu")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
-      (:commit . "81cf03e81775a67a1386fd51bca7414508ff9c22"))])
+      (:commit . "cf9a342972237d8a25fb7ba9418ec659a4273115"))])
  (undo-fu-session
   . [(0 8 0 20260209 75408) ((emacs (28 1)))
      "Persistent undo, available between sessions" tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 0 -4 0 20261017 267) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 0 -4 0 20261018 283) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "e9772d8b718c9849b1707d1950825dfc579c138a"))])
+      (:commit . "c331d01d3792c111ac168057da84b352705025cc"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
@@ -2268,7 +2268,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 4 0 20261009 12)
+  . [(3 5 4 0 20261018 15)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2277,7 +2277,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "3c390146741be401ff2e78e337707efd4bdec506"))])
+      (:commit . "fd559b37da8eb7afd93bf48db266410b1821dc02"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar
