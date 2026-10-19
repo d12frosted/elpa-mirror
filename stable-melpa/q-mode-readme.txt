@@ -60,6 +60,8 @@ receives it as a literal command-line argument, so it's visible to
 anyone on the machine running `ps'; `q-con' resolves it from
 auth-source only for the instant it takes to write it to the
 socket, and it never becomes a command-line argument at all.
+`q-qcon' passes it in environment variables too, and
+`q-qcon-command-line-credentials' can disable the command line form.
 `q-con' also supports TLS: prefix a host with `tcps://' - in
 `q-connection-host', a `q-connections-alist' entry, or typed ad-hoc at the
 prompt - to connect over TLS instead of plain tcp.
