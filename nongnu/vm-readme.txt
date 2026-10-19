@@ -1,6 +1,6 @@
 # The Emacs mail reader VM (a.k.a. ViewMail)
 
-VM is a mail reader that runs under GNU Emacs and XEmacs. It was
+VM is a mail reader that runs under GNU Emacs. It was
 written as an alternative to the Emacs RMAIL mail reader by Kyle
 Jones. VM is highly configurable and easy to use. It supports POP and
 IMAP mail servers, understands MIME, and handles mail folders in the
@@ -17,7 +17,6 @@ VM is available from
 The VM versions 8.3.0 and up are designed to work with:
 
 - Gnu Emacs versions 28.1 or higher
-- XEmacs version (not currently tested with XEmacs)
 
 ## Installation
 
@@ -27,7 +26,7 @@ VM releases are avaliable through a non-gnu ELPA package:
    M-x package-install <ret> vm <ret>
 ```
 
-If you wish to build from source, see [INSTALL](INSTALL)
+If you wish to build from source, see [INSTALL](INSTALL.md)
 for instructions.
 
 If you are new to VM, see example.vm for example configuration
@@ -75,6 +74,12 @@ after all):
 - [viewmail-maintainers](https://lists.nongnu.org/mailman/listinfo/viewmail-maintainers)
   aimed at at VM maintainers and packagers. The list is public but of
   limited interest outside its target audience.
+
+## Maintainers
+
+VM is maintained by a VM development team: Göran Uddeborg, John Stoffel, Mark
+Diekhans, Stefan Monnier and Ulrich Müller. More volunteers to help with
+development are needed; see [CONTRIBUTING](CONTRIBUTING.md).
 
 ## See also
 

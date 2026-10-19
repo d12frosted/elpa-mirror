@@ -1308,12 +1308,12 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "f5d520b3ee7722dd2231ab586ba51d8eb166e49b"))])
  (markdown-ts-appear
-  . [(0 3 0) ((emacs (31 1))) "Reveal Markdown source at point" tar
+  . [(0 3 1) ((emacs (31 1))) "Reveal Markdown source at point" tar
      ((:url . "https://github.com/Thysrael/markdown-ts-appear")
       (:keywords "text" "convenience")
       (:maintainer "Thysrael" . "thysrael@163.com")
       (:authors ("Thysrael" . "thysrael@163.com"))
-      (:commit . "27653de179cb40b0aa2b26a65dafd582a7db7bd7"))])
+      (:commit . "22577039b48c3209776bc2efc901b2bb8d4ebd9f"))])
  (mastodon
   . [(2 1 7) ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
@@ -2092,10 +2092,10 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "9c0ecc2af21d3024a2a838c30d574e86265a52be"))])
  (vm
-  . [(8 3 2) ((emacs (28 1)) (vcard (0 2 2))) "VM mail reader" tar
+  . [(9 0 0) ((emacs (28 1)) (vcard (0 2 2))) "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "790c95503d8e130f97a68ab502eb5c77f35011c8"))])
+      (:commit . "4ca2ebdb1f5165181e487bff5db9059592f58d85"))])
  (web-mode
   . [(17 3 25) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
