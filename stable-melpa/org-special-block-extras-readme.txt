@@ -88,9 +88,9 @@ should be rewritten and what should not be re-written, the global variable
 7. [Code Organisation] `org-defblock', `org-deflink', and `org-deftag' each live in a file of their name, as do
 `org-thread-blockcall' and, in org-block-header-args.el, the blocks' header-args.  The blocks and links built atop
 them live in org-links.el, org-color-links.el, org-details-block.el, org-box-block.el, org-callout-blocks.el,
-org-parallel-block.el, org-proof-block.el, org-align-block.el, org-margin-blocks.el, org-quote-block.el,
-org-solution-block.el, org-demo-block.el, org-spoiler-block.el, org-remark-block.el, org-style-block.el,
-org-substitution-blocks.el, and org-math-block.el ---one file per family of blocks; this file
+org-parallel-block.el, org-proof-block.el, org-margin-blocks.el, org-quote-block.el, org-solution-block.el,
+org-demo-block.el, org-spoiler-block.el, org-remark-block.el, org-style-block.el, org-substitution-blocks.el, and
+org-math-block.el ---one file per family of blocks; this file
 requires them all and defines the mode.  The graph block, org-graph-block.el,
 needs Graphviz and so is opt-in: (require 'org-graph-block); see graphs-README.org.
 
