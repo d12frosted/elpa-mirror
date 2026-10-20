@@ -3699,12 +3699,12 @@
       (:url . "https://elpa.gnu.org/packages/which-key.html")
       (:commit . "34b832fce1d01c22aa644196cd6e6b50b1d403ee"))])
  (window-commander
-  . [(3 0 2) ((emacs (27 1))) "Simply execute commands on windows" tar
+  . [(3 1) ((emacs (27 1))) "Simply execute commands on windows" tar
      ((:url . "https://dsemy.com/projects/window-commander")
       (:keywords "convenience")
       (:maintainer "Daniel Semyonov" . "daniel@dsemy.com")
       (:authors ("Daniel Semyonov" . "daniel@dsemy.com"))
-      (:commit . "ad92c184ccc06f46b2caf001bc8201d983eca626"))])
+      (:commit . "26e021f2cf0aa510a72cb61a673fa652670bead9"))])
  (window-tool-bar
   . [(0 3) ((emacs (27 1)) (compat (29 1)))
      "Add tool bars inside windows" tar

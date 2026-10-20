@@ -20,24 +20,26 @@ When `wincom-mode' is active:
   the minibuffer (by default, see `wincom-scope').
 - `other-window' (C-x o by default) is remapped to `wincom-select'.
 
-C-x o ID	switches focus to the window which corresponds to ID.
+C-x o ID    switches focus to the window which corresponds to ID.
 
-C-x o 0 ID	deletes the window which corresponds to ID.
+C-x o 0 ID  deletes the window which corresponds to ID.
 
-C-x o 1 ID	makes the window which corresponds to ID the sole
-		window of its frame.
+C-x o 1 ID  makes the window which corresponds to ID the sole
+            window of its frame.
 
-C-x o 2 ID	splits the window which corresponds to ID from below.
+C-x o 2 ID  splits the window which corresponds to ID from below.
 
-C-x o 3 ID	splits the window which corresponds to ID from the right.
+C-x o 3 ID  splits the window which corresponds to ID from the right.
 
-C-x 0 4 ID	displays the buffer of the next command in the window
-		which corresponds to ID.
+C-x o 4 ID  displays the buffer of the next command in the window
+            which corresponds to ID.
 
-C-x 0 t ID	swaps the states of the current window and the window
-		which corresponds to ID.
+C-x o t ID  swaps the states of the current window and the window
+            which corresponds to ID.
 
-C-x o m	switches focus to the minibuffer if it's active.
+C-x o m     switches focus to the minibuffer if it's active.
+
+C-x o r     switches focus to the most recently used window.
 
 More commands can be added through `wincom-command-map':
 
