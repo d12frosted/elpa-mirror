@@ -769,12 +769,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20261016 178) ((emacs (28 1)))
+  . [(4 2 3 0 20261019 179) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "003204c64fe42b23c63ab6d815dd3802086d4600"))])
+      (:commit . "3f0cdec208950f89e40b577a1967b316c67ec28c"))])
  (denote-journal
   . [(0 3 0 0 20261016 1) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -3227,6 +3227,14 @@
       (:maintainer "D.L. Nicolai" . "dalanicolai@gmail.com")
       (:authors ("D.L. Nicolai" . "dalanicolai@gmail.com"))
       (:commit . "c7694d666738abfe3644181ae14499fd3f15ff7e"))])
+ (slang-ts-mode
+  . [(0 1 0 20261019 3) ((emacs (30))) "tree-sitter support for Slang"
+     tar
+     ((:url . "https://codeberg.org/hikari/slang-ts-mode")
+      (:keywords "slang" "languages" "tree-sitter")
+      (:maintainer "Hikari" . "aneris@disroot.org")
+      (:authors ("Hikari" . "aneris@disroot.org"))
+      (:commit . "54b7eecb38d9801e59c890491cd0e58dd7cb0003"))])
  (slime-volleyball
   . [(1 2 0 0 20221221 82156) ((cl-lib (0 5)))
      "An SVG Slime Volleyball Game" tar
@@ -3298,13 +3306,13 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "04186129f2dccf48e288639b78adeb9c0e94be54"))])
  (spacious-padding
-  . [(0 9 0 0 20261016 1) ((emacs (28 1)))
+  . [(0 9 1 0 20261019 1) ((emacs (28 1)))
      "Increase the padding/spacing of frames and windows" tar
      ((:url . "https://github.com/protesilaos/spacious-padding")
       (:keywords "convenience" "focus" "writing" "presentation")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "30a7c463dd9f0f0632a7ab4fa7174f534ded9110"))])
+      (:commit . "50519dfd38d1cceea03dfbef2c5ca5dfe922304f"))])
  (speedrect
   . [(0 7 0 20241220 133155) ((emacs (29 1)) (compat (30)))
      "Fast modal rectangle commands" tar

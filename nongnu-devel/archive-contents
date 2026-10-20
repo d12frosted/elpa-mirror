@@ -220,7 +220,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261009 147)
+  . [(2 1 0 -4 0 20261019 153)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -234,7 +234,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "dafaff10c71c497c25fc2ed3500665c3b78e72b9"))])
+      (:commit . "d35d5567ac1daaa50398d8d5a40f0620ee367038"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -437,7 +437,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "c8d54d649872bfe7b2b9f49ae5c2addbf12d3b99"))])
  (ebuild-mode
-  . [(1 88 0 20261010 2) ((emacs (26 3)))
+  . [(1 88 0 20261018 3) ((emacs (26 3)))
      "edit ebuild and eclass files" tar
      ((:keywords "languages" "processes")
       (:maintainer nil . "emacs@gentoo.org")
@@ -446,7 +446,7 @@
 		("Christian Faulhammer" . "fauli@gentoo.org")
 		("Ulrich Müller" . "ulm@gentoo.org"))
       (:url . "https://elpa.nongnu.org/nongnu/ebuild-mode.html")
-      (:commit . "b54a7b218585766bac818384aac6d569a94d4d09"))])
+      (:commit . "2e98c0807fd08df5943208bd01c3efc59ee788db"))])
  (edit-indirect
   . [(0 1 13 0 20240128 11949) ((emacs (24 3)))
      "Edit regions in separate buffers" tar
@@ -657,13 +657,13 @@
       (:authors ("Sylvain Benner" . "sylvain.benner@gmail.com"))
       (:commit . "3c65fecd9917a41eaf6460f22187e2323821f3ce"))])
  (evil-matchit
-  . [(4 1 1 0 20261012 1) ((emacs (27 1)))
+  . [(5 0 0 0 20261019 0) ((emacs (27 1)))
      "Vim matchit ported to Evil" tar
      ((:url . "http://github.com/redguardtoo/evil-matchit")
       (:keywords "matchit" "vim" "evil")
       (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
-      (:commit . "1a8f5b950a9496c76297020dda6afdf448913cdc"))])
+      (:commit . "4cb8dd3d811ecb2abd774b491223ac5460dcdd5e"))])
  (evil-nerd-commenter
   . [(3 6 1 0 20260507 41457) ((emacs (26 1)))
      "Comment/uncomment lines efficiently. Like Nerd Commenter in Vim"
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261018 51)
+  . [(4 7 1 0 20261019 52)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "fade602ed5621094402cab2068979164362ae6d4"))])
+      (:commit . "1760a5281d09c0a79a363915231ccdb7a4c7cb1d"))])
  (magit-section
-  . [(4 7 1 0 20261018 51)
+  . [(4 7 1 0 20261019 52)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "fade602ed5621094402cab2068979164362ae6d4"))])
+      (:commit . "1760a5281d09c0a79a363915231ccdb7a4c7cb1d"))])
  (markdown-mode
   . [(2 9 -3 0 20261009 24) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar

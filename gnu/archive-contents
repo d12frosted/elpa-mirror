@@ -3059,13 +3059,13 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "fffe8d0b42b143a2e7df0470d9049fa57b6ecac5"))])
  (spacious-padding
-  . [(0 9 0) ((emacs (28 1)))
+  . [(0 9 1) ((emacs (28 1)))
      "Increase the padding/spacing of frames and windows" tar
      ((:url . "https://github.com/protesilaos/spacious-padding")
       (:keywords "convenience" "focus" "writing" "presentation")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "b390a5b95a6398ff83f8eeb623b29147f42582a7"))])
+      (:commit . "7461d9a9c8aa3e706c169a11c33cf4925c46c43f"))])
  (speedrect
   . [(0 7) ((emacs (29 1)) (compat (30)))
      "Fast modal rectangle commands" tar
