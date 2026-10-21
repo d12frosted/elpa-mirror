@@ -1,8 +1,8 @@
 
 `devops.el' adds TARGET syntax to org-babel:
 
-  #+TARGET: /ssh:web1.example.com: (web)
-  #+TARGET: /ssh:db1.example.com: (db)
+  #+TARGET: web /ssh:web1.example.com:
+  #+TARGET: db /ssh:db1.example.com:
 
   * Check the web server                  :web:
   #+begin_src sh
@@ -41,6 +41,10 @@ If async is enabled (recommended)
 Options:
 
 - `devops-enable-session-async'  run blocks in async session pool
+
+For packages that build on it:
+
+- `devops-resolving-target'  (TAG . REF) while a dynamic target resolves
 
 Please report issues at
 https://github.com/kpassapk/devops.el/issues
