@@ -1546,12 +1546,12 @@
      ((:url . "http://github.com/bastibe/org-journal")
       (:commit . "6460f6f2b0835b4b8aa87d5fdf40cac7deb319f5"))])
  (org-mime
-  . [(0 3 5 0 20261015 3) ((emacs (29 1)))
+  . [(0 3 5 0 20261021 8) ((emacs (29 1)))
      "org html export for text/html MIME emails" tar
      ((:url . "http://github.com/org-mime/org-mime")
       (:keywords "mime" "mail" "email" "html")
       (:maintainer "Chen Bin" . "chb_shAThotmailDOTcom")
-      (:commit . "8447fe96f95c17d52e60e0ef14a8ae49e0880dce"))])
+      (:commit . "1073e4fbed1afa99e4c1aad6940b90dcf198df64"))])
  (org-present
   . [(0 1 0 20220806 144744) ((org (7)))
      "Minimalist presentation minor-mode for Emacs org-mode." tar
@@ -1723,13 +1723,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (project-nix-store
-  . [(0 13 0 0 20261010 3) ((emacs (29 1)))
+  . [(0 13 0 0 20261021 4) ((emacs (29 1)))
      "Project backend for Nix store" tar
      ((:url . "https://github.com/jian-lin/project-nix-store")
       (:keywords "nix" "nix-store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "0ff2e50fb33983cdf7f3e7d1b93b4e547d88fdf8"))])
+      (:commit . "4d94d692b372bdb2ec75029e39c8de34a5187bc2"))])
  (projectile
   . [(3 5 0 -4 0 20260930 66) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar

@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 1 0 0 20261020 19) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 1 0 0 20261021 23) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "8be2cac7ba975cd7ee8e758f2432e1ae7e5fb15c"))])
+      (:commit . "e50ea7a3222020cef8e7f320f9870bb20c61e451"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -619,13 +619,13 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "9c2bf9add6c182ae524eb378d0d0f45ecc805eef"))])
  (coterm
-  . [(1 6 0 20261013 7) ((emacs (26 1)) (compat (28 1 2 0)))
+  . [(1 6 0 20261013 8) ((emacs (26 1)) (compat (31 1)))
      "Terminal emulation for comint" tar
      ((:url . "https://repo.or.cz/emacs-coterm.git")
       (:keywords "processes")
       (:maintainer "Miha Rihtaršič" . "miha@kamnitnik.top")
       (:authors ("Miha Rihtaršič" . "miha@kamnitnik.top"))
-      (:commit . "c656702c7297bd9c335664782d93af54b50d7bc8"))])
+      (:commit . "763faca4a91deb7e7f60c873db76430151eb9afa"))])
  (counsel
   . [(0 15 1 0 20260913 36)
      ((emacs (24 5)) (ivy (0 15 1)) (swiper (0 15 1)))
@@ -1766,6 +1766,12 @@
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "253f69b17187b99b59b60f46a2a72c8c1802b342"))])
+ (isbn
+  . [(0 2 0 0 20261019 1) ((emacs (28 1))) "ISBN library" tar
+     ((:url . "https://git.sr.ht/~cook/isbn.el") (:keywords "data")
+      (:maintainer "Maximilian Cook" . "maximilian@fclr.net")
+      (:authors ("Maximilian Cook" . "maximilian@fclr.net"))
+      (:commit . "5f3e641595c3049b975a4fbbc9d7c7f27bdecc92"))])
  (isearch-mb
   . [(0 8 0 20240310 84654) ((emacs (27 1)))
      "Control isearch from the minibuffer" tar

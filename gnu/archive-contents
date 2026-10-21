@@ -1656,6 +1656,12 @@
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "33bf6f73e314ade8da27dd793c69c21312c97f10"))])
+ (isbn
+  . [(0 2 0) ((emacs (28 1))) "ISBN library" tar
+     ((:url . "https://git.sr.ht/~cook/isbn.el") (:keywords "data")
+      (:maintainer "Maximilian Cook" . "maximilian@fclr.net")
+      (:authors ("Maximilian Cook" . "maximilian@fclr.net"))
+      (:commit . "e52d1c194e4fd7c0da7c3bf67b33e6923f785059"))])
  (isearch-mb
   . [(0 8) ((emacs (27 1))) "Control isearch from the minibuffer" tar
      ((:url . "https://github.com/astoff/isearch-mb")
