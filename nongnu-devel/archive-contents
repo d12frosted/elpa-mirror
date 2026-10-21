@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261019 53)
+  . [(4 7 1 0 20261020 54)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "d745ed24aa1c0b1fbc104a1d26ca609541ab9ed9"))])
+      (:commit . "afa6095d723c9557d781d648cc9b0b6ad624d9ca"))])
  (magit-section
-  . [(4 7 1 0 20261019 53)
+  . [(4 7 1 0 20261020 54)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "d745ed24aa1c0b1fbc104a1d26ca609541ab9ed9"))])
+      (:commit . "afa6095d723c9557d781d648cc9b0b6ad624d9ca"))])
  (markdown-mode
   . [(2 9 -3 0 20261009 24) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1375,13 +1375,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "1d22840d588be29aa57eca36f28a32bede331550"))])
  (markdown-ts-appear
-  . [(0 3 1 0 20261019 0) ((emacs (31 1)))
+  . [(0 3 1 0 20261020 4) ((emacs (31 1)))
      "Reveal Markdown source at point" tar
      ((:url . "https://github.com/Thysrael/markdown-ts-appear")
       (:keywords "text" "convenience")
       (:maintainer "Thysrael" . "thysrael@163.com")
       (:authors ("Thysrael" . "thysrael@163.com"))
-      (:commit . "22577039b48c3209776bc2efc901b2bb8d4ebd9f"))])
+      (:commit . "618876c65980db3b484d6033f27f4b29466d5e17"))])
  (mastodon
   . [(2 1 7 0 20261007 81)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
@@ -2268,7 +2268,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 4 0 20261018 15)
+  . [(3 5 4 0 20261020 16)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2277,7 +2277,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "fd559b37da8eb7afd93bf48db266410b1821dc02"))])
+      (:commit . "4d887efc750b7a69554dbd2d0c79ca447f8f08f3"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar
