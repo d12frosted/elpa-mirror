@@ -273,12 +273,12 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "212eb3c09dc396f3ff38011b97b549ce37251ee3"))])
  (bicep-ts-mode
-  . [(0 1 4 0 20260825 88) nil "tree-sitter support for Bicep" tar
+  . [(0 1 4 0 20261022 89) nil "tree-sitter support for Bicep" tar
      ((:url . "https://github.com/josteink/bicep-ts-mode")
       (:keywords "bicep" "languages" "tree-sitter")
       (:maintainer "Jostein Kjønigsen" . "jostein@kjonigsen.net")
       (:authors ("Jostein Kjønigsen" . "jostein@kjonigsen.net"))
-      (:commit . "9aecd345822227d24c9c8f095e7b02666ee25534"))])
+      (:commit . "ed25295d9dc053564ebde0acedccfa6add303e8a"))])
  (bind-key
   . [(2 4 1 0 20260408 145602) ((emacs (24 3)))
      "A simple way to manage personal keybindings" tar

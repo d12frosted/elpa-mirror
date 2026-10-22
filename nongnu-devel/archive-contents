@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20261021 88) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20261022 89) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "bec18cea48962277e1c14275d183159911b132ed"))])
+      (:commit . "9f62a1d36796c254b0a545d28d3c7bd30fec0395"))])
  (helm-core
-  . [(4 0 7 0 20261021 88) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20261022 89) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "bec18cea48962277e1c14275d183159911b132ed"))])
+      (:commit . "9f62a1d36796c254b0a545d28d3c7bd30fec0395"))])
  (hermes
   . [(0 9 0 0 20261013 97)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261020 54)
+  . [(4 7 1 0 20261022 55)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "afa6095d723c9557d781d648cc9b0b6ad624d9ca"))])
+      (:commit . "4a889060a11d6192e95716c48ee1f72bde36b8b1"))])
  (magit-section
-  . [(4 7 1 0 20261020 54)
+  . [(4 7 1 0 20261022 55)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,15 +1365,15 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "afa6095d723c9557d781d648cc9b0b6ad624d9ca"))])
+      (:commit . "4a889060a11d6192e95716c48ee1f72bde36b8b1"))])
  (markdown-mode
-  . [(2 9 -3 0 20261009 24) ((emacs (28 1)))
+  . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
      ((:url . "https://jblevins.org/projects/markdown-mode/")
       (:keywords "markdown" "github flavored markdown" "itex")
       (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
-      (:commit . "1d22840d588be29aa57eca36f28a32bede331550"))])
+      (:commit . "e2e2bc753b4330f85b6ea7e62cd0552e8ea47b76"))])
  (markdown-ts-appear
   . [(0 3 1 0 20261020 4) ((emacs (31 1)))
      "Reveal Markdown source at point" tar
@@ -2178,11 +2178,11 @@
       (:authors ("Mark Tran" . "mark.tran@gmail.com"))
       (:commit . "7345ab821739aafa2ec079a71fa7de350a869f0e"))])
  (undo-fu
-  . [(0 5 0 20261018 40) ((emacs (25 1))) "Undo helper with redo" tar
+  . [(0 5 0 20261022 53) ((emacs (25 1))) "Undo helper with redo" tar
      ((:url . "https://codeberg.org/ideasman42/emacs-undo-fu")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
-      (:commit . "cf9a342972237d8a25fb7ba9418ec659a4273115"))])
+      (:commit . "2e39b8c2c3a68a7763e5936145dbe4d6060da19c"))])
  (undo-fu-session
   . [(0 8 0 20260209 75408) ((emacs (28 1)))
      "Persistent undo, available between sessions" tar
