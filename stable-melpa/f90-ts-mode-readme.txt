@@ -3,6 +3,11 @@ files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
 Changelog (recent):
 [10-2026]
+  - Changes required by updates to the proposed string_literal branch added.
+  - Support for new keyword "non_recursive" added (requires new grammar).
+  - Support for new grammar version with a different tree structure in some
+    type related statements (allocate, select type) added.  Both new and old
+    grammar CST variants are supported.
   - Prefix of ERT test names shortened `f90-ts-mode-test--' (no distinction
     between std and extra anymore).
   - Transient menu restructured and decomposed.

@@ -31,6 +31,8 @@ Commands, on the heading at point:
 - `devops-tangle'             tangle the heading's blocks to its target
 - `devops-visit-file'         open tangled source block in the target
 - `devops-open-terminal-dwim' open a terminal at the target
+- `devops-run-in-terminal'    run the block in a ghostel terminal
+                              at the target
 - `devops-drift'              (if loaded) report diff between blocks
                               and tangled files
 
