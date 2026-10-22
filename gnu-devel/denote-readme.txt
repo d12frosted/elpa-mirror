@@ -6755,7 +6755,8 @@ section 22.14
         expression. With optional `OMIT-CURRENT' as a non-nil value, do
         not include the current Denote file in the returned list. With
         optional `TEXT-ONLY' as a non-nil value, limit the results to
-        text files that satisfy `denote-file-is-note-p'. With optional
+        text files that satisfy
+        `denote-file-has-denote-filename-p'. With optional
         `EXCLUDE-REGEXP' exclude the files that match the given regular
         expression. This is done after `FILES-MATCHING-REGEXP' and
         `OMIT-CURRENT' have been applied. With optional `HAS-IDENTIFIER'

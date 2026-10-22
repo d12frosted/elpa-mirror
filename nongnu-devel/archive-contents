@@ -759,7 +759,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "be738f439fa779c5a5def44569202d2d7c6b0547"))])
  (flycheck
-  . [(40 0 -4 0 20260902 86) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20261021 94) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -768,7 +768,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "9076d01a8a685bb0f03302e7bf3feaf41e6c34dc"))])
+      (:commit . "0707e3426edf8dd9529bd8ad1058eb0b3add4507"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20261016 80) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 7 0 20261021 88) ((helm-core (4 0 7)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "9c1a5007870bc944dbefd327ff452eb0fe755c97"))])
+      (:commit . "bec18cea48962277e1c14275d183159911b132ed"))])
  (helm-core
-  . [(4 0 7 0 20261016 80) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 7 0 20261021 88) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "9c1a5007870bc944dbefd327ff452eb0fe755c97"))])
+      (:commit . "bec18cea48962277e1c14275d183159911b132ed"))])
  (hermes
   . [(0 9 0 0 20261013 97)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -2001,13 +2001,13 @@
       (:maintainer "Sacha Chua" . "sacha@sachachua.com")
       (:commit . "d9317d1de190601384528ae01468688107725c8d"))])
  (sweeprolog
-  . [(0 27 6 0 20260510 162905) ((emacs (27 1)) (compat (29 1 4 2)))
+  . [(0 27 6 0 20261021 7) ((emacs (27 1)) (compat (29 1 4 2)))
      "Embedded SWI-Prolog" tar
      ((:url . "https://git.sr.ht/~eshel/sweep")
       (:keywords "prolog" "languages" "extensions")
       (:maintainer "Eshel Yaron" . "~eshel/dev@lists.sr.ht")
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
-      (:commit . "3ed24d3e9f57e5b3a7915dd46ce5219557e1033d"))])
+      (:commit . "4e1c7c975f4d6960f4c8d3695088b7054523a93d"))])
  (swift-mode
   . [(10 0 0 0 20261012 41) ((emacs (25 2)))
      "Major-mode for Apple's Swift programming language" tar
