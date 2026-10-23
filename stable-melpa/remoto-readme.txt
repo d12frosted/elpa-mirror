@@ -1,7 +1,9 @@
 remoto.el lets you browse any GitHub repository in Emacs as if it were
 cloned locally - without cloning it.  It registers a virtual filesystem
 via `file-name-handler-alist' that translates Emacs file operations into
-GitHub API calls via the `ghub' library.
+requests to a forge.  A forge is a `remoto-forge' that answers the
+generic functions of the forge contract with plain data; GitHub's
+answers live in remoto-github.el and use the `ghub' library.
 
 Loading this file defines things and changes nothing.  `global-remoto-mode'
 is the switch: it installs the file-name handler, the `find-file' and

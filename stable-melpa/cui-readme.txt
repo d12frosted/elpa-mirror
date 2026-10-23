@@ -1,5 +1,5 @@
-CUI as a minor mode extend Org major mode with "cui block" that
-  allows you to interact with the OpenAI-compatible REST APIs.
+CUI (chat user interface) adds a "cui block" to Org mode that lets
+ you interact with LLMs via OpenAI-compatible REST APIs.
 
 CUI was inspired by org-ai package of Robert Krahn <https://github.com/rksm/org-ai>
 
