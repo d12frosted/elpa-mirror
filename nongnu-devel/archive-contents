@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 8 0 20261022 1) ((helm-core (4 0 8)) (wfnames (1 2)))
+  . [(4 0 8 0 20261023 5) ((helm-core (4 0 8)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "ab8ad31f24e97174fcebaba60506232da86f631b"))])
+      (:commit . "0088242718d20263b94f8d6ab263c315cf04913b"))])
  (helm-core
-  . [(4 0 8 0 20261022 1) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 8 0 20261023 5) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "ab8ad31f24e97174fcebaba60506232da86f631b"))])
+      (:commit . "0088242718d20263b94f8d6ab263c315cf04913b"))])
  (hermes
   . [(0 9 0 0 20261013 97)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1181,13 +1181,13 @@
 		("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "23b2a09294d8ac7f95edd83ad3bb26e21322cc6d"))])
  (isl
-  . [(1 7 0 20260927 3) ((emacs (29 1)))
+  . [(1 7 0 20261023 4) ((emacs (29 1)))
      "Simple incremental search in current-buffer" tar
      ((:url . "https://github.com/thierryvolpiatto/isearch-light")
       (:keywords "matching" "searching")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "8fb827074417c8a1ef597ae904bfafe84c513334"))])
+      (:commit . "3790dbcc0bd7b6778eb01518af456d0d943cc8ec"))])
  (iwindow
   . [(1 1 0 20230920 203903)
      ((emacs (24 3)) (seq (2 23)) (compat (28 1 2 2)))
@@ -2178,11 +2178,11 @@
       (:authors ("Mark Tran" . "mark.tran@gmail.com"))
       (:commit . "7345ab821739aafa2ec079a71fa7de350a869f0e"))])
  (undo-fu
-  . [(0 5 0 20261022 53) ((emacs (25 1))) "Undo helper with redo" tar
+  . [(0 5 0 20261022 55) ((emacs (25 1))) "Undo helper with redo" tar
      ((:url . "https://codeberg.org/ideasman42/emacs-undo-fu")
       (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
       (:authors ("Campbell Barton" . "ideasman42@gmail.com"))
-      (:commit . "2e39b8c2c3a68a7763e5936145dbe4d6060da19c"))])
+      (:commit . "005ce713932d46f305cfe36e8ae7aaa96aa63e66"))])
  (undo-fu-session
   . [(0 8 0 20260209 75408) ((emacs (28 1)))
      "Persistent undo, available between sessions" tar
