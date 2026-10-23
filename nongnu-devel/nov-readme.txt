@@ -140,14 +140,17 @@ looked up with `F1 m`.
 
 ## Bugs
 
+Please send me an email with a minimal reproduction, as explained on
+[the FAQ](/faq.html) and I'll take a look.
+
 Invalid EPUB documents are *not* supported.  Please use [epubcheck] to
 validate yours when running into an error.
 
-In case the bug is specific to an EPUB document, please send attach it
-to your email.  I'll try my best to figure out the error, but chances
-are you can figure it out as well by using the source view (bound to
-``v`` for the current document and ``V`` for the content file) to spot
-the problematic XML.
+In case the bug is specific to an EPUB document, please attach it to
+your email. I'll try my best to figure out the error, but chances are
+you can figure it out as well by using the source view (bound to ``v``
+for the current document and ``V`` for the content file) to spot the
+problematic XML.
 
 ## Alternatives
 

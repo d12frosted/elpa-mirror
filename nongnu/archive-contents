@@ -1000,21 +1000,22 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "16155f8b63ccf67d46535207a4f4378f675a8b47"))])
  (helm
-  . [(4 0 7) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 8) ((helm-core (4 0 8)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
-		 "completion" "lisp" "matching" "tools" "help")
+		 "completion" "lisp" "matching" "tools" "help"
+		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "3cd5097285dc10ac0898cf6f30c9699c3399e421"))])
+      (:commit . "d41a41f8e7d760bb3f74a2fe54ccb3e008e80e5a"))])
  (helm-core
-  . [(4 0 7) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 8) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "3cd5097285dc10ac0898cf6f30c9699c3399e421"))])
+      (:commit . "d41a41f8e7d760bb3f74a2fe54ccb3e008e80e5a"))])
  (hermes
   . [(0 9 0)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1315,13 +1316,13 @@
       (:authors ("Thysrael" . "thysrael@163.com"))
       (:commit . "22577039b48c3209776bc2efc901b2bb8d4ebd9f"))])
  (mastodon
-  . [(2 1 7) ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
+  . [(2 1 8) ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "43f52902604df5e5ba664bf71d952f64617b93e9"))])
+      (:commit . "1af6f742ff599f2ce65be1656afd375b245d3679"))])
  (material-theme
   . [(2015) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar

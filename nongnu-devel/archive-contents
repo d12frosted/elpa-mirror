@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 7 0 20261022 89) ((helm-core (4 0 7)) (wfnames (1 2)))
+  . [(4 0 8 0 20261022 1) ((helm-core (4 0 8)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "9f62a1d36796c254b0a545d28d3c7bd30fec0395"))])
+      (:commit . "ab8ad31f24e97174fcebaba60506232da86f631b"))])
  (helm-core
-  . [(4 0 7 0 20261022 89) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 8 0 20261022 1) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "9f62a1d36796c254b0a545d28d3c7bd30fec0395"))])
+      (:commit . "ab8ad31f24e97174fcebaba60506232da86f631b"))])
  (hermes
   . [(0 9 0 0 20261013 97)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1383,14 +1383,14 @@
       (:authors ("Thysrael" . "thysrael@163.com"))
       (:commit . "618876c65980db3b484d6033f27f4b29466d5e17"))])
  (mastodon
-  . [(2 1 7 0 20261007 81)
+  . [(2 1 8 0 20261022 85)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
      ((:url . "https://codeberg.org/martianh/mastodon.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Johnson Denen" . "johnson.denen@gmail.com")
 		("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "3861f8c1a3fbf24acd7e5513bfd6c2c28ea4758a"))])
+      (:commit . "5fbda8d38164e486de5134f414703656ae6d3c25"))])
  (material-theme
   . [(2015 0 20210904 122621) ((emacs (24 1)))
      "A Theme based on the colors of the Google Material Design" tar
@@ -1487,13 +1487,13 @@
       (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
       (:commit . "2c77e7e0b7540efbb20ccaee3557ef90a5dc77f0"))])
  (nov
-  . [(0 5 0 0 20251213 150137) ((esxml (0 3 6)) (emacs (25 1)))
+  . [(0 5 0 0 20261022 5) ((esxml (0 3 6)) (emacs (25 1)))
      "Featureful EPUB reader mode" tar
      ((:url . "https://depp.brause.cc/nov.el")
       (:keywords "hypermedia" "multimedia" "epub")
       (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
       (:authors ("Vasilij Schneidermann" . "mail@vasilij.de"))
-      (:commit . "874daf5e4791a6d4f47741422c80e2736e907351"))])
+      (:commit . "b1fdcbd41c037ab50dce29db878f2ab226ed66c3"))])
  (oblivion-theme
   . [(0 1 0 20260108 134901) ((emacs (24 1)))
      "A port of GEdit oblivion theme" tar
