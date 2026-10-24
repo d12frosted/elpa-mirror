@@ -204,12 +204,12 @@
       (:authors ("Kevin Ryde" . "user42_kevin@yahoo.com.au"))
       (:commit . "ded8e75454a3d33f93efc8a5ca2c6041173d6c74"))])
  (auth-source-xoauth2-plugin
-  . [(0 4 1 0 20260526 0) ((emacs (28 1)) (oauth2 (0 18)))
+  . [(0 5 0 20261023 0) ((emacs (28 1)) (oauth2 (0 18)))
      "Authentication source plugin for xoauth2" tar
      ((:url . "https://gitlab.com/manphiz/auth-source-xoauth2-plugin")
       (:maintainer "Xiyue Deng" . "manphiz@gmail.com")
       (:authors ("Xiyue Deng" . "manphiz@gmail.com"))
-      (:commit . "8f7725ef7fce48a548f997aceebfdebcf1b4d214"))])
+      (:commit . "56eb28617d51c985ed6603d907c6bee64e1b2089"))])
  (auto-correct
   . [(1 1 4 0 20221221 74656) nil
      "Remembers and automatically fixes past corrections" tar
@@ -1012,13 +1012,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 3 0 0 20261022 18) ((emacs (29 1)))
+  . [(1 3 0 0 20261023 19) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "69ab575b721341569c1f89658cdb710749817a55"))])
+      (:commit . "82099c5cb8ccffa3e6356240cfe0562f6e4a7c13"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar

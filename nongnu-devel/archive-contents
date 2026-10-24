@@ -437,7 +437,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "c8d54d649872bfe7b2b9f49ae5c2addbf12d3b99"))])
  (ebuild-mode
-  . [(1 88 0 20261018 3) ((emacs (26 3)))
+  . [(1 89 0 20261023 0) ((emacs (26 3)))
      "edit ebuild and eclass files" tar
      ((:keywords "languages" "processes")
       (:maintainer nil . "emacs@gentoo.org")
@@ -446,7 +446,7 @@
 		("Christian Faulhammer" . "fauli@gentoo.org")
 		("Ulrich Müller" . "ulm@gentoo.org"))
       (:url . "https://elpa.nongnu.org/nongnu/ebuild-mode.html")
-      (:commit . "2e98c0807fd08df5943208bd01c3efc59ee788db"))])
+      (:commit . "9b8609e9e298d78bf8b62732ec729c76a7f45a99"))])
  (edit-indirect
   . [(0 1 13 0 20240128 11949) ((emacs (24 3)))
      "Edit regions in separate buffers" tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261018 1) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261023 4) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "13308f8a758fb7f0f861588af2f607a9a711e574"))])
+      (:commit . "8e68879b4cfd5542a563f436b7b344267820444d"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

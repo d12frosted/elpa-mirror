@@ -189,12 +189,12 @@
       (:authors ("Kevin Ryde" . "user42_kevin@yahoo.com.au"))
       (:commit . "72db1f3ee04f3d1db17487d5bd98466fcbad87fd"))])
  (auth-source-xoauth2-plugin
-  . [(0 4 1) ((emacs (28 1)) (oauth2 (0 18)))
+  . [(0 5) ((emacs (28 1)) (oauth2 (0 18)))
      "Authentication source plugin for xoauth2" tar
      ((:url . "https://gitlab.com/manphiz/auth-source-xoauth2-plugin")
       (:maintainer "Xiyue Deng" . "manphiz@gmail.com")
       (:authors ("Xiyue Deng" . "manphiz@gmail.com"))
-      (:commit . "8f7725ef7fce48a548f997aceebfdebcf1b4d214"))])
+      (:commit . "56eb28617d51c985ed6603d907c6bee64e1b2089"))])
  (auto-correct
   . [(1 1 4) nil "Remembers and automatically fixes past corrections"
      tar
