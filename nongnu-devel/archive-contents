@@ -437,16 +437,16 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "c8d54d649872bfe7b2b9f49ae5c2addbf12d3b99"))])
  (ebuild-mode
-  . [(1 89 0 20261023 0) ((emacs (26 3)))
+  . [(1 89 0 20261024 1) ((emacs (26 3)))
      "edit ebuild and eclass files" tar
      ((:keywords "languages" "processes")
-      (:maintainer nil . "emacs@gentoo.org")
+      (:maintainer "Gentoo Emacs project" . "emacs@gentoo.org")
       (:authors ("Matthew Kennedy" . "mkennedy@gentoo.org")
 		("Diego Pettenò" . "flameeyes@gentoo.org")
 		("Christian Faulhammer" . "fauli@gentoo.org")
 		("Ulrich Müller" . "ulm@gentoo.org"))
       (:url . "https://elpa.nongnu.org/nongnu/ebuild-mode.html")
-      (:commit . "9b8609e9e298d78bf8b62732ec729c76a7f45a99"))])
+      (:commit . "0b10dd71ba7096dcc962b3440bc08c218cea9d61"))])
  (edit-indirect
   . [(0 1 13 0 20240128 11949) ((emacs (24 3)))
      "Edit regions in separate buffers" tar
@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 8 0 20261023 5) ((helm-core (4 0 8)) (wfnames (1 2)))
+  . [(4 0 8 0 20261023 9) ((helm-core (4 0 8)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "0088242718d20263b94f8d6ab263c315cf04913b"))])
+      (:commit . "a6444b66cb1df41cd2465626e69f5e0a00fda9ca"))])
  (helm-core
-  . [(4 0 8 0 20261023 5) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 8 0 20261023 9) ((emacs (25 1)) (async (1 9 9)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "0088242718d20263b94f8d6ab263c315cf04913b"))])
+      (:commit . "a6444b66cb1df41cd2465626e69f5e0a00fda9ca"))])
  (hermes
   . [(0 9 0 0 20261013 97)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1075,12 +1075,12 @@
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
       (:commit . "3acc9c1ff009c8674cb25ccf9587dc66cfbd51a0"))])
  (hideshowvis
-  . [(0 9 0 20251119 95800) ((emacs (27 1)))
+  . [(0 9 0 20260829 1) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
      ((:url . "https://github.com/sheijk/hideshowvis")
       (:maintainer "Jan Rehders" . "jan@sheijk.net")
       (:authors ("Jan Rehders" . "jan@sheijk.net"))
-      (:commit . "cfae9e1f57804a557b81bb1ad778ef355877bc72"))])
+      (:commit . "9e030c4c1d16132604b6e784c4f42efa996298ac"))])
  (highlight-parentheses
   . [(2 2 2 0 20240408 112634) ((emacs (24 3)))
      "Highlight surrounding parentheses" tar
