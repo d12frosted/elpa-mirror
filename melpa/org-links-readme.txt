@@ -1,9 +1,10 @@
-This package (org-links) provides facilities to help create and
- manage Org-mode links, add new link types, have speed optimization
- for large files.  Have facility to message if two lines was found,
- control wheter to search for full line or by the begining of it.
+This package (org-links) provides new link types and simplifies
+copying and pasting of links by extending Org-mode links (ol.el). It
+also has speed optimizations for large files. It has a facility to
+message if two lines were found, and to control whether to search for
+the full line or by the beginning of it.
 
-org-mode supports  file links  with line numbers  and line  via the
+org-mode supports file links with line numbers and line via the
  following syntax:
 [[PATH::NUM][Link description]]
 [[PATH::LINE][Link description]]
@@ -76,7 +77,7 @@ Other packages:
 - Solution for "callback hell"	https://github.com/Anoncheg1/emacs-async1
 - Restore buffer state	https://github.com/Anoncheg1/emacs-unmodified-buffer1
 - outline.el usage		https://github.com/Anoncheg1/emacs-outline-it
-- ai_block for Org mode for chat.  https://github.com/Anoncheg1/emacs-oai
+- Chat with LLMs in Org blocks	https://github.com/Anoncheg1/emacs-cui
 
 *DONATE MONEY* to sponsor author directly with crypto currencies:
 - BTC (Bitcoin) address: 1CcDWSQ2vgqv5LxZuWaHGW52B9fkT5io25

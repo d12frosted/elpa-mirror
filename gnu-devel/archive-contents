@@ -1012,13 +1012,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 3 0 0 20261023 19) ((emacs (29 1)))
+  . [(1 3 0 0 20261024 22) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "82099c5cb8ccffa3e6356240cfe0562f6e4a7c13"))])
+      (:commit . "d883f257f2aae8e990473ce34d52bdaaaab6cf89"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -3668,7 +3668,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 8 0 20261020 16)
+  . [(0 13 8 0 20261024 17)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3678,7 +3678,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "fe1bb3ca9857b24a8fb9a3c7c931b80206ea2de1"))])
+      (:commit . "318b039872a419feaf3ca3584e89936642627ca9"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

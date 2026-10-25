@@ -220,7 +220,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261019 153)
+  . [(2 1 0 -4 0 20261024 158)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -234,7 +234,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "d35d5567ac1daaa50398d8d5a40f0620ee367038"))])
+      (:commit . "de5a400770f9c8df583392ea307ec96feb3d51a7"))])
  (clojure-mode
   . [(5 23 0 0 20260709 7) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261022 55)
+  . [(4 7 1 0 20261024 59)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "4a889060a11d6192e95716c48ee1f72bde36b8b1"))])
+      (:commit . "65232f488caae960029cc68bcc607aea340fa3b1"))])
  (magit-section
-  . [(4 7 1 0 20261022 55)
+  . [(4 7 1 0 20261024 59)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "4a889060a11d6192e95716c48ee1f72bde36b8b1"))])
+      (:commit . "65232f488caae960029cc68bcc607aea340fa3b1"))])
  (markdown-mode
   . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
