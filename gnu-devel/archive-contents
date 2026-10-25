@@ -181,13 +181,13 @@
       (:maintainer nil . "auctex-devel@gnu.org")
       (:commit . "31736b15989dee40b1f4463f3aeb8fb95bbdf6cb"))])
  (auctex-cont-latexmk
-  . [(0 3 0 20260617 10) ((emacs (29 3)) (auctex (14 0 5)))
+  . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
      ((:url . "https://github.com/ultronozm/auctex-cont-latexmk.el")
       (:keywords "tex")
       (:maintainer "Paul D. Nelson" . "nelson.paul.david@gmail.com")
       (:authors ("Paul D. Nelson" . "nelson.paul.david@gmail.com"))
-      (:commit . "b495db3197fc98904ea85ba1fabd8fe2bac0f509"))])
+      (:commit . "54a8ce3c6747d448d31b4d19a5e1e88937f6eb8d"))])
  (auctex-label-numbers
   . [(0 3 0 20260714 1) ((emacs (27 1)) (auctex (14 0 5)))
      "Numbering for LaTeX previews and folds" tar
@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 1 0 0 20261021 23) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 1 0 0 20261025 25) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "e50ea7a3222020cef8e7f320f9870bb20c61e451"))])
+      (:commit . "0790d828bf74c49cc270934b6d2eafbd4640e75d"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -1339,14 +1339,14 @@
       (:authors ("Lawrence Mitchell" . "wence@gmx.li"))
       (:commit . "4e192f6e03bc96f996923b307248b7d5b1d398fa"))])
  (ffs
-  . [(0 2 3 0 20260922 0) ((emacs (27 1)))
+  . [(0 2 3 0 20261024 2) ((emacs (27 1)))
      "Form feed-separated plain text presentations" tar
      ((:url . "https://git.kelar.org/~bandali/ffs")
       (:keywords "convenience" "focus" "narrowing" "outlines"
 		 "presentation" "text")
       (:maintainer "Amin Bandali" . "bandali@gnu.org")
       (:authors ("Amin Bandali" . "bandali@gnu.org"))
-      (:commit . "e7d9c6f673b4e65e2bdc8036d8c90a7b7195ddca"))])
+      (:commit . "c0a4d72ec9e7ebf08e371fbc0b052ce973b126ba"))])
  (filechooser
   . [(0 3 0 0 20260723 0) ((emacs (28 1)) (compat (29 1)))
      "An xdg-desktop-portal filechooser" tar

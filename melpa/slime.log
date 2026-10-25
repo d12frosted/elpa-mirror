@@ -5,7 +5,7 @@ Updating /mnt/store/melpa/working/slime/
 Checking out b53e5e3fe14cff97cf7a1b2240981023e1f71d70
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/slime/
-  to /tmp/slime-XIhZgf/slime-20261018.2021/
+  to /tmp/slime-b05yXs/slime-20261018.2021/
     slime-autoloads.el -> slime-autoloads.el
     slime-tests.el -> slime-tests.el
     slime.el -> slime.el
@@ -98,3 +98,121 @@ Copying files (->) and directories (=>)
     contrib/swank-util.lisp -> contrib/swank-util.lisp
     contrib/swank.rb -> contrib/swank.rb
 Generating slime.info
+Created slime-20261018.2021.tar containing:
+  slime-20261018.2021/
+  slime-20261018.2021/contrib/
+  slime-20261018.2021/contrib/README.md
+  slime-20261018.2021/contrib/inferior-slime.el
+  slime-20261018.2021/contrib/slime-asdf.el
+  slime-20261018.2021/contrib/slime-autodoc.el
+  slime-20261018.2021/contrib/slime-banner.el
+  slime-20261018.2021/contrib/slime-buffer-streams.el
+  slime-20261018.2021/contrib/slime-c-p-c.el
+  slime-20261018.2021/contrib/slime-cl-indent.el
+  slime-20261018.2021/contrib/slime-clipboard.el
+  slime-20261018.2021/contrib/slime-coalton.el
+  slime-20261018.2021/contrib/slime-compiler-notes-tree.el
+  slime-20261018.2021/contrib/slime-editing-commands.el
+  slime-20261018.2021/contrib/slime-enclosing-context.el
+  slime-20261018.2021/contrib/slime-fancy-inspector.el
+  slime-20261018.2021/contrib/slime-fancy-trace.el
+  slime-20261018.2021/contrib/slime-fancy.el
+  slime-20261018.2021/contrib/slime-fontifying-fu.el
+  slime-20261018.2021/contrib/slime-fuzzy.el
+  slime-20261018.2021/contrib/slime-highlight-edits.el
+  slime-20261018.2021/contrib/slime-hyperdoc.el
+  slime-20261018.2021/contrib/slime-indentation.el
+  slime-20261018.2021/contrib/slime-listener-hooks.el
+  slime-20261018.2021/contrib/slime-macrostep.el
+  slime-20261018.2021/contrib/slime-mdot-fu.el
+  slime-20261018.2021/contrib/slime-media.el
+  slime-20261018.2021/contrib/slime-mrepl.el
+  slime-20261018.2021/contrib/slime-package-fu.el
+  slime-20261018.2021/contrib/slime-parse.el
+  slime-20261018.2021/contrib/slime-presentation-streams.el
+  slime-20261018.2021/contrib/slime-presentations.el
+  slime-20261018.2021/contrib/slime-quicklisp.el
+  slime-20261018.2021/contrib/slime-references.el
+  slime-20261018.2021/contrib/slime-repl.el
+  slime-20261018.2021/contrib/slime-sbcl-exts.el
+  slime-20261018.2021/contrib/slime-scheme.el
+  slime-20261018.2021/contrib/slime-scratch.el
+  slime-20261018.2021/contrib/slime-snapshot.el
+  slime-20261018.2021/contrib/slime-sprof.el
+  slime-20261018.2021/contrib/slime-trace-dialog.el
+  slime-20261018.2021/contrib/slime-tramp.el
+  slime-20261018.2021/contrib/slime-typeout-frame.el
+  slime-20261018.2021/contrib/slime-xref-browser.el
+  slime-20261018.2021/contrib/slime-xterm-color.el
+  slime-20261018.2021/contrib/swank-arglists.lisp
+  slime-20261018.2021/contrib/swank-asdf.lisp
+  slime-20261018.2021/contrib/swank-buffer-streams.lisp
+  slime-20261018.2021/contrib/swank-c-p-c.lisp
+  slime-20261018.2021/contrib/swank-clipboard.lisp
+  slime-20261018.2021/contrib/swank-coalton.lisp
+  slime-20261018.2021/contrib/swank-fancy-inspector.lisp
+  slime-20261018.2021/contrib/swank-fuzzy.lisp
+  slime-20261018.2021/contrib/swank-goo.goo
+  slime-20261018.2021/contrib/swank-hyperdoc.lisp
+  slime-20261018.2021/contrib/swank-ikarus.ss
+  slime-20261018.2021/contrib/swank-indentation.lisp
+  slime-20261018.2021/contrib/swank-jolt.k
+  slime-20261018.2021/contrib/swank-kawa.scm
+  slime-20261018.2021/contrib/swank-larceny.scm
+  slime-20261018.2021/contrib/swank-listener-hooks.lisp
+  slime-20261018.2021/contrib/swank-macrostep.lisp
+  slime-20261018.2021/contrib/swank-media.lisp
+  slime-20261018.2021/contrib/swank-mit-scheme.scm
+  slime-20261018.2021/contrib/swank-mlworks.sml
+  slime-20261018.2021/contrib/swank-mrepl.lisp
+  slime-20261018.2021/contrib/swank-package-fu.lisp
+  slime-20261018.2021/contrib/swank-presentation-streams.lisp
+  slime-20261018.2021/contrib/swank-presentations.lisp
+  slime-20261018.2021/contrib/swank-quicklisp.lisp
+  slime-20261018.2021/contrib/swank-r6rs.scm
+  slime-20261018.2021/contrib/swank-repl.lisp
+  slime-20261018.2021/contrib/swank-sbcl-exts.lisp
+  slime-20261018.2021/contrib/swank-snapshot.lisp
+  slime-20261018.2021/contrib/swank-sprof.lisp
+  slime-20261018.2021/contrib/swank-trace-dialog.lisp
+  slime-20261018.2021/contrib/swank-util.lisp
+  slime-20261018.2021/contrib/swank.rb
+  slime-20261018.2021/dir
+  slime-20261018.2021/lib/
+  slime-20261018.2021/lib/hyperspec.el
+  slime-20261018.2021/metering.lisp
+  slime-20261018.2021/nregex.lisp
+  slime-20261018.2021/packages.lisp
+  slime-20261018.2021/sbcl-pprint-patch.lisp
+  slime-20261018.2021/slime-autoloads.el
+  slime-20261018.2021/slime-pkg.el
+  slime-20261018.2021/slime-tests.el
+  slime-20261018.2021/slime.el
+  slime-20261018.2021/slime.info
+  slime-20261018.2021/start-swank.lisp
+  slime-20261018.2021/swank-loader.lisp
+  slime-20261018.2021/swank.asd
+  slime-20261018.2021/swank.lisp
+  slime-20261018.2021/swank/
+  slime-20261018.2021/swank/abcl.lisp
+  slime-20261018.2021/swank/allegro.lisp
+  slime-20261018.2021/swank/backend.lisp
+  slime-20261018.2021/swank/ccl.lisp
+  slime-20261018.2021/swank/clasp.lisp
+  slime-20261018.2021/swank/clisp.lisp
+  slime-20261018.2021/swank/cmucl.lisp
+  slime-20261018.2021/swank/corman.lisp
+  slime-20261018.2021/swank/dotcl.lisp
+  slime-20261018.2021/swank/ecl.lisp
+  slime-20261018.2021/swank/gray.lisp
+  slime-20261018.2021/swank/lispworks.lisp
+  slime-20261018.2021/swank/match.lisp
+  slime-20261018.2021/swank/mezzano.lisp
+  slime-20261018.2021/swank/mkcl.lisp
+  slime-20261018.2021/swank/rpc.lisp
+  slime-20261018.2021/swank/sbcl.lisp
+  slime-20261018.2021/swank/scl.lisp
+  slime-20261018.2021/swank/source-file-cache.lisp
+  slime-20261018.2021/swank/source-path-parser.lisp
+  slime-20261018.2021/xref.lisp
+Built slime in 9.366s, finished at 2026-10-25T09:13:55+0000
