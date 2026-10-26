@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 8 0 20261025 10) ((helm-core (4 0 8)) (wfnames (1 2)))
+  . [(4 0 9 0 20261025 0) ((helm-core (4 0 9)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "b11678b50d53829e9d936f22d8e969c9d31643ff"))])
+      (:commit . "a1e8724ed20d1f8024ff7530047374e1d7e994b0"))])
  (helm-core
-  . [(4 0 8 0 20261025 10) ((emacs (25 1)) (async (1 9 9)))
+  . [(4 0 9 0 20261025 0) ((emacs (25 1)) (async (2 0)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "b11678b50d53829e9d936f22d8e969c9d31643ff"))])
+      (:commit . "a1e8724ed20d1f8024ff7530047374e1d7e994b0"))])
  (hermes
   . [(0 9 0 0 20261013 97)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1941,13 +1941,13 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "82d2cf084a19b0c2c3812e0550721f8a61996056"))])
  (solarized-theme
-  . [(2 2 0 0 20260910 4) ((emacs (24 1))) "The Solarized color theme"
+  . [(2 2 0 0 20261025 6) ((emacs (24 1))) "The Solarized color theme"
      tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "9df935bede27abcaa1b1ca9035ac17f39d2f64c9"))])
+      (:commit . "d8bc6f72dc3e3800a2119bae9733c333d215b04d"))])
  (spacemacs-theme
   . [(0 2 0 20260906 51) ((emacs (24)))
      "Color theme with a dark and light versions." tar
@@ -2009,7 +2009,7 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "4e1c7c975f4d6960f4c8d3695088b7054523a93d"))])
  (swift-mode
-  . [(10 0 0 0 20261012 41) ((emacs (25 2)))
+  . [(10 0 0 0 20261025 42) ((emacs (25 2)))
      "Major-mode for Apple's Swift programming language" tar
      ((:url . "https://github.com/swift-emacs/swift-mode")
       (:keywords "languages" "swift")
@@ -2018,7 +2018,7 @@
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
 		("Arthur Evstifeev" . "lod@pisem.net"))
-      (:commit . "b94652eff55e67b4461da504c68db25c872df94c"))])
+      (:commit . "766f366f2407da540f296fa1690f01020d98dfed"))])
  (symbol-overlay
   . [(4 3 0 20260703 4) ((emacs (24 3)) (seq (2 2)))
      "Highlight symbols with keymap-enabled overlays" tar

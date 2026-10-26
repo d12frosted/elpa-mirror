@@ -165,13 +165,13 @@
       (:url . "https://elpa.gnu.org/packages/assess.html")
       (:commit . "cadeb24a5d8261fad4bdfdc09e7d571cc395a6ca"))])
  (async
-  . [(1 9 9 0 20260729 33) ((emacs (24 4)))
+  . [(2 0 0 20261025 0) ((emacs (24 4)))
      "Asynchronous processing in Emacs" tar
      ((:url . "https://github.com/jwiegley/emacs-async")
       (:keywords "async")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
-      (:commit . "4fdcb061a166e0d6ccc27d3829a28e04415ae825"))])
+      (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
   . [(14 2 0 0 20261013 12) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
@@ -1012,13 +1012,13 @@
       (:url . "https://elpa.gnu.org/packages/docbook.html")
       (:commit . "9b7c2dbae38b523442f7c1155bc4e3db16a0c49f"))])
  (doric-themes
-  . [(1 3 0 0 20261024 22) ((emacs (29 1)))
+  . [(1 4 0 0 20261025 0) ((emacs (29 1)))
      "Highly legible minimalist themes with precise typography" tar
      ((:url . "https://github.com/protesilaos/doric-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "d883f257f2aae8e990473ce34d52bdaaaab6cf89"))])
+      (:commit . "49e0490e61c6f35d68e485f37636676de1dc2ed0"))])
  (drepl
   . [(0 4 0 20260715 8) ((emacs (29 1)) (comint-mime (0 7)))
      "REPL protocol for the dumb terminal" tar
@@ -2599,13 +2599,13 @@
       (:url . "https://elpa.gnu.org/packages/osc.html")
       (:commit . "62eda3d8fb288b6a16c35a7220a507d0991c5a74"))])
  (osm
-  . [(2 5 0 20260811 2) ((emacs (29 1)) (compat (31)))
+  . [(2 5 0 20261025 4) ((emacs (29 1)) (compat (31)))
      "OpenStreetMap viewer" tar
      ((:url . "https://github.com/minad/osm")
       (:keywords "network" "multimedia" "hypermedia" "mouse")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "6aa44a0776e5d94739ab93c992eefbef0914fc8b"))])
+      (:commit . "9616cbbab33a8fcd52c981e5a6ff567f43520826"))])
  (other-frame-window
   . [(1 0 6 0 20221221 81352) ((emacs (24 4)))
      "Minor mode to enable global prefix keys for other frame/window buffer placement"
@@ -2886,12 +2886,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "fd5f183f5d4588cc5b52e8f8acf3afde2cb0003e"))])
  (qrencode
-  . [(1 6 0 20261007 2) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 7 -2 1 0 20261025 0) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "a8f5cec87a82a9f3c6312193ac6a6eb93563564e"))])
+      (:commit . "15b2476c09324fba78f0cd253560fee4207c5cf2"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
@@ -4072,6 +4072,14 @@
       (:maintainer "Emanuel Berg" . "incal@dataswamp.org")
       (:authors ("Emanuel Berg" . "incal@dataswamp.org"))
       (:commit . "3d84c7a5861fb7b2a316c000bfb29bf87c30a674"))])
+ (xc
+  . [(20260719 1 0 20260719 0) ((emacs (28 1)) (compat (29)))
+     "Emacs interface for xc" tar
+     ((:url . "https://codeberg.org/ryanprior/xc.el")
+      (:keywords "processes" "docs")
+      (:maintainer "Ryan Prior" . "rprior@protonmail.com")
+      (:authors ("Ryan Prior" . "rprior@protonmail.com"))
+      (:commit . "ff35462614b6d4ae627cfc1e3b21879b84048c1d"))])
  (xclip
   . [(1 11 1 0 20240912 92814) nil
      "Copy&paste GUI clipboard from text terminal" tar
