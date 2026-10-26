@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261013 12) ((emacs (28 1)))
+  . [(14 2 0 0 20261025 13) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "31736b15989dee40b1f4463f3aeb8fb95bbdf6cb"))])
+      (:commit . "850020f7c67835700ebb9b516b9e1d1ecc5d2ed4"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 3 1 0 20261022 1) ((emacs (28)))
+  . [(9 3 1 0 20261025 10) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "c3e66a48f8ee994538e74fdc582f49ed14d2800a"))])
+      (:commit . "a88cef59a57121b866ce91d2df68e1a82e59e757"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
