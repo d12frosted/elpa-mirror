@@ -1,10 +1,13 @@
 1 About
 ═══════
 
-  xc.el provides an Emacs interface for [xc].
+  xc.el is an Emacs interface for [xc], the README-based task runner. It
+  provides an "`xc'" command to run some task associated with the
+  current buffer. The optional Treemacs integration adds a node for `xc'
+  commands to the project's tree.
 
 
-[xc] <https://xcfile.dev/>
+[xc] <https://github.com/joerdav/xc>
 
 1.1 Action shot
 ───────────────
@@ -28,24 +31,12 @@
 2.1 Installation instructions
 ─────────────────────────────
 
-  You can install this package directly from Codeberg like so:
-
-  ┌────
-  │ (use-package xc
-  │   :vc (:url "https://codeberg.org/ryanprior/xc.el.git" :branch "main"))
-  └────
-
-  If you use Spacemacs, you can add this data to your
-  `dotspacemacs-additional-packages':
-
-  ┌────
-  │ (xc :location (recipe :fetcher codeberg
-  │                       :repo "ryanprior/xc.el"))
-  └────
+  xc.el is part of GNU Emacs and you can install it [from ELPA] by
+  running `M-x' package-install `RET' xc `RET' or by adding
+  `(use-package xc)' to your init.
 
 
-  If you would like to help me get this into GNU Elpa, feel free to bug
-  me.  (Otherwise I will probably get around to it eventually.)
+[from ELPA] <https://elpa.gnu.org/packages/xc.html>
 
 
 2.2 Configuration
@@ -68,9 +59,7 @@
 
   By default, the package will use whatever `xc' is found on your
   `PATH'. If that's not what you want, customize `xc-executable' to
-  point to the executable you prefer to use. An absolute path is
-  recommended, but a relative path is also permitted, which might be
-  handy i.e. as a directory-local variable.
+  point to the executable you prefer to use.
 
 
 ◊ 2.2.1.2 `xc-type'

@@ -3,6 +3,12 @@ supported for all newly spawned comint processes.  This allows you to use
 more complex console programs such as "less" and "mpv" and full-screen TUI
 programs such as "vi", "top", "htop" or even "emacs -nw".
 
+If you prefer to enable coterm-mode only on specific commands,
+then, instead of activating `coterm-mode', use `coterm-apply' as an
+advice.  For instance:
+
+  (advice-add 'shell :around 'coterm-apply)
+
 In addition to that, the following two local minor modes may be used:
 
 `coterm-char-mode': if enabled, most characters you type are sent directly
@@ -12,8 +18,8 @@ programs.
 `coterm-auto-char-mode': if enabled, coterm will enter and leave
 `coterm-char-mode' automatically as appropriate.  For example, if you
 execute "less" in a shell buffer, coterm will detect that "less" is running
-and automatically enable char mode so that you can interact with less
-normally.  Once you leave the "less" program, coterm will disable char mode
+and automatically enable char mode so that you can interact with "less"
+directly.  Once you leave the "less" program, coterm will disable char mode
 so that you can interact with your shell in the normal comint way.  This
 mode is enabled by default in all coterm comint buffers.
 
@@ -25,6 +31,24 @@ Non-automatic exit of char mode is indicated by "Line".
 The command `coterm-char-mode-cycle' is a handy command to cycle between
 automatic char-mode, char-mode enabled and char-mode disabled.
 
+Shell integration:
+
+Optionally, you can configure your shell to demarcate prompts and
+command output through OSC 133 escape sequences.  To do so, add the
+following to your shell init, say ~/.bashrc:
+
+  case "$TERM" in eterm-*)
+    PS0='\e]133;C\a'"$PS0"
+    PS1='\[\e]133;D;$?\a\]'"$PS1"
+  esac
+
+If coterm sees any of those sequences, it disables the heuristic
+`coterm-auto-char-mode' and uses only the OSC 133 information to
+decide when to switch between char and line mode.
+
+The above settings will also cause coterm to display the exit
+status of each command in the mode line.  If you wish to disable
+that feature, leave out the ";$?" part in PS1.
 
 Installation:
 
@@ -34,6 +58,10 @@ It is best to add the following elisp snippet to your Emacs init file, to
 enable `coterm-mode' automatically on startup:
 
   (coterm-mode)
+
+  ;; Alternatively, to enhance M-x shell but keep other
+  ;; comint-based modes unmodified:
+  (advice-add 'shell :around 'coterm-apply)
 
   ;; Optional: bind `coterm-char-mode-cycle' to C-; in comint
   (with-eval-after-load 'comint
@@ -56,11 +84,11 @@ Coterm also provides `coterm-auto-char-mode' which aims to eliminate the
 need to manually enable and disable char mode.
 
 
-Some common probles:
+Some common problems:
 
 If some TUI programs misbehave, try checking your TERM environment variable
 with 'echo $TERM' in your coterm enabled M-x shell.  It should normally be
-set to "coterm-color".  If if isn't, it might be that one of your shell
+set to "eterm-color".  If if isn't, it might be that one of your shell
 initialization files (~/.bashrc) changes it, so check for that and remove
 the change.
 

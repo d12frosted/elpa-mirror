@@ -243,12 +243,12 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "3c68569738f04a22d52f1ca28f593c2ee733bf04"))])
  (clojure-ts-mode
-  . [(0 6 0 0 20261010 60) ((emacs (30 1)))
+  . [(0 6 0 0 20261026 72) ((emacs (30 1)))
      "Major mode for Clojure code" tar
      ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "36bd7088145419086d24ec8367b63dbafecb2f14"))])
+      (:commit . "9aed091f27984ba96d063588770e573e993f27ee"))])
  (codex-ide
   . [(0 2 1 0 20261011 0)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
@@ -437,7 +437,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "c8d54d649872bfe7b2b9f49ae5c2addbf12d3b99"))])
  (ebuild-mode
-  . [(1 89 0 20261024 1) ((emacs (26 3)))
+  . [(1 89 0 20261025 3) ((emacs (26 3)))
      "edit ebuild and eclass files" tar
      ((:keywords "languages" "processes")
       (:maintainer "Gentoo Emacs project" . "emacs@gentoo.org")
@@ -446,7 +446,7 @@
 		("Christian Faulhammer" . "fauli@gentoo.org")
 		("Ulrich Müller" . "ulm@gentoo.org"))
       (:url . "https://elpa.nongnu.org/nongnu/ebuild-mode.html")
-      (:commit . "0b10dd71ba7096dcc962b3440bc08c218cea9d61"))])
+      (:commit . "5740128b6064195bfe914cd86ddcb6797b42bf74"))])
  (edit-indirect
   . [(0 1 13 0 20240128 11949) ((emacs (24 3)))
      "Edit regions in separate buffers" tar
@@ -1755,12 +1755,12 @@
       (:authors ("David Christiansen" . "david@davidchristiansen.dk"))
       (:commit . "50b102c1c0935fd3e0c465feed7f27d66b21cdf3"))])
  (racket-mode
-  . [(1 0 20260926 0) ((emacs (25 1)) (compat (30 0 2 0)))
+  . [(1 0 20261025 0) ((emacs (25 1)) (compat (30 0 2 0)))
      "Racket editing, REPL, and more" tar
      ((:url . "https://www.racket-mode.com/")
       (:authors
        ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
-      (:commit . "112ede7765c19011f58d67b4dac9a5435846a07d"))])
+      (:commit . "1ba63e2fa6dd146b71640fefbd0315e0334106e8"))])
  (radio
   . [(0 4 3 0 20260212 144358) ((emacs (29 1)))
      "Listen to Internet radio" tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261023 4) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261026 10) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "8e68879b4cfd5542a563f436b7b344267820444d"))])
+      (:commit . "f66e4b348f5e959cf5c16179365663bdbb59d4b4"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

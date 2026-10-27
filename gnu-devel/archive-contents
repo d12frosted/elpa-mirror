@@ -619,13 +619,13 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "9c2bf9add6c182ae524eb378d0d0f45ecc805eef"))])
  (coterm
-  . [(1 6 0 20261013 8) ((emacs (26 1)) (compat (31 1)))
+  . [(1 7 0 20261026 0) ((emacs (26 1)) (compat (31 1)))
      "Terminal emulation for comint" tar
      ((:url . "https://repo.or.cz/emacs-coterm.git")
       (:keywords "processes")
       (:maintainer "Miha Rihtaršič" . "miha@kamnitnik.top")
       (:authors ("Miha Rihtaršič" . "miha@kamnitnik.top"))
-      (:commit . "763faca4a91deb7e7f60c873db76430151eb9afa"))])
+      (:commit . "8b379d89b9f25e617aa4398708ef18465df638d5"))])
  (counsel
   . [(0 15 1 0 20260913 36)
      ((emacs (24 5)) (ivy (0 15 1)) (swiper (0 15 1)))
@@ -769,12 +769,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20261021 183) ((emacs (28 1)))
+  . [(4 2 3 0 20261026 184) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "ac92d4b180a8c210b285f99752373d06bd1330ca"))])
+      (:commit . "3161ccb479e657c05a46d7728a8b480d6d11dc33"))])
  (denote-journal
   . [(0 3 0 0 20261016 1) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -1744,13 +1744,13 @@
       (:authors ("Durand" . "mmemmew@gmail.com"))
       (:commit . "8f221c58a8c694112738e346c630d4d49a41d967"))])
  (indent-bars
-  . [(1 0 1 0 20260904 5) ((emacs (27 1)) (compat (30)))
+  . [(1 0 1 0 20261026 7) ((emacs (27 1)) (compat (30)))
      "Highlight indentation with bars" tar
      ((:url . "https://github.com/jdtsmith/indent-bars")
       (:keywords "convenience")
       (:maintainer "J.D. Smith" . "jdtsmith+elpa@gmail.com")
       (:authors ("J.D. Smith" . "jdtsmith+elpa@gmail.com"))
-      (:commit . "7733b4b8e1fbd69dc38940000e6eea7516ca2dbc"))])
+      (:commit . "7ef4c38cb1f54cac8f5b43661aee6795b530966c"))])
  (inspector
   . [(0 39 0 20251204 171741) ((emacs (27 1)))
      "Tool for inspection of Emacs Lisp objects" tar
@@ -2053,14 +2053,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 34 0 0 20261015 3)
+  . [(0 34 0 0 20261025 5)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "d3606d9bf1803600b86f52abaf17552da7c731c5"))])
+      (:commit . "ce9a7c4a434c27301cffbb8d2cf221b9500936d8"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -4073,13 +4073,13 @@
       (:authors ("Emanuel Berg" . "incal@dataswamp.org"))
       (:commit . "3d84c7a5861fb7b2a316c000bfb29bf87c30a674"))])
  (xc
-  . [(20260719 1 0 20260719 0) ((emacs (28 1)) (compat (29)))
+  . [(20260719 1 0 20261026 3) ((emacs (28 1)) (compat (29)))
      "Emacs interface for xc" tar
      ((:url . "https://codeberg.org/ryanprior/xc.el")
       (:keywords "processes" "docs")
       (:maintainer "Ryan Prior" . "rprior@protonmail.com")
       (:authors ("Ryan Prior" . "rprior@protonmail.com"))
-      (:commit . "ff35462614b6d4ae627cfc1e3b21879b84048c1d"))])
+      (:commit . "14de9a3b931a85ede7889f4038c000fb99129a1d"))])
  (xclip
   . [(1 11 1 0 20240912 92814) nil
      "Copy&paste GUI clipboard from text terminal" tar
