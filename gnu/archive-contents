@@ -675,11 +675,11 @@
       (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
       (:commit . "836b19b39651419876e65cdb1a91e3eef83cc4e7"))])
  (dape
-  . [(0 27 1) ((emacs (29 1)) (jsonrpc (1 0 25)))
+  . [(0 28 0) ((emacs (29 1)) (jsonrpc (1 0 25)))
      "Debug Adapter Protocol for Emacs" tar
      ((:url . "https://github.com/svaante/dape")
       (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-      (:commit . "dcbdffc68a3c89bbb89956161edde9f0fe062e64"))])
+      (:commit . "1d45904b40bfdbdbe0e29546a13d7859a478f710"))])
  (darkroom
   . [(0 3) ((cl-lib (0 5)))
      "Remove visual distractions and focus on writing" tar
@@ -1603,7 +1603,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "7081ee6d443dbf2b58e77fa7357c90e495173a2f"))])
  (hyperbole
-  . [(9 3 1) ((emacs (28)))
+  . [(9 3 2) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1613,7 +1613,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "de73191feea2823d1b2599d96ea0f41f63b77dc8"))])
+      (:commit . "3b57036078e7b198856116fa9cb9a189624cd29f"))])
  (ibuffer-sidebar
   . [(1 0 0) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")

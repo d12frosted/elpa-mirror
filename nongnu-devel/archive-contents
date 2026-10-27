@@ -437,7 +437,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "c8d54d649872bfe7b2b9f49ae5c2addbf12d3b99"))])
  (ebuild-mode
-  . [(1 89 0 20261025 3) ((emacs (26 3)))
+  . [(1 89 0 20261025 4) ((emacs (26 3)))
      "edit ebuild and eclass files" tar
      ((:keywords "languages" "processes")
       (:maintainer "Gentoo Emacs project" . "emacs@gentoo.org")
@@ -446,7 +446,7 @@
 		("Christian Faulhammer" . "fauli@gentoo.org")
 		("Ulrich Müller" . "ulm@gentoo.org"))
       (:url . "https://elpa.nongnu.org/nongnu/ebuild-mode.html")
-      (:commit . "5740128b6064195bfe914cd86ddcb6797b42bf74"))])
+      (:commit . "17ac68dd00304151bf903068242f901806acb323"))])
  (edit-indirect
   . [(0 1 13 0 20240128 11949) ((emacs (24 3)))
      "Edit regions in separate buffers" tar
@@ -1911,14 +1911,14 @@
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "173e4d632c94af6670869729c09bfb8ba484d257"))])
  (simple-httpd
-  . [(1 7 0 20260904 0) ((emacs (29 1)) (compat (31)))
+  . [(1 7 0 20261026 3) ((emacs (29 1)) (compat (31)))
      "Pure Elisp HTTP server" tar
      ((:url . "https://github.com/skeeto/emacs-http-server")
       (:keywords "network" "comm")
       (:maintainer ("Philip Kaludercic" . "philipk@posteo.net")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
+      (:commit . "f413c8ea511add76cca298e39eb20fb492504485"))])
  (slime
   . [(2 32 -4 0 20261018 81) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
@@ -2268,7 +2268,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 5 4 0 20261020 16)
+  . [(3 5 4 0 20261025 17)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2277,7 +2277,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "4d887efc750b7a69554dbd2d0c79ca447f8f08f3"))])
+      (:commit . "9f56eb92ce7e47730ba52785564d09d8f13abe31"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar

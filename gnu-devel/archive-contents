@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261025 13) ((emacs (28 1)))
+  . [(14 2 0 0 20261026 15) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "850020f7c67835700ebb9b516b9e1d1ecc5d2ed4"))])
+      (:commit . "ab59f2f27e920dd112e07846059411836d4c625a"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -723,11 +723,11 @@
       (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
       (:commit . "c1ef993f8c66fec71b10d70eb7a2cd0c416aaa12"))])
  (dape
-  . [(0 27 1 0 20260924 10) ((emacs (29 1)) (jsonrpc (1 0 25)))
+  . [(0 28 0 0 20261026 0) ((emacs (29 1)) (jsonrpc (1 0 25)))
      "Debug Adapter Protocol for Emacs" tar
      ((:url . "https://github.com/svaante/dape")
       (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-      (:commit . "a5dcf2d086a91fbe6e600b6de482d8f680f4410c"))])
+      (:commit . "1d45904b40bfdbdbe0e29546a13d7859a478f710"))])
  (darkroom
   . [(0 3 0 20200507 173652) ((cl-lib (0 5)))
      "Remove visual distractions and focus on writing" tar
@@ -1378,14 +1378,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 7 0 20261010 11)
+  . [(1 4 7 0 20261027 12)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "bcd8db9dc1757a9602b2664dd1eb36fbf40a1903"))])
+      (:commit . "1bafd3fe62a33ba1998b210c03db068270c1ee65"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -1710,7 +1710,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 3 1 0 20261025 10) ((emacs (28)))
+  . [(9 3 2 0 20261026 1) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1720,7 +1720,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "a88cef59a57121b866ce91d2df68e1a82e59e757"))])
+      (:commit . "d066759ae3c6fd5de207518fb100aeb49fed4ba4"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -4122,10 +4122,10 @@
       (:authors ("Mattias Engdegård" . "mattias.engdegard@gmail.com"))
       (:commit . "fc4d6b5ddae9eb2c8adc2b117e6f33f3a09a4e96"))])
  (xref
-  . [(1 7 0 0 20260929 51) ((emacs (26 1)))
+  . [(1 7 0 0 20261027 52) ((emacs (26 1)))
      "Cross-referencing commands" tar
      ((:url . "https://elpa.gnu.org/packages/xref.html")
-      (:commit . "240ea4d15c654808823c7188d7ecba5c219a8c1f"))])
+      (:commit . "1bafd3fe62a33ba1998b210c03db068270c1ee65"))])
  (xref-union
   . [(0 2 0 0 20260222 131318) ((emacs (25 1)))
      "Combine multiple Xref backends" tar
