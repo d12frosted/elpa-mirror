@@ -9,7 +9,8 @@ A basic configuration using `use-package' might look like
       :init
       (auto-capitalize-global-mode))
 
-Or, to also use the Org, SGML, and TeX plugins (the latter requiring AUCTeX):
+Or, to also use the Org, SGML, XML, and TeX plugins (the latter requiring
+AUCTeX):
 
     (use-package auto-capitalize
       :init
@@ -17,7 +18,8 @@ Or, to also use the Org, SGML, and TeX plugins (the latter requiring AUCTeX):
       :hook
       ((TeX-mode . auto-capitalize-tex-mode)
        (org-mode . auto-capitalize-org-mode)
-       (sgml-mode . auto-capitalize-sgml-mode)))
+       (sgml-mode . auto-capitalize-sgml-mode)
+       (nxml-mode . auto-capitalize-xml-mode)))
 
 The heart of the package is `auto-capitalize-after-change', which is
 installed in `after-change-functions' when the mode is enabled. It serves as
