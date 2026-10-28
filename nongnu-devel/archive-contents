@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261024 59)
+  . [(4 7 1 0 20261028 63)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "65232f488caae960029cc68bcc607aea340fa3b1"))])
+      (:commit . "fed3e3009adfc62c2addad2db05d91741447728b"))])
  (magit-section
-  . [(4 7 1 0 20261024 59)
+  . [(4 7 1 0 20261028 63)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "65232f488caae960029cc68bcc607aea340fa3b1"))])
+      (:commit . "fed3e3009adfc62c2addad2db05d91741447728b"))])
  (markdown-mode
   . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1926,11 +1926,11 @@
       (:keywords "languages" "lisp" "slime")
       (:commit . "b53e5e3fe14cff97cf7a1b2240981023e1f71d70"))])
  (sly
-  . [(1 0 43 0 20261013 150) ((emacs (24 5)))
+  . [(1 0 43 0 20261028 155) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
      ((:url . "https://github.com/joaotavora/sly")
       (:keywords "languages" "lisp" "sly")
-      (:commit . "9b3477a5dc6c9a4496d4fbb6804349961e861835"))])
+      (:commit . "70350623eecd1f41837c9e57cbb6d5c06678a60d"))])
  (smartparens
   . [(1 11 0 0 20260129 121419) ((dash (2 13 0)))
      "Automatic insertion, wrapping and paredit-like navigation with user defined pairs."
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261027 12) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261027 14) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "a594a7f25d09e55718280a492f439733ba587804"))])
+      (:commit . "1b9dcdc53b1dc02781f7c4bc2ab208f2d7b28aa2"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
