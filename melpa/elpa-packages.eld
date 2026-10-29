@@ -597,7 +597,7 @@
   (chembalance :url "https://github.com/sergiruiztrepat/chembalance")
   (chemtable :url "https://github.com/sergiruiztrepat/chemtable")
   (cherry-blossom-theme :url "https://github.com/inlinestyle/emacs-cherry-blossom-theme")
-  (chezmoi :url "https://github.com/tuh8888/chezmoi.el")
+  (chezmoi :url "https://github.com/harrison-p-l/chezmoi.el")
   (chinese-conv :url "https://github.com/gucong/emacs-chinese-conv")
   (chinese-number :url "https://github.com/zhcosin/chinese-number")
   (chinese-wbim :url "https://github.com/zilongshanren/chinese-wbim")

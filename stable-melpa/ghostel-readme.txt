@@ -15,6 +15,7 @@ Usage:
   M-x ghostel-project-next / ghostel-project-previous /
       ghostel-project-list-buffers
                             Same, scoped to the current project
+  M-x ghostel-status-next   Switch to the next terminal needing attention
 
 Key bindings in the terminal buffer:
 

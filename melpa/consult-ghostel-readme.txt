@@ -5,6 +5,7 @@ route through `read-buffer', which has no preview.
 
   `consult-ghostel'          all ghostel buffers
   `consult-ghostel-project'  ghostel buffers in this project
+  `consult-ghostel-status'   ghostel buffers needing attention
   `consult-ghostel-history'  pick from the shell's command history
 
 Candidates are ordered for switching (recently-used first, current
@@ -25,10 +26,12 @@ command line.
 `consult-ghostel-mode' wires ghostel into consult's own commands:
 it registers hidden sources in `consult-buffer' and
 `consult-project-buffer' that enable the `g' narrow key (restricting
-the view to ghostel buffers only), makes `consult-line' match across
-soft line wraps in ghostel buffers (rows joined by wrap newlines
-become one candidate), adds a "Ghostel" group to `consult-bookmark'
-so the `g' narrow key restricts the candidates to ghostel bookmarks.
+the view to ghostel buffers only) and the `a' narrow key in
+`consult-buffer' (terminals needing attention), makes `consult-line'
+match across soft line wraps in ghostel buffers (rows joined by wrap
+newlines become one candidate), adds a "Ghostel" group to
+`consult-bookmark' so the `g' narrow key restricts the candidates to
+ghostel bookmarks.
 
 Enable by adding to your init:
 
