@@ -243,12 +243,12 @@
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:commit . "3c68569738f04a22d52f1ca28f593c2ee733bf04"))])
  (clojure-ts-mode
-  . [(0 6 0 0 20261026 72) ((emacs (30 1)))
+  . [(0 6 0 0 20261028 74) ((emacs (30 1)))
      "Major mode for Clojure code" tar
      ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "9aed091f27984ba96d063588770e573e993f27ee"))])
+      (:commit . "79362d52c6d354a9f1ae128e988de7ca29a88535"))])
  (codex-ide
   . [(0 2 1 0 20261011 0)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261028 63)
+  . [(4 7 1 0 20261028 66)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "fed3e3009adfc62c2addad2db05d91741447728b"))])
+      (:commit . "4031049049b23785268497ff49eed0690f1ce85f"))])
  (magit-section
-  . [(4 7 1 0 20261028 63)
+  . [(4 7 1 0 20261028 66)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "fed3e3009adfc62c2addad2db05d91741447728b"))])
+      (:commit . "4031049049b23785268497ff49eed0690f1ce85f"))])
  (markdown-mode
   . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1375,13 +1375,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "e2e2bc753b4330f85b6ea7e62cd0552e8ea47b76"))])
  (markdown-ts-appear
-  . [(0 3 1 0 20261020 4) ((emacs (31 1)))
+  . [(0 4 0 0 20261028 0) ((emacs (31 1)))
      "Reveal Markdown source at point" tar
      ((:url . "https://github.com/Thysrael/markdown-ts-appear")
       (:keywords "text" "convenience")
       (:maintainer "Thysrael" . "thysrael@163.com")
       (:authors ("Thysrael" . "thysrael@163.com"))
-      (:commit . "618876c65980db3b484d6033f27f4b29466d5e17"))])
+      (:commit . "812a2155617c6b3175f00ce594f36cea4d84f2f4"))])
  (mastodon
   . [(2 1 8 0 20261022 85)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
@@ -1683,13 +1683,13 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "17e82d7557cc8d86abdf0679c6a54be3bc25cf5f"))])
  (php-mode
-  . [(1 28 0 0 20260825 32) ((emacs (28 1)))
+  . [(1 28 0 0 20261028 34) ((emacs (28 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
       (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
-      (:commit . "0e32f79ffca49578eba452d38b62e434e517df5e"))])
+      (:commit . "a54fa885cd5c69637eb296e3fa70220cc7aedd5e"))])
  (pinyin-isearch
   . [(1 7 2 0 20260910 61) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20260825 269) ((emacs (25 2)))
+  . [(4 6 -4 0 20261028 273) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "9799d01c357f9c35634887dffb3276b6d7adb1ac"))])
+      (:commit . "7117e4b9bad3e3801f464091df9cd77d7f560be2"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"

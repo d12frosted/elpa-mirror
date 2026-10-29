@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 1 0 0 20261025 25) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 1 0 0 20261028 34) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "0790d828bf74c49cc270934b6d2eafbd4640e75d"))])
+      (:commit . "0029cbb435c7fc68ceff0987fae0256f1ccf0507"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -1101,16 +1101,16 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "786ed6cf752158cf798d157d3b51a3fd9a9448ee"))])
  (eglot
-  . [(1 24 0 20261013 24)
+  . [(1 24 0 20261028 34)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
-      (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
-      (seq (2 23)) (xref (1 7 0)))
+      (flymake (1 4 5)) (jsonrpc (1 0 30)) (project (0 11 2))
+      (refactor (0 1)) (seq (2 23)) (xref (1 7 0)))
      "The Emacs Client for LSP servers" tar
      ((:url . "https://github.com/joaotavora/eglot")
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "2abc21d084d78000e8403122cbb2de3f029bd87c"))])
+      (:commit . "f15f047dba157914b00a68caccfa78ba6ead8cdf"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -1378,14 +1378,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 7 0 20261027 12)
+  . [(1 4 7 0 20261028 15)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "1bafd3fe62a33ba1998b210c03db068270c1ee65"))])
+      (:commit . "f15f047dba157914b00a68caccfa78ba6ead8cdf"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -1855,14 +1855,14 @@
       (:maintainer "Danny Freeman" . "danny@dfreeman.email")
       (:commit . "b4f59c13acf783513c897a639eb4e35c20b288d9"))])
  (javaimp
-  . [(0 9 2 0 20260804 10) nil
+  . [(0 9 2 0 20261028 11) nil
      "Add and reorder Java import statements in Maven/Gradle projects"
      tar
      ((:keywords "java" "maven" "gradle" "programming")
       (:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm")
       (:authors ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
       (:url . "https://elpa.gnu.org/packages/javaimp.html")
-      (:commit . "b24e7d43f668cf731f57c3e52373180febabec45"))])
+      (:commit . "97c3e5460d1db4a51c9cba88115b4b4c6347b2e2"))])
  (jgraph-mode
   . [(1 1 0 20221221 80333) ((cl-lib (0 5)))
      "Major mode for Jgraph files" tar
@@ -1980,13 +1980,13 @@
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
       (:commit . "7e30b492ec594e641727fb31d07291e767d0897a"))])
  (leaf
-  . [(4 5 5 0 20260508 153103) ((emacs (24 1)))
+  . [(4 5 5 0 20261028 19) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar
      ((:url . "https://github.com/conao3/leaf.el")
       (:keywords "lisp" "settings")
       (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
       (:authors ("Naoya Yamashita" . "conao3@gmail.com"))
-      (:commit . "1e363fe114310a6af5f3f770be795657307ad3d1"))])
+      (:commit . "cf5f068664e89e4f57e2716184b37655ee4f564e"))])
  (lentic
   . [(0 12 0 20240303 95600)
      ((emacs (25)) (m-buffer (0 13)) (dash (2 5 0)))
@@ -3045,6 +3045,14 @@
       (:maintainer "Antoine Kalmbach" . "ane@iki.fi")
       (:authors ("Jose E. Marchesi" . "jemarch@gnu.org"))
       (:commit . "504e07da054afd584b205d5e18bd6cbe24707f83"))])
+ (refactor
+  . [(0 1 0 20261027 5) ((emacs (26 3)) (eldoc (1 14 0)))
+     "Language-agnostic refactoring interface" tar
+     ((:keywords "convenience" "languages")
+      (:maintainer "João Távora" . "joaotavora@gmail.com")
+      (:authors ("João Távora" . "joaotavora@gmail.com"))
+      (:url . "https://elpa.gnu.org/packages/refactor.html")
+      (:commit . "f15f047dba157914b00a68caccfa78ba6ead8cdf"))])
  (register-list
   . [(0 1 0 20250213 102055) nil "Interactively list/edit registers"
      tar

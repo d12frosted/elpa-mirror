@@ -1309,12 +1309,12 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "f5d520b3ee7722dd2231ab586ba51d8eb166e49b"))])
  (markdown-ts-appear
-  . [(0 3 1) ((emacs (31 1))) "Reveal Markdown source at point" tar
+  . [(0 4 0) ((emacs (31 1))) "Reveal Markdown source at point" tar
      ((:url . "https://github.com/Thysrael/markdown-ts-appear")
       (:keywords "text" "convenience")
       (:maintainer "Thysrael" . "thysrael@163.com")
       (:authors ("Thysrael" . "thysrael@163.com"))
-      (:commit . "22577039b48c3209776bc2efc901b2bb8d4ebd9f"))])
+      (:commit . "812a2155617c6b3175f00ce594f36cea4d84f2f4"))])
  (mastodon
   . [(2 1 8) ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
      "Client for fediverse services using the Mastodon API" tar
