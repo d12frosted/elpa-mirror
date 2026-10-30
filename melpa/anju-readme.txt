@@ -3,7 +3,8 @@ Anju is a project to align mouse interactions in Emacs with contemporary
 following areas:
 
 - Context-sensitive menus
-- De-emphasis of middle mouse button usage (binding <mouse-2>)
+- De-emphasis of middle mouse button usage (binding <mouse-2>) and
+  remove secondary selection
 - Support direct manipulation when possible
 - Re-organization of the main menu bar
 
