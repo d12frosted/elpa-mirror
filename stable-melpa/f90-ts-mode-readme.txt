@@ -3,6 +3,17 @@ files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
 Changelog (recent):
 [10-2026]
+  - Extend/reduce variants for mark region operations based on siblings
+    (first, last, previous, next) added.
+  - Replace f90-ts-nav by improved f90-ts-toc providing a side panel with a
+    table of content of a f90 buffer, see `MANUAL.md' for details.  This
+    optional package requires its own use-package statement.
+  - Alignment rules for improved indentation of variable declarations with
+    initialisation added.
+  - Infinite loop caused by `f90-ts-indent-delete-trailing-whitespace' fixed.
+    This happened if region ended at last line without a trailing newline.
+  - Right-align-at-comma options for array literals added,
+    see `f90-ts-indent-array-align'.
   - Changes required by updates to the proposed string_literal branch added.
   - Support for new keyword "non_recursive" added (requires new grammar).
   - Support for new grammar version with a different tree structure in some
@@ -79,7 +90,8 @@ Features:
   - OpenMP and preprocessor directives
   - Coarray keywords and statements
   - Imenu and a Fortran menu in the menu bar
-  - Navigation (defun, things, Xref, side panel tree)
+  - Navigation (defun, things, Xref)
+  - TOC side panel to show interactive table of content for a f90-ts buffer (optional package)
   - Hideshow and outline support (support for external treesit-fold is pending)
 
 Features can be found by the fortran menu or a transient popup bound
