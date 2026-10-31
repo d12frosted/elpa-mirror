@@ -2,12 +2,20 @@
  • Building package solarized-theme
 From https://github.com/bbatsov/solarized-emacs
 Updating /mnt/store/melpa/working/solarized-theme/
-Checking out d8bc6f72dc3e3800a2119bae9733c333d215b04d
+Checking out ce2bc214e5486b05c76beb8d9da0a5068e66bd0e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/solarized-theme/
-  to /tmp/solarized-theme-Y7eXau/solarized-theme-20261025.1447/
+  to /tmp/solarized-theme-YA7WwD/solarized-theme-20261031.914/
+    solarized-apple-dark-theme.el -> solarized-apple-dark-theme.el
+    solarized-apple-light-theme.el -> solarized-apple-light-theme.el
+    solarized-carbon-dark-theme.el -> solarized-carbon-dark-theme.el
+    solarized-carbon-light-theme.el -> solarized-carbon-light-theme.el
+    solarized-carbonfox-theme.el -> solarized-carbonfox-theme.el
     solarized-dark-high-contrast-theme.el -> solarized-dark-high-contrast-theme.el
     solarized-dark-theme.el -> solarized-dark-theme.el
+    solarized-dawnfox-theme.el -> solarized-dawnfox-theme.el
+    solarized-dayfox-theme.el -> solarized-dayfox-theme.el
+    solarized-duskfox-theme.el -> solarized-duskfox-theme.el
     solarized-everforest-dark-theme.el -> solarized-everforest-dark-theme.el
     solarized-everforest-light-theme.el -> solarized-everforest-light-theme.el
     solarized-faces.el -> solarized-faces.el
@@ -20,41 +28,55 @@ Copying files (->) and directories (=>)
     solarized-kanagawa-wave-theme.el -> solarized-kanagawa-wave-theme.el
     solarized-light-high-contrast-theme.el -> solarized-light-high-contrast-theme.el
     solarized-light-theme.el -> solarized-light-theme.el
+    solarized-nightfox-theme.el -> solarized-nightfox-theme.el
+    solarized-nordfox-theme.el -> solarized-nordfox-theme.el
     solarized-palettes.el -> solarized-palettes.el
     solarized-selenized-black-theme.el -> solarized-selenized-black-theme.el
     solarized-selenized-dark-theme.el -> solarized-selenized-dark-theme.el
     solarized-selenized-light-theme.el -> solarized-selenized-light-theme.el
     solarized-selenized-white-theme.el -> solarized-selenized-white-theme.el
+    solarized-terafox-theme.el -> solarized-terafox-theme.el
     solarized-theme-utils.el -> solarized-theme-utils.el
     solarized-theme.el -> solarized-theme.el
     solarized-wombat-dark-theme.el -> solarized-wombat-dark-theme.el
     solarized-zenburn-theme.el -> solarized-zenburn-theme.el
     solarized.el -> solarized.el
-Created solarized-theme-20261025.1447.tar containing:
-  solarized-theme-20261025.1447/
-  solarized-theme-20261025.1447/solarized-dark-high-contrast-theme.el
-  solarized-theme-20261025.1447/solarized-dark-theme.el
-  solarized-theme-20261025.1447/solarized-everforest-dark-theme.el
-  solarized-theme-20261025.1447/solarized-everforest-light-theme.el
-  solarized-theme-20261025.1447/solarized-faces.el
-  solarized-theme-20261025.1447/solarized-flexoki-dark-theme.el
-  solarized-theme-20261025.1447/solarized-flexoki-light-theme.el
-  solarized-theme-20261025.1447/solarized-gruvbox-dark-theme.el
-  solarized-theme-20261025.1447/solarized-gruvbox-light-theme.el
-  solarized-theme-20261025.1447/solarized-kanagawa-dragon-theme.el
-  solarized-theme-20261025.1447/solarized-kanagawa-lotus-theme.el
-  solarized-theme-20261025.1447/solarized-kanagawa-wave-theme.el
-  solarized-theme-20261025.1447/solarized-light-high-contrast-theme.el
-  solarized-theme-20261025.1447/solarized-light-theme.el
-  solarized-theme-20261025.1447/solarized-palettes.el
-  solarized-theme-20261025.1447/solarized-selenized-black-theme.el
-  solarized-theme-20261025.1447/solarized-selenized-dark-theme.el
-  solarized-theme-20261025.1447/solarized-selenized-light-theme.el
-  solarized-theme-20261025.1447/solarized-selenized-white-theme.el
-  solarized-theme-20261025.1447/solarized-theme-pkg.el
-  solarized-theme-20261025.1447/solarized-theme-utils.el
-  solarized-theme-20261025.1447/solarized-theme.el
-  solarized-theme-20261025.1447/solarized-wombat-dark-theme.el
-  solarized-theme-20261025.1447/solarized-zenburn-theme.el
-  solarized-theme-20261025.1447/solarized.el
-Built solarized-theme in 6.462s, finished at 2026-10-31T07:10:34+0000
+Created solarized-theme-20261031.914.tar containing:
+  solarized-theme-20261031.914/
+  solarized-theme-20261031.914/solarized-apple-dark-theme.el
+  solarized-theme-20261031.914/solarized-apple-light-theme.el
+  solarized-theme-20261031.914/solarized-carbon-dark-theme.el
+  solarized-theme-20261031.914/solarized-carbon-light-theme.el
+  solarized-theme-20261031.914/solarized-carbonfox-theme.el
+  solarized-theme-20261031.914/solarized-dark-high-contrast-theme.el
+  solarized-theme-20261031.914/solarized-dark-theme.el
+  solarized-theme-20261031.914/solarized-dawnfox-theme.el
+  solarized-theme-20261031.914/solarized-dayfox-theme.el
+  solarized-theme-20261031.914/solarized-duskfox-theme.el
+  solarized-theme-20261031.914/solarized-everforest-dark-theme.el
+  solarized-theme-20261031.914/solarized-everforest-light-theme.el
+  solarized-theme-20261031.914/solarized-faces.el
+  solarized-theme-20261031.914/solarized-flexoki-dark-theme.el
+  solarized-theme-20261031.914/solarized-flexoki-light-theme.el
+  solarized-theme-20261031.914/solarized-gruvbox-dark-theme.el
+  solarized-theme-20261031.914/solarized-gruvbox-light-theme.el
+  solarized-theme-20261031.914/solarized-kanagawa-dragon-theme.el
+  solarized-theme-20261031.914/solarized-kanagawa-lotus-theme.el
+  solarized-theme-20261031.914/solarized-kanagawa-wave-theme.el
+  solarized-theme-20261031.914/solarized-light-high-contrast-theme.el
+  solarized-theme-20261031.914/solarized-light-theme.el
+  solarized-theme-20261031.914/solarized-nightfox-theme.el
+  solarized-theme-20261031.914/solarized-nordfox-theme.el
+  solarized-theme-20261031.914/solarized-palettes.el
+  solarized-theme-20261031.914/solarized-selenized-black-theme.el
+  solarized-theme-20261031.914/solarized-selenized-dark-theme.el
+  solarized-theme-20261031.914/solarized-selenized-light-theme.el
+  solarized-theme-20261031.914/solarized-selenized-white-theme.el
+  solarized-theme-20261031.914/solarized-terafox-theme.el
+  solarized-theme-20261031.914/solarized-theme-pkg.el
+  solarized-theme-20261031.914/solarized-theme-utils.el
+  solarized-theme-20261031.914/solarized-theme.el
+  solarized-theme-20261031.914/solarized-wombat-dark-theme.el
+  solarized-theme-20261031.914/solarized-zenburn-theme.el
+  solarized-theme-20261031.914/solarized.el
+Built solarized-theme in 4.480s, finished at 2026-10-31T11:10:33+0000
