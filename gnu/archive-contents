@@ -1036,16 +1036,16 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
  (eglot
-  . [(1 24)
+  . [(1 26)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
-      (flymake (1 4 5)) (jsonrpc (1 0 29)) (project (0 11 2))
-      (seq (2 23)) (xref (1 7 0)))
+      (flymake (1 4 8)) (jsonrpc (1 0 30)) (project (0 11 2))
+      (refactor (0 1 1)) (seq (2 23)) (xref (1 8 0)))
      "The Emacs Client for LSP servers" tar
      ((:url . "https://github.com/joaotavora/eglot")
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "0d67e76b94e1f0af9fe364aed8aa5db1c494c206"))])
+      (:commit . "02d438541daccf0a9829194601a871c9960dff6e"))])
  (el-job
   . [(2 7 4) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -1293,13 +1293,13 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "20fe3e77bb73773c8678e65ae38020b0b7f996eb"))])
  (flymake
-  . [(1 4 7) ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
+  . [(1 4 8) ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "507d93ad48a060e286afd1df14f70938f13fc8ad"))])
+      (:commit . "0e5548f16facdf4a4b390f76ef4a5f0d143d9ec9"))])
  (flymake-clippy
   . [(1 1 0) ((emacs (27))) "Flymake backend for Clippy" tar
      ((:url . "https://github.com/mak-kirkland/flymake-clippy")
@@ -2832,13 +2832,13 @@
       (:authors ("Jose E. Marchesi" . "jemarch@gnu.org"))
       (:commit . "8d9b73870acdd0a282a5c2829b139a93a39366dc"))])
  (refactor
-  . [(0 1) ((emacs (26 3)) (eldoc (1 14 0)))
+  . [(0 1 1) ((emacs (26 3)) (eldoc (1 14 0)))
      "Language-agnostic refactoring interface" tar
      ((:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/refactor.html")
-      (:commit . "f2568db52eb1503f98085a74467d55e9f65f2248"))])
+      (:commit . "e8f81976d0f14f314e7b5241ac9d8b7b98385680"))])
  (register-list
   . [(0 1) nil "Interactively list/edit registers" tar
      ((:keywords "register")
@@ -2941,12 +2941,12 @@
       (:url . "https://elpa.gnu.org/packages/seq.html")
       (:commit . "27a90793a13f149121180e864fa53d68b9eac0b3"))])
  (setup
-  . [(1 5 0) ((emacs (26 1))) "Helpful Configuration Macro" tar
+  . [(1 5 1) ((emacs (26 1))) "Helpful Configuration Macro" tar
      ((:url . "https://codeberg.org/pkal/setup.el")
       (:keywords "lisp" "local")
       (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
       (:authors ("Philip Kaludercic" . "philipk@posteo.net"))
-      (:commit . "5a69dab9bb79d8bebaaa9bc14795cbaafd1c2423"))])
+      (:commit . "c5fffeb2ddf604d927413f9cdb55c646d78ae126"))])
  (shelisp
   . [(1 0 0) nil "execute elisp in shell" tar
      ((:keywords "terminals" "lisp" "processes")
@@ -3358,14 +3358,14 @@
       (:url . "https://elpa.gnu.org/packages/track-changes.html")
       (:commit . "e119514ae8b391f41577d22d4e41cc3fea7ab9eb"))])
  (tramp
-  . [(2 8 2 3) ((emacs (28 1)))
+  . [(2 8 2 4) ((emacs (28 1)))
      "Transparent Remote Access, Multiple Protocol" tar
      ((:url . "https://www.gnu.org/software/tramp/")
       (:keywords "comm" "processes")
       (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
       (:authors ("Kai Großjohann" . "kai.grossjohann@gmx.net")
 		("Michael Albinus" . "michael.albinus@gmx.de"))
-      (:commit . "825c92c3a159466c1ff8633adc7f7e283241818d"))])
+      (:commit . "c30cfdf8ac1abd63a29939a4e18b20f21d5cf2a4"))])
  (tramp-hlo
   . [(0 0 2) ((tramp (2 8 0 5)))
      "High level operations as Tramp handlers" tar
@@ -3398,8 +3398,8 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "89832e4cdc1e6d8262a4a2c9d1ff70f398b8faf0"))])
  (transient
-  . [(0 13 8)
-     ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
+  . [(0 13 9)
+     ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
      ((:url . "https://github.com/magit/transient")
@@ -3408,7 +3408,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "0cacc84ff0c7df126e194666ff8b8a1e6082e796"))])
+      (:commit . "08d85042ced662a73da813a143785f135f66a769"))])
  (transient-cycles
   . [(2 1) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
@@ -3825,9 +3825,9 @@
       (:authors ("Mattias Engdegård" . "mattias.engdegard@gmail.com"))
       (:commit . "694defa220113d0acaa78fd646dcff9f1a08fad9"))])
  (xref
-  . [(1 7 0) ((emacs (26 1))) "Cross-referencing commands" tar
+  . [(1 8 0) ((emacs (26 1))) "Cross-referencing commands" tar
      ((:url . "https://elpa.gnu.org/packages/xref.html")
-      (:commit . "cef848fe5f355ca34abc176739d0ace835b12eed"))])
+      (:commit . "c10b6f01db5435308878fbec70f47ce9f0db7c39"))])
  (xref-union
   . [(0 2 0) ((emacs (25 1))) "Combine multiple Xref backends" tar
      ((:url . "https://git.sr.ht/~pkal/xref-union/")

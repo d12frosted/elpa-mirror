@@ -56,7 +56,20 @@
 
   The resulting `jabber-omemo-core.so' (or `.dylib' on macOS) lands
   beside the Elisp files and is loaded automatically.  If the module is
-  missing, OMEMO use signals `OMEMO module not compiled'.
+  missing, OMEMO use signals `OMEMO module not compiled'; if it exists
+  but cannot be loaded, Jabber warns and continues without OMEMO.
+
+  If the Emacs that loads the module cannot see the library directory
+  used at build time (for example a Nix development shell, or an Emacs
+  linked against a different C library), link Mbed TLS statically:
+
+  ┌────
+  │ make module MBED_STATIC=1
+  └────
+
+  This needs `libmbedcrypto.a' and leaves the C library as the module's
+  only runtime dependency.  The repository's Nix development shell sets
+  it by default; pass `MBED_STATIC=' to link dynamically there.
 
 
 [picomemo] <https://github.com/mierenhoop/picomemo>

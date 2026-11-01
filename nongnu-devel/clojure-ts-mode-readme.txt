@@ -257,9 +257,10 @@ customization option.
 
 Two types of rules are supported: `:block` and `:inner`, mirroring those in
 cljfmt. When a rule is defined as `:block n`, `n` represents the number of
-arguments preceding the body. When a rule is defined as `:inner n`, each form
-within the expression's body, nested `n` levels deep, is indented by two
-spaces. These rule definitions fully reflect the [cljfmt rules](https://github.com/weavejester/cljfmt/blob/0.13.0/docs/INDENTS.md).
+arguments preceding the body. If the body doesn't start on a line of its own,
+the form is indented like a function call instead. When a rule is
+defined as `:inner n`, each form within the expression's body, nested `n`
+levels deep, is indented by two spaces. These rule definitions fully reflect the [cljfmt rules](https://github.com/weavejester/cljfmt/blob/0.13.0/docs/INDENTS.md).
 
 For example:
 
@@ -267,10 +268,6 @@ For example:
 - `when` has a rule `((:block 1))`.
 - `defn` and `fn` have a rule `((:inner 0))`.
 - `letfn` has a rule `((:block 1) (:inner 2 0))`.
-
-Note that `clojure-ts-semantic-indent-rules` should be set using the
-customization interface or `setopt`; otherwise, it will not be applied
-correctly.
 
 #### Project-specific indentation
 
@@ -459,7 +456,8 @@ or set this variable using `setopt`:
 (setopt clojure-ts-extra-def-forms '("defelem"))
 ```
 
-This setting will highlight `defelem` symbol, function name and the docstring.
+This setting will highlight `defelem` symbol, function name and the docstring,
+including the Markdown in it.
 
 > [!IMPORTANT]
 >
@@ -708,10 +706,6 @@ and `clojure-mode` (this is very helpful when dealing with `derived-mode-p` chec
 - Navigation by sexp/lists might work differently on Emacs versions lower
   than 31. Starting with version 31, Emacs uses Tree-sitter 'things' settings, if
   available, to rebind some commands.
-- If you set `clojure-ts-extra-def-forms`, `clojure-ts-mode` will highlight the
-  specified forms, including their docstrings, in a manner similar to Clojure's
-  `defn`.  However, Markdown syntax will not be highlighted within these custom
-  docstrings.
 
 ## Frequently Asked Questions
 

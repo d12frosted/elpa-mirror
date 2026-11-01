@@ -13,12 +13,14 @@ manual first.  Additionally, take the following in consideration:
 * Eglot's main job is to hook up the information that language
   servers offer via LSP to Emacs's UI facilities: Xref for
   definition-chasing, Flymake for diagnostics, Eldoc for at-point
-  documentation, etc.  Eglot's job is generally *not* to provide
-  such a UI itself, though a small number of simple
-  counter-examples do exist, e.g. in the `eglot-rename' command or
-  the `eglot-inlay-hints-mode' minor mode.  When a new UI is
-  evidently needed, consider adding a new package to Emacs, or
-  extending an existing one.
+  documentation, Refactor for code action collection and execution,
+  etc.  Eglot's job is generally *not* to provide such a UI itself,
+  though a fair number of simple counter-examples do exist, e.g. in
+  the `eglot-inlay-hints-mode' and `eglot-semantic-tokens-mode' minor
+  modes, and the `eglot-show-call-hierarchy' and
+  `eglot-show-type-hierarchy' commands.  When a new UI is evidently
+  needed, consider adding a new package to Emacs, or extending an
+  existing one.
 
 * Eglot was designed to function with just the UI facilities found
   in the latest Emacs core, as long as those facilities are also
