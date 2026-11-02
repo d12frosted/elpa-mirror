@@ -24,6 +24,9 @@ SETUP:
    (setq ticktick-client-id "your-client-id")
    (setq ticktick-client-secret "your-client-secret")
 
+   `ticktick-client-secret' also accepts a function of no arguments,
+   to fetch it on demand from auth-source.  See the README.
+
 3. Authorize the application:
    M-x ticktick-authorize
 
