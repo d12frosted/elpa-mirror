@@ -42,6 +42,7 @@ Main commands:
 - `ticktick-authorize': Set up OAuth authentication
 - `ticktick-refresh-token': Manually refresh auth token
 - `ticktick-toggle-sync-timer': Toggle automatic timer-based syncing
+- `ticktick-set-project-file': Choose project destinations before first sync
 - `ticktick-delete-task-at-point': Delete task at cursor from both sides
 - `ticktick-show-sync-state': View current synchronization state
 - `ticktick-retry-failed-deletions': Retry any failed deletion operations
@@ -67,7 +68,8 @@ Task description content here.
 CUSTOMIZATION:
 
 Key variables you can customize:
-- `ticktick-sync-file': Path to the org file for tasks
+- `ticktick-sync-file': Default Org file for tasks
+- `ticktick-project-files': Optional project ID to Org file mappings
 - `ticktick-dir': Directory for storing tokens and data
 - `ticktick-autosync': Enable automatic syncing on focus changes
 - `ticktick-sync-interval': Enable automatic syncing every N minutes
