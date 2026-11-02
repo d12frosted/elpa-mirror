@@ -1674,14 +1674,14 @@
       (:authors ("Andreas Politz" . "mail@andreas-politz.de"))
       (:commit . "365f88238f46f9b1425685562105881800f10386"))])
  (pg
-  . [(0 69 0 20260812 0) ((emacs (28 1)) (peg (1 0 1)))
+  . [(0 69 0 20261102 2) ((emacs (28 1)) (peg (1 0 1)))
      "Socket-level interface to the PostgreSQL database" tar
      ((:url . "https://github.com/emarsden/pg-el")
       (:keywords "data" "comm" "database" "postgresql")
       (:maintainer "Eric Marsden"
 		   . "eric.marsden@risk-engineering.org")
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
-      (:commit . "17e82d7557cc8d86abdf0679c6a54be3bc25cf5f"))])
+      (:commit . "32cb4fb77ae440c55bceeb9748d38871dd36ee2c"))])
  (php-mode
   . [(1 28 0 0 20261029 36) ((emacs (28 1)))
      "Major mode for editing PHP code" tar
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261030 309) ((emacs (25 2)))
+  . [(4 6 -4 0 20261102 311) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "e0a6d4f042c083018896bc831234589abb33b915"))])
+      (:commit . "587a3de1ea98f8f38266b4b1151c2d598dd948dc"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -1941,13 +1941,13 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "82d2cf084a19b0c2c3812e0550721f8a61996056"))])
  (solarized-theme
-  . [(2 2 0 0 20261031 7) ((emacs (24 1))) "The Solarized color theme"
+  . [(2 2 0 0 20261101 8) ((emacs (24 1))) "The Solarized color theme"
      tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "ce2bc214e5486b05c76beb8d9da0a5068e66bd0e"))])
+      (:commit . "a9e645ee32322b3b86ac0ae85f36a993ddcc9510"))])
  (spacemacs-theme
   . [(0 2 0 20260906 51) ((emacs (24)))
      "Color theme with a dark and light versions." tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261101 35) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261101 40) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "665d76571c7a0748b315760e830639d520ab8f2b"))])
+      (:commit . "be44878cd5812c22f90245d82abe1fd7c493239e"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

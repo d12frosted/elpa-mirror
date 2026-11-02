@@ -42,5 +42,6 @@ After that, the license header will be written. An example follows.
 
 - `spdx-copyright-holder'
 - `spdx-copyright-sign'
+- `spdx-copyright-prefix'
 - `spdx-project-detection'
 - `spdx-ignore-deprecated'
