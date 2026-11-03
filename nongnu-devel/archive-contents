@@ -730,7 +730,7 @@
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "c79f66c8196723fc135053b4a8eec085fcc613ca"))])
  (fj
-  . [(0 50 0 20261101 37)
+  . [(0 51 0 20261102 38)
      ((emacs (29 1)) (compat (31)) (fedi (0 5)) (tp (0 8))
       (transient (0 10 0)) (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -738,7 +738,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "b99d1e6e97e2208e399299bed449729431532981"))])
+      (:commit . "9b44590aa4ac938c31789099879c82a404896f72"))])
  (flamegraph
   . [(0 2 0 20260609 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261102 311) ((emacs (25 2)))
+  . [(4 6 -4 0 20261102 317) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "587a3de1ea98f8f38266b4b1151c2d598dd948dc"))])
+      (:commit . "af05b1cac037f3bfb4e2355f37c21f0d8dcb7978"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -1920,11 +1920,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "f413c8ea511add76cca298e39eb20fb492504485"))])
  (slime
-  . [(2 32 -4 0 20261018 81) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20261102 82) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "b53e5e3fe14cff97cf7a1b2240981023e1f71d70"))])
+      (:commit . "728a05ed0afc12626e3792be1c5bccc01913c269"))])
  (sly
   . [(1 0 43 0 20261028 155) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
