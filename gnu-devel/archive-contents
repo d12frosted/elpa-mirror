@@ -1980,13 +1980,13 @@
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
       (:commit . "7e30b492ec594e641727fb31d07291e767d0897a"))])
  (leaf
-  . [(4 5 5 0 20261028 19) ((emacs (24 1)))
+  . [(4 5 5 0 20261103 20) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar
      ((:url . "https://github.com/conao3/leaf.el")
       (:keywords "lisp" "settings")
       (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
       (:authors ("Naoya Yamashita" . "conao3@gmail.com"))
-      (:commit . "cf5f068664e89e4f57e2716184b37655ee4f564e"))])
+      (:commit . "d70d8d3109c5630a90fd90fbb81a1b735bf3c78b"))])
  (lentic
   . [(0 12 0 20240303 95600)
      ((emacs (25)) (m-buffer (0 13)) (dash (2 5 0)))

@@ -16,6 +16,7 @@
 
   ⁃ Source:
     ⁃ [git.thanosapollo.org]
+    ⁃ [GitHub] (mirror)
 
 
 [XMPP] <http://xmpp.org>
@@ -26,6 +27,8 @@
 
 [git.thanosapollo.org]
 <https://git.thanosapollo.org/emacs-jabber/about/>
+
+[GitHub] <https://github.com/thanosapollo/emacs-jabber>
 
 
 2 Requirements

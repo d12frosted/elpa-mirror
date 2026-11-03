@@ -236,12 +236,12 @@
 		("Steve Purcell" . "steve@sanityinc.com"))
       (:commit . "1f0a1d13f3e879f6b795eecf44ee5df54b23e5b5"))])
  (clojure-mode
-  . [(5 23 0 0 20261101 11) ((emacs (27 1)))
+  . [(5 23 0 0 20261103 12) ((emacs (27 1)))
      "Major mode for Clojure code" tar
      ((:url . "https://github.com/clojure-emacs/clojure-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "8060fc85ae60c1742dd5599d530cb06401e08023"))])
+      (:commit . "370c7ffe3a0511e02b071579ddf4fa9ddbf5cef1"))])
  (clojure-ts-mode
   . [(0 6 0 0 20261101 97) ((emacs (30 1)))
      "Major mode for Clojure code" tar
@@ -1204,14 +1204,14 @@
       (:keywords "j" "languages")
       (:commit . "e49ef0692d73b320c281e40d9fa96b2c17073695"))])
  (jabber
-  . [(0 15 1 0 20261030 1)
+  . [(0 15 1 0 20261103 2)
      ((emacs (29 1)) (fsm (0 2 0)) (keymap-popup (0 2)))
      "XMPP/Jabber client" tar
      ((:url . "https://git.thanosapollo.org/emacs-jabber/about/")
       (:keywords "comm")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Magnus Henoch" . "mange@freemail.hu"))
-      (:commit . "2e582ad33fc684a7fa92070f77452af7b522a001"))])
+      (:commit . "ad054ead8a8f4fdda2a9ea4405e8221df5cd4bfc"))])
  (jade-mode
   . [(1 0 1 0 20211019 161323) nil
      "Major mode for editing .jade files" tar
@@ -1683,13 +1683,13 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "32cb4fb77ae440c55bceeb9748d38871dd36ee2c"))])
  (php-mode
-  . [(1 28 0 0 20261029 36) ((emacs (28 1)))
+  . [(1 28 0 0 20261103 39) ((emacs (28 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
       (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
-      (:commit . "98b597c296d11f9792261abed278406104367dbf"))])
+      (:commit . "518c4bb17b66cdd889c22e56369e6efe606784d2"))])
  (pinyin-isearch
   . [(1 7 2 0 20260910 61) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261102 317) ((emacs (25 2)))
+  . [(4 6 -4 0 20261103 322) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "af05b1cac037f3bfb4e2355f37c21f0d8dcb7978"))])
+      (:commit . "4f6d2d856dff1eaaa460a7e6c885c110b461c17b"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
