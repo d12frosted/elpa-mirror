@@ -20,5 +20,5 @@ path through `remoto-autoload-file-name-handler', which the package
 autoloads register for the prefixes of the forges that come with
 remoto, the way TRAMP autoloads on a remote path.
 `(global-remoto-mode 1)' in the init file turns it on ahead of time.
-`remoto-browse' supports pasting any GitHub URL, git remote URL, or
-owner/repo shorthand.
+`remoto-browse' supports pasting any forge URL, git remote URL,
+/PREFIX:OWNER/REPO name, or OWNER/REPO of `remoto-default-forge'.
