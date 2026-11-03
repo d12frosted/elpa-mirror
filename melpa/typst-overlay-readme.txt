@@ -1,8 +1,8 @@
 typst-overlay renders Typst math equations as inline overlays.
 Equations are compiled asynchronously to SVG with the `typst'
-compiler, many per process, and displayed over the source text.  The overlay is hidden
-while point is inside an equation, so you can edit the raw source,
-and restored when point leaves.
+compiler, many per process, and displayed over the source text.
+The overlay is hidden while point is inside an equation, so you can
+edit the raw source, and restored when point leaves.
 
 Supported buffers: `typst-ts-mode' and `org-mode' (where $...$ is
 treated as Typst math, with the #let code of the Typst export
