@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 9 0 20261025 0) ((helm-core (4 0 9)) (wfnames (1 2)))
+  . [(4 0 9 0 20261104 8) ((helm-core (4 0 9)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "a1e8724ed20d1f8024ff7530047374e1d7e994b0"))])
+      (:commit . "ed6f56ac26d4e253ddb5d2c01d1711c3d7799b9d"))])
  (helm-core
-  . [(4 0 9 0 20261025 0) ((emacs (25 1)) (async (2 0)))
+  . [(4 0 9 0 20261104 8) ((emacs (25 1)) (async (2 0)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "a1e8724ed20d1f8024ff7530047374e1d7e994b0"))])
+      (:commit . "ed6f56ac26d4e253ddb5d2c01d1711c3d7799b9d"))])
  (hermes
   . [(0 9 0 0 20261013 97)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
