@@ -1,22 +1,25 @@
-`helm-taskswitch' provides an X window and buffer switching with helm.
+`helm-taskswitch' switches between desktop windows (X11, or KDE
+Plasma on Wayland), browser tabs and Emacs buffers with helm.
 
-## Table of Contents
+Installation:
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Issues](#issues)
-- [License](#license)
-- [TODOs](#TODOs)
+Install wmctrl and helm.  On KDE Plasma under Wayland, wmctrl only
+sees XWayland windows, so set `helm-taskswitch-backend' to `kwin'
+(the default when XDG_SESSION_TYPE is wayland) to list windows
+through KWin's D-Bus interface instead.
 
-## Installation
+Browser tabs: the extension in browser-extension/ sends every tab to
+Emacs.  Install websocket.el, run M-x helm-taskswitch-browser-install
+and follow its steps, then turn on `helm-taskswitch-browser-mode' in
+your init file.  Tabs then show in their own section, most recently
+used first, with actions to switch to, close, reload, duplicate or
+mute them, or copy their URL.
 
-Install wmctrl and helm.
+Usage:
 
-## Usage
+To activate use `M-x helm-taskswitch'.
 
-To activate use `M-x helm-task-switcher'.
-
-## Issues / bugs
+Issues / bugs:
 
 If you discover an issue or bug in `helm-taskswitch' not already noted:
 
@@ -26,9 +29,9 @@ please create a new issue with as much detail as possible, including:
 
 * which version of Emacs you're running on which operating system, and
 
-* how you installed `helm-task-switcher', wmctrl and helm.
+* how you installed `helm-taskswitch', wmctrl and helm.
 
-## TODOs
+TODOs:
 
 * handle desktops: Switch to WM desktop withEmacs, bring Emacs to fore on
 activating, In most cases this already works.
@@ -47,9 +50,9 @@ WMCLASS is often program.Program, transform theses to just Program
 * Strip WMCLASS from end of title
 Title often ends with WMCLASS or something like that.  Try to strip these off.
 
-## License
+License:
 
-[GNU General Public License version 3]
+GNU General Public License version 3
 (http://www.gnu.org/licenses/gpl.html), or (at your option) any
-later version;; Code from https://github.com/flexibeast/ewmctrl is
+later version.  Code from https://github.com/flexibeast/ewmctrl is
 used under GNU 3.
