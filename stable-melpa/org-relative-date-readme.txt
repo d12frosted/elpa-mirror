@@ -1,4 +1,4 @@
-`org-relative-date-mode' paints a live "(N days away)" / "(N days ago)"
+`org-relative-date-mode' paints a live "3d away" / "2d ago" / "today"
 annotation *after* every Org timestamp in the buffer, without modifying the
 file.  It is the spiritual successor to `time-uuid-mode': rather than
 replacing text via a `display' property, it appends an `after-string' overlay,
