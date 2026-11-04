@@ -68,7 +68,13 @@ Many functions use text properties, to investigate them use:
 - Solution for "callback hell"	https://github.com/Anoncheg1/emacs-async1
 - Restore buffer state	https://github.com/Anoncheg1/emacs-unmodified-buffer1
 - outline.el usage		https://github.com/Anoncheg1/emacs-outline-it
-- ai_block for Org mode for chat. https://github.com/Anoncheg1/emacs-oai
+- ai_block for Org mode for chat.  https://github.com/Anoncheg1/emacs-oai
+
+;; TODO:
+
+- instead of pre-command-hook make it
+  like [[file:/usr/share/emacs/30.2/lisp/isearch.el::571::(defvar isearch-mode-map]]
+- Add timeout to clear search unless Ctrl pressed
 
 ;; Donate:
 

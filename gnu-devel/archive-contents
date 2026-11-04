@@ -2286,6 +2286,14 @@
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "782743415b3eedac0b99db2342fb35703deb752f"))])
+ (modus-vague
+  . [(0 2 3 0 20261101 1) ((emacs (30 1)) (modus-themes (5 3 0)))
+     "Emacs port of the popular vague theme" tar
+     ((:url . "https://github.com/paniash/modus-vague")
+      (:keywords "faces" "theme")
+      (:maintainer "Ashish Panigrahi" . "public@ashishpanigrahi.com")
+      (:authors ("Ashish Panigrahi" . "public@ashishpanigrahi.com"))
+      (:commit . "7c88f38f33e427aa74b7a8202e4aa33c90eea40f"))])
  (mpdired
   . [(4 0 20260915 0) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
@@ -3729,13 +3737,13 @@
       (:authors ("Martin Edström" . "meedstrom91@gmail.com"))
       (:commit . "5de00fbb6df3e3636095dc02d5c726f200213753"))])
  (trust-manager
-  . [(0 4 2 0 20260724 0) ((emacs (30 1)))
+  . [(0 4 3 0 20261103 0) ((emacs (30 1)))
      "Convenient trust management" tar
      ((:url . "https://git.sr.ht/~eshel/trust-manager")
       (:keywords "security" "trust" "files")
       (:maintainer "Eshel Yaron" . "me@eshelyaron.com")
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
-      (:commit . "0ff311bb59c9f1bb1ecdf413fa2bfa353bf389d7"))])
+      (:commit . "e527653dc41fa59a4a8af63dc4bfb4b4a8f9f68a"))])
  (typewriter
   . [(1 2 1 0 20261002 1) ((emacs (30 1)))
      "Turn Emacs into a text adder" tar

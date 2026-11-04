@@ -236,19 +236,19 @@
 		("Steve Purcell" . "steve@sanityinc.com"))
       (:commit . "1f0a1d13f3e879f6b795eecf44ee5df54b23e5b5"))])
  (clojure-mode
-  . [(5 23 0 0 20261103 12) ((emacs (27 1)))
+  . [(5 23 0 0 20261103 13) ((emacs (27 1)))
      "Major mode for Clojure code" tar
      ((:url . "https://github.com/clojure-emacs/clojure-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "370c7ffe3a0511e02b071579ddf4fa9ddbf5cef1"))])
+      (:commit . "d864d6f26c8acc576fc7fc343299c240909f27ac"))])
  (clojure-ts-mode
-  . [(0 6 0 0 20261101 97) ((emacs (30 1)))
+  . [(0 6 0 0 20261103 98) ((emacs (30 1)))
      "Major mode for Clojure code" tar
      ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "6a05097c033d0822514d4da9438c2eb563ba87f5"))])
+      (:commit . "51df988a3874e2f02a64f2d67b6ef97c7fc987b8"))])
  (codex-ide
   . [(0 2 1 0 20261011 0)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
@@ -759,7 +759,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "be738f439fa779c5a5def44569202d2d7c6b0547"))])
  (flycheck
-  . [(40 0 -4 0 20261021 94) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20261103 95) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -768,7 +768,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "0707e3426edf8dd9529bd8ad1058eb0b3add4507"))])
+      (:commit . "a76f054fd63333e6586e50a9a531ee6669b19758"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1683,13 +1683,13 @@
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
       (:commit . "32cb4fb77ae440c55bceeb9748d38871dd36ee2c"))])
  (php-mode
-  . [(1 28 0 0 20261103 39) ((emacs (28 1)))
+  . [(1 28 0 0 20261103 41) ((emacs (28 1)))
      "Major mode for editing PHP code" tar
      ((:url . "https://github.com/emacs-php/php-mode")
       (:keywords "languages" "php")
       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
       (:authors ("USAMI Kenta" . "tadsan@zonu.me"))
-      (:commit . "518c4bb17b66cdd889c22e56369e6efe606784d2"))])
+      (:commit . "75a2ca83b6a1c98781dd5e55ff4b8ffec285c39b"))])
  (pinyin-isearch
   . [(1 7 2 0 20260910 61) ((emacs (28 1))) "Pinyin mode for isearch"
      tar
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261103 322) ((emacs (25 2)))
+  . [(4 6 -4 0 20261103 334) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "4f6d2d856dff1eaaa460a7e6c885c110b461c17b"))])
+      (:commit . "70696abaff29def0c17d7a740806b1687dba3153"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
