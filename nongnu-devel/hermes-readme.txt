@@ -780,9 +780,9 @@ gateway.
 
   `N' opens a separate ordinary scratch chat.  Within a canonical Bot
   Chat, `/new' offers compression or explicit scratch creation; it does
-  not silently replace the relationship.  Ordinary chats retain their
-  existing `/new' behavior.  `m' still edits the profile's default
-  model.
+  not silently replace the relationship.  In an ordinary chat, `/new'
+  opens a fresh chat under the same profile and backend.  `m' still
+  edits the profile's default model.
 
   `R' opens that backend/profile's existing cron jobs in the ordinary
   cron editor.  Opening or refreshing Routines only reads jobs.

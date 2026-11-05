@@ -982,7 +982,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20261031 33)
+  . [(0 9 9 6 0 20261104 36)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -991,7 +991,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "65280701b87dc32cbe6cf9c07f1b88fdf035085c"))])
+      (:commit . "e161ababf0cb19654ec9097f06c09c95d4561721"))])
  (graphql-mode
   . [(1 0 0 0 20261031 40) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1065,7 +1065,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "ed6f56ac26d4e253ddb5d2c01d1711c3d7799b9d"))])
  (hermes
-  . [(0 9 0 0 20261013 97)
+  . [(0 9 0 0 20261105 99)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1073,7 +1073,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "3acc9c1ff009c8674cb25ccf9587dc66cfbd51a0"))])
+      (:commit . "1c281ad7b2711081d472d40c17ec76ca4a53726f"))])
  (hideshowvis
   . [(0 9 0 20260829 1) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1283,13 +1283,13 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "50cac3f726abd4e7872b8fa36ede72550ce66a64"))])
  (loopy
-  . [(0 16 1 0 20260927 15)
+  . [(0 16 1 0 20261105 17)
      ((emacs (28 1)) (map (3 3 1)) (seq (2 22)) (compat (29 1 3))
       (stream (2 4 0)))
      "A looping macro" tar
      ((:url . "https://codeberg.org/okamsn/loopy")
       (:keywords "extensions")
-      (:commit . "f02d09667489011e412321ee9331b5163c4c1b36"))])
+      (:commit . "b75089cdf0a7b004b44ea703d80c47ac821b2635"))])
  (loopy-dash
   . [(0 13 0 0 20260718 11)
      ((emacs (28 1)) (loopy (0 13 0)) (dash (2 20)))
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261104 339) ((emacs (25 2)))
+  . [(4 6 -4 0 20261105 352) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "e418af92903c1c174db08bc29f25dfee1197dd1b"))])
+      (:commit . "9f1021edcc7b1c066c61fd01a15c4f159900bf78"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -1941,13 +1941,13 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "82d2cf084a19b0c2c3812e0550721f8a61996056"))])
  (solarized-theme
-  . [(2 2 0 0 20261104 10) ((emacs (28 1)))
+  . [(2 2 0 0 20261105 12) ((emacs (28 1)))
      "The Solarized color theme" tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "1358f00a50447ace9a40f0f70147ddabccb76708"))])
+      (:commit . "50a13dfdde6ccf998a03095c3ddfcfedf6efcacc"))])
  (spacemacs-theme
   . [(0 2 0 20260906 51) ((emacs (24)))
      "Color theme with a dark and light versions." tar

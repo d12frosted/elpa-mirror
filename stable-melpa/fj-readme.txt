@@ -1,5 +1,5 @@
 A client for Forgejo instances. Forgejo is a self-hostable software
-forge. See <https://foregejo.org>.
+forge. See <https://forgejo.org>.
 
 The client is based on tabulated listings for issues, PRs, repos,
 users, etc., and attempts to implement a fairly rich interface for item

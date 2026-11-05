@@ -1228,7 +1228,7 @@
       (:authors ("Jorgen Schäfer" . "forcer@forcix.cx"))
       (:commit . "6f704fd3c12f35e059700aaeb43ae64c35ad81b2"))])
  (emureader
-  . [(0 4 0 0 20261104 1) ((emacs (26 1)))
+  . [(0 4 0 0 20261105 3) ((emacs (26 1)))
      "General-purpose document reader" tar
      ((:url . "https://codeberg.org/MonadicSheep/emureader")
       (:keywords "lisp" "files" "tools")
@@ -1236,7 +1236,7 @@
 		   ("Tushar" . "tusharhero@sdf.org"))
       (:authors ("Divya Ranjan Pattanaik" . "divya@dialetheia.xyz")
 		("Tushar" . "tusharhero@sdf.org"))
-      (:commit . "bfa375880735c9da7dd1462f36967be904f0d598"))])
+      (:commit . "d42119ef6ff6f90c80ea1038716d4d9d16d1c81e"))])
  (engrave-faces
   . [(0 3 1 0 20240421 82802) ((emacs (27 1)))
      "Convert font-lock faces to other formats" tar
@@ -2063,14 +2063,14 @@
       (:authors ("Sean Whitton" . "spwhitton@spwhitton.name"))
       (:commit . "00b8f65effe4f2673e6450d70000644b266aa78a"))])
  (llm
-  . [(0 34 0 0 20261025 5)
+  . [(0 34 0 0 20261104 6)
      ((emacs (28 1)) (plz (0 8)) (plz-event-source (0 1 1))
       (plz-media-type (0 2 1)) (compat (29 1)))
      "Interface to pluggable llm backends" tar
      ((:url . "https://github.com/ahyatt/llm")
       (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
-      (:commit . "ce9a7c4a434c27301cffbb8d2cf221b9500936d8"))])
+      (:commit . "fd36370316d056804d9642cbf54e94259cd59248"))])
  (lmc
   . [(1 4 0 20230105 113402) ((emacs (24)) (cl-lib (0 5)))
      "Little Man Computer in Elisp" tar
@@ -2902,12 +2902,12 @@
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
       (:commit . "fd5f183f5d4588cc5b52e8f8acf3afde2cb0003e"))])
  (qrencode
-  . [(1 7 -2 2 0 20261101 0) ((emacs (25 1))) "QRCode encoder" tar
+  . [(1 7 -2 2 0 20261105 1) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")
       (:keywords "qrcode" "comm")
       (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
       (:authors ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
-      (:commit . "5f112da0c99e625e7fd3e265e18b511189b3944a"))])
+      (:commit . "c0e293f798ef1c908ec6e3567e703d36f9b66c20"))])
  (quarter-plane
   . [(0 1 0 20221221 81727) nil
      "Minor mode for quarter-plane style editing" tar
