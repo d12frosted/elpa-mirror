@@ -1,5 +1,5 @@
-This package uses xelb to build a dock bar for displaying status
-information.
+This package uses xelb to build a dock bar on X11 and elwl/wlr-layer-shell
+to build a bar on Wayland.
 
 An example configuration with use-package:
 
