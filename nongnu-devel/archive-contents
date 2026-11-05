@@ -723,12 +723,12 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "bb4867e13ec7480d4dbc1d99888627e4cc8ef2f6"))])
  (fedi
-  . [(0 5 0 20261005 4) ((emacs (28 1)) (markdown-mode (2 5)))
+  . [(0 5 0 20261104 7) ((emacs (28 1)) (markdown-mode (2 5)))
      "Helper functions for fediverse clients" tar
      ((:url . "https://codeberg.org/martianh/fedi.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "c79f66c8196723fc135053b4a8eec085fcc613ca"))])
+      (:commit . "1609066aa4c3ea6b6e780eb0a688b6ebdbac6357"))])
  (fj
   . [(0 51 0 20261102 38)
      ((emacs (29 1)) (compat (31)) (fedi (0 5)) (tp (0 8))
@@ -759,7 +759,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "be738f439fa779c5a5def44569202d2d7c6b0547"))])
  (flycheck
-  . [(40 0 -4 0 20261103 95) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20261104 101) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -768,7 +768,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "a76f054fd63333e6586e50a9a531ee6669b19758"))])
+      (:commit . "a92701691da0a37c13501d6c3eb99b4f198ca917"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261103 334) ((emacs (25 2)))
+  . [(4 6 -4 0 20261104 339) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "70696abaff29def0c17d7a740806b1687dba3153"))])
+      (:commit . "e418af92903c1c174db08bc29f25dfee1197dd1b"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -1941,13 +1941,13 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "82d2cf084a19b0c2c3812e0550721f8a61996056"))])
  (solarized-theme
-  . [(2 2 0 0 20261101 8) ((emacs (24 1))) "The Solarized color theme"
-     tar
+  . [(2 2 0 0 20261104 10) ((emacs (28 1)))
+     "The Solarized color theme" tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "a9e645ee32322b3b86ac0ae85f36a993ddcc9510"))])
+      (:commit . "1358f00a50447ace9a40f0f70147ddabccb76708"))])
  (spacemacs-theme
   . [(0 2 0 20260906 51) ((emacs (24)))
      "Color theme with a dark and light versions." tar
@@ -2009,7 +2009,7 @@
       (:authors ("Eshel Yaron" . "me@eshelyaron.com"))
       (:commit . "4e1c7c975f4d6960f4c8d3695088b7054523a93d"))])
  (swift-mode
-  . [(10 0 0 0 20261025 42) ((emacs (25 2)))
+  . [(10 0 0 0 20261104 43) ((emacs (25 2)))
      "Major-mode for Apple's Swift programming language" tar
      ((:url . "https://github.com/swift-emacs/swift-mode")
       (:keywords "languages" "swift")
@@ -2018,7 +2018,7 @@
 		("Chris Barrett" . "chris.d.barrett@me.com")
 		("Bozhidar Batsov" . "bozhidar@batsov.com")
 		("Arthur Evstifeev" . "lod@pisem.net"))
-      (:commit . "766f366f2407da540f296fa1690f01020d98dfed"))])
+      (:commit . "158abad032d2562e3736ff65a0fc7876a1bbbf73"))])
  (symbol-overlay
   . [(4 3 0 20260703 4) ((emacs (24 3)) (seq (2 2)))
      "Highlight symbols with keymap-enabled overlays" tar

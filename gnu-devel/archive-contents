@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261103 21) ((emacs (28 1)))
+  . [(14 2 0 0 20261104 22) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "52fc561c6fd9e049a837f09a559fc8c095894928"))])
+      (:commit . "067713ce147ea7530089b8f82ee397104755801e"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1227,6 +1227,16 @@
       (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
       (:authors ("Jorgen Schäfer" . "forcer@forcix.cx"))
       (:commit . "6f704fd3c12f35e059700aaeb43ae64c35ad81b2"))])
+ (emureader
+  . [(0 4 0 0 20261104 1) ((emacs (26 1)))
+     "General-purpose document reader" tar
+     ((:url . "https://codeberg.org/MonadicSheep/emureader")
+      (:keywords "lisp" "files" "tools")
+      (:maintainer ("Divya Ranjan Pattanaik" . "divya@dialetheia.xyz")
+		   ("Tushar" . "tusharhero@sdf.org"))
+      (:authors ("Divya Ranjan Pattanaik" . "divya@dialetheia.xyz")
+		("Tushar" . "tusharhero@sdf.org"))
+      (:commit . "bfa375880735c9da7dd1462f36967be904f0d598"))])
  (engrave-faces
   . [(0 3 1 0 20240421 82802) ((emacs (27 1)))
      "Convert font-lock faces to other formats" tar
@@ -1880,13 +1890,13 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "bccb08062a3372629015bcd2c197490b7d005f37"))])
  (jit-spell
-  . [(0 5 0 20251012 84654) ((emacs (27 1)) (compat (29 1)))
+  . [(0 5 0 20261104 7) ((emacs (28 1)) (compat (31 1)))
      "Just-in-time spell checking" tar
      ((:url . "https://github.com/astoff/jit-spell")
-      (:keywords "tools" "wp")
+      (:keywords "text")
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
-      (:commit . "e6f3525b848c48906f06bf21a9e8678b95ccd3bf"))])
+      (:commit . "6fb5d63860d1714b39c8581e6ee860ed7abd86bf"))])
  (js2-mode
   . [(20231224 0 20260627 14) ((emacs (24 1)) (cl-lib (0 5)))
      "Improved JavaScript editing mode" tar
@@ -2287,13 +2297,13 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "782743415b3eedac0b99db2342fb35703deb752f"))])
  (modus-vague
-  . [(0 2 3 0 20261101 1) ((emacs (30 1)) (modus-themes (5 3 0)))
+  . [(0 2 4 0 20261104 1) ((emacs (30 1)) (modus-themes (5 3 0)))
      "Emacs port of the popular vague theme" tar
      ((:url . "https://github.com/paniash/modus-vague")
       (:keywords "faces" "theme")
       (:maintainer "Ashish Panigrahi" . "public@ashishpanigrahi.com")
       (:authors ("Ashish Panigrahi" . "public@ashishpanigrahi.com"))
-      (:commit . "7c88f38f33e427aa74b7a8202e4aa33c90eea40f"))])
+      (:commit . "4108a12f555ae7ed80cd0dea59e5fc9e000e3b84"))])
  (mpdired
   . [(4 0 20260915 0) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
@@ -2488,13 +2498,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261104 958) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261104 959) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "fe91cdaf6350e03a421286b2ed11fc3c81257f73"))])
+      (:commit . "56a243ffaa42cb13606e3e7598b27c2c655f947d"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2967,6 +2977,14 @@
       (:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
       (:commit . "349aabcbb6bd10b007f431d180e870a5918b9e21"))])
+ (readline-completion
+  . [(0 1 0 20261104 0) ((emacs (29 1)) (compat (31 1)))
+     "CAPF based on GNU Readline" tar
+     ((:url . "https://codeberg.org/astoff/readline-completion.el")
+      (:keywords "convenience" "processes")
+      (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
+      (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
+      (:commit . "567be45a202ee2f597fcc86cc65040bd73afb4c3"))])
  (realgud
   . [(1 6 0 0 20260821 16)
      ((load-relative (1 3 2)) (loc-changes (1 2))
@@ -3539,12 +3557,12 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "9299c5d0f35dbb02de2565404a082224c4d11654"))])
  (termint
-  . [(0 2 3 0 20260804 2) ((emacs (29 1)))
+  . [(0 3 0 20261104 0) ((emacs (29 1)))
      "Run REPLs in a terminal backend" tar
      ((:url . "https://github.com/milanglacier/termint.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "bf97d0a417902417febc2b6925152dab5610057f"))])
+      (:commit . "7b919e672497a463a3e2e15e497919ff4cc5f77f"))])
  (test-simple
   . [(1 3 2 0 20260118 164127) ((emacs (24 4)) (compat (30 1 0 1)))
      "Simple Unit Test Framework for Emacs Lisp" tar

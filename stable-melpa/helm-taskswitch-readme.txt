@@ -10,10 +10,10 @@ through KWin's D-Bus interface instead.
 
 Browser tabs: the extension in browser-extension/ sends every tab to
 Emacs.  Install websocket.el, run M-x helm-taskswitch-browser-install
-and follow its steps, then turn on `helm-taskswitch-browser-mode' in
-your init file.  Tabs then show in their own section, most recently
-used first, with actions to switch to, close, reload, duplicate or
-mute them, or copy their URL.
+and follow its steps.  Tabs then show in their own section, most
+recently used first, with actions to switch to, close, reload,
+duplicate or mute them, or copy their URL.  Emacs starts listening
+for the extension the first time you run `helm-taskswitch'.
 
 Usage:
 

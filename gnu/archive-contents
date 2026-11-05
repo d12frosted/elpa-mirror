@@ -1153,6 +1153,15 @@
       (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
       (:authors ("Jorgen Schäfer" . "forcer@forcix.cx"))
       (:commit . "6f704fd3c12f35e059700aaeb43ae64c35ad81b2"))])
+ (emureader
+  . [(0 4 0) ((emacs (26 1))) "General-purpose document reader" tar
+     ((:url . "https://codeberg.org/MonadicSheep/emureader")
+      (:keywords "lisp" "files" "tools")
+      (:maintainer ("Divya Ranjan Pattanaik" . "divya@dialetheia.xyz")
+		   ("Tushar" . "tusharhero@sdf.org"))
+      (:authors ("Divya Ranjan Pattanaik" . "divya@dialetheia.xyz")
+		("Tushar" . "tusharhero@sdf.org"))
+      (:commit . "5ea47a599e98bcb341c9182bb501922b69f2f60c"))])
  (engrave-faces
   . [(0 3 1) ((emacs (27 1)))
      "Convert font-lock faces to other formats" tar
@@ -2142,13 +2151,13 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "2d044ac89f3bca7011fa2bfda003cf80ce115f70"))])
  (modus-vague
-  . [(0 2 3) ((emacs (30 1)) (modus-themes (5 3 0)))
+  . [(0 2 4) ((emacs (30 1)) (modus-themes (5 3 0)))
      "Emacs port of the popular vague theme" tar
      ((:url . "https://github.com/paniash/modus-vague")
       (:keywords "faces" "theme")
       (:maintainer "Ashish Panigrahi" . "public@ashishpanigrahi.com")
       (:authors ("Ashish Panigrahi" . "public@ashishpanigrahi.com"))
-      (:commit . "9049ac51dc320759d2a715a665141ca99e84e362"))])
+      (:commit . "aa5e85a9d2ecc72a24eec5b3cff482c7ad409ba7"))])
  (mpdired
   . [(4) ((emacs (29))) "A dired-like client for Music Player Daemon"
      tar
@@ -2769,6 +2778,14 @@
       (:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
       (:commit . "349aabcbb6bd10b007f431d180e870a5918b9e21"))])
+ (readline-completion
+  . [(0 1) ((emacs (29 1)) (compat (31 1)))
+     "CAPF based on GNU Readline" tar
+     ((:url . "https://codeberg.org/astoff/readline-completion.el")
+      (:keywords "convenience" "processes")
+      (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
+      (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
+      (:commit . "567be45a202ee2f597fcc86cc65040bd73afb4c3"))])
  (realgud
   . [(1 6 0)
      ((load-relative (1 3 2)) (loc-changes (1 2))
@@ -3274,11 +3291,11 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "c5fdc3806b486d9d86a54c50efac3d4a141e789d"))])
  (termint
-  . [(0 2 3) ((emacs (29 1))) "Run REPLs in a terminal backend" tar
+  . [(0 3) ((emacs (29 1))) "Run REPLs in a terminal backend" tar
      ((:url . "https://github.com/milanglacier/termint.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "f51ab6c4ef50eb8781560d3596335a6f7f668c7c"))])
+      (:commit . "7b919e672497a463a3e2e15e497919ff4cc5f77f"))])
  (test-simple
   . [(1 3 2) ((emacs (24 4)) (compat (30 1 0 1)))
      "Simple Unit Test Framework for Emacs Lisp" tar
