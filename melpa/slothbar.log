@@ -2,10 +2,10 @@
  • Building package slothbar
 From https://codeberg.org/agnes-li/slothbar
 Updating /mnt/store/melpa/working/slothbar/
-Checking out 96b0cee54280e709c8c084dddefbad9285fac30c
+Checking out 5ab07d26d71ba38ef584a10b3e4dc7af045bc95c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/slothbar/
-  to /tmp/slothbar-PA6L0B/slothbar-20261105.2109/
+  to /tmp/slothbar-9hwpCL/slothbar-20261106.1747/
     slothbar-backend-wayland.el -> slothbar-backend-wayland.el
     slothbar-backend-xcb.el -> slothbar-backend-xcb.el
     slothbar-backend.el -> slothbar-backend.el
@@ -15,6 +15,7 @@ Copying files (->) and directories (=>)
     slothbar-date.el -> slothbar-date.el
     slothbar-draw-op.el -> slothbar-draw-op.el
     slothbar-ewmh.el -> slothbar-ewmh.el
+    slothbar-focus.el -> slothbar-focus.el
     slothbar-font.el -> slothbar-font.el
     slothbar-format.el -> slothbar-format.el
     slothbar-layout.el -> slothbar-layout.el
@@ -31,32 +32,33 @@ Copying files (->) and directories (=>)
     slothbar-wifi.el -> slothbar-wifi.el
     slothbar-workspaces.el -> slothbar-workspaces.el
     slothbar.el -> slothbar.el
-Created slothbar-20261105.2109.tar containing:
-  slothbar-20261105.2109/
-  slothbar-20261105.2109/slothbar-backend-wayland.el
-  slothbar-20261105.2109/slothbar-backend-xcb.el
-  slothbar-20261105.2109/slothbar-backend.el
-  slothbar-20261105.2109/slothbar-backlight.el
-  slothbar-20261105.2109/slothbar-battery.el
-  slothbar-20261105.2109/slothbar-color.el
-  slothbar-20261105.2109/slothbar-date.el
-  slothbar-20261105.2109/slothbar-draw-op.el
-  slothbar-20261105.2109/slothbar-ewmh.el
-  slothbar-20261105.2109/slothbar-font.el
-  slothbar-20261105.2109/slothbar-format.el
-  slothbar-20261105.2109/slothbar-layout.el
-  slothbar-20261105.2109/slothbar-log.el
-  slothbar-20261105.2109/slothbar-module-.el
-  slothbar-20261105.2109/slothbar-module-requires.el
-  slothbar-20261105.2109/slothbar-module.el
-  slothbar-20261105.2109/slothbar-pkg.el
-  slothbar-20261105.2109/slothbar-randr.el
-  slothbar-20261105.2109/slothbar-render-xcb.el
-  slothbar-20261105.2109/slothbar-sysinfo.el
-  slothbar-20261105.2109/slothbar-tray.el
-  slothbar-20261105.2109/slothbar-util.el
-  slothbar-20261105.2109/slothbar-volume.el
-  slothbar-20261105.2109/slothbar-wifi.el
-  slothbar-20261105.2109/slothbar-workspaces.el
-  slothbar-20261105.2109/slothbar.el
-Built slothbar in 5.148s, finished at 2026-11-06T15:06:47+0000
+Created slothbar-20261106.1747.tar containing:
+  slothbar-20261106.1747/
+  slothbar-20261106.1747/slothbar-backend-wayland.el
+  slothbar-20261106.1747/slothbar-backend-xcb.el
+  slothbar-20261106.1747/slothbar-backend.el
+  slothbar-20261106.1747/slothbar-backlight.el
+  slothbar-20261106.1747/slothbar-battery.el
+  slothbar-20261106.1747/slothbar-color.el
+  slothbar-20261106.1747/slothbar-date.el
+  slothbar-20261106.1747/slothbar-draw-op.el
+  slothbar-20261106.1747/slothbar-ewmh.el
+  slothbar-20261106.1747/slothbar-focus.el
+  slothbar-20261106.1747/slothbar-font.el
+  slothbar-20261106.1747/slothbar-format.el
+  slothbar-20261106.1747/slothbar-layout.el
+  slothbar-20261106.1747/slothbar-log.el
+  slothbar-20261106.1747/slothbar-module-.el
+  slothbar-20261106.1747/slothbar-module-requires.el
+  slothbar-20261106.1747/slothbar-module.el
+  slothbar-20261106.1747/slothbar-pkg.el
+  slothbar-20261106.1747/slothbar-randr.el
+  slothbar-20261106.1747/slothbar-render-xcb.el
+  slothbar-20261106.1747/slothbar-sysinfo.el
+  slothbar-20261106.1747/slothbar-tray.el
+  slothbar-20261106.1747/slothbar-util.el
+  slothbar-20261106.1747/slothbar-volume.el
+  slothbar-20261106.1747/slothbar-wifi.el
+  slothbar-20261106.1747/slothbar-workspaces.el
+  slothbar-20261106.1747/slothbar.el
+Built slothbar in 8.699s, finished at 2026-11-06T19:39:29+0000
