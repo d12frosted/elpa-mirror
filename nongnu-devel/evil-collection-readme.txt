@@ -266,20 +266,34 @@ calendar', Eshell and more.
   │       '((term-toggle-escape :enabled nil)))
   └────
 
-  `:enabled' can also take a predicate.
+  `:enabled' can also take a predicate (called with `map-sym', `id',
+  `keys', and `command').
 
   ┌────
   │ (setq evil-collection-binding-overrides
-  │       `((find-usages :enabled ,(lambda () evil-collection-want-find-usages-bindings))))
+  │       `((find-usages :enabled ,(lambda (_map-sym _id _keys _command)
+  │                                  (not (eq map-sym 'dired-mode-map))))))
   └────
 
 
 5.3 Configure the REPL
 ──────────────────────
 
-  `:state' for `repl-submit~/~repl-newline' defaults to lambdas that
-  read the (now-obsolete) `evil-collection-repl-submit-state' — flipping
-  that var is equivalent to setting `:state' here.
+  By default `RET' submits the input in `normal' state (`repl-submit')
+  and inserts a newline in `insert' state (`repl-newline'); `S-RET'
+  (`repl-force-newline') always inserts a newline.  The states are plain
+  theme values, so they can be overridden directly.
+
+  To reverse the behavior — have `RET' submit while in `insert' state
+  and insert a newline in `normal' state — swap the two `:state' values:
+
+  ┌────
+  │ (setq evil-collection-binding-overrides
+  │       '((repl-submit  :state insert)
+  │         (repl-newline :state normal)))
+  └────
+
+  The shipped defaults, in full:
 
   ┌────
   │ (setq evil-collection-binding-overrides
@@ -879,7 +893,7 @@ calendar', Eshell and more.
 7.8 Go to references, etc (`gr', `gA')
 ──────────────────────────────────────
 
-  When `evil-collection-want-find-usages-bindings' is set to t:
+  When the `find-usages' theme binding is enabled (the default):
 
   • `gr': [g] to [r]eferences. This binding is also used for
     refresh/reverting modes in non programming modes but is usually

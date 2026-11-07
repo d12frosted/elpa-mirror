@@ -1,3 +1,8 @@
+                       ━━━━━━━━━━━━━━━━━━━━━━━━━
+                        FJ.EL: A FORGEJO CLIENT
+                       ━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
 
 
 
@@ -313,137 +318,149 @@
 11 commands index
 ═════════════════
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Binding    Command                         Description                                                         
-  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-              fj-add-issue-to-milestone       Add issue at point or in current view to milestone.                 
-   r          fj-add-reaction                 Add reaction to issue, PR or comment at point.                      
-              fj-browse-commit                Browse commit with SHA in REPO by OWNER.                            
-   b          fj-browse-view                  Browse URL of view at point.                                        
-              fj-commits-mode                 Major mode for viewing repo commits.                                
-   C-c C-k    fj-compose-cancel               Kill new-post buffer/window. Does not POST content.                 
-              fj-compose-comment-mode         Minor mode for composing comments.                                  
-              fj-compose-mode                 Minor mode for composing issues.                                    
-   C-c C-l    fj-compose-read-labels          Read a label in the issue compose buffer.                           
-   C-c RET    fj-compose-read-milestone       Read an existing milestone in the compose buffer.                   
-   C-c C-o    fj-compose-read-owner           Read a repo owner.                                                  
-   C-c C-r    fj-compose-read-repo            Read a repo for composing a issue or comment.                       
-   C-c C-t    fj-compose-read-title           Read an issue title.                                                
-   C-c C-u    fj-compose-read-upload          Read a file to upload.                                              
-   C-c C-S-l  fj-compose-remove-labels        Remove labels from item being composed.                             
-   C-c S-RET  fj-compose-remove-milestone     Remove milestone from item being composed.                          
-   C-c C-S-u  fj-compose-remove-upload        Remove attachment file from item being composed.                    
-   C-c C-c    fj-compose-send                 Submit the issue or comment to your Forgejo instance.               
-   C          fj-copy-item-url                Copy URL of current item, either issue or PR.                       
-              fj-copy-pr-url                  Copy upstream Pull Request URL with branch name.                    
-   c          fj-create-issue                 Create issue in current repo or repo at point in tabulated listing. 
-              fj-create-milestone             Create a milestone for REPO by OWNER.                               
-              fj-create-token                 Create an access token for `fj-user' on `fj-host'.                  
-   C-c C-d    fj-cycle-sort-or-relation       Call `fj-own-items-cycle-relation' or `fj-list-issues-sort'.        
-   C-c C-c    fj-cycle-state                  Cycle item state listing of open, closed, and all.                  
-   C-c C-s    fj-cycle-type                   Cycle item type listing of issues, pulls, and all.                  
-              fj-delete-attachment            Delete attachment at point.                                         
-              fj-delete-repo                  Delete repo at point, if you are its owner.                         
-              fj-delete-repo-tag              Prompt for a repo tag and delete it on the server.                  
-   <return>   fj-do-link-action               Do the action of the link at POS.                                   
-   <mouse-2>  fj-do-link-action-mouse         Do the action of the link at point.                                 
-              fj-fetch-pull-as-branch         From a PR view, fetch it as a new git branch using magit.           
-              fj-fork-repo                    Fork repo entry at point.                                           
-              fj-fork-to-parent               From a repo TL listing, jump to the parent repo.                    
-              fj-get-pull-commits             Return the data for the commits of the current pull.                
-              fj-inspect-item-data            Browse the JSON data of item at point.                              
-              fj-issue-compose                Compose a new post.                                                 
-              fj-issue-get-labels             Get labels on ISSUE in REPO by OWNER.                               
-              fj-issue-tl-mode                Major mode for browsing a tabulated list of issues.                 
-   v          fj-issues-tl-view               View current issue from tabulated issues listing.                   
-   k          fj-item-close                   Close the item at point or being viewed.                            
-   c, C       fj-item-comment                 Comment on the item at point or being viewed.                       
-   K          fj-item-delete                  Delete the item at point or being viewed.                           
-   e          fj-item-edit                    Edit the item at point or being viewed.                             
-   t          fj-item-edit-title              Edit the title of the item at point or being viewed.                
-   l          fj-item-label-add               Add label to the item at point or being viewed.                     
-              fj-item-label-remove            Remove label from the item at point or being viewed.                
-   n          fj-item-next                    Go to next item or notification.                                    
-   p          fj-item-prev                    Goto previous item or notification.                                 
-   o          fj-item-reopen                  Reopen the item at point or being viewed.                           
-              fj-item-view                    View item NUMBER from REPO of OWNER.                                
-              fj-item-view-mode               Major mode for viewing items.                                       
-   >          fj-item-view-more               Load more items to the timeline, if it has more items.              
-   J          fj-jump-to-item                 Prompt for a query and load matching issue or PR from current repo. 
-              fj-jump-to-repo                 Jump to repo issues listing.                                        
-   C-M-q      fj-kill-all-buffers             Kill all fj buffers.                                                
-              fj-list-authored-issues         Return issues authored by `fj-user', in any repo.                   
-              fj-list-authored-pulls          Return pulls authored by `fj-user', in any repo.                    
-   I          fj-list-issues                  List issues for current REPO with default sorting.                  
-              fj-list-issues-+-pulls          List issues and pulls for REPO by OWNER, filtered by STATE.         
-              fj-list-issues-all              Display all ISSUES for REPO by OWNER in tabulated list view.        
-              fj-list-issues-by-label         List issues in REPO by OWNER, filtering by label.                   
-              fj-list-issues-by-milestone     List issues in REPO by OWNER, filtering by milestone.               
-              fj-list-issues-closed           Display closed ISSUES for REPO by OWNER in tabulated list view.     
-   s          fj-list-issues-search           Search current repo issues for QUERY.                               
-              fj-list-issues-sort             Reload current issues listing, prompting for a sort type.           
-   W          fj-list-own-issues              List issues in repos owned by `fj-user'.                            
-              fj-list-own-pulls               List pulls in repos owned by `fj-user'.                             
-   O          fj-list-own-repos               List repos for `fj-user'.                                           
-   C-c C-c    fj-list-own-repos-read          List repos for `fj-user', prompting for an order type.              
-   P          fj-list-pulls                   List pulls for REPO by OWNER, filtered by STATE.                    
-              fj-list-repos                   List repos for `fj-user' extended by `fj-extra-repos'.              
-   C-c C-c    fj-list-repos-sort              Reload current repos listing, prompting for a sort type.            
-              fj-list-user-repos              View repos of current entry user from tabulated repos listing.      
-              fj-mark-notification-read       Mark notification at point as read.                                 
-              fj-mark-notification-unread     Mark notification at point as unread.                               
-              fj-mark-notifs-read             Mark all notifications read.                                        
-   M          fj-merge-pull                   Merge pull request of current view or at point.                     
-   .          fj-next-page                    Load the next page of the current view.                             
-   <tab>      fj-next-tab-item                Jump to next tab item.                                              
-              fj-notifications-mode           Major mode for viewing notifications.                               
-   C-c C-s    fj-notifications-subject-cycle  Cycle notifications by `fj-notifications-subject-types'.            
-   C-c C-c    fj-notifications-unread-toggle  Switch between showing all notifications, and only showing unread.  
-              fj-own-items-cycle-relation     Cycle the relation for own issues view.                             
-              fj-owned-issues-tl-mode         Major mode for browsing a tabulated list of issues.                 
-   ,          fj-prev-page                    Load the previous page.                                             
-   <backtab>  fj-prev-tab-item                Jump to prev tab item.                                              
-              fj-pull-req-comment             Add comment to PULL in REPO.                                        
-              fj-remove-reaction              Remove a reaction from issue, PR or comment at point.               
-   L          fj-repo-commit-log              Render log of commits for REPO by OWNER.                            
-   u, L       fj-repo-copy-clone-url          Add the clone_url of repo at point to the kill ring.                
-              fj-repo-create                  Create a new repo.                                                  
-              fj-repo-create-label            Create a new label for REPO by OWNER.                               
-              fj-repo-delete-label            Delete a label for REPO by OWNER.                                   
-              fj-repo-get-labels              Return labels JSON for REPO by OWNER.                               
-   RET        fj-repo-list-issues             View issues of current repo from tabulated repos listing.           
-   M-RET      fj-repo-list-pulls              View issues of current repo from tabulated repos listing.           
-   r          fj-repo-readme                  Display readme file of current repo.                                
-   s, S       fj-repo-search                  Search repos for QUERY, and display a tabulated list of results.    
-              fj-repo-search-topic            Search repo topics for QUERY, and display a tabulated list.         
-              fj-repo-stargazers              Render stargazers for REPO by OWNER.                                
-              fj-repo-tl-mode                 Mode for displaying a tabulated list of repo search results.        
-   R          fj-repo-update-settings         A transient for setting current repo settings.                      
-              fj-repo-watchers                Render watchers for REPO by OWNER.                                  
-   *          fj-star-repo                    Star or UNSTAR current repo from tabulated user repos listing.      
-              fj-stargazers-completing        Prompt for a repo stargazer, and view their repos.                  
-              fj-starred-repos                List your starred repos.                                            
-   B          fj-tl-browse-entry              Browse URL of tabulated list entry at point.                        
-              fj-token                        Fetch user access token from auth source, or try to add one.        
-              fj-unstar-repo                  Unstar current repo from tabulated user repos listing.              
-              fj-unwatch-repo                 Watch repo at point or in current view.                             
-              fj-update-repo                  Update current repo settings.                                       
-              fj-update-topics                Update repo topics on the server.                                   
-              fj-update-user-settings         Update current user settings on the server.                         
-              fj-user-followers               View users who follow USER or `fj-user'.                            
-              fj-user-following               View users that USER or `fj-user' is following.                     
-              fj-user-repo-tl-mode            Mode for displaying a tabulated list of user repos.                 
-              fj-user-repos                   View a tabulated list of respos for USER.                           
-   U          fj-user-update-settings         A transient for setting current user settings.                      
-              fj-users-mode                   Major mode for viewing users.                                       
-              fj-view-commit-diff             View a diff of a commit at point.                                   
-   N          fj-view-notifications           View notifications for `fj-user'.                                   
-              fj-view-notifications-all       View all notifications for `fj-user'.                               
-   D          fj-view-pull-diff               View a diff of the entire current PR.                               
-   g          fj-view-reload                  Try to reload the current view based on its major-mode.             
-              fj-watch-repo                   Watch repo at point or in current view.                             
-              fj-watched-repos                List your watched repos.                                            
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Binding    Command                           Description                                                               
+  ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+              fj-add-issue-to-milestone         Add issue at point or in current view to milestone.                       
+   r          fj-add-reaction                   Add reaction to issue, PR or comment at point.                            
+              fj-browse-commit                  Browse commit with SHA in REPO by OWNER.                                  
+   b          fj-browse-view                    Browse URL of view at point.                                              
+              fj-commits-mode                   Major mode for viewing repo commits.                                      
+   C-c C-k    fj-compose-cancel                 Kill new-post buffer/window. Does not POST content.                       
+              fj-compose-comment-mode           Minor mode for composing comments.                                        
+              fj-compose-mode                   Minor mode for composing issues.                                          
+   C-c C-e    fj-compose-read-assignees         Read multiple assignees in the compose buffer.                            
+   C-c C-l    fj-compose-read-labels            Read a label in the issue compose buffer.                                 
+   C-c RET    fj-compose-read-milestone         Read an existing milestone in the compose buffer.                         
+   C-c C-o    fj-compose-read-owner             Read a repo owner.                                                        
+   C-c C-r    fj-compose-read-repo              Read a repo for composing a issue or comment.                             
+   C-c C-t    fj-compose-read-title             Read an issue title.                                                      
+   C-c C-u    fj-compose-read-upload            Read a file to upload.                                                    
+   C-c C-S-e  fj-compose-remove-assignees       Remove assignees from item being composed.                                
+   C-c C-S-l  fj-compose-remove-labels          Remove labels from item being composed.                                   
+   C-c S-RET  fj-compose-remove-milestone       Remove milestone from item being composed.                                
+   C-c C-S-u  fj-compose-remove-upload          Remove attachment file from item being composed.                          
+   C-c C-c    fj-compose-send                   Submit the issue or comment to your Forgejo instance.                     
+   C          fj-copy-item-url                  Copy URL of current item, either issue or PR.                             
+              fj-copy-pr-url                    Copy upstream Pull Request URL with branch name.                          
+   c          fj-create-issue                   Create issue in current repo or repo at point in tabulated listing.       
+              fj-create-milestone               Create a milestone for REPO by OWNER.                                     
+              fj-create-token                   Create an access token for `fj-user' on `fj-host'.                        
+   C-c C-d    fj-cycle-sort-or-relation         Call `fj-own-items-cycle-relation' or `fj-list-issues-sort'.              
+   C-c C-c    fj-cycle-state                    Cycle item state listing of open, closed, and all.                        
+   C-c C-s    fj-cycle-type                     Cycle item type listing of issues, pulls, and all.                        
+              fj-delete-attachment              Delete attachment at point.                                               
+              fj-delete-repo                    Delete repo at point, if you are its owner.                               
+              fj-delete-repo-tag                Prompt for a repo tag and delete it on the server.                        
+   <return>   fj-do-link-action                 Do the action of the link at POS.                                         
+   <mouse-2>  fj-do-link-action-mouse           Do the action of the link at point.                                       
+              fj-fetch-pull-as-branch           From a PR view, fetch it as a new git branch using magit.                 
+              fj-fork-repo                      Fork repo entry at point.                                                 
+              fj-fork-to-parent                 From a repo TL listing, jump to the parent repo.                          
+              fj-get-pull-commits               Return the data for the commits of the current pull.                      
+              fj-inspect-item-data              Browse the JSON data of item at point.                                    
+              fj-issue-compose                  Compose a new post.                                                       
+              fj-issue-get-labels               Get labels on ISSUE in REPO by OWNER.                                     
+              fj-issue-tl-mode                  Major mode for browsing a tabulated list of issues.                       
+   v          fj-issues-tl-view                 View current issue from tabulated issues listing.                         
+   a          fj-item-add-assignee              Add an assignee to item being viewed or at point in tabulated listing.    
+   A          fj-item-clear-assignees           Remove assignees from item being viewed or at point in tabulated listing. 
+   k          fj-item-close                     Close the item at point or being viewed.                                  
+   c, C       fj-item-comment                   Comment on the item at point or being viewed.                             
+   K          fj-item-delete                    Delete the item at point or being viewed.                                 
+   e          fj-item-edit                      Edit the item at point or being viewed.                                   
+   t          fj-item-edit-title                Edit the title of the item at point or being viewed.                      
+              fj-item-goto-by-number            Jump to item by its number, from the item at point or being viewed.       
+   l          fj-item-label-add                 Add label to the item at point or being viewed.                           
+              fj-item-label-remove              Remove label from the item at point or being viewed.                      
+              fj-item-labels-remove-all         Remove all labels from the item at point or being viewed.                 
+   n          fj-item-next                      Go to next item or notification.                                          
+   p          fj-item-prev                      Goto previous item or notification.                                       
+   o          fj-item-reopen                    Reopen the item at point or being viewed.                                 
+              fj-item-view                      View item NUMBER from REPO of OWNER.                                      
+              fj-item-view-comment-delete       Delete comment at point.                                                  
+              fj-item-view-goto-item-by-number  Read an item number INDEX and jump to it, from timline.                   
+              fj-item-view-mode                 Major mode for viewing items.                                             
+   >          fj-item-view-more                 Load more items to the timeline, if it has more items.                    
+   J          fj-jump-to-item                   Prompt for a query and load matching issue or PR from current repo.       
+              fj-jump-to-own-repo               Jump to issues listing of one of your own repos.                          
+              fj-jump-to-repo                   Jump to repo issues listing.                                              
+   C-M-q      fj-kill-all-buffers               Kill all fj buffers.                                                      
+              fj-list-authored-issues           Return issues authored by `fj-user', in any repo.                         
+              fj-list-authored-pulls            Return pulls authored by `fj-user', in any repo.                          
+   I          fj-list-issues                    List issues for current REPO with default sorting.                        
+              fj-list-issues-+-pulls            List issues and pulls for REPO by OWNER, filtered by STATE.               
+              fj-list-issues-all                Display all ISSUES for REPO by OWNER in tabulated list view.              
+              fj-list-issues-by-label           List issues in REPO by OWNER, filtering by label.                         
+              fj-list-issues-by-milestone       List issues in REPO by OWNER, filtering by milestone.                     
+              fj-list-issues-closed             Display closed ISSUES for REPO by OWNER in tabulated list view.           
+              fj-list-issues-sort               Reload current issues listing, prompting for a sort type.                 
+   W          fj-list-own-issues                List issues in repos owned by `fj-user'.                                  
+              fj-list-own-pulls                 List pulls in repos owned by `fj-user'.                                   
+   O          fj-list-own-repos                 List repos for `fj-user'.                                                 
+   C-c C-c    fj-list-own-repos-read            List repos for `fj-user', prompting for an order type.                    
+   P          fj-list-pulls                     List pulls for REPO by OWNER, filtered by STATE.                          
+              fj-list-repos                     List repos for `fj-user' extended by `fj-extra-repos'.                    
+   C-c C-c    fj-list-repos-sort                Reload current repos listing, prompting for a sort type.                  
+   s          fj-list-search-issues             Search current repo issues for QUERY.                                     
+   s          fj-list-search-items              Call item search function depending on our view.                          
+              fj-list-search-pulls              Search current repo PRs for QUERY.                                        
+              fj-list-user-repos                View repos of current entry user from tabulated repos listing.            
+              fj-mark-notification-read         Mark notification at point as read.                                       
+              fj-mark-notification-unread       Mark notification at point as unread.                                     
+              fj-mark-notifs-read               Mark all notifications read.                                              
+   M          fj-merge-pull                     Merge pull request of current view or at point.                           
+   .          fj-next-page                      Load the next page of the current view.                                   
+   <tab>      fj-next-tab-item                  Jump to next tab item.                                                    
+              fj-notifications-mode             Major mode for viewing notifications.                                     
+   C-c C-s    fj-notifications-subject-cycle    Cycle notifications by `fj-notifications-subject-types'.                  
+   C-c C-c    fj-notifications-unread-toggle    Switch between showing all notifications, and only showing unread.        
+              fj-own-items-cycle-relation       Cycle the relation for own issues view.                                   
+              fj-owned-issues-tl-mode           Major mode for browsing a tabulated list of issues.                       
+   ,          fj-prev-page                      Load the previous page.                                                   
+   <backtab>  fj-prev-tab-item                  Jump to prev tab item.                                                    
+              fj-pull-req-comment               Add comment to PULL in REPO.                                              
+              fj-remove-reaction                Remove a reaction from issue, PR or comment at point.                     
+   L          fj-repo-commit-log                Render log of commits for REPO by OWNER.                                  
+   u, L       fj-repo-copy-clone-url            Add the clone_url of repo at point to the kill ring.                      
+              fj-repo-create                    Create a new repo.                                                        
+              fj-repo-create-label              Create a new label for REPO by OWNER.                                     
+              fj-repo-delete-label              Delete a label for REPO by OWNER.                                         
+              fj-repo-get-labels                Return labels JSON for REPO by OWNER.                                     
+   RET        fj-repo-list-issues               View issues of current repo from tabulated repos listing.                 
+   M-RET      fj-repo-list-pulls                View issues of current repo from tabulated repos listing.                 
+   r          fj-repo-readme                    Display readme file of current repo.                                      
+   s, S       fj-repo-search                    Search repos for QUERY, and display a tabulated list of results.          
+              fj-repo-search-topic              Search repo topics for QUERY, and display a tabulated list.               
+              fj-repo-stargazers                Render stargazers for REPO by OWNER.                                      
+              fj-repo-tl-mode                   Mode for displaying a tabulated list of repo search results.              
+   R          fj-repo-update-settings           A transient for setting current repo settings.                            
+              fj-repo-watchers                  Render watchers for REPO by OWNER.                                        
+   *          fj-star-repo                      Star or UNSTAR current repo from tabulated user repos listing.            
+              fj-stargazers-completing          Prompt for a repo stargazer, and view their repos.                        
+              fj-starred-repos                  List your starred repos.                                                  
+   B          fj-tl-browse-entry                Browse URL of tabulated list entry at point.                              
+              fj-tl-goto-item-by-number         Read an item number INDEX and jump to it, from tabulated listing.         
+              fj-token                          Fetch user access token from auth source, or try to add one.              
+              fj-unstar-repo                    Unstar current repo from tabulated user repos listing.                    
+              fj-unwatch-repo                   Watch repo at point or in current view.                                   
+              fj-update-repo                    Update current repo settings.                                             
+              fj-update-topics                  Update repo topics on the server.                                         
+              fj-update-user-settings           Update current user settings on the server.                               
+              fj-user-followers                 View users who follow USER or `fj-user'.                                  
+              fj-user-following                 View users that USER or `fj-user' is following.                           
+              fj-user-repo-tl-mode              Mode for displaying a tabulated list of user repos.                       
+              fj-user-repos                     View a tabulated list of respos for USER.                                 
+   U          fj-user-update-settings           A transient for setting current user settings.                            
+              fj-users-mode                     Major mode for viewing users.                                             
+              fj-view-commit-diff               View a diff of a commit at point.                                         
+   N          fj-view-notifications             View notifications for `fj-user'.                                         
+              fj-view-notifications-all         View all notifications for `fj-user'.                                     
+   D          fj-view-pull-diff                 View a diff of the entire current PR.                                     
+   g          fj-view-reload                    Try to reload the current view based on its major-mode.                   
+              fj-watch-repo                     Watch repo at point or in current view.                                   
+              fj-watched-repos                  List your watched repos.                                                  
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
 12 variables index
@@ -455,6 +472,7 @@
    fj-compose-autocomplete       Whether to enable autocompletion in compose buffers.               
    fj-compose-comment-mode-hook  Hook run after entering or leaving `fj-compose-comment-mode'.      
    fj-compose-mode-hook          Hook run after entering or leaving `fj-compose-mode'.              
+   fj-extra-repos                A list of favourite repos, in the form "owner/repo" or "org/repo". 
    fj-favourite-repos            A list of favourite repos, in the form "owner/repo" or "org/repo". 
    fj-host                       The forgejo host of the instance to use.                           
    fj-inspect-profile-requests   Whether to profile requests info.                                  

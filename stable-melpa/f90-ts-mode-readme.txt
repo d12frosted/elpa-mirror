@@ -4,6 +4,7 @@ files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 Changelog (recent):
 [11-2026]
   - Support for abbreviations through abbrev-mode and transient menu added.
+    New abbrevs can be added via defcustom `f90-ts-extra-abbrevs'.
   - Alignment rules for case statements of select case blocks added.
   - Alignment rules for trailing comments within continued lines as well as
     those following a statement added.

@@ -484,12 +484,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "50b9ec928193f339c3c2ae20f088ea62cc82bb9d"))])
  (company
-  . [(1 1 0) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 2 0) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "1cc907ac9e46ae4209eb5a341131787e0c678406"))])
+      (:commit . "ba9c346c43bbe3c904cec60364100f521c43faea"))])
  (company-ebdb
   . [(1 1) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -2570,13 +2570,13 @@
       (:authors ("Adam Porter" . "adam@alphapapa.net"))
       (:commit . "c579f039ffdb52ff61775ff25510a9c26e25d0c5"))])
  (plz-event-source
-  . [(0 1 3) ((emacs (26 3)) (plz-media-type (0 2 4)))
+  . [(0 1 4) ((emacs (26 3)) (plz-media-type (0 2 4)))
      "Plz Event Source" tar
      ((:url . "https://github.com/r0man/plz-event-source")
       (:keywords "comm" "network" "http")
       (:maintainer "r0man" . "roman@burningswell.com")
       (:authors ("r0man" . "roman@burningswell.com"))
-      (:commit . "236235a14cd33ab3d458627a3c169b1a0c7a887e"))])
+      (:commit . "a286c29d08fbd712374a4743d370bad937c1c3c6"))])
  (plz-media-type
   . [(0 2 4) ((emacs (26 3)) (plz (0 9 1))) "Plz Media Types" tar
      ((:url . "https://github.com/r0man/plz-media-type")

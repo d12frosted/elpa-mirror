@@ -115,13 +115,13 @@
       (:authors ("Vivek Das Mohapatra" . "vivek@etla.org"))
       (:commit . "6acb5f3cdac840fc2d1e5c4b73a90f4c035d7116"))])
  (bash-completion
-  . [(3 2 1 -4 0 20260325 20) ((emacs (25 3)))
+  . [(3 2 1 -4 0 20261105 26) ((emacs (25 3)))
      "Bash completion for the shell buffer" tar
      ((:url . "http://github.com/szermatt/emacs-bash-completion")
       (:keywords "convenience" "unix")
       (:maintainer "Stephane Zermatten" . "szermatt@gmail.com")
       (:authors ("Stephane Zermatten" . "szermatt@gmx.net"))
-      (:commit . "e2ae243588db8e03f4d0485bb09b670abbc63eaf"))])
+      (:commit . "d4a89ccb77d45d488192292e9719b9546fd8fcfe"))])
  (beancount
   . [(0 9 0 0 20260517 140330) nil
      "A major mode to edit Beancount input files." tar
@@ -220,7 +220,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261101 163)
+  . [(2 1 0 -4 0 20261106 164)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -234,7 +234,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "1f0a1d13f3e879f6b795eecf44ee5df54b23e5b5"))])
+      (:commit . "3d6ac80060b16009b597f1bc8481655b25f78dd7"))])
  (clojure-mode
   . [(5 23 0 0 20261103 13) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -590,13 +590,13 @@
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "a8151556f63c9d45d0c44c8a7ef9e5a542f3cdc7"))])
  (evil-collection
-  . [(3 0 3 0 20261014 11) ((emacs (29 1)) (evil (1 2 13)))
+  . [(3 0 3 0 20261106 16) ((emacs (29 1)) (evil (1 2 13)))
      "A set of keybindings for Evil mode" tar
      ((:url . "https://github.com/emacs-evil/evil-collection")
       (:keywords "evil" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "3948a7890960d389dffa637203a6760df68b1c1c"))])
+      (:commit . "2c85a07409957627a6660c88407a21f3e4272db9"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3 0 20260225 15950) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar
@@ -730,7 +730,7 @@
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "1609066aa4c3ea6b6e780eb0a688b6ebdbac6357"))])
  (fj
-  . [(0 51 0 20261102 38)
+  . [(0 53 0 20261105 43)
      ((emacs (29 1)) (compat (31)) (fedi (0 5)) (tp (0 8))
       (transient (0 10 0)) (magit (4 3 8)))
      "Client for Forgejo instances" tar
@@ -738,7 +738,7 @@
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "9b44590aa4ac938c31789099879c82a404896f72"))])
+      (:commit . "37c57a02478bb4de0f2afa2f68c2be7a2e80c7d4"))])
  (flamegraph
   . [(0 2 0 20260609 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"
@@ -759,7 +759,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "be738f439fa779c5a5def44569202d2d7c6b0547"))])
  (flycheck
-  . [(40 0 -4 0 20261104 101) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20261106 187) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -768,7 +768,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "a92701691da0a37c13501d6c3eb99b4f198ca917"))])
+      (:commit . "5ae78f82bc4dae564b00f78d677f5d516f120b40"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar
@@ -856,11 +856,11 @@
       (:authors ("Peter" . "craven@gmx.net"))
       (:commit . "52bf07aee6fa2d6e9864c5a4a1f72f15e830d55c"))])
  (geiser-chicken
-  . [(0 17 0 20260924 11) ((emacs (24 4)) (geiser (0 19)))
+  . [(0 17 0 20261106 12) ((emacs (24 4)) (geiser (0 19)))
      "Chicken's implementation of the geiser protocols" tar
      ((:url . "https://gitlab.com/emacs-geiser/chicken")
       (:keywords "languages" "chicken" "scheme" "geiser")
-      (:commit . "74610c900b671dd40c1bd7114c991781e0621102"))])
+      (:commit . "b019678711ef29a06a049ec7f80598c24cc74a51"))])
  (geiser-gambit
   . [(0 18 1 0 20260727 3) ((emacs (26 1)) (geiser (0 18)))
      "Gambit's implementation of the geiser protocols" tar
@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 9 0 20261104 8) ((helm-core (4 0 9)) (wfnames (1 2)))
+  . [(4 0 9 0 20261105 10) ((helm-core (4 0 9)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "ed6f56ac26d4e253ddb5d2c01d1711c3d7799b9d"))])
+      (:commit . "f367b157105f7774b0159015081616bf8da287e2"))])
  (helm-core
-  . [(4 0 9 0 20261104 8) ((emacs (25 1)) (async (2 0)))
+  . [(4 0 9 0 20261105 10) ((emacs (25 1)) (async (2 0)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "ed6f56ac26d4e253ddb5d2c01d1711c3d7799b9d"))])
+      (:commit . "f367b157105f7774b0159015081616bf8da287e2"))])
  (hermes
   . [(0 9 0 0 20261105 99)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1181,13 +1181,13 @@
 		("Campbell Barton" . "ideasman42@gmail.com"))
       (:commit . "23b2a09294d8ac7f95edd83ad3bb26e21322cc6d"))])
  (isl
-  . [(1 7 0 20261023 4) ((emacs (29 1)))
+  . [(1 7 0 20261105 5) ((emacs (29 1)))
      "Simple incremental search in current-buffer" tar
      ((:url . "https://github.com/thierryvolpiatto/isearch-light")
       (:keywords "matching" "searching")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "3790dbcc0bd7b6778eb01518af456d0d943cc8ec"))])
+      (:commit . "d45bcda8ce0269d41e99ca5d5757dfe38b550bf9"))])
  (iwindow
   . [(1 1 0 20230920 203903)
      ((emacs (24 3)) (seq (2 23)) (compat (28 1 2 2)))
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261101 74)
+  . [(4 7 1 0 20261103 76)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 5)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "942d61d5de37c89a3a7c6cf693696b900b1d97b0"))])
+      (:commit . "f7100cf9fd8fae6ca0576297e3d224e7d1a173d2"))])
  (magit-section
-  . [(4 7 1 0 20261101 74)
+  . [(4 7 1 0 20261103 76)
      ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "942d61d5de37c89a3a7c6cf693696b900b1d97b0"))])
+      (:commit . "f7100cf9fd8fae6ca0576297e3d224e7d1a173d2"))])
  (markdown-mode
   . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261105 352) ((emacs (25 2)))
+  . [(4 6 -4 0 20261106 389) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "9f1021edcc7b1c066c61fd01a15c4f159900bf78"))])
+      (:commit . "7922429acd7b46e237873f26533a20f67490ad3f"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -2051,13 +2051,13 @@
       (:authors ("Colin McLear" . "mclear@fastmail.com"))
       (:commit . "d45bf0db847ed7de47b85dee61926506e3c1995a"))])
  (tangotango-theme
-  . [(0 0 7 0 20241117 114955) nil
+  . [(0 0 7 0 20261106 22) nil
      "Tango Palette color theme for Emacs 24." tar
      ((:url . "https://github.com/juba/color-theme-tangotango")
       (:keywords "tango" "palette" "color" "theme" "emacs")
       (:maintainer "Julien Barnier" . "julien@nozav.org")
       (:authors ("Julien Barnier" . "julien@nozav.org"))
-      (:commit . "6202d4a19ac1def1b2596f1906c4524dd7303563"))])
+      (:commit . "1f650e7312242bfe7d70e002397d0bd3abbfc8ad"))])
  (teco
   . [(9 0 20200801 144333) nil "Teco interpreter" tar
      ((:url . "https://github.com/mtk/teco.git")
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261101 40) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261105 48) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "be44878cd5812c22f90245d82abe1fd7c493239e"))])
+      (:commit . "82673f4684c1321995b20432dab818fd70dd7754"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

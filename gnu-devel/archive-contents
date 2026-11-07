@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261104 22) ((emacs (28 1)))
+  . [(14 2 0 0 20261106 25) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "067713ce147ea7530089b8f82ee397104755801e"))])
+      (:commit . "90e12196dd6ca042c70a7ab0d687e3f347c440dc"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 1 0 0 20261028 34) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 2 0 0 20261106 0) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "0029cbb435c7fc68ceff0987fae0256f1ccf0507"))])
+      (:commit . "ba9c346c43bbe3c904cec60364100f521c43faea"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -769,12 +769,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20261030 190) ((emacs (28 1)))
+  . [(4 2 3 0 20261105 191) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "f4207ce4628f90ab547d084a560b0a20ccd42b9b"))])
+      (:commit . "6731ddafe4c0232765fec59e57bffca3e19ac479"))])
  (denote-journal
   . [(0 3 0 0 20261016 1) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -1093,13 +1093,13 @@
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
       (:commit . "4850e9c7a465684a0fdb79a6be83055e0ef9537b"))])
  (ef-themes
-  . [(2 2 1 0 20261101 40) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(2 2 1 0 20261106 51) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
      ((:url . "https://github.com/protesilaos/ef-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "4c15af95c7246a754056f885a0f033085f712aa3"))])
+      (:commit . "b8dee07feb9d0671dc8953ccb5d6af1b9b10ac2d"))])
  (eglot
   . [(1 26 0 20261030 0)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
@@ -2498,13 +2498,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261104 959) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261106 964) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "56a243ffaa42cb13606e3e7598b27c2c655f947d"))])
+      (:commit . "20dd7cb9b61a0be269e724c4cc0731cd4a22c6fc"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2741,13 +2741,13 @@
       (:authors ("Adam Porter" . "adam@alphapapa.net"))
       (:commit . "e2d07838e3b64ee5ebe59d4c3c9011adefb7b58e"))])
  (plz-event-source
-  . [(0 1 4 -1 0 20250413 0) ((emacs (26 3)) (plz-media-type (0 2 4)))
+  . [(0 1 5 -1 0 20261106 0) ((emacs (26 3)) (plz-media-type (0 2 4)))
      "Plz Event Source" tar
      ((:url . "https://github.com/r0man/plz-event-source")
       (:keywords "comm" "network" "http")
       (:maintainer "r0man" . "roman@burningswell.com")
       (:authors ("r0man" . "roman@burningswell.com"))
-      (:commit . "de89214ce14e2b82cbfdc30e1adcf3e77b1f250a"))])
+      (:commit . "1d7bb33271466084cbe76de03e24e3dc6522d091"))])
  (plz-media-type
   . [(0 2 5 -1 0 20250412 0) ((emacs (26 3)) (plz (0 9 1)))
      "Plz Media Types" tar
