@@ -14,6 +14,21 @@ or via the utility command `trust-manager-customize'.  You may also
 customize `trust-manager-trust-alist' to designate some directories
 as trusted or untrusted before actually visiting files in them.
 
+By default, `trust-manager-mode' saves your choices with Customize,
+in your `custom-file'.  If you'd rather keep them out of your
+`custom-file' (e.g. because you publish your Emacs configuration),
+set `trust-manager-save-trust-alist' to nil and persist
+`trust-manager-trust-alist' some other way.  For example, you can
+persist it with Savehist using the following configuration:
+
+  (setopt trust-manager-save-trust-alist nil)
+  (add-to-list 'savehist-additional-variables 'trust-manager-trust-alist)
+  (savehist-mode)
+  (trust-manager-mode)
+
+Note that this enables `savehist-mode' before `trust-manager-mode',
+so that `trust-manager-mode' applies the restored trust settings.
+
 Another utility command is `trust-manager-set-project-trust', which
 lets you mark any project as trusted or untrusted, not necessarily
 the current project.  The command `trust-manager-set-file-trust' is
