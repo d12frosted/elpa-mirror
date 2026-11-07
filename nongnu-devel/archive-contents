@@ -236,19 +236,19 @@
 		("Steve Purcell" . "steve@sanityinc.com"))
       (:commit . "3d6ac80060b16009b597f1bc8481655b25f78dd7"))])
  (clojure-mode
-  . [(5 23 0 0 20261103 13) ((emacs (27 1)))
+  . [(5 23 0 0 20261107 14) ((emacs (27 1)))
      "Major mode for Clojure code" tar
      ((:url . "https://github.com/clojure-emacs/clojure-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "d864d6f26c8acc576fc7fc343299c240909f27ac"))])
+      (:commit . "62d8981019b81bcf30e4bc47ae6927170104088b"))])
  (clojure-ts-mode
-  . [(0 6 0 0 20261103 98) ((emacs (30 1)))
+  . [(0 6 0 0 20261107 104) ((emacs (30 1)))
      "Major mode for Clojure code" tar
      ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "51df988a3874e2f02a64f2d67b6ef97c7fc987b8"))])
+      (:commit . "30bccb067ed87f091b68738056b7ec7f14b19aac"))])
  (codex-ide
   . [(0 2 1 0 20261011 0)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
@@ -590,13 +590,13 @@
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "a8151556f63c9d45d0c44c8a7ef9e5a542f3cdc7"))])
  (evil-collection
-  . [(3 0 3 0 20261106 16) ((emacs (29 1)) (evil (1 2 13)))
+  . [(3 0 3 0 20261107 17) ((emacs (29 1)) (evil (1 2 13)))
      "A set of keybindings for Evil mode" tar
      ((:url . "https://github.com/emacs-evil/evil-collection")
       (:keywords "evil" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "2c85a07409957627a6660c88407a21f3e4272db9"))])
+      (:commit . "412c49c836db086ff990e7aa1c80a6994a8f9b03"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3 0 20260225 15950) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar
@@ -759,7 +759,7 @@
      ((:url . "https://github.com/lewang/flx")
       (:commit . "be738f439fa779c5a5def44569202d2d7c6b0547"))])
  (flycheck
-  . [(40 0 -4 0 20261106 187) ((emacs (28 1)) (seq (2 24)))
+  . [(40 0 -4 0 20261107 191) ((emacs (28 1)) (seq (2 24)))
      "On-the-fly syntax checking" tar
      ((:url . "https://github.com/flycheck/flycheck")
       (:keywords "convenience" "languages" "tools")
@@ -768,7 +768,7 @@
        ("fmdkdd" . "fmdkdd@gmail.com")
        ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:authors ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
-      (:commit . "5ae78f82bc4dae564b00f78d677f5d516f120b40"))])
+      (:commit . "246857406d3f1b95fe96b8822928599b0295acca"))])
  (flymake-guile
   . [(0 5 0 20230905 194410) ((emacs (26 1)) (flymake (1 2 1)))
      "Guile flymake backend" tar

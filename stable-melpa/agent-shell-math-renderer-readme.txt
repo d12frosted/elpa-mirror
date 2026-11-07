@@ -8,10 +8,11 @@ independently via `agent-shell-math-renderer-delimiters':
   bracket  `\[X\]'    (default; unambiguous)
   dollar   `$$X$$'    (default; safe because matched block-level only)
 
-Inline math `\(X\)' is recognized separately (toggle
-`agent-shell-math-renderer-render-inline', default on) and typeset
-in text style.  Inline `$X$' is intentionally not matched — a lone
-`$' is too common in prose to be safe.
+Inline math `\(X\)' and `$X$' is recognized separately (toggles
+`agent-shell-math-renderer-render-inline' and
+`agent-shell-math-renderer-render-inline-dollar', both default on)
+and typeset in text style.  A `$' counts only under pandoc's guards
+against currency.
 
 The raw LaTeX is kept in the buffer (so copy / save round-trips the
 source) and, on a graphical display, an equation image is layered on

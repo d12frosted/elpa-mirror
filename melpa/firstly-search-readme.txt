@@ -51,8 +51,12 @@ with specified values.
 Many functions use text properties, to investigate them use:
   M-: (print (text-properties-at (point)))
 
+To reduce  speed we use `isearch-repeat-on-direction-change' and
+`isearch-wrap-pause' variables.
+
 
 ;; Files:
+
 - first-search.el - common functionality for other files.
 - first-search-{dired,package,buffermenu,bookmarks,recentf}.el -
   define user available minor modes for specific major modes.
@@ -67,7 +71,7 @@ Many functions use text properties, to investigate them use:
 - Solution for "callback hell"	https://github.com/Anoncheg1/emacs-async1
 - Restore buffer state	https://github.com/Anoncheg1/emacs-unmodified-buffer1
 - outline.el usage		https://github.com/Anoncheg1/emacs-outline-it
-- ai_block for Org mode for chat.  https://github.com/Anoncheg1/emacs-oai
+- ai_block for Org mode for chat.  https://github.com/Anoncheg1/emacs-cui
 - TAB key reimplementation	https://github.com/Anoncheg1/emacs-indent
 
 ;; Donate:
@@ -77,7 +81,3 @@ Many functions use text properties, to investigate them use:
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
 
 ;; TODO:
-
-- instead of pre-command-hook make it
-  like [[file:/usr/share/emacs/30.2/lisp/isearch.el::571::(defvar isearch-mode-map]]
-- Add timeout to clear search unless Ctrl pressed
