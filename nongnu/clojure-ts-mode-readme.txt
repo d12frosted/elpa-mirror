@@ -51,7 +51,7 @@ You can read more about the vision for `clojure-ts-mode` [here](https://metaredu
 The currently provided functionality should cover the needs of most Clojure programmers, but you
 can expect to encounter some bugs and missing functionality here and there.
 
-Those will be addressed over the time, as more and more people use `clojure-ts-mode`.
+Those will be addressed over time, as more and more people use `clojure-ts-mode`.
 
 ## Installation
 
@@ -80,11 +80,7 @@ Tree-sitter grammars automatically.
 >
 > That's the recommended way to install `clojure-ts-mode`.
 
-If you have `git` and a C compiler (`cc`) available on your system's `PATH`,
-`clojure-ts-mode` will install the
-grammars
-
-clojure-ts-mode is available on [MElPA](https://melpa.org/#/clojure-ts-mode) and
+clojure-ts-mode is available on [MELPA](https://melpa.org/#/clojure-ts-mode) and
 [NonGNU ELPA](https://elpa.nongnu.org/nongnu/clojure-ts-mode.html).
 It can be installed with:
 
@@ -120,15 +116,15 @@ Once installed, evaluate `clojure-ts-mode.el` and you should be ready to go.
 
 > [!NOTE]
 >
-> `clojure-ts-mode` install the required grammars automatically, so for most
+> `clojure-ts-mode` installs the required grammars automatically, so for most
 > people no manual actions will be required.
 
 `clojure-ts-mode` makes use of the following Tree-sitter grammars:
 
-- The [experimental](https://github.com/sogaiu/tree-sitter-clojure/tree/unstable-20250526) version Clojure grammar. This version includes a few
+- The [experimental](https://github.com/sogaiu/tree-sitter-clojure/tree/unstable-20250526) version of the Clojure grammar. This version includes a few
   improvements, which potentially will be promoted to a stable release (See [the
   discussion](https://github.com/sogaiu/tree-sitter-clojure/issues/65)). This grammar is required for proper work of `clojure-ts-mode`.
-- [markdown-inline](https://github.com/MDeiml/tree-sitter-markdown), which will be used for docstrings if available and if
+- [markdown-inline](https://github.com/tree-sitter-grammars/tree-sitter-markdown), which will be used for docstrings if available and if
   `clojure-ts-use-markdown-inline` is enabled.
 - [tree-sitter-regex](https://github.com/tree-sitter/tree-sitter-regex/releases/tag/v0.24.3), which will be used for regex literals if available and if
   `clojure-ts-use-regex-parser` is not `nil`.
@@ -138,7 +134,7 @@ to highlight JS syntax in `js*` forms.  This is enabled by default and can be
 turned off by setting `clojure-ts-clojurescript-use-js-parser` to `nil`.
 
 `clojure-ts-jank-mode` can optionally use `tree-sitter-cpp` grammar to highlight C++
-syntax in `native/raw` forms.  This is enabled by default and can be turned off by
+syntax in `cpp/raw` forms.  This is enabled by default and can be turned off by
 setting `clojure-ts-jank-use-cpp-parser` to `nil`.
 
 If you have `git` and a C compiler (`cc`) available on your system's `PATH`,
@@ -160,12 +156,12 @@ This installs GCC, G++, `make`, and other essential development tools.
 
 If `clojure-ts-mode` fails to automatically install the grammar, you have the
 option to install it manually. Please, refer to the installation instructions of
-each required grammar and make sure you're install the versions expected (see
+each required grammar and make sure you're installing the versions expected (see
 `clojure-ts-grammar-recipes` for details).
 
 If `clojure-ts-ensure-grammars` is enabled, `clojure-ts-mode` will try to upgrade
-the Clojure grammar if it's outdated. This might happen, when you activate
-`clojure-ts-mode` for the first time after package update. If grammar was
+the Clojure grammar if it's outdated. This might happen when you activate
+`clojure-ts-mode` for the first time after a package update. If the grammar was
 previously installed, you might need to restart Emacs, because it has to reload
 the grammar binary.
 
@@ -179,6 +175,21 @@ M-x clojure-ts-reinstall-grammars
 
 This will install the latest compatible grammars, even if they are already
 installed.
+
+## Supported Modes
+
+`clojure-ts-mode` provides major modes for several Clojure dialects:
+
+| Mode                              | File Extension | Description       |
+|:----------------------------------|:---------------|:------------------|
+| `clojure-ts-mode`                 | `.clj`         | Clojure           |
+| `clojure-ts-clojurescript-mode`   | `.cljs`        | ClojureScript     |
+| `clojure-ts-clojurec-mode`       | `.cljc`        | ClojureC (portable Clojure) |
+| `clojure-ts-clojuredart-mode`    | `.cljd`        | ClojureDart       |
+| `clojure-ts-jank-mode`           | `.jank`        | Jank              |
+| `clojure-ts-joker-mode`          | `.joke`        | Joker             |
+
+All derived modes inherit the full feature set of `clojure-ts-mode`.
 
 ## Configuration
 
@@ -196,8 +207,8 @@ like `clojurescript-mode`). To disable this remapping, set
 (setopt clojure-ts-auto-remap nil)
 ```
 
-You can also use the commands `clojure-ts-activate` / `clojure-ts-deactivate` to
-interactively change this behavior.
+You can also use the commands `clojure-ts-activate-mode-remappings` /
+`clojure-ts-deactivate-mode-remappings` to interactively change this behavior.
 
 ### Indentation
 
@@ -246,9 +257,10 @@ customization option.
 
 Two types of rules are supported: `:block` and `:inner`, mirroring those in
 cljfmt. When a rule is defined as `:block n`, `n` represents the number of
-arguments preceding the body. When a rule is defined as `:inner n`, each form
-within the expression's body, nested `n` levels deep, is indented by two
-spaces. These rule definitions fully reflect the [cljfmt rules](https://github.com/weavejester/cljfmt/blob/0.13.0/docs/INDENTS.md).
+arguments preceding the body. If the body doesn't start on a line of its own,
+the form is indented like a function call instead. When a rule is
+defined as `:inner n`, each form within the expression's body, nested `n`
+levels deep, is indented by two spaces. These rule definitions fully reflect the [cljfmt rules](https://github.com/weavejester/cljfmt/blob/0.13.0/docs/INDENTS.md).
 
 For example:
 
@@ -256,10 +268,6 @@ For example:
 - `when` has a rule `((:block 1))`.
 - `defn` and `fn` have a rule `((:inner 0))`.
 - `letfn` has a rule `((:block 1) (:inner 2 0))`.
-
-Note that `clojure-ts-semantic-indent-rules` should be set using the
-customization interface or `setopt`; otherwise, it will not be applied
-correctly.
 
 #### Project-specific indentation
 
@@ -313,22 +321,115 @@ Forms that can be aligned vertically are configured via the following variables:
 
 ### Font Locking
 
+`clojure-ts-mode` provides 4 levels of font-locking, as is the standard for
+Tree-sitter modes. The default level in Emacs is 3, and you can change it like
+this:
+
+```emacs-lisp
+;; this font-locks everything clojure-ts-mode supports
+(setq treesit-font-lock-level 4)
+```
+
+The font-lock features available at each level are:
+
+**Level 1** (minimal -- comments, definitions, and variables):
+
+- `comment` -- comments and `#_` discard expressions
+- `definition` -- `defn`, `defmacro`, `defmethod`, `defmulti`, `defonce`, `defrecord`, `deftype`, `defprotocol`, `reify`, `letfn`, anonymous functions (`#(...)`)
+- `variable` -- `def` and `defonce` bindings
+
+**Level 2** (add keywords, strings, types, symbols):
+
+- `keyword` -- Clojure keywords and their namespaces: `:foo`, `:bar/baz`
+- `string` -- string literals: `"hello"`
+- `char` -- character literals: `\a`, `\newline`
+- `symbol` -- symbol namespaces: `clojure.string` in `clojure.string/join`
+- `builtin` -- `clojure.core` built-in forms and dynamic vars: `let`, `when`, `map`, `*out*`
+- `type` -- type declarations (`defrecord`, `deftype`, `defprotocol`), type hints (`^String`), namespace names
+
+**Level 3** (default -- full-blown fontification):
+
+- `constant` -- boolean and nil literals: `true`, `false`, `nil`
+- `number` -- numeric literals: `42`, `3.14`, `0xFF`
+- `quote` -- quoting markers: `'`, `` ` ``, `~`, `~@`, `#'`
+- `metadata` -- metadata markers and keyword values: `^:dynamic`, `#^{}`
+- `doc` -- docstrings in `defn`, `def`, `defmacro`, etc.
+- `regex` -- the `#` marker on regex literals: `#"pattern"`
+
+**Level 4** (maximum detail):
+
+- `bracket` -- brackets: `()`, `[]`, `{}`, `#{}`
+- `deref` -- the `@` deref marker: `@atom`
+- `function` -- function calls: `f` in `(f x)`, `map` in `(map inc coll)`
+- `tagged-literals` -- tagged literals: `#inst`, `#uuid`, `#my/tag`
+
+#### Selecting features
+
+You don't have to use the level system. If you want fine-grained control over
+what gets highlighted, you can cherry-pick individual features using
+`treesit-font-lock-recompute-features`:
+
+```emacs-lisp
+(defun my-clojure-ts-font-lock-setup ()
+  (treesit-font-lock-recompute-features
+   ;; enable these features
+   '(comment definition variable keyword string char symbol builtin type
+     constant number quote metadata doc regex
+     deref function tagged-literals)
+   ;; disable these features
+   '(bracket)))
+
+(add-hook 'clojure-ts-mode-hook #'my-clojure-ts-font-lock-setup)
+```
+
+You can also call `M-x treesit-font-lock-recompute-features` interactively to
+toggle features in the current buffer.
+
+#### Customizing faces
+
+The faces used are standard `font-lock-*-face` faces (plus `clojure-ts-keyword-face`
+and `clojure-ts-character-face`), so any theme applies automatically. If you want
+to tweak how specific syntactic elements look, you have two options:
+
+**Buffer-local remapping** (recommended) -- changes apply only to
+`clojure-ts-mode` buffers, leaving other modes unaffected:
+
+```emacs-lisp
+;; Use a custom color for keywords in Clojure buffers only
+(add-hook 'clojure-ts-mode-hook
+  (lambda ()
+    (face-remap-add-relative 'clojure-ts-keyword-face
+                             :foreground "DarkCyan")))
+```
+
+You can remap multiple faces in the same hook. Each
+`face-remap-add-relative` call stacks on top of the face's current
+definition, so theme settings are preserved as a base. See
+[Face Remapping](https://www.gnu.org/software/emacs/manual/html_node/elisp/Face-Remapping.html)
+in the Emacs Lisp manual for details.
+
+**Global customization** -- changes apply everywhere the face is used:
+
+```emacs-lisp
+;; Change keyword face globally
+(custom-set-faces
+ '(clojure-ts-keyword-face ((t (:foreground "DarkCyan")))))
+```
+
+This is simpler but less precise -- since tree-sitter modes share the same
+`font-lock-*-face` faces, a global change will affect every tree-sitter mode
+(and traditional modes) that uses that face.
+
+#### Comment macro font-locking
+
 To highlight entire rich `comment` expression with the comment font face, set
 
-``` emacs-lisp
+```emacs-lisp
 (setopt clojure-ts-comment-macro-font-lock-body t)
 ```
 
 By default this is `nil`, so that anything within a `comment` expression is
 highlighted like regular Clojure code.
-
-> [!TIP]
->
-> You can customize the exact level of font-locking via the variables
-> `treesit-font-lock-level` (the default value is 3) and
-> `treesit-font-lock-features-list`. Check [this
-> section](https://www.gnu.org/software/emacs/manual/html_node/emacs/Parser_002dbased-Font-Lock.html)
-> of the Emacs manual for more details.
 
 #### Extending font-lock rules
 
@@ -355,7 +456,8 @@ or set this variable using `setopt`:
 (setopt clojure-ts-extra-def-forms '("defelem"))
 ```
 
-This setting will highlight `defelem` symbol, function name and the docstring.
+This setting will highlight `defelem` symbol, function name and the docstring,
+including the Markdown in it.
 
 > [!IMPORTANT]
 >
@@ -403,8 +505,8 @@ To make forms inside of `(comment ...)` forms appear as top-level forms for eval
 
 To change the maximal line length used by `M-x prog-fill-reindent-defun` (also
 bound to `M-q` by default) to reformat docstrings and comments it's possible to
-customize `clojure-ts-fill-paragraph` variable (by default set to the value of
-Emacs' `fill-paragraph` value).
+customize `clojure-ts-docstring-fill-column` variable (by default set to the value of
+Emacs' `fill-column` value).
 
 Every new line in the docstrings is indented by
 `clojure-ts-docstring-fill-prefix-width` number of spaces (set to 2 by default
@@ -422,6 +524,19 @@ using `imenu`, such as:
 - interface (forms such as `defprotocol`, `definterface` and `defmulti`)
 - class (forms such as `deftype`, `defrecord` and `defstruct`)
 - keyword (for example, spec definitions)
+
+### Project detection
+
+`clojure-ts-mode` can detect Clojure project roots by looking for common build
+tool files (e.g. `project.clj`, `deps.edn`, `shadow-cljs.edn`, etc.). The list
+of files used for detection is configured via `clojure-ts-build-tool-files`.
+
+The function used to locate the project root can be customized via
+`clojure-ts-project-root-function` (defaults to `clojure-ts-project-root-path`).
+
+For performance, the project directory and namespace lookups can be cached via
+`clojure-ts-cache-project-dir` (enabled by default) and `clojure-ts-cache-ns`
+(disabled by default).
 
 ### Integration with `outline-minor-mode`
 
@@ -512,7 +627,31 @@ set. The following commands are available:
 `clojure-ts-add-arity`: Add a new arity to an existing single-arity or
 multi-arity function or macro. Function can be defined using `defn`, `fn` or
 `defmethod` form. This command also supports functions defined inside forms like
-`letfn`, `defprotol`, `reify`, `extend-protocol` or `proxy`.
+`letfn`, `defprotocol`, `reify`, `extend-protocol` or `proxy`.
+
+### Remove unused destructured keys
+
+`clojure-ts-remove-unused-keys`: Remove what the top-level form at point
+destructures from maps but doesn't use: names in `:keys`, `:strs` and `:syms`,
+`:as` names and names bound to keys, along with their `:or` defaults. That
+covers arglists (`defn`, `fn`, `defmethod`, `letfn`, `reify` and the like) and
+the bindings of `let`, `loop`, `for`, `doseq` and the like. A map with nothing
+left becomes `_`.
+
+```clojure
+(defn handle [{:keys [id user] :or {user "anon"} :as req}]
+  (process id))
+
+;; becomes
+
+(defn handle [{:keys [id]}]
+  (process id))
+```
+
+A name stays when a symbol with that name appears anywhere in its scope, even
+if it's a local that shadows it, and so does one starting with `_`, which marks
+it unused on purpose. Positional args and vector destructuring are left alone,
+as removing one would change what the others bind.
 
 ### Default keybindings
 
@@ -533,6 +672,7 @@ multi-arity function or macro. Function can be defined using `defn`, `fn` or
 | `C-c C-r c` / `C-c C-r C-c` | `clojure-ts-cycle-conditional`                 |
 | `C-c C-r o` / `C-c C-r C-o` | `clojure-ts-cycle-not`                         |
 | `C-c C-r a` / `C-c C-r C-a` | `clojure-ts-add-arity`                         |
+| `C-c C-r k` / `C-c C-r C-k` | `clojure-ts-remove-unused-keys`                |
 
 ### Customize refactoring commands prefix
 
@@ -591,10 +731,6 @@ and `clojure-mode` (this is very helpful when dealing with `derived-mode-p` chec
 - Navigation by sexp/lists might work differently on Emacs versions lower
   than 31. Starting with version 31, Emacs uses Tree-sitter 'things' settings, if
   available, to rebind some commands.
-- If you set `clojure-ts-extra-def-forms`, `clojure-ts-mode` will highlight the
-  specified forms, including their docstrings, in a manner similar to Clojure's
-  `defn`.  However, Markdown syntax will not be highlighted within these custom
-  docstrings.
 
 ## Frequently Asked Questions
 
@@ -643,7 +779,7 @@ We welcome contributions of any kind!
 If you're not familiar with Tree-sitter, a good place to start is our
 [design documentation](doc/design.md), which explains how Tree-sitter
 works in Emacs in broad strokes and covers some of the design
-decisions we've made a long the way.
+decisions we've made along the way.
 
 We're using [Eldev](https://github.com/emacs-eldev/eldev) as our build tool, so you'll
 have to install it. We also provide a simple [Makefile](Makefile) with targets invoking Eldev. You
@@ -659,7 +795,7 @@ The process of releasing a new version of `clojure-ts-mode` is documented [here]
 
 ## License
 
-Copyright © 2022-2025 Danny Freeman, Bozhidar Batsov and [contributors][].
+Copyright © 2022-2026 Danny Freeman, Bozhidar Batsov and [contributors][].
 
 Distributed under the GNU General Public License; type <kbd>C-h C-c</kbd> to view it.
 

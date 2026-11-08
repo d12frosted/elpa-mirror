@@ -236,19 +236,19 @@
 		("Steve Purcell" . "steve@sanityinc.com"))
       (:commit . "3d6ac80060b16009b597f1bc8481655b25f78dd7"))])
  (clojure-mode
-  . [(5 23 0 0 20261107 14) ((emacs (27 1)))
+  . [(5 24 0 0 20261107 0) ((emacs (27 1)))
      "Major mode for Clojure code" tar
      ((:url . "https://github.com/clojure-emacs/clojure-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "62d8981019b81bcf30e4bc47ae6927170104088b"))])
+      (:commit . "065f8489c0cea7532982c8f0b63f3ed64f1837c0"))])
  (clojure-ts-mode
-  . [(0 6 0 0 20261107 104) ((emacs (30 1)))
+  . [(0 7 0 0 20261107 0) ((emacs (30 1)))
      "Major mode for Clojure code" tar
      ((:url . "http://github.com/clojure-emacs/clojure-ts-mode")
       (:keywords "languages" "clojure" "clojurescript" "lisp")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
-      (:commit . "30bccb067ed87f091b68738056b7ec7f14b19aac"))])
+      (:commit . "88f3404d702bac7cef7ad995cc10baedea1559d7"))])
  (codex-ide
   . [(0 2 1 0 20261011 0)
      ((emacs (29 1)) (compat (29 1 4 2)) (keymap-popup (0 4 0))
@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 9 0 20261105 10) ((helm-core (4 0 9)) (wfnames (1 2)))
+  . [(4 0 9 0 20261108 11) ((helm-core (4 0 9)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "f367b157105f7774b0159015081616bf8da287e2"))])
+      (:commit . "4fdd575901eb7f92479db2bf7d34afa5395fb1ea"))])
  (helm-core
-  . [(4 0 9 0 20261105 10) ((emacs (25 1)) (async (2 0)))
+  . [(4 0 9 0 20261108 11) ((emacs (25 1)) (async (2 0)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "f367b157105f7774b0159015081616bf8da287e2"))])
+      (:commit . "4fdd575901eb7f92479db2bf7d34afa5395fb1ea"))])
  (hermes
   . [(0 9 0 0 20261105 99)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1342,10 +1342,10 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 1 0 20261103 76)
-     ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
+  . [(4 7 2 0 20261107 0)
+     ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
-      (with-editor (3 5)))
+      (with-editor (3 6)))
      "A Git porcelain inside Emacs" tar
      ((:url . "https://github.com/magit/magit")
       (:keywords "git" "tools" "vc")
@@ -1354,10 +1354,10 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "f7100cf9fd8fae6ca0576297e3d224e7d1a173d2"))])
+      (:commit . "602760478f6d4a67e7064f5bcd2e294aa3f38f8e"))])
  (magit-section
-  . [(4 7 1 0 20261103 76)
-     ((emacs (28 1)) (compat (31 0)) (cond-let (1 1)) (llama (1 0))
+  . [(4 7 2 0 20261107 0)
+     ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
      ((:url . "https://github.com/magit/magit") (:keywords "tools")
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "f7100cf9fd8fae6ca0576297e3d224e7d1a173d2"))])
+      (:commit . "602760478f6d4a67e7064f5bcd2e294aa3f38f8e"))])
  (markdown-mode
   . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1674,14 +1674,14 @@
       (:authors ("Andreas Politz" . "mail@andreas-politz.de"))
       (:commit . "365f88238f46f9b1425685562105881800f10386"))])
  (pg
-  . [(0 69 0 20261102 2) ((emacs (28 1)) (peg (1 0 1)))
+  . [(0 70 0 20261107 0) ((emacs (28 1)) (peg (1 0 1)))
      "Socket-level interface to the PostgreSQL database" tar
      ((:url . "https://github.com/emarsden/pg-el")
       (:keywords "data" "comm" "database" "postgresql")
       (:maintainer "Eric Marsden"
 		   . "eric.marsden@risk-engineering.org")
       (:authors ("Eric Marsden" . "eric.marsden@risk-engineering.org"))
-      (:commit . "32cb4fb77ae440c55bceeb9748d38871dd36ee2c"))])
+      (:commit . "cda2e1ff5eecd90730e88c8b2ce1597367e85309"))])
  (php-mode
   . [(1 28 0 0 20261103 41) ((emacs (28 1)))
      "Major mode for editing PHP code" tar
@@ -1723,13 +1723,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (project-nix-store
-  . [(0 13 0 0 20261031 6) ((emacs (29 1)))
+  . [(0 13 0 0 20261107 7) ((emacs (29 1)))
      "Project backend for Nix store" tar
      ((:url . "https://github.com/jian-lin/project-nix-store")
       (:keywords "nix" "nix-store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "ea6fc16d2e21ef067e34ec03e30960d4201ce45f"))])
+      (:commit . "f7206059aa3c44323e70c6611eabdc5949e10b80"))])
  (projectile
   . [(3 5 0 -4 0 20260930 66) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261106 389) ((emacs (25 2)))
+  . [(4 6 -4 0 20261108 394) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "7922429acd7b46e237873f26533a20f67490ad3f"))])
+      (:commit . "20de568be368eef29e97635a31f383eeadcc4c31"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -2162,14 +2162,14 @@
       (:keywords "typescript" "languages")
       (:commit . "2535780bdb318d86761b9bd21b0347ca6a89628f"))])
  (typst-ts-mode
-  . [(0 12 2 0 20261006 26) ((emacs (29 1)))
+  . [(0 12 3 0 20261108 0) ((emacs (29 1)))
      "Tree Sitter support for Typst" tar
      ((:url . "https://codeberg.org/meow_king/typst-ts-mode")
       (:keywords "typst" "languages" "tree-sitter")
       (:maintainer ("Ziqi Yang" . "mr.meowking@anche.no")
 		   ("Huan Nguyen" . "nguyenthieuhuan@gmail.com"))
       (:authors ("Ziqi Yang" . "mr.meowking@anche.no"))
-      (:commit . "ee17b331ebfa8d8b7c2f54a1c39ab3d76e134706"))])
+      (:commit . "5fc2e73e0391903272509452d5c12e3104face99"))])
  (ujelly-theme
   . [(1 3 6 0 20241111 2243) nil
      "Ujelly theme for GNU Emacs 24 (deftheme)" tar
