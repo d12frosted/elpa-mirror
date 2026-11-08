@@ -59,6 +59,10 @@ Table of Contents
 2 Getting started
 ═════════════════
 
+  *NOTE*: Emacs 31.1 or later is required. You may still see this in
+  `M-x package-list-packages' on 30.2 but that was an error on my part,
+  and that version of Emacs isn't supported.
+
   This package is available on GNU ELPA, so here are some examples of
   how to activate:
   ┌────
