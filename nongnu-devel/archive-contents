@@ -1375,13 +1375,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "e2e2bc753b4330f85b6ea7e62cd0552e8ea47b76"))])
  (markdown-ts-appear
-  . [(0 4 0 0 20261108 2) ((emacs (31 1)))
+  . [(0 4 0 0 20261109 4) ((emacs (31 1)))
      "Reveal Markdown source at point" tar
      ((:url . "https://github.com/Thysrael/markdown-ts-appear")
       (:keywords "text" "convenience")
       (:maintainer "Thysrael" . "thysrael@163.com")
       (:authors ("Thysrael" . "thysrael@163.com"))
-      (:commit . "1be4a8c6ae97fd59293d88709e1b02039e828784"))])
+      (:commit . "60b5a5082d1594170fe119cf14bedd64232261c5"))])
  (mastodon
   . [(2 1 8 0 20261022 85)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
@@ -1920,11 +1920,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "f413c8ea511add76cca298e39eb20fb492504485"))])
  (slime
-  . [(2 32 -4 0 20261102 82) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20261108 83) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "728a05ed0afc12626e3792be1c5bccc01913c269"))])
+      (:commit . "26cdc8bb6182f4b17b803573721546af705caf0a"))])
  (sly
   . [(1 0 43 0 20261028 155) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261108 54) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261108 69) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "9d27c643fbd25a051097ca9dc23c99a04d4e1e2a"))])
+      (:commit . "589ee12538bd844cbfb1ca659ff6f5ef92c5b91d"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

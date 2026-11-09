@@ -1785,6 +1785,7 @@
   (ewal-doom-themes :url "https://github.com/cyruseuros/ewal")
   (ewal-evil-cursors :url "https://github.com/cyruseuros/ewal")
   (ewal-spacemacs-themes :url "https://github.com/cyruseuros/ewal")
+  (ewc :url "https://github.com/thkoch2001/rau")
   (ewm :url "https://github.com/laluxx/ewm")
   (ewmctrl :url "https://github.com/flexibeast/ewmctrl")
   (eww-lnum :url "https://github.com/m00natic/eww-lnum")
