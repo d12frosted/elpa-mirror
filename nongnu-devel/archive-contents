@@ -1375,13 +1375,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "e2e2bc753b4330f85b6ea7e62cd0552e8ea47b76"))])
  (markdown-ts-appear
-  . [(0 4 0 0 20261029 1) ((emacs (31 1)))
+  . [(0 4 0 0 20261108 2) ((emacs (31 1)))
      "Reveal Markdown source at point" tar
      ((:url . "https://github.com/Thysrael/markdown-ts-appear")
       (:keywords "text" "convenience")
       (:maintainer "Thysrael" . "thysrael@163.com")
       (:authors ("Thysrael" . "thysrael@163.com"))
-      (:commit . "d740ad4f59b8b34ea27a93a2b3b98fbdaf0cd467"))])
+      (:commit . "1be4a8c6ae97fd59293d88709e1b02039e828784"))])
  (mastodon
   . [(2 1 8 0 20261022 85)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
@@ -1941,13 +1941,13 @@
       (:authors ("Matus Goljer" . "matus.goljer@gmail.com"))
       (:commit . "82d2cf084a19b0c2c3812e0550721f8a61996056"))])
  (solarized-theme
-  . [(2 2 0 0 20261105 12) ((emacs (28 1)))
+  . [(2 2 0 0 20261108 13) ((emacs (28 1)))
      "The Solarized color theme" tar
      ((:url . "http://github.com/bbatsov/solarized-emacs")
       (:keywords "convenience" "themes" "solarized")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "50a13dfdde6ccf998a03095c3ddfcfedf6efcacc"))])
+      (:commit . "c3efdaa7ff693a1b83ffa64e5631c9770e80c54d"))])
  (spacemacs-theme
   . [(0 2 0 20260906 51) ((emacs (24)))
      "Color theme with a dark and light versions." tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261105 48) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261108 54) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "82673f4684c1321995b20432dab818fd70dd7754"))])
+      (:commit . "9d27c643fbd25a051097ca9dc23c99a04d4e1e2a"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

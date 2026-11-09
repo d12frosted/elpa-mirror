@@ -363,7 +363,7 @@
       (:authors ("Clemens Radermacher" . "clemera@posteo.net"))
       (:commit . "c4a1c745123b86c15ba7bb4858255b5252e8440a"))])
  (bufferlo
-  . [(1 2 0 20261107 24) ((emacs (29 1)))
+  . [(1 2 0 20261108 26) ((emacs (29 1)))
      "Frame/Tab Local Buffer Lists with Persistence" tar
      ((:url . "https://github.com/florommel/bufferlo")
       (:keywords "buffer" "frame" "tabs" "local")
@@ -371,7 +371,7 @@
 		   ("Stephane Marks" . "shipmints@gmail.com"))
       (:authors ("Florian Rommel" . "mail@florommel.de")
 		("Stephane Marks" . "shipmints@gmail.com"))
-      (:commit . "afe372bb776db4d044967ea78b414b477d4ab9f8"))])
+      (:commit . "82d9e53e6459eb9f34eebc672ab050f1f877f87c"))])
  (buframe
   . [(0 3 0 20260415 112855) ((emacs (27 1)) (timeout (2 1)))
      "Buffer-local frames" tar
@@ -585,13 +585,13 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "500d62e229cbef8a33a333905c9b421a9a5a7d1e"))])
  (consult-hoogle
-  . [(0 8 0 0 20260723 0) ((emacs (28 1)) (consult (2 0)))
+  . [(0 8 1 0 20261108 0) ((emacs (28 1)) (consult (2 0)))
      "Hoogle frontend using consult" tar
      ((:url . "https://codeberg.org/rahguzar/consult-hoogle")
       (:keywords "docs" "languages")
       (:maintainer "rahguzar" . "rahguzar@mailbox.org")
       (:authors ("rahguzar" . "rahguzar@mailbox.org"))
-      (:commit . "d6d3e9419980c0c385ae2e7a55b1e52e93103f87"))])
+      (:commit . "d8ccf9ed4f409272b01474387a98203d66a7c4a0"))])
  (consult-recoll
   . [(1 0 0 0 20250223 210510) ((emacs (26 1)) (consult (2 0)))
      "Recoll queries using consult" tar
@@ -1358,13 +1358,13 @@
       (:authors ("Amin Bandali" . "bandali@gnu.org"))
       (:commit . "c0a4d72ec9e7ebf08e371fbc0b052ce973b126ba"))])
  (filechooser
-  . [(0 3 0 0 20260723 0) ((emacs (28 1)) (compat (29 1)))
+  . [(0 3 0 0 20261108 1) ((emacs (28 1)) (compat (29 1)))
      "An xdg-desktop-portal filechooser" tar
      ((:url . "https://codeberg.org/rahguzar/filechooser")
       (:keywords "convenience" "files" "tools" "unix")
       (:maintainer "rahguzar" . "rahguzar@mailbox.org")
       (:authors ("rahguzar" . "rahguzar@mailbox.org"))
-      (:commit . "a0be6ce512eea8940b325d96fbefba2ada3048ec"))])
+      (:commit . "d395225031b2b49e5fc496f3bd22284e7a92ef97"))])
  (filladapt
   . [(2 12 2 0 20221221 75607) ((emacs (24 4))) "Adaptive fill" tar
      ((:maintainer nil . "emacs-devel@gnu.org")
@@ -1720,7 +1720,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 3 2 0 20261030 3) ((emacs (28)))
+  . [(9 3 2 0 20261108 5) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1730,7 +1730,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "e9974c1cf02e4f52b5a31a54ee37d04cd11cebb9"))])
+      (:commit . "80379ba33b281b3934fbbcf38a144e9053f2729f"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2498,13 +2498,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261106 964) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261108 969) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "20dd7cb9b61a0be269e724c4cc0731cd4a22c6fc"))])
+      (:commit . "cf41132d0b21081c999fa31dbda9ef8b7cb20208"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
