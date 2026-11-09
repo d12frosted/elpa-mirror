@@ -2,10 +2,10 @@
  • Building package fontsloth
 From https://github.com/jollm/fontsloth
 Updating /mnt/store/melpa/working/fontsloth/
-Checking out 0835098743e060b2f2191f53d181257d6444dce4
+Checking out f77dec891f04d5d2f30671a9f81bb5b68d2f08f4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fontsloth/
-  to /tmp/fontsloth-d8Kvzv/fontsloth-20250707.829/
+  to /tmp/fontsloth-gCIhaD/fontsloth-20261108.2339/
     fontsloth--common-types.el -> fontsloth--common-types.el
     fontsloth-bbox.el -> fontsloth-bbox.el
     fontsloth-cache.el -> fontsloth-cache.el
@@ -21,40 +21,48 @@ Copying files (->) and directories (=>)
     fontsloth-otf-.el -> fontsloth-otf-.el
     fontsloth-otf-cff-dict.el -> fontsloth-otf-cff-dict.el
     fontsloth-otf-cff.el -> fontsloth-otf-cff.el
+    fontsloth-otf-cff2.el -> fontsloth-otf-cff2.el
     fontsloth-otf-glyf.el -> fontsloth-otf-glyf.el
+    fontsloth-otf-gvar.el -> fontsloth-otf-gvar.el
+    fontsloth-otf-hvar.el -> fontsloth-otf-hvar.el
     fontsloth-otf-kern.el -> fontsloth-otf-kern.el
     fontsloth-otf-typo.el -> fontsloth-otf-typo.el
+    fontsloth-otf-var.el -> fontsloth-otf-var.el
     fontsloth-otf.el -> fontsloth-otf.el
     fontsloth-point.el -> fontsloth-point.el
     fontsloth-raster.el -> fontsloth-raster.el
     fontsloth-test-util.el -> fontsloth-test-util.el
     fontsloth-woff.el -> fontsloth-woff.el
     fontsloth.el -> fontsloth.el
-Created fontsloth-20250707.829.tar containing:
-  fontsloth-20250707.829/
-  fontsloth-20250707.829/fontsloth--common-types.el
-  fontsloth-20250707.829/fontsloth-bbox.el
-  fontsloth-20250707.829/fontsloth-cache.el
-  fontsloth-20250707.829/fontsloth-coords.el
-  fontsloth-20250707.829/fontsloth-geometry.el
-  fontsloth-20250707.829/fontsloth-glyph.el
-  fontsloth-20250707.829/fontsloth-layout-lb-tables.el
-  fontsloth-20250707.829/fontsloth-layout-linebreak.el
-  fontsloth-20250707.829/fontsloth-layout.el
-  fontsloth-20250707.829/fontsloth-line.el
-  fontsloth-20250707.829/fontsloth-log.el
-  fontsloth-20250707.829/fontsloth-otf--mac-names.el
-  fontsloth-20250707.829/fontsloth-otf-.el
-  fontsloth-20250707.829/fontsloth-otf-cff-dict.el
-  fontsloth-20250707.829/fontsloth-otf-cff.el
-  fontsloth-20250707.829/fontsloth-otf-glyf.el
-  fontsloth-20250707.829/fontsloth-otf-kern.el
-  fontsloth-20250707.829/fontsloth-otf-typo.el
-  fontsloth-20250707.829/fontsloth-otf.el
-  fontsloth-20250707.829/fontsloth-pkg.el
-  fontsloth-20250707.829/fontsloth-point.el
-  fontsloth-20250707.829/fontsloth-raster.el
-  fontsloth-20250707.829/fontsloth-test-util.el
-  fontsloth-20250707.829/fontsloth-woff.el
-  fontsloth-20250707.829/fontsloth.el
-Built fontsloth in 3.412s, finished at 2026-11-07T20:38:41+0000
+Created fontsloth-20261108.2339.tar containing:
+  fontsloth-20261108.2339/
+  fontsloth-20261108.2339/fontsloth--common-types.el
+  fontsloth-20261108.2339/fontsloth-bbox.el
+  fontsloth-20261108.2339/fontsloth-cache.el
+  fontsloth-20261108.2339/fontsloth-coords.el
+  fontsloth-20261108.2339/fontsloth-geometry.el
+  fontsloth-20261108.2339/fontsloth-glyph.el
+  fontsloth-20261108.2339/fontsloth-layout-lb-tables.el
+  fontsloth-20261108.2339/fontsloth-layout-linebreak.el
+  fontsloth-20261108.2339/fontsloth-layout.el
+  fontsloth-20261108.2339/fontsloth-line.el
+  fontsloth-20261108.2339/fontsloth-log.el
+  fontsloth-20261108.2339/fontsloth-otf--mac-names.el
+  fontsloth-20261108.2339/fontsloth-otf-.el
+  fontsloth-20261108.2339/fontsloth-otf-cff-dict.el
+  fontsloth-20261108.2339/fontsloth-otf-cff.el
+  fontsloth-20261108.2339/fontsloth-otf-cff2.el
+  fontsloth-20261108.2339/fontsloth-otf-glyf.el
+  fontsloth-20261108.2339/fontsloth-otf-gvar.el
+  fontsloth-20261108.2339/fontsloth-otf-hvar.el
+  fontsloth-20261108.2339/fontsloth-otf-kern.el
+  fontsloth-20261108.2339/fontsloth-otf-typo.el
+  fontsloth-20261108.2339/fontsloth-otf-var.el
+  fontsloth-20261108.2339/fontsloth-otf.el
+  fontsloth-20261108.2339/fontsloth-pkg.el
+  fontsloth-20261108.2339/fontsloth-point.el
+  fontsloth-20261108.2339/fontsloth-raster.el
+  fontsloth-20261108.2339/fontsloth-test-util.el
+  fontsloth-20261108.2339/fontsloth-woff.el
+  fontsloth-20261108.2339/fontsloth.el
+Built fontsloth in 4.658s, finished at 2026-11-09T04:46:04+0000

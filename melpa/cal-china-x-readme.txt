@@ -16,8 +16,6 @@ To use, add something like the following to your .emacs:
                   cal-china-x-general-holidays
                   other-holidays))
 
-Note: for emacs22, please use version 1.1.
-
 ; History
 
 This is an early derived work from `chinese-calendar.el' written by
