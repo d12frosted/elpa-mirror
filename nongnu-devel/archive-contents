@@ -220,7 +220,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261106 164)
+  . [(2 1 0 -4 0 20261109 169)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -234,7 +234,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "3d6ac80060b16009b597f1bc8481655b25f78dd7"))])
+      (:commit . "8730d9bee39955338932476f3a8ae370e77241cc"))])
  (clojure-mode
   . [(5 24 0 0 20261107 0) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -267,7 +267,7 @@
       (:authors ("Chris Wanstrath" . "chris@ozmm.org"))
       (:commit . "1c6adeae14f3795d3b1e44321189ed7c2c93c967"))])
  (cond-let
-  . [(1 1 5 0 20261001 0) ((emacs (28 1)))
+  . [(1 1 5 0 20261109 1) ((emacs (28 1)))
      "Additional and improved binding conditionals" tar
      ((:url . "https://github.com/tarsius/cond-let")
       (:keywords "extensions")
@@ -275,7 +275,7 @@
 		   . "emacs.cond-let@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.cond-let@jonas.bernoulli.dev"))
-      (:commit . "09292a77001434f59ab55c775dec2b98cb18d028"))])
+      (:commit . "b992b54d3958c1f76abb05ecd6f60c645aefd647"))])
  (consult-flycheck
   . [(1 2 0 20260628 1)
      ((emacs (29 1)) (consult (3 5)) (flycheck (35)))
@@ -437,7 +437,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "c8d54d649872bfe7b2b9f49ae5c2addbf12d3b99"))])
  (ebuild-mode
-  . [(1 89 0 20261025 4) ((emacs (26 3)))
+  . [(1 90 0 20261109 0) ((emacs (26 3)))
      "edit ebuild and eclass files" tar
      ((:keywords "languages" "processes")
       (:maintainer "Gentoo Emacs project" . "emacs@gentoo.org")
@@ -446,7 +446,7 @@
 		("Christian Faulhammer" . "fauli@gentoo.org")
 		("Ulrich Müller" . "ulm@gentoo.org"))
       (:url . "https://elpa.nongnu.org/nongnu/ebuild-mode.html")
-      (:commit . "17ac68dd00304151bf903068242f901806acb323"))])
+      (:commit . "080f9f62b3cd5a8651c4d159df5960261f770083"))])
  (edit-indirect
   . [(0 1 13 0 20240128 11949) ((emacs (24 3)))
      "Edit regions in separate buffers" tar
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 2 0 20261107 0)
+  . [(4 7 2 0 20261109 2)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 6)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "602760478f6d4a67e7064f5bcd2e294aa3f38f8e"))])
+      (:commit . "1b0c2281a6956a0723068a9a2f34c5d04784cb77"))])
  (magit-section
-  . [(4 7 2 0 20261107 0)
+  . [(4 7 2 0 20261109 2)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "602760478f6d4a67e7064f5bcd2e294aa3f38f8e"))])
+      (:commit . "1b0c2281a6956a0723068a9a2f34c5d04784cb77"))])
  (markdown-mode
   . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261108 394) ((emacs (25 2)))
+  . [(4 6 -4 0 20261109 403) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "20de568be368eef29e97635a31f383eeadcc4c31"))])
+      (:commit . "9a579a70bcc5c3a0b8fb921a135759c3b12f738a"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -2268,7 +2268,7 @@
       (:authors ("Akib Azmain Turja" . "akib@disroot.org"))
       (:commit . "5203d9379afaf6703746823a580c804e1dd98e08"))])
  (with-editor
-  . [(3 6 0 0 20261101 0)
+  . [(3 6 0 0 20261109 2)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0)))
      "Use the Emacsclient as $EDITOR" tar
      ((:url . "https://github.com/magit/with-editor")
@@ -2277,7 +2277,7 @@
 		   . "emacs.with-editor@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.with-editor@jonas.bernoulli.dev"))
-      (:commit . "3218d480d2c2258835c57f1200afead7f143f3ad"))])
+      (:commit . "254c54189e26ed9223a55cba8bbd08b51c4b83c0"))])
  (with-simulated-input
   . [(3 0 0 20210602 224623) ((emacs (24 4)))
      "A macro to simulate user input non-interactively" tar
@@ -2356,11 +2356,11 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.com"))
       (:commit . "5b251bb01aa1d64055a50ea68ea4f4c060336705"))])
  (zig-mode
-  . [(0 0 8 0 20260717 49) ((emacs (26 1)) (reformatter (0 6)))
+  . [(0 0 8 0 20261109 50) ((emacs (26 1)) (reformatter (0 6)))
      "A major mode for the Zig programming language" tar
      ((:url . "https://codeberg.org/ziglang/zig-mode")
       (:keywords "zig" "languages")
       (:maintainer "Jen-Chieh" . "jcs090218@gmail.com")
       (:authors ("Andrea Orru" . "andreaorru1991@gmail.com")
 		("Andrew Kelley" . "superjoe30@gmail.com"))
-      (:commit . "62bfbaced0222e2bfbc086fa8556adf6b3298476"))]))
+      (:commit . "16592be806dc87911efec57be9c840c96298a1a0"))]))

@@ -1772,13 +1772,13 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "bccb08062a3372629015bcd2c197490b7d005f37"))])
  (jit-spell
-  . [(0 5) ((emacs (27 1)) (compat (29 1)))
+  . [(0 6) ((emacs (28 1)) (compat (31 1)))
      "Just-in-time spell checking" tar
      ((:url . "https://github.com/astoff/jit-spell")
-      (:keywords "tools" "wp")
+      (:keywords "text")
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
-      (:commit . "e6f3525b848c48906f06bf21a9e8678b95ccd3bf"))])
+      (:commit . "493237accb3759b9ca22b1346a90cceae08d4853"))])
  (js2-mode
   . [(20231224) ((emacs (24 1)) (cl-lib (0 5)))
      "Improved JavaScript editing mode" tar
@@ -3731,12 +3731,12 @@
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
       (:commit . "03d1cca4bd910a8df73e4ec637836c6ac25213a2"))])
  (which-key
-  . [(3 6 1) ((emacs (25 1))) "Display available keybindings in popup"
+  . [(3 6 2) ((emacs (25 1))) "Display available keybindings in popup"
      tar
      ((:maintainer "Justin Burkett" . "justin@burkett.cc")
       (:authors ("Justin Burkett" . "justin@burkett.cc"))
       (:url . "https://elpa.gnu.org/packages/which-key.html")
-      (:commit . "34b832fce1d01c22aa644196cd6e6b50b1d403ee"))])
+      (:commit . "fd3a65bd1af4ca0034da9986c68d455a08e2eca1"))])
  (window-commander
   . [(3 1) ((emacs (27 1))) "Simply execute commands on windows" tar
      ((:url . "https://dsemy.com/projects/window-commander")

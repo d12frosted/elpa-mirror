@@ -1,7 +1,7 @@
 Create releases of Emacs packages and watch them roll down the hill
 again.
 
-This package adds three commmands to the `magit-tag' menu.
+This package adds three commands to the `magit-tag' menu.
 
 `sisyphus-bump-package-requires' bumps the versions of dependencies
 in the ~Package-Requires~ header of the visited library.

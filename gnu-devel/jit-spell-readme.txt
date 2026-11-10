@@ -14,10 +14,12 @@ only checks words as the cursor moves over them.
 
 jit-spell is part of [GNU ELPA] and can be installed with `M-x
 package-install RET jit-spell RET'.  As a complement, you may also want
-to install the vibe-spell package; see section “Engines” below.
+to install the [vibe-spell] package; see section “Engines” below.
 
 
 [GNU ELPA] <https://elpa.gnu.org>
+
+[vibe-spell] <https://github.com/astoff/vibe-spell>
 
 
 1 Usage
@@ -88,14 +90,21 @@ to install the vibe-spell package; see section “Engines” below.
   to run a spellchecker as a subprocess, using the standard `ispell -a'
   interface.  This forces us to compute all correction suggestions for
   misspellings eagerly, even if they will never be used.  As a
-  consequence, it takes (visibly) longer to complete uses considerably
-  more systems resources.  That said, since jit-spell runs
-  asynchronously, it should not slow down Emacs itself.
+  consequence, it takes (visibly) longer to complete and uses more
+  systems resources.  That said, since jit-spell runs asynchronously, it
+  should not slow down Emacs itself.
 
-  As a better performing alternative, jit-spell can use vibe-spell, a
-  spell checker in pure Emacs Lisp.  It suffices to install that
-  package.  When it is available, jit-spell selects it automatically as
-  the engine.
+  As a better performing alternative, jit-spell can use [vibe-spell], a
+  port of Hunspell to pure Emacs Lisp.  It is selected automatically as
+  the jit-spell backend when available, so it suffices to install that
+  package with the following command:
+
+  ┌────
+  │ M-x package-vc-install RET https://github.com/astoff/vibe-spell RET
+  └────
+
+
+[vibe-spell] <https://github.com/astoff/vibe-spell>
 
 
 5 Contributing

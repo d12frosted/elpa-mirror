@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261106 25) ((emacs (28 1)))
+  . [(14 2 0 0 20261109 26) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "90e12196dd6ca042c70a7ab0d687e3f347c440dc"))])
+      (:commit . "4cd99e788bd81be5636dc907badc88667968557a"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1228,7 +1228,7 @@
       (:authors ("Jorgen Schäfer" . "forcer@forcix.cx"))
       (:commit . "6f704fd3c12f35e059700aaeb43ae64c35ad81b2"))])
  (emureader
-  . [(0 4 0 0 20261105 3) ((emacs (26 1)))
+  . [(0 4 0 0 20261109 8) ((emacs (26 1)))
      "General-purpose document reader" tar
      ((:url . "https://codeberg.org/MonadicSheep/emureader")
       (:keywords "lisp" "files" "tools")
@@ -1236,7 +1236,7 @@
 		   ("Tushar" . "tusharhero@sdf.org"))
       (:authors ("Divya Ranjan Pattanaik" . "divya@dialetheia.xyz")
 		("Tushar" . "tusharhero@sdf.org"))
-      (:commit . "d42119ef6ff6f90c80ea1038716d4d9d16d1c81e"))])
+      (:commit . "a29ee325f9ccd7ab931752f94fd4be9b4a34ffdd"))])
  (engrave-faces
   . [(0 3 1 0 20240421 82802) ((emacs (27 1)))
      "Convert font-lock faces to other formats" tar
@@ -1890,13 +1890,13 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "bccb08062a3372629015bcd2c197490b7d005f37"))])
  (jit-spell
-  . [(0 5 0 20261104 7) ((emacs (28 1)) (compat (31 1)))
+  . [(0 6 0 20261109 0) ((emacs (28 1)) (compat (31 1)))
      "Just-in-time spell checking" tar
      ((:url . "https://github.com/astoff/jit-spell")
       (:keywords "text")
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
-      (:commit . "6fb5d63860d1714b39c8581e6ee860ed7abd86bf"))])
+      (:commit . "493237accb3759b9ca22b1346a90cceae08d4853"))])
  (js2-mode
   . [(20231224 0 20260627 14) ((emacs (24 1)) (cl-lib (0 5)))
      "Improved JavaScript editing mode" tar
@@ -3798,11 +3798,11 @@
       (:url . "https://elpa.gnu.org/packages/uniquify-files.html")
       (:commit . "7f84a579906eb449270ffe5e5ccc090aa3821c97"))])
  (urgrep
-  . [(0 6 1 -4 0 20260619 3) ((emacs (28 1)) (compat (29 1 0 1)))
+  . [(0 6 1 -4 0 20261108 5) ((emacs (28 1)) (compat (29 1 0 1)))
      "Universal recursive grep" tar
      ((:url . "https://sr.ht/~jimporter/urgrep/")
       (:keywords "grep" "search")
-      (:commit . "6db85925c7dbcc364f7264c884c13193e2ec23ec"))])
+      (:commit . "d28807a3a50e550bc56118e223b00f116ceb50ec"))])
  (url-http-ntlm
   . [(2 0 6 0 20250626 205101) ((emacs (24 4)) (ntlm (2 1 0)))
      "NTLM authentication for the url library" tar
@@ -4027,12 +4027,12 @@
       (:authors ("Andrew Hyatt" . "ahyatt@gmail.com"))
       (:commit . "7fb3686dd02aed5bd52bc847ef26a4346f149456"))])
  (which-key
-  . [(3 6 1 0 20260101 125434) ((emacs (25 1)))
+  . [(3 6 2 0 20261109 0) ((emacs (25 1)))
      "Display available keybindings in popup" tar
      ((:maintainer "Justin Burkett" . "justin@burkett.cc")
       (:authors ("Justin Burkett" . "justin@burkett.cc"))
       (:url . "https://elpa.gnu.org/packages/which-key.html")
-      (:commit . "17ddfd66e65c19f44dee41ee1b7ee1ce23ef3ed2"))])
+      (:commit . "6a856248f2a105be6d503975d30af557b8f5cb05"))])
  (window-commander
   . [(3 1 0 20261020 0) ((emacs (27 1)))
      "Simply execute commands on windows" tar

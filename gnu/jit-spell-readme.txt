@@ -10,16 +10,16 @@ does.
 <https://raw.githubusercontent.com/astoff/jit-spell/images/screenshot.png>
 
 This behavior is different from the built-in Flyspell package, which
-only checks words as the cursor moves over them.  Moreover, unlike
-Flyspell, jit-spell communicates with the spell-checking subprocess
-entirely asynchronously, which can lead to a noticeable performance
-improvement.
+only checks words as the cursor moves over them.
 
 jit-spell is part of [GNU ELPA] and can be installed with `M-x
-package-install RET jit-spell RET'.
+package-install RET jit-spell RET'.  As a complement, you may also want
+to install the [vibe-spell] package; see section “Engines” below.
 
 
 [GNU ELPA] <https://elpa.gnu.org>
+
+[vibe-spell] <https://github.com/astoff/vibe-spell>
 
 
 1 Usage
@@ -44,36 +44,25 @@ package-install RET jit-spell RET'.
   Try also `M-x customize-group RET jit-spell RET' to see a listing of
   all possible customization options.
 
-  Many customization options from the built-in `ispell' library are also
-  relevant, notably `ispell-program-name'.  Hunspell and Aspell are the
-  most common choices.  Aspell is faster, but in my experience Hunspell
-  has better correction suggestions and is sufficiently performant.
-
 
 2 Language selection
 ════════════════════
 
-  Type `M-x jit-spell-change-dictionary RET' to choose a different
-  spelling language.  If you use Hunspell, you will be able to select
-  multiple languages.  Other spellchecking programs are limited to a
-  single language.
+  Type `M-x jit-spell-dictionary RET' to choose a different spelling
+  language (or languages).  You also call that command with a prefix
+  argument in order to save the dictionary choice permanently, either as
+  a [file-local variable] or [dir-local variable].
 
-  The default spellchecking language is determined from your system
-  settings.  To change that, customize the variable `ispell-dictionary'.
-  To change the spellchecking language of a specific file, type `M-x
-  add-file-local-variable RET ispell-local-dictionary RET' followed by
-  the desired language (remember to enclose it in quotation marks, since
-  that variable must be a string).  Similarly, you can use
-  [directory-local variables] to adjust the spellchecking language for
-  collections of files.
-
-  When using Hunspell, you can set those variables to a comma-separated
-  list of dictionaries for multi-language spellchecking.  See the
-  explanation of the `-d' switch in Hunspell's man page for more
-  information.
+  Moreover, you can set the default dictionary by customizing the
+  variable `jit-spell-dictionary'.  If it is nil, the default dictionary
+  is determined by the “legacy” `ispell-dictionary' variable or your
+  system's locale setting.
 
 
-[directory-local variables]
+[file-local variable]
+<https://www.gnu.org/software/emacs/manual/html_node/elisp/File-Local-Variables.html>
+
+[dir-local variable]
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Directory-Local-Variables.html>
 
 
@@ -94,7 +83,31 @@ package-install RET jit-spell RET'.
   the variable `jit-spell-prog-mode-faces'.
 
 
-4 Contributing
+4 Spellchecking engines
+═══════════════════════
+
+  jit-spell supports two spellchecking backends.  The default method is
+  to run a spellchecker as a subprocess, using the standard `ispell -a'
+  interface.  This forces us to compute all correction suggestions for
+  misspellings eagerly, even if they will never be used.  As a
+  consequence, it takes (visibly) longer to complete and uses more
+  systems resources.  That said, since jit-spell runs asynchronously, it
+  should not slow down Emacs itself.
+
+  As a better performing alternative, jit-spell can use [vibe-spell], a
+  port of Hunspell to pure Emacs Lisp.  It is selected automatically as
+  the jit-spell backend when available, so it suffices to install that
+  package with the following command:
+
+  ┌────
+  │ M-x package-vc-install RET https://github.com/astoff/vibe-spell RET
+  └────
+
+
+[vibe-spell] <https://github.com/astoff/vibe-spell>
+
+
+5 Contributing
 ══════════════
 
   Discussions, suggestions and code contributions are welcome!  Since
