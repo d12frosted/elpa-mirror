@@ -1008,12 +1008,12 @@
       (:authors ("Alexey Kutepov" . "reximkut@gmail.com"))
       (:commit . "2e9f99c41fe8ef0557e9ea0f3b94ef50c68b5557"))])
  (gruvbox-theme
-  . [(1 30 3 0 20260911 2) ((autothemer (0 2 19)))
+  . [(1 30 3 0 20261110 3) ((autothemer (0 2 19)))
      "A retro-groove colour theme for Emacs" tar
      ((:url . "https://github.com/greduan/emacs-theme-gruvbox")
       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
       (:authors ("Jason Milkins" . "jasonm23@gmail.com"))
-      (:commit . "e629403d6f56f1483f86893b6a50f8d172d7c7a3"))])
+      (:commit . "351a3ced876fe0b294398ef6bb37c8b7b8a246a7"))])
  (guru-mode
   . [(1 0 0 20211025 115715) nil "Become an Emacs guru" tar
      ((:url . "https://github.com/bbatsov/guru-mode")
@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 9 0 20261108 11) ((helm-core (4 0 9)) (wfnames (1 2)))
+  . [(4 0 9 0 20261109 14) ((helm-core (4 0 9)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "4fdd575901eb7f92479db2bf7d34afa5395fb1ea"))])
+      (:commit . "e76e9899c95ac90a8ccff87e06876df0660b1c55"))])
  (helm-core
-  . [(4 0 9 0 20261108 11) ((emacs (25 1)) (async (2 0)))
+  . [(4 0 9 0 20261109 14) ((emacs (25 1)) (async (2 0)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "4fdd575901eb7f92479db2bf7d34afa5395fb1ea"))])
+      (:commit . "e76e9899c95ac90a8ccff87e06876df0660b1c55"))])
  (hermes
   . [(0 9 0 0 20261105 99)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1739,12 +1739,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261109 403) ((emacs (25 2)))
+  . [(4 6 -4 0 20261109 409) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "9a579a70bcc5c3a0b8fb921a135759c3b12f738a"))])
+      (:commit . "e09cd62ada58d5e38986a81101cffe1be28e527d"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
