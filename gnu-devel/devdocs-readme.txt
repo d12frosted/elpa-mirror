@@ -96,7 +96,7 @@ package-install RET devdocs'.
 
   ┌────
   │ (add-hook 'python-mode-hook
-  │ 	  (lambda () (setq-local devdocs-current-docs '("python~3.9"))))
+  │           (lambda () (setq-local devdocs-current-docs '("python~3.9"))))
   └────
 
   As usual, calling `devdocs-lookup' with a prefix argument redefines

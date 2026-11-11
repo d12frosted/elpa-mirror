@@ -220,7 +220,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261109 169)
+  . [(2 1 0 -4 0 20261111 175)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -234,7 +234,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "8730d9bee39955338932476f3a8ae370e77241cc"))])
+      (:commit . "8bb3fe2ef82dea8f6f3e1f843680acd062712a40"))])
  (clojure-mode
   . [(5 24 0 0 20261107 0) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 9 0 20261109 14) ((helm-core (4 0 9)) (wfnames (1 2)))
+  . [(4 0 9 0 20261110 15) ((helm-core (4 0 9)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "e76e9899c95ac90a8ccff87e06876df0660b1c55"))])
+      (:commit . "b56bbbba53ced5851516b3ff28b091aae9faa62c"))])
  (helm-core
-  . [(4 0 9 0 20261109 14) ((emacs (25 1)) (async (2 0)))
+  . [(4 0 9 0 20261110 15) ((emacs (25 1)) (async (2 0)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "e76e9899c95ac90a8ccff87e06876df0660b1c55"))])
+      (:commit . "b56bbbba53ced5851516b3ff28b091aae9faa62c"))])
  (hermes
   . [(0 9 0 0 20261105 99)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 2 0 20261109 2)
+  . [(4 7 2 0 20261110 3)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 6)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "1b0c2281a6956a0723068a9a2f34c5d04784cb77"))])
+      (:commit . "da92cab409326115b7ee64cc611c99fd29b00963"))])
  (magit-section
-  . [(4 7 2 0 20261109 2)
+  . [(4 7 2 0 20261110 3)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "1b0c2281a6956a0723068a9a2f34c5d04784cb77"))])
+      (:commit . "da92cab409326115b7ee64cc611c99fd29b00963"))])
  (markdown-mode
   . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261108 69) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261110 73) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "589ee12538bd844cbfb1ca659ff6f5ef92c5b91d"))])
+      (:commit . "82483571d6e7f362c7cf5fef7f62622ea18440e8"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

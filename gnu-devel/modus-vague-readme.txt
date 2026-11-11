@@ -50,6 +50,16 @@ work. If not, please open an issue on the issue tracker.
   The release version of the package is available on GNU ELPA.  Simply
   run `M-x package-install RET modus-vague RET'.
 
+  A basic configuration with `use-package' would look something like
+  this:
+
+  ┌────
+  │ (use-package modus-vague
+  │   :ensure t
+  │   :config
+  │   (modus-themes-load-theme 'modus-vague))
+  └────
+
 
 2.2 Development version
 ───────────────────────

@@ -843,13 +843,13 @@
       (:authors ("Niklas Eklund" . "niklas.eklund@posteo.net"))
       (:commit . "6b64d4d8064cee781e071e825857b442ea96c3d9"))])
  (devdocs
-  . [(0 7 0 20251022 125547) ((emacs (27 1)) (compat (30 1)))
+  . [(0 7 0 20261110 2) ((emacs (28 1)) (compat (30 1)))
      "Emacs viewer for DevDocs" tar
      ((:url . "https://github.com/astoff/devdocs.el")
       (:keywords "help")
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
-      (:commit . "25c746024ddf73570195bf42b841f761a2fee10c"))])
+      (:commit . "4b4fa0c97f7bddb1348319bf0fe152211465b189"))])
  (devicetree-ts-mode
   . [(0 3 0 20240117 132538) ((emacs (29 1)))
      "Tree-sitter support for DTS" tar
@@ -2297,13 +2297,13 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "782743415b3eedac0b99db2342fb35703deb752f"))])
  (modus-vague
-  . [(0 2 4 0 20261104 1) ((emacs (30 1)) (modus-themes (5 3 0)))
+  . [(0 2 4 0 20261110 2) ((emacs (30 1)) (modus-themes (5 3 0)))
      "Emacs port of the popular vague theme" tar
      ((:url . "https://github.com/paniash/modus-vague")
       (:keywords "faces" "theme")
       (:maintainer "Ashish Panigrahi" . "public@ashishpanigrahi.com")
       (:authors ("Ashish Panigrahi" . "public@ashishpanigrahi.com"))
-      (:commit . "4108a12f555ae7ed80cd0dea59e5fc9e000e3b84"))])
+      (:commit . "25b08deb84644d8986b30eb53423e63b00be220c"))])
  (mpdired
   . [(4 0 20260915 0) ((emacs (29)))
      "A dired-like client for Music Player Daemon" tar
