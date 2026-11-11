@@ -14,7 +14,8 @@ Key bindings in magnus buffer:
   c   - Create a Claude Code instance
   X   - Create a Codex instance
   k   - Archive instance
-  r   - Rename instance
+  K   - Forget archived instance
+  U   - Show or hide archived items
   v   - Request an independent review
   g   - Refresh status
   ?   - Show help menu

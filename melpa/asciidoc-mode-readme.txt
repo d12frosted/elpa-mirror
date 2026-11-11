@@ -1,7 +1,7 @@
 A tree-sitter-based major mode for editing AsciiDoc files.
 
 This mode uses two tree-sitter parsers from
-<https://github.com/cathaysia/tree-sitter-asciidoc>:
+<https://github.com/bovinemagnet/tree-sitter-asciidoc>:
 
 - `asciidoc' for block-level structure (sections, lists, blocks)
 - `asciidoc-inline' for inline formatting (bold, italic, links)
