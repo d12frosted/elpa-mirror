@@ -2,10 +2,10 @@
  • Building package fzf-native
 From https://github.com/dangduc/fzf-native
 Updating /mnt/store/melpa/working/fzf-native/
-Checking out 4b9236e8cd1e9f9f3aaf5f2ebf83f1fc5995d38d
+Checking out 20a16a277764436e003f1d84cb9f0352263f3bad
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fzf-native/
-  to /tmp/fzf-native-0c3Jjd/fzf-native-20260908.1042/
+  to /tmp/fzf-native-IrXoVs/fzf-native-20261111.947/
     fzf-native.el -> fzf-native.el
     bin => bin
     CMakeLists.txt -> CMakeLists.txt
@@ -25,40 +25,40 @@ Copying files (->) and directories (=>)
     utf8proc-2.10.0/utf8proc.c -> utf8proc-2.10.0/utf8proc.c
     utf8proc-2.10.0/utf8proc_data.c -> utf8proc-2.10.0/utf8proc_data.c
     utf8proc-2.10.0/utf8proc.h -> utf8proc-2.10.0/utf8proc.h
-Created fzf-native-20260908.1042.tar containing:
-  fzf-native-20260908.1042/
-  fzf-native-20260908.1042/CMakeLists.txt
-  fzf-native-20260908.1042/bin/
-  fzf-native-20260908.1042/bin/Darwin/
-  fzf-native-20260908.1042/bin/Darwin/arm64/
-  fzf-native-20260908.1042/bin/Darwin/arm64/fzf-native-module.so
-  fzf-native-20260908.1042/bin/Darwin/fzf-native-module.so
-  fzf-native-20260908.1042/bin/FreeBSD/
-  fzf-native-20260908.1042/bin/FreeBSD/fzf-native-module.so
-  fzf-native-20260908.1042/bin/Linux/
-  fzf-native-20260908.1042/bin/Linux/fzf-native-module.so
-  fzf-native-20260908.1042/bin/Windows/
-  fzf-native-20260908.1042/bin/Windows/Release/
-  fzf-native-20260908.1042/bin/Windows/Release/fzf-native-module.dll
-  fzf-native-20260908.1042/bin/Windows/Release/fzf-native-module.exp
-  fzf-native-20260908.1042/bin/Windows/Release/fzf-native-module.lib
-  fzf-native-20260908.1042/emacs-module.h
-  fzf-native-20260908.1042/fzf-additions.c
-  fzf-native-20260908.1042/fzf-additions.h
-  fzf-native-20260908.1042/fzf-native-module.c
-  fzf-native-20260908.1042/fzf-native-module.def
-  fzf-native-20260908.1042/fzf-native-module.map
-  fzf-native-20260908.1042/fzf-native-pkg.el
-  fzf-native-20260908.1042/fzf-native.el
-  fzf-native-20260908.1042/fzf-normalize.inc
-  fzf-native-20260908.1042/fzf-private.h
-  fzf-native-20260908.1042/fzf-score-input.inc
-  fzf-native-20260908.1042/fzf-simd-prefilter.h
-  fzf-native-20260908.1042/fzf.c
-  fzf-native-20260908.1042/fzf.h
-  fzf-native-20260908.1042/utf8_char_index.h
-  fzf-native-20260908.1042/utf8proc-2.10.0/
-  fzf-native-20260908.1042/utf8proc-2.10.0/utf8proc.c
-  fzf-native-20260908.1042/utf8proc-2.10.0/utf8proc.h
-  fzf-native-20260908.1042/utf8proc-2.10.0/utf8proc_data.c
-Built fzf-native in 4.309s, finished at 2026-11-11T08:27:50+0000
+Created fzf-native-20261111.947.tar containing:
+  fzf-native-20261111.947/
+  fzf-native-20261111.947/CMakeLists.txt
+  fzf-native-20261111.947/bin/
+  fzf-native-20261111.947/bin/Darwin/
+  fzf-native-20261111.947/bin/Darwin/arm64/
+  fzf-native-20261111.947/bin/Darwin/arm64/fzf-native-module.so
+  fzf-native-20261111.947/bin/Darwin/fzf-native-module.so
+  fzf-native-20261111.947/bin/FreeBSD/
+  fzf-native-20261111.947/bin/FreeBSD/fzf-native-module.so
+  fzf-native-20261111.947/bin/Linux/
+  fzf-native-20261111.947/bin/Linux/fzf-native-module.so
+  fzf-native-20261111.947/bin/Windows/
+  fzf-native-20261111.947/bin/Windows/Release/
+  fzf-native-20261111.947/bin/Windows/Release/fzf-native-module.dll
+  fzf-native-20261111.947/bin/Windows/Release/fzf-native-module.exp
+  fzf-native-20261111.947/bin/Windows/Release/fzf-native-module.lib
+  fzf-native-20261111.947/emacs-module.h
+  fzf-native-20261111.947/fzf-additions.c
+  fzf-native-20261111.947/fzf-additions.h
+  fzf-native-20261111.947/fzf-native-module.c
+  fzf-native-20261111.947/fzf-native-module.def
+  fzf-native-20261111.947/fzf-native-module.map
+  fzf-native-20261111.947/fzf-native-pkg.el
+  fzf-native-20261111.947/fzf-native.el
+  fzf-native-20261111.947/fzf-normalize.inc
+  fzf-native-20261111.947/fzf-private.h
+  fzf-native-20261111.947/fzf-score-input.inc
+  fzf-native-20261111.947/fzf-simd-prefilter.h
+  fzf-native-20261111.947/fzf.c
+  fzf-native-20261111.947/fzf.h
+  fzf-native-20261111.947/utf8_char_index.h
+  fzf-native-20261111.947/utf8proc-2.10.0/
+  fzf-native-20261111.947/utf8proc-2.10.0/utf8proc.c
+  fzf-native-20261111.947/utf8proc-2.10.0/utf8proc.h
+  fzf-native-20261111.947/utf8proc-2.10.0/utf8proc_data.c
+Built fzf-native in 5.641s, finished at 2026-11-11T12:47:16+0000
