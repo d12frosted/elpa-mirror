@@ -203,14 +203,14 @@
 		("Damien Doligez" . "damien.doligez@inria.fr"))
       (:commit . "744333dc4c4bd8b93e037efa8f7362b0903b96a2"))])
  (casual
-  . [(3 0 2 0 20260831 0)
-     ((emacs (30 1)) (transient (0 9 0)) (csv-mode (1 27)))
+  . [(3 1 0 0 20261111 0)
+     ((emacs (30 1)) (transient (0 9 0)) (org (9 3)) (csv-mode (1 27)))
      "Transient user interfaces for various modes" tar
      ((:url . "https://github.com/kickingvegas/casual")
       (:keywords "tools" "wp")
       (:maintainer "Charles Choi" . "kickingvegas@gmail.com")
       (:authors ("Charles Choi" . "kickingvegas@gmail.com"))
-      (:commit . "60259e256e34d4f6ae64ef950c740cacbe8b4d37"))])
+      (:commit . "d5166240f23e4481a32672cd952f7d117c647a0f"))])
  (cdlatex
   . [(4 18 5 0 20241007 162342) nil
      "Fast input methods for LaTeX environments and math" tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261110 73) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261111 75) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "82483571d6e7f362c7cf5fef7f62622ea18440e8"))])
+      (:commit . "06f8fe41013e0ebec15022c2b78ef813e2726065"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

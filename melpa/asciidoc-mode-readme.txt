@@ -6,8 +6,9 @@ This mode uses two tree-sitter parsers from
 - `asciidoc' for block-level structure (sections, lists, blocks)
 - `asciidoc-inline' for inline formatting (bold, italic, links)
 
-Both parsers operate on the full buffer independently, similar to
-the dual-parser pattern used by `markdown-ts-mode'.
+The block parser covers the whole buffer, and the inline parser is
+embedded into the parts of it that hold inline content (paragraphs,
+titles, list items, table cells).
 
 Features:
 - Syntax highlighting for headings, inline markup, blocks, lists,

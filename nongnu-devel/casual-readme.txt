@@ -76,6 +76,7 @@
 
   • [GNU Emacs] 30.1+
   • [Transient] 0.9+
+  • [Org Mode] 9.3+
 
   Versions of GNU Emacs 30.1 or greater will satisfy the above
   requirements with its built-in version of Transient.
@@ -95,6 +96,8 @@
 <https://www.gnu.org/savannah-checkouts/gnu/emacs/emacs.html>
 
 [Transient] <https://github.com/magit/transient>
+
+[Org Mode] <https://orgmode.org/>
 
 [GNU Core Utilities] <https://www.gnu.org/software/coreutils/>
 
@@ -166,9 +169,6 @@
 4 Development
 ═════════════
 
-  For users who wish to help contribute to Casual or personally
-  customize it for their own usage, please read the .
-
 
 5 Sponsorship
 ═════════════
@@ -178,6 +178,8 @@
   help support its development and maintenance.
 
   [file:docs/images/default-yellow.png]
+
+  Please star and share this project to others as well. Thank you!
 
 
 [file:docs/images/default-yellow.png]
