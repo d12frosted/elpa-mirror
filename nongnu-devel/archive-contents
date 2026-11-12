@@ -220,7 +220,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261111 175)
+  . [(2 1 0 -4 0 20261111 180)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -234,7 +234,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "8bb3fe2ef82dea8f6f3e1f843680acd062712a40"))])
+      (:commit . "2c0e6104d2468f559cc182e940eed102cd319d07"))])
  (clojure-mode
   . [(5 24 0 0 20261107 0) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -723,12 +723,12 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "bb4867e13ec7480d4dbc1d99888627e4cc8ef2f6"))])
  (fedi
-  . [(0 5 0 20261104 7) ((emacs (28 1)) (markdown-mode (2 5)))
+  . [(0 6 0 20261111 7) ((emacs (28 1)) (markdown-mode (2 5)))
      "Helper functions for fediverse clients" tar
      ((:url . "https://codeberg.org/martianh/fedi.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "1609066aa4c3ea6b6e780eb0a688b6ebdbac6357"))])
+      (:commit . "82fb942987141b19ee5202ce6e76b236309d07a6"))])
  (fj
   . [(0 53 0 20261105 43)
      ((emacs (29 1)) (compat (31)) (fedi (0 5)) (tp (0 8))

@@ -690,12 +690,12 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "c7af95865ef083327d299b86c254ca87fa88a504"))])
  (fedi
-  . [(0 5) ((emacs (28 1)) (markdown-mode (2 5)))
+  . [(0 6) ((emacs (28 1)) (markdown-mode (2 5)))
      "Helper functions for fediverse clients" tar
      ((:url . "https://codeberg.org/martianh/fedi.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "6eee9c67589c56da9a801756142e6563e1fa4384"))])
+      (:commit . "a41695624789b25523904749d0c6fa2dfbb8cd93"))])
  (fj
   . [(0 53)
      ((emacs (29 1)) (compat (31)) (fedi (0 5)) (tp (0 8))
