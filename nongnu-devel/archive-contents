@@ -723,12 +723,12 @@
       (:authors ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
       (:commit . "bb4867e13ec7480d4dbc1d99888627e4cc8ef2f6"))])
  (fedi
-  . [(0 6 0 20261111 7) ((emacs (28 1)) (markdown-mode (2 5)))
+  . [(0 6 0 20261112 9) ((emacs (28 1)) (markdown-mode (2 5)))
      "Helper functions for fediverse clients" tar
      ((:url . "https://codeberg.org/martianh/fedi.el")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "82fb942987141b19ee5202ce6e76b236309d07a6"))])
+      (:commit . "85f8f2ea4c4aa354ac65067b7c4d32e3274b284b"))])
  (fj
   . [(0 53 0 20261105 43)
      ((emacs (29 1)) (compat (31)) (fedi (0 5)) (tp (0 8))
@@ -1048,7 +1048,7 @@
       (:authors ("Pranshu Sharma" . "pranshu@bauherren.ovh"))
       (:commit . "673c27eb86ced050c6b3f46920d081fcb257fee4"))])
  (helm
-  . [(4 0 9 0 20261110 15) ((helm-core (4 0 9)) (wfnames (1 2)))
+  . [(4 0 9 0 20261112 20) ((helm-core (4 0 9)) (wfnames (1 2)))
      "Helm is an Emacs incremental and narrowing framework" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:keywords "helm" "convenience" "files" "buffers" "grep"
@@ -1056,14 +1056,14 @@
 		 "package")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "b56bbbba53ced5851516b3ff28b091aae9faa62c"))])
+      (:commit . "9e3877eb5d962dd5004a42876f035930dc88f68f"))])
  (helm-core
-  . [(4 0 9 0 20261110 15) ((emacs (25 1)) (async (2 0)))
+  . [(4 0 9 0 20261112 20) ((emacs (25 1)) (async (2 0)))
      "Development files for Helm" tar
      ((:url . "https://emacs-helm.github.io/helm/")
       (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
-      (:commit . "b56bbbba53ced5851516b3ff28b091aae9faa62c"))])
+      (:commit . "9e3877eb5d962dd5004a42876f035930dc88f68f"))])
  (hermes
   . [(0 9 0 0 20261105 99)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261111 75) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261112 87) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "06f8fe41013e0ebec15022c2b78ef813e2726065"))])
+      (:commit . "2840a34e51c81b5533f1fb1f01868d64318ebc17"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

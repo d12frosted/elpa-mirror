@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261110 28) ((emacs (28 1)))
+  . [(14 2 0 0 20261112 31) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "4bf03dded5466c4a221a4bdaa30aff45ad3c63f9"))])
+      (:commit . "89c72da8d8192e1a780cea717a191f22213ad362"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 2 0 0 20261112 14) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 2 0 0 20261112 17) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "024f930990b9c5b7a2ac6f230cea6e31b959cfa7"))])
+      (:commit . "22cb3ff7b14821d98a5be6b324357a21bc46fef3"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -723,11 +723,11 @@
       (:url . "https://elpa.gnu.org/packages/cycle-quotes.html")
       (:commit . "c1ef993f8c66fec71b10d70eb7a2cd0c416aaa12"))])
  (dape
-  . [(0 28 0 0 20261026 0) ((emacs (29 1)) (jsonrpc (1 0 25)))
+  . [(0 28 0 0 20261112 1) ((emacs (29 1)) (jsonrpc (1 0 25)))
      "Debug Adapter Protocol for Emacs" tar
      ((:url . "https://github.com/svaante/dape")
       (:maintainer "Daniel Pettersson" . "daniel@dpettersson.net")
-      (:commit . "1d45904b40bfdbdbe0e29546a13d7859a478f710"))])
+      (:commit . "1951daef650f61b29019428a83ecd84315c5ba97"))])
  (darkroom
   . [(0 3 0 20200507 173652) ((cl-lib (0 5)))
      "Remove visual distractions and focus on writing" tar
@@ -1093,13 +1093,13 @@
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
       (:commit . "4850e9c7a465684a0fdb79a6be83055e0ef9537b"))])
  (ef-themes
-  . [(2 2 1 0 20261111 53) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(2 2 1 0 20261112 54) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
      ((:url . "https://github.com/protesilaos/ef-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "e5b30bb1244590d8349e7d49557ee54715cf68fc"))])
+      (:commit . "716d365d0cf2ad3d855c6879a476857bc5fa57d2"))])
  (eglot
   . [(1 26 0 20261030 0)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
@@ -2986,7 +2986,7 @@
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
       (:commit . "567be45a202ee2f597fcc86cc65040bd73afb4c3"))])
  (realgud
-  . [(1 6 0 0 20260821 16)
+  . [(1 6 1 0 20261112 3)
      ((load-relative (1 3 2)) (loc-changes (1 2))
       (test-simple (1 3 0)) (emacs (27)))
      "A modular front-end for interacting with external debuggers" tar
@@ -2995,7 +2995,7 @@
 		 "bashdb" "zshdb" "remake" "trepan" "perldb" "pdb")
       (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
       (:authors ("Rocky Bernstein" . "rocky@gnu.org"))
-      (:commit . "2075721ad093b4525038f746cc4ad5c013f6d0b8"))])
+      (:commit . "d152f0ade1046f19ac3e9e28b4f4169877609222"))])
  (realgud-ipdb
   . [(1 0 0 0 20231216 160636)
      ((realgud (1 5 0)) (load-relative (1 3 1)) (emacs (25)))
@@ -3700,7 +3700,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 9 0 20261109 1)
+  . [(0 13 9 0 20261112 6)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3710,7 +3710,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "f0c63b8f480ee5fee595185abbe936c165fe6a03"))])
+      (:commit . "d424c0d980a37413e193b8e615d1af624ef96b17"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar

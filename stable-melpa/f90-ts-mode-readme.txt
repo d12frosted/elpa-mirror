@@ -3,12 +3,16 @@ files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
 Changelog (recent):
 [11-2026]
+  - Header in TOC buffer added which shows the name of the associated buffer.
+  - Abbrev expansion at start of `f90-ts-indent-and-complete-line' added.
+    In particular, TAB-based indentation and completion functions also check
+    for abbrev expansion.
   - Function `f90-ts-install-grammar' added to provide a pinned grammar
     tested against this version.
   - Mode adjusted to finally merged grammar variant of the string_literal
     patch set.  Update grammar to avoid broken setup!
   - Mode adjusted to grammar changes concerning
-    \"block_label_start_expression\".
+    "block_label_start_expression".
   - Support for abbreviations through abbrev-mode and transient menu added.
     New abbrevs can be added via defcustom `f90-ts-extra-abbrevs'.
   - Alignment rules for case statements of select case blocks added.
@@ -83,7 +87,7 @@ Features:
   - Imenu and a Fortran menu in the menu bar
   - Navigation (defun, things, Xref)
   - TOC side panel to show interactive table of content for a f90-ts buffer
-   (optional package)
+    (optional package)
   - Hideshow and outline support (support for external treesit-fold is
     pending)
 

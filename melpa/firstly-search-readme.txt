@@ -2,6 +2,8 @@ Any key activate navigation by tuned search.
 There are minor modes for major modes: Dired, Package Menu.
 Pressing any printable character moves the cursor, allowing
 search-based navigation to major elements.
+"The \";\" key stops the search; if the search failed, move the
+cursor left."
 
 ;; Activation:
 
@@ -35,9 +37,13 @@ C-n and C-p is used during searching as C-s and C-r
 ;; How it works:
 
 We use `pre-command-hook' called for any key pressed, if key is
-simple and not in "ignore-keys" we activate incremental search with
-modified `isearch-search-fun-function' that limit search to bounds
-in buffer and some other tweeks.
+in `firstly-search-keys' we activate configured incremental search
+ (isearch). Also we correctly handle failed search and set timer.
+To prevent intererence with major-mode keybindings we create copy
+of keymap with :parent of major-mode map at loading. At minor mode
+activation we set our map copy and set hooks.
+When isearch is active it uses own keys and decide on its own when
+to stop.
 
 For Dired default `isearch-search-fun-in-text-property' function is
 used for search and only in text which have not nil specified "text

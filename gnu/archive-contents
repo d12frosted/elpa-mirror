@@ -2787,7 +2787,7 @@
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
       (:commit . "567be45a202ee2f597fcc86cc65040bd73afb4c3"))])
  (realgud
-  . [(1 6 0)
+  . [(1 6 1)
      ((load-relative (1 3 2)) (loc-changes (1 2))
       (test-simple (1 3 0)) (emacs (27)))
      "A modular front-end for interacting with external debuggers" tar
@@ -2796,7 +2796,7 @@
 		 "bashdb" "zshdb" "remake" "trepan" "perldb" "pdb")
       (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
       (:authors ("Rocky Bernstein" . "rocky@gnu.org"))
-      (:commit . "7a93c29c04a4f0d283d3acb3918c4d6381bbfc20"))])
+      (:commit . "01430eb6281dd0fa3687c151e5bc85bc22cb5e62"))])
  (realgud-ipdb
   . [(1 0 0) ((realgud (1 4 5)) (emacs (24)))
      "realgud front-end to ipdb" tar
