@@ -8141,11 +8141,12 @@ section 22.14
         Ryota, Samuel W. Flint, Quiliro Ordóñez, Stephen R. Kifer,
         Stefan Monnier, Stefan Thesing, Thibaut Benjamin, Tobias
         Lidman-Strauss, Tomasz Hołubowicz, TomoeMami , Vedang Manerikar,
-        Wesley Harvey, Yann Dutrieux, Zhenxu Xu, alvmts, arsaber101,
-        bplubell, bryanrinders, dulikiles, eum3l, experimental-code-86,
-        ezchi, gnuhack, gvalson, jarofromel, kimsaram32, leinfink
-        (Henrik), l-o-l-h (Lincoln), mattyonweb, maxbrieiev,
-        mentalisttraceur, nescias, pmenair, relict007, skissue.
+        Wesley Harvey, Yann Dutrieux, Zhenxu Xu, alvmts, andsy10,
+        arsaber101, bplubell, bryanrinders, dulikiles, eum3l,
+        experimental-code-86, ezchi, gnuhack, gvalson, jarofromel,
+        kimsaram32, leinfink (Henrik), l-o-l-h (Lincoln), mattyonweb,
+        maxbrieiev, mentalisttraceur, nescias, pmenair, relict007,
+        skissue.
 
   Ideas and/or user feedback
         Aaron Jensen, Abin Simon, Aditya Yadav, Alan Schmitt, Aleksandr

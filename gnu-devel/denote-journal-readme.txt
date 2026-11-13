@@ -474,8 +474,8 @@ section 4.4
 
   Contributions to code or the manual
         Abdelhak Bougouffa, Alan Schmitt, Ettore Berardi, Honza Pokorny,
-        Josh Kingsley, Stefan Monnier, Vineet C. Kulkarni, gk2803,
-        jbwfu, nescias.
+        Josh Kingsley, Stefan Monnier, Vineet C. Kulkarni, andsy10,
+        gk2803, jbwfu, nescias.
 
   Ideas and/or user feedback
         Alan Schmitt, Kevin McCarthy, Halogen3576.

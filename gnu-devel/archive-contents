@@ -577,13 +577,13 @@
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:commit . "a64569f377b8bc0f62e1d2ae0f3ee48ba4a7cc1c"))])
  (consult-denote
-  . [(0 5 1 0 20261101 4)
+  . [(0 5 1 0 20261113 7)
      ((emacs (28 1)) (denote (4 0 0)) (consult (2 2)))
      "Use Consult in tandem with Denote" tar
      ((:url . "https://github.com/protesilaos/consult-denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "500d62e229cbef8a33a333905c9b421a9a5a7d1e"))])
+      (:commit . "eeb478081475f8df93848e3d3e88bce492aa56c5"))])
  (consult-hoogle
   . [(0 8 1 0 20261108 0) ((emacs (28 1)) (consult (2 0)))
      "Hoogle frontend using consult" tar
@@ -769,19 +769,19 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20261105 191) ((emacs (28 1)))
+  . [(4 2 3 0 20261113 194) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "6731ddafe4c0232765fec59e57bffca3e19ac479"))])
+      (:commit . "f3cad80f1d834cf954803740fad4275dfc56d940"))])
  (denote-journal
-  . [(0 3 0 0 20261016 1) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 0 0 20261113 4) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
      ((:url . "https://github.com/protesilaos/denote-journal")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "cef2713abe4129974ff2007f72007e49e3b8081e"))])
+      (:commit . "8dbf832d4e787a9ad01c8f6a953824d5607180b1"))])
  (denote-markdown
   . [(0 3 0 0 20261016 3) ((emacs (28 1)) (denote (4 0 0)))
      "Extensions that better integrate Denote with Markdown" tar
@@ -2875,7 +2875,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "83d53271a0ec2728ef36b45704d47bafd170e814"))])
  (pyim
-  . [(5 3 6 0 20261029 2) ((emacs (27 1)) (async (1 6)) (xr (1 13)))
+  . [(5 3 6 0 20261113 4) ((emacs (27 1)) (async (1 6)) (xr (1 13)))
      "A Chinese input method support quanpin, shuangpin, wubi, cangjie and rime."
      tar
      ((:url . "https://github.com/tumashu/pyim")
@@ -2883,7 +2883,7 @@
       (:maintainer "Feng Shu" . "tumashu@163.com")
       (:authors ("Ye Wenbin" . "wenbinye@163.com")
 		("Feng Shu" . "tumashu@163.com"))
-      (:commit . "551517408f2803ecd096180e399c4f06f33ca156"))])
+      (:commit . "c680aa65dc2104aa15fe9a8f7e9ff97fe682b2f1"))])
  (pyim-basedict
   . [(0 5 5 0 20240923 73912) ((pyim (3 7)))
      "The default pinyin dict of pyim" tar

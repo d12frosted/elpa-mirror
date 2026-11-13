@@ -1994,12 +1994,12 @@
       (:authors ("John Olsson" . "john@cryon.se"))
       (:commit . "d61acae1ddb6830f98dbd9d2e82a9fb42833bd1b"))])
  (subed
-  . [(1 5 4 0 20260917 0) ((emacs (25 1)))
+  . [(1 5 4 0 20261112 13) ((emacs (25 1)))
      "A major mode for editing subtitles" tar
      ((:url . "https://github.com/sachac/subed")
       (:keywords "convenience" "files" "hypermedia" "multimedia")
       (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-      (:commit . "d9317d1de190601384528ae01468688107725c8d"))])
+      (:commit . "6752329239d01ccf6ad62546f8bddc6884eb5208"))])
  (sweeprolog
   . [(0 27 6 0 20261021 7) ((emacs (27 1)) (compat (29 1 4 2)))
      "Embedded SWI-Prolog" tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261112 87) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261112 100) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "2840a34e51c81b5533f1fb1f01868d64318ebc17"))])
+      (:commit . "aff6222b3c40fc6f84ebaa0e4d38ba46761a92f4"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar
