@@ -2,10 +2,10 @@
  • Building package card-games
 From https://code.bru.st/corwin/card-game.el.git
 Updating /mnt/store/melpa/working/card-games/
-Checking out 74af63a089756424897f6a80e6bb3f9838994658
+Checking out fa95fc99f23149e1f99b8273fb5b95180ef490c6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/card-games/
-  to /tmp/card-games-16vZJa/card-games-20261006.45/
+  to /tmp/card-games-WLN2kd/card-games-20261114.457/
     card-games-bid-net.el -> card-games-bid-net.el
     card-games-bid-ui.el -> card-games-bid-ui.el
     card-games-bid.el -> card-games-bid.el
@@ -31,37 +31,40 @@ Copying files (->) and directories (=>)
     card-games-trick.el -> card-games-trick.el
     card-games.el -> card-games.el
   ! doc/card-games.texi -> card-games.texi
+  ! doc/doclicense.texi -> doclicense.texi
   ! doc/version.texi -> version.texi
 Generating card-games.info
+Generating doclicense.info
 Generating version.info
-Created card-games-20261006.45.tar containing:
-  card-games-20261006.45/
-  card-games-20261006.45/card-games-bid-net.el
-  card-games-20261006.45/card-games-bid-ui.el
-  card-games-20261006.45/card-games-bid.el
-  card-games-20261006.45/card-games-bridge.el
-  card-games-20261006.45/card-games-core.el
-  card-games-20261006.45/card-games-crapette.el
-  card-games-20261006.45/card-games-cribbage.el
-  card-games-20261006.45/card-games-eights.el
-  card-games-20261006.45/card-games-gaps.el
-  card-games-20261006.45/card-games-handfoot.el
-  card-games-20261006.45/card-games-match.el
-  card-games-20261006.45/card-games-net.el
-  card-games-20261006.45/card-games-patience.el
-  card-games-20261006.45/card-games-pkg.el
-  card-games-20261006.45/card-games-president.el
-  card-games-20261006.45/card-games-render.el
-  card-games-20261006.45/card-games-rum500.el
-  card-games-20261006.45/card-games-rummy.el
-  card-games-20261006.45/card-games-scopa.el
-  card-games-20261006.45/card-games-solitaire.el
-  card-games-20261006.45/card-games-spite.el
-  card-games-20261006.45/card-games-svg.el
-  card-games-20261006.45/card-games-trick-ext.el
-  card-games-20261006.45/card-games-trick.el
-  card-games-20261006.45/card-games.el
-  card-games-20261006.45/card-games.info
-  card-games-20261006.45/dir
-  card-games-20261006.45/version.info
-Built card-games in 8.548s, finished at 2026-11-14T01:32:28+0000
+Created card-games-20261114.457.tar containing:
+  card-games-20261114.457/
+  card-games-20261114.457/card-games-bid-net.el
+  card-games-20261114.457/card-games-bid-ui.el
+  card-games-20261114.457/card-games-bid.el
+  card-games-20261114.457/card-games-bridge.el
+  card-games-20261114.457/card-games-core.el
+  card-games-20261114.457/card-games-crapette.el
+  card-games-20261114.457/card-games-cribbage.el
+  card-games-20261114.457/card-games-eights.el
+  card-games-20261114.457/card-games-gaps.el
+  card-games-20261114.457/card-games-handfoot.el
+  card-games-20261114.457/card-games-match.el
+  card-games-20261114.457/card-games-net.el
+  card-games-20261114.457/card-games-patience.el
+  card-games-20261114.457/card-games-pkg.el
+  card-games-20261114.457/card-games-president.el
+  card-games-20261114.457/card-games-render.el
+  card-games-20261114.457/card-games-rum500.el
+  card-games-20261114.457/card-games-rummy.el
+  card-games-20261114.457/card-games-scopa.el
+  card-games-20261114.457/card-games-solitaire.el
+  card-games-20261114.457/card-games-spite.el
+  card-games-20261114.457/card-games-svg.el
+  card-games-20261114.457/card-games-trick-ext.el
+  card-games-20261114.457/card-games-trick.el
+  card-games-20261114.457/card-games.el
+  card-games-20261114.457/card-games.info
+  card-games-20261114.457/dir
+  card-games-20261114.457/doclicense.info
+  card-games-20261114.457/version.info
+Built card-games in 14.729s, finished at 2026-11-14T10:03:37+0000
