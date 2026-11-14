@@ -590,13 +590,13 @@
       (:authors ("Connor Smith" . "wconnorsmith@gmail.com"))
       (:commit . "a8151556f63c9d45d0c44c8a7ef9e5a542f3cdc7"))])
  (evil-collection
-  . [(3 0 3 0 20261107 17) ((emacs (29 1)) (evil (1 2 13)))
+  . [(3 0 3 0 20261113 18) ((emacs (29 1)) (evil (1 2 13)))
      "A set of keybindings for Evil mode" tar
      ((:url . "https://github.com/emacs-evil/evil-collection")
       (:keywords "evil" "tools")
       (:maintainer "James Nguyen" . "james@jojojames.com")
       (:authors ("James Nguyen" . "james@jojojames.com"))
-      (:commit . "412c49c836db086ff990e7aa1c80a6994a8f9b03"))])
+      (:commit . "e3f70c513585086ad83e245829e1de8f72f2de26"))])
  (evil-emacs-cursor-model-mode
   . [(0 1 3 0 20260225 15950) ((emacs (29 1)) (evil (1 15 0)))
      "Emacs' cursor model in evil-mode" tar
@@ -1065,7 +1065,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "9e3877eb5d962dd5004a42876f035930dc88f68f"))])
  (hermes
-  . [(0 9 0 0 20261105 99)
+  . [(0 9 1 0 20261113 0)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1073,7 +1073,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "1c281ad7b2711081d472d40c17ec76ca4a53726f"))])
+      (:commit . "e1799efbe1e98c33c7621d78007462ab9fa199e4"))])
  (hideshowvis
   . [(0 9 0 20260829 1) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1342,7 +1342,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 2 0 20261110 3)
+  . [(4 7 2 0 20261113 4)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 6)))
@@ -1354,9 +1354,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "da92cab409326115b7ee64cc611c99fd29b00963"))])
+      (:commit . "4402e972bb2b6df2dad25118d8a638fa5a9b3e5b"))])
  (magit-section
-  . [(4 7 2 0 20261110 3)
+  . [(4 7 2 0 20261113 4)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1365,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "da92cab409326115b7ee64cc611c99fd29b00963"))])
+      (:commit . "4402e972bb2b6df2dad25118d8a638fa5a9b3e5b"))])
  (markdown-mode
   . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1762,13 +1762,13 @@
        ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
       (:commit . "1ba63e2fa6dd146b71640fefbd0315e0334106e8"))])
  (radio
-  . [(0 4 3 0 20260212 144358) ((emacs (29 1)))
-     "Listen to Internet radio" tar
+  . [(0 4 4 0 20261113 0) ((emacs (29 1))) "Listen to Internet radio"
+     tar
      ((:url . "https://github.com/jroimartin/radio")
       (:keywords "multimedia")
       (:maintainer "Roi Martin" . "jroi.martin@gmail.com")
       (:authors ("Roi Martin" . "jroi.martin@gmail.com"))
-      (:commit . "da47fd36af0309f3d782dd49559ae77b234896d2"))])
+      (:commit . "14a826b7c479f5e039c6b38de9775a39392d72fe"))])
  (rainbow-delimiters
   . [(2 1 5 0 20230830 160022) nil
      "Highlight brackets according to their depth" tar
@@ -1911,14 +1911,14 @@
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "173e4d632c94af6670869729c09bfb8ba484d257"))])
  (simple-httpd
-  . [(1 7 0 20261026 3) ((emacs (29 1)) (compat (31)))
+  . [(1 8 0 20261113 0) ((emacs (29 1)) (compat (31)))
      "Pure Elisp HTTP server" tar
      ((:url . "https://github.com/skeeto/emacs-http-server")
       (:keywords "network" "comm")
       (:maintainer ("Philip Kaludercic" . "philipk@posteo.net")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "f413c8ea511add76cca298e39eb20fb492504485"))])
+      (:commit . "2777955684eb8724757014de03e7834640d37423"))])
  (slime
   . [(2 32 -4 0 20261108 83) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
@@ -2223,11 +2223,11 @@
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
       (:commit . "e1be9a1545157d24454d950c0ac79553c540edb7"))])
  (vm
-  . [(9 0 1 -4 0 20261112 100) ((emacs (28 1)) (vcard (0 2 2)))
+  . [(9 0 1 -4 0 20261113 108) ((emacs (28 1)) (vcard (0 2 2)))
      "VM mail reader" tar
      ((:url . "https://gitlab.com/emacs-vm/vm") (:keywords "mail")
       (:maintainer nil . "viewmail-info@nongnu.org")
-      (:commit . "aff6222b3c40fc6f84ebaa0e4d38ba46761a92f4"))])
+      (:commit . "2e5579f752638700b0d86c5c9b98d3a188ef5a6e"))])
  (web-mode
   . [(17 3 25 0 20260831 3) ((emacs (24 3 1)))
      "major mode for editing web templates" tar

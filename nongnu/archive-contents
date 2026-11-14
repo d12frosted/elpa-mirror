@@ -1018,7 +1018,7 @@
       (:authors ("Thierry Volpiatto" . "thievol@posteo.net"))
       (:commit . "a1e8724ed20d1f8024ff7530047374e1d7e994b0"))])
  (hermes
-  . [(0 9 0)
+  . [(0 9 1)
      ((emacs (29 1)) (keymap-popup (0 4 0)) (websocket (1 15))
       (markdown-mode (2 6)))
      "Emacs frontend for Hermes Agent" tar
@@ -1026,7 +1026,7 @@
       (:keywords "tools" "convenience")
       (:maintainer "Thanos Apollo" . "public@thanosapollo.org")
       (:authors ("Thanos Apollo" . "public@thanosapollo.org"))
-      (:commit . "3f5cc4ea8686471fee72a89f742c792071e7e17d"))])
+      (:commit . "e1799efbe1e98c33c7621d78007462ab9fa199e4"))])
  (hideshowvis
   . [(0 9) ((emacs (27 1)))
      "Fringe markers for regions foldable by hideshow.el" tar
@@ -1670,12 +1670,12 @@
        ("Greg Hendershott" . "racket-mode-author@greghendershott.com"))
       (:commit . "HEAD"))])
  (radio
-  . [(0 4 3) ((emacs (29 1))) "Listen to Internet radio" tar
+  . [(0 4 4) ((emacs (29 1))) "Listen to Internet radio" tar
      ((:url . "https://github.com/jroimartin/radio")
       (:keywords "multimedia")
       (:maintainer "Roi Martin" . "jroi.martin@gmail.com")
       (:authors ("Roi Martin" . "jroi.martin@gmail.com"))
-      (:commit . "da47fd36af0309f3d782dd49559ae77b234896d2"))])
+      (:commit . "14a826b7c479f5e039c6b38de9775a39392d72fe"))])
  (rainbow-delimiters
   . [(2 1 5) nil "Highlight brackets according to their depth" tar
      ((:url . "https://github.com/Fanael/rainbow-delimiters")
@@ -1799,13 +1799,13 @@
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
       (:commit . "4e71f5b9199a0ad10017104a6b2bf5ef5f207dfc"))])
  (simple-httpd
-  . [(1 7) ((emacs (29 1)) (compat (31))) "Pure Elisp HTTP server" tar
+  . [(1 8) ((emacs (29 1)) (compat (31))) "Pure Elisp HTTP server" tar
      ((:url . "https://github.com/skeeto/emacs-http-server")
       (:keywords "network" "comm")
       (:maintainer ("Philip Kaludercic" . "philipk@posteo.net")
 		   ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "0c17124cefddf2d50defcec5f2bd25fa6d1db756"))])
+      (:commit . "2777955684eb8724757014de03e7834640d37423"))])
  (slime
   . [(2 32) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
