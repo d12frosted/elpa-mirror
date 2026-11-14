@@ -2,27 +2,29 @@
  • Building package jal
 From https://github.com/saulotoledo/java-agent-loader
 Updating /mnt/store/melpa/working/jal/
-Checking out 00cb7be8facea246906f74d70e07f84e16222b08
+Checking out 0b02842aa4013ff9ab0481781a94cc14d77247f8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jal/
-  to /tmp/jal-FPeYEk/jal-20260810.1507/
+  to /tmp/jal-ZnhGeT/jal-20261114.1616/
     jal-build-gradle.el -> jal-build-gradle.el
     jal-build-maven.el -> jal-build-maven.el
+    jal-client-common.el -> jal-client-common.el
     jal-client-eglot.el -> jal-client-eglot.el
     jal-client-lsp.el -> jal-client-lsp.el
     jal-known-agents.el -> jal-known-agents.el
     jal-utils.el -> jal-utils.el
     jal-vars.el -> jal-vars.el
     jal.el -> jal.el
-Created jal-20260810.1507.tar containing:
-  jal-20260810.1507/
-  jal-20260810.1507/jal-build-gradle.el
-  jal-20260810.1507/jal-build-maven.el
-  jal-20260810.1507/jal-client-eglot.el
-  jal-20260810.1507/jal-client-lsp.el
-  jal-20260810.1507/jal-known-agents.el
-  jal-20260810.1507/jal-pkg.el
-  jal-20260810.1507/jal-utils.el
-  jal-20260810.1507/jal-vars.el
-  jal-20260810.1507/jal.el
-Built jal in 3.633s, finished at 2026-11-14T14:46:15+0000
+Created jal-20261114.1616.tar containing:
+  jal-20261114.1616/
+  jal-20261114.1616/jal-build-gradle.el
+  jal-20261114.1616/jal-build-maven.el
+  jal-20261114.1616/jal-client-common.el
+  jal-20261114.1616/jal-client-eglot.el
+  jal-20261114.1616/jal-client-lsp.el
+  jal-20261114.1616/jal-known-agents.el
+  jal-20261114.1616/jal-pkg.el
+  jal-20261114.1616/jal-utils.el
+  jal-20261114.1616/jal-vars.el
+  jal-20261114.1616/jal.el
+Built jal in 5.928s, finished at 2026-11-14T19:01:57+0000

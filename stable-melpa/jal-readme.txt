@@ -3,7 +3,7 @@ artificial intelligence (AI) agents.
 
 Java Agent Loader (JAL) automates the manual injection of `-javaagent'
 arguments into the JDT Language Server (JDTLS) process used by development
-environments like `lsp-java' or `eglot-java'.
+environments like `lsp-mode' or `eglot', with or without Java extensions.
 
 In the Java ecosystem, a "Java Agent" is a native JVM plugin that uses
 bytecode instrumentation to modify compiled code on the fly as it loads

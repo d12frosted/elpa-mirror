@@ -20,6 +20,13 @@ also add:
 You may also adjust some variables, below, by defining them in your
 '.emacs' file, either directly or through command 'M-x customize'.
 
+To test, during development:
+1. Run 'emacs -q'.
+2. M-x load-file, specify this file.
+3. Open an existing PO file.
+4. M-x po-mode
+5. Do some editing.
+
 TODO:
 Plural form editing:
  - When in edit mode, currently it highlights (in green) the msgid;
