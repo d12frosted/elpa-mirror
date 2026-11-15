@@ -127,14 +127,14 @@ inferring types. Incorrect type declarations may cause crashes in natively
 compiled code (see below). Functions with type declarations are shown by C-h
 C-f as having a “declared type”.
 
-(defun my/positive-p (x)
+(defun my-positive-p (x)
   (declare (ftype (function (number) boolean)))
   (when (> x 0)
     t))
 
 HAS DOCS:
 
-    (my/positive-p X)
+    (my-positive-p X)
 
     Declared type: (function (number) boolean)
 
