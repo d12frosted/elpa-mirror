@@ -478,7 +478,7 @@
       (:authors ("Huang Feiyu" . "sibadake1@163.com"))
       (:commit . "2d89026fbc61214fda25d5dd589cd328ddce5f6e"))])
  (elfeed
-  . [(4 2 1) ((emacs (29 1)) (compat (31))) "An Atom/RSS feed reader"
+  . [(4 2 2) ((emacs (29 1)) (compat (31))) "An Atom/RSS feed reader"
      tar
      ((:url . "https://github.com/emacs-elfeed/elfeed")
       (:keywords "network" "comm" "hypermedia")
@@ -487,7 +487,7 @@
        ("Ihor Radchenko" . "yantar92@posteo.net")
        ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
-      (:commit . "acbb86e342d2b8f85dfb30dce9df01db9a829c77"))])
+      (:commit . "d76d43699a1348077bada2c4a313f256f8b377c3"))])
  (elfeed-web
   . [(4 1 0)
      ((emacs (29 1)) (compat (31)) (elfeed (4 1 0))
