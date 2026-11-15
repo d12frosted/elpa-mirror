@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261113 33) ((emacs (28 1)))
+  . [(14 2 0 0 20261114 35) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "b0fd6e0d2044e6913ccf3ec16a078ce17380e353"))])
+      (:commit . "5123817a03f82cd802fa0ff976baa9cf6e3f8bba"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -538,13 +538,13 @@
       (:authors ("Vitalie Spinu" . "spinuvit@gmail.com"))
       (:commit . "3eb006874e309ff4076d947fcbd61bb6806aa508"))])
  (company-statistics
-  . [(0 2 3 0 20261113 4) ((emacs (24 3)) (company (0 8 5)))
+  . [(0 3 0 0 20261114 0) ((emacs (24 3)) (company (0 8 5)))
      "Sort candidates using completion history" tar
      ((:url . "https://github.com/company-mode/company-statistics")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Ingo Lohmar" . "i.lohmar@gmail.com")
       (:authors ("Ingo Lohmar" . "i.lohmar@gmail.com"))
-      (:commit . "b46d7df38b2f5cec63c29e4f71f40610db0ca93d"))])
+      (:commit . "2ae5457dc5f4ab80c2ca8f1752e5e81ab6203815"))])
  (compat
   . [(31 1 0 0 0 20260913 0) ((emacs (25 1)))
      "Emacs Lisp Compatibility Library" tar
@@ -1101,7 +1101,7 @@
       (:authors ("Protesilaos" . "info@protesilaos.com"))
       (:commit . "716d365d0cf2ad3d855c6879a476857bc5fa57d2"))])
  (eglot
-  . [(1 26 0 20261030 0)
+  . [(1 26 0 20261114 5)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
       (flymake (1 4 8)) (jsonrpc (1 0 30)) (project (0 11 2))
       (refactor (0 1 1)) (seq (2 23)) (xref (1 8 0)))
@@ -1110,7 +1110,7 @@
       (:keywords "convenience" "languages")
       (:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
-      (:commit . "47557cebb4f84553afc43b25c45c912e8b6e14b4"))])
+      (:commit . "6fcbd85db7f70488027744d8af3f1446b73ca004"))])
  (el-job
   . [(2 7 4 0 20260306 64315) ((emacs (29 1)))
      "Contrived way to call a function using all CPU cores" tar
@@ -2498,13 +2498,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261111 970) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261114 973) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "7125924020ad0cccbd4d28e965323695f7ddd5b1"))])
+      (:commit . "146e8a6bd5c0f6c2965456c0eb882c6d673b0465"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2765,11 +2765,11 @@
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
       (:commit . "c55e6aa2971caad582df1d449e0f57604250cae1"))])
  (po-mode
-  . [(2 32 0 20260217 95607) ((emacs (23)))
+  . [(2 33 0 20261114 6) ((emacs (23)))
      "major mode for GNU gettext PO files" tar
      ((:keywords "i18n" "gettext")
       (:url . "https://elpa.gnu.org/packages/po-mode.html")
-      (:commit . "27538dd0938d5a941833d503afc9dba13dcf16fe"))])
+      (:commit . "be0c57e778fe90e71abe6a7e68d8961fa1782a97"))])
  (poke
   . [(3 2 0 20230517 100500) ((emacs (25))) "Emacs meets GNU poke!"
      tar

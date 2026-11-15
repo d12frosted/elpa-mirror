@@ -2,10 +2,10 @@
  • Building package org-special-block-extras
 From https://github.com/alhassy/org-special-block-extras
 Updating /mnt/store/melpa/working/org-special-block-extras/
-Checking out 6ff9297e65758681e03a51e8364d0b6a1ddf0d19
+Checking out 02fd257bd995bd1a3ac5b8a2cef430aaa454ae3f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-special-block-extras/
-  to /tmp/org-special-block-extras-AD7B6g/org-special-block-extras-20261109.1937/
+  to /tmp/org-special-block-extras-cQISig/org-special-block-extras-20261114.2307/
   ! lisp/org-block-export.el -> org-block-export.el
   ! lisp/org-block-fontify.el -> org-block-fontify.el
   ! lisp/org-block-header-args.el -> org-block-header-args.el
@@ -29,6 +29,7 @@ Copying files (->) and directories (=>)
   ! lisp/org-graph-smartdiagram.el -> org-graph-smartdiagram.el
   ! lisp/org-links.el -> org-links.el
   ! lisp/org-margin-blocks.el -> org-margin-blocks.el
+  ! lisp/org-markup-links.el -> org-markup-links.el
   ! lisp/org-math-block.el -> org-math-block.el
   ! lisp/org-math-hints.el -> org-math-hints.el
   ! lisp/org-math-markup.el -> org-math-markup.el
@@ -47,48 +48,49 @@ Copying files (->) and directories (=>)
   ! lisp/org-spoiler-block.el -> org-spoiler-block.el
   ! lisp/org-substitution-blocks.el -> org-substitution-blocks.el
   ! lisp/org-thread-blockcall.el -> org-thread-blockcall.el
-Created org-special-block-extras-20261109.1937.tar containing:
-  org-special-block-extras-20261109.1937/
-  org-special-block-extras-20261109.1937/org-block-export.el
-  org-special-block-extras-20261109.1937/org-block-fontify.el
-  org-special-block-extras-20261109.1937/org-block-header-args.el
-  org-special-block-extras-20261109.1937/org-block-switches.el
-  org-special-block-extras-20261109.1937/org-box-block.el
-  org-special-block-extras-20261109.1937/org-callout-blocks.el
-  org-special-block-extras-20261109.1937/org-color-links.el
-  org-special-block-extras-20261109.1937/org-ctrl-c-ctrl-c-for-special-block.el
-  org-special-block-extras-20261109.1937/org-defblock-tag.el
-  org-special-block-extras-20261109.1937/org-defblock.el
-  org-special-block-extras-20261109.1937/org-deflink.el
-  org-special-block-extras-20261109.1937/org-deftag.el
-  org-special-block-extras-20261109.1937/org-demo.el
-  org-special-block-extras-20261109.1937/org-details-block.el
-  org-special-block-extras-20261109.1937/org-graph-attributes.el
-  org-special-block-extras-20261109.1937/org-graph-block.el
-  org-special-block-extras-20261109.1937/org-graph-dot.el
-  org-special-block-extras-20261109.1937/org-graph-edit.el
-  org-special-block-extras-20261109.1937/org-graph-parse.el
-  org-special-block-extras-20261109.1937/org-graph-read.el
-  org-special-block-extras-20261109.1937/org-graph-smartdiagram.el
-  org-special-block-extras-20261109.1937/org-links.el
-  org-special-block-extras-20261109.1937/org-margin-blocks.el
-  org-special-block-extras-20261109.1937/org-math-block.el
-  org-special-block-extras-20261109.1937/org-math-hints.el
-  org-special-block-extras-20261109.1937/org-math-markup.el
-  org-special-block-extras-20261109.1937/org-math-refs.el
-  org-special-block-extras-20261109.1937/org-math-structure.el
-  org-special-block-extras-20261109.1937/org-parallel-block.el
-  org-special-block-extras-20261109.1937/org-proof-block.el
-  org-special-block-extras-20261109.1937/org-quote-block.el
-  org-special-block-extras-20261109.1937/org-remark-block.el
-  org-special-block-extras-20261109.1937/org-solution-block.el
-  org-special-block-extras-20261109.1937/org-special-block-at-point.el
-  org-special-block-extras-20261109.1937/org-special-block-extras-pkg.el
-  org-special-block-extras-20261109.1937/org-special-block-extras.el
-  org-special-block-extras-20261109.1937/org-special-block-indirect-edit.el
-  org-special-block-extras-20261109.1937/org-special-block-parse.el
-  org-special-block-extras-20261109.1937/org-special-block-split.el
-  org-special-block-extras-20261109.1937/org-spoiler-block.el
-  org-special-block-extras-20261109.1937/org-substitution-blocks.el
-  org-special-block-extras-20261109.1937/org-thread-blockcall.el
-Built org-special-block-extras in 6.174s, finished at 2026-11-14T19:18:30+0000
+Created org-special-block-extras-20261114.2307.tar containing:
+  org-special-block-extras-20261114.2307/
+  org-special-block-extras-20261114.2307/org-block-export.el
+  org-special-block-extras-20261114.2307/org-block-fontify.el
+  org-special-block-extras-20261114.2307/org-block-header-args.el
+  org-special-block-extras-20261114.2307/org-block-switches.el
+  org-special-block-extras-20261114.2307/org-box-block.el
+  org-special-block-extras-20261114.2307/org-callout-blocks.el
+  org-special-block-extras-20261114.2307/org-color-links.el
+  org-special-block-extras-20261114.2307/org-ctrl-c-ctrl-c-for-special-block.el
+  org-special-block-extras-20261114.2307/org-defblock-tag.el
+  org-special-block-extras-20261114.2307/org-defblock.el
+  org-special-block-extras-20261114.2307/org-deflink.el
+  org-special-block-extras-20261114.2307/org-deftag.el
+  org-special-block-extras-20261114.2307/org-demo.el
+  org-special-block-extras-20261114.2307/org-details-block.el
+  org-special-block-extras-20261114.2307/org-graph-attributes.el
+  org-special-block-extras-20261114.2307/org-graph-block.el
+  org-special-block-extras-20261114.2307/org-graph-dot.el
+  org-special-block-extras-20261114.2307/org-graph-edit.el
+  org-special-block-extras-20261114.2307/org-graph-parse.el
+  org-special-block-extras-20261114.2307/org-graph-read.el
+  org-special-block-extras-20261114.2307/org-graph-smartdiagram.el
+  org-special-block-extras-20261114.2307/org-links.el
+  org-special-block-extras-20261114.2307/org-margin-blocks.el
+  org-special-block-extras-20261114.2307/org-markup-links.el
+  org-special-block-extras-20261114.2307/org-math-block.el
+  org-special-block-extras-20261114.2307/org-math-hints.el
+  org-special-block-extras-20261114.2307/org-math-markup.el
+  org-special-block-extras-20261114.2307/org-math-refs.el
+  org-special-block-extras-20261114.2307/org-math-structure.el
+  org-special-block-extras-20261114.2307/org-parallel-block.el
+  org-special-block-extras-20261114.2307/org-proof-block.el
+  org-special-block-extras-20261114.2307/org-quote-block.el
+  org-special-block-extras-20261114.2307/org-remark-block.el
+  org-special-block-extras-20261114.2307/org-solution-block.el
+  org-special-block-extras-20261114.2307/org-special-block-at-point.el
+  org-special-block-extras-20261114.2307/org-special-block-extras-pkg.el
+  org-special-block-extras-20261114.2307/org-special-block-extras.el
+  org-special-block-extras-20261114.2307/org-special-block-indirect-edit.el
+  org-special-block-extras-20261114.2307/org-special-block-parse.el
+  org-special-block-extras-20261114.2307/org-special-block-split.el
+  org-special-block-extras-20261114.2307/org-spoiler-block.el
+  org-special-block-extras-20261114.2307/org-substitution-blocks.el
+  org-special-block-extras-20261114.2307/org-thread-blockcall.el
+Built org-special-block-extras in 6.663s, finished at 2026-11-14T23:37:02+0000
