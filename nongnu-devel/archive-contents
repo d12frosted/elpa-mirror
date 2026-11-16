@@ -982,7 +982,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20261114 38)
+  . [(0 9 9 6 0 20261115 43)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -991,7 +991,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "1ce9cd8aba6dd65b8f8b437523399a7a577d91d1"))])
+      (:commit . "169d1543c5e64d158bd89263a9d50caf91ab1249"))])
  (graphql-mode
   . [(1 0 0 0 20261031 40) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
