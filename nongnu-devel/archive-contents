@@ -302,12 +302,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "e769fe4a40813c8b1d1d869acbfee2323d2ed182"))])
  (csv2ledger
-  . [(1 5 5 0 20260621 0) ((emacs (29 1)) (csv-mode (1 24)))
+  . [(1 6 0 20261115 0) ((emacs (29 1)) (csv-mode (1 24)))
      "Convert csv files to ledger entries" tar
      ((:url . "https://codeberg.org/joostkremers/csv2ledger")
       (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
-      (:commit . "7b095112e7a0a4cbe58e665129c3b2d227f3c96e"))])
+      (:commit . "ec888b00419d9b136cf81d4fc1c2d38b02790bb5"))])
  (cyberpunk-theme
   . [(1 22 0 20240112 144451) nil "Cyberpunk Color Theme" tar
      ((:url . "https://github.com/n3mo/cyberpunk-theme.el")
@@ -565,13 +565,13 @@
       (:authors ("Vanya Izaksonas-Smith" . "izak0002atumndotedu"))
       (:commit . "6a375888a74b7563eb53176aad81faee8b858189"))])
  (evil
-  . [(1 15 0 0 20260728 297)
+  . [(1 15 0 0 20261116 300)
      ((emacs (24 1)) (cl-lib (0 5)) (goto-chg (1 6)) (nadvice (0 3)))
      "Extensible vi layer" tar
      ((:url . "https://github.com/emacs-evil/evil")
       (:keywords "emulations")
       (:maintainer "Tom Dalziel" . "tom.dalziel@gmail.com")
-      (:commit . "6a3e1ddd04ac504a016590940d0af2a3361b9efd"))])
+      (:commit . "76e094309f615594ced89afa7b32c2051715b402"))])
  (evil-anzu
   . [(0 2 0 20250316 121704) ((evil (1 0 0)) (anzu (0 46)))
      "anzu for evil-mode" tar

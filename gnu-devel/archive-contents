@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261114 35) ((emacs (28 1)))
+  . [(14 2 0 0 20261115 36) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "5123817a03f82cd802fa0ff976baa9cf6e3f8bba"))])
+      (:commit . "45b71f07a56877709472be1c688f2d16f070302e"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1055,13 +1055,13 @@
       (:authors ("Leo Liu" . "sdl.web@gmail.com"))
       (:commit . "98cbae5d8c378ad14d612d7c88a78484c49a80b8"))])
  (ebdb
-  . [(0 8 22 0 20261115 6) ((emacs (25 1)) (seq (2 15)))
+  . [(0 8 22 0 20261115 7) ((emacs (25 1)) (seq (2 15)))
      "Contact management package" tar
      ((:url . "https://github.com/girzel/ebdb")
       (:keywords "convenience" "mail")
       (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
       (:authors ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-      (:commit . "c625c91de37a2dae77a23216aae8e7103fe3ba57"))])
+      (:commit . "7f7f9578a61b5f230e2ab0cd7740a50d8d802ab6"))])
  (ebdb-gnorb
   . [(1 0 2 0 20221221 75324) ((gnorb (1 1 0)) (ebdb (0 2)))
      "Utilities for connecting EBDB to Gnorb" tar
@@ -1720,7 +1720,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 3 2 0 20261108 5) ((emacs (28)))
+  . [(9 3 2 0 20261115 8) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1730,7 +1730,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "80379ba33b281b3934fbbcf38a144e9053f2729f"))])
+      (:commit . "bc28743ebf1f5f3d52ae92c2a1b89ef717fa73aa"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2267,12 +2267,12 @@
       (:url . "https://elpa.gnu.org/packages/minimap.html")
       (:commit . "b295cab07c1932c11dd00f23ba29c1ff0de486ab"))])
  (minuet
-  . [(0 10 0 0 20261114 7) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
+  . [(0 10 0 0 20261115 9) ((emacs (29)) (plz (0 9)) (dash (2 19 1)))
      "Code completion using LLM" tar
      ((:url . "https://github.com/milanglacier/minuet-ai.el")
       (:maintainer "Milan Glacier" . "dev@milanglacier.com")
       (:authors ("Milan Glacier" . "dev@milanglacier.com"))
-      (:commit . "bd6b67b0c55a9a0652346b04e4ee1b295bcfe6e0"))])
+      (:commit . "7b9822d97972fd4a936a8ea3826ee8d2f215f5b2"))])
  (mmm-mode
   . [(0 5 11 0 20240222 42825) ((emacs (25 1)) (cl-lib (0 2)))
      "Allow Multiple Major Modes in a buffer" tar
@@ -2498,13 +2498,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261115 994) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261116 995) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "546e9928a5a49560a46916281a88596bf239b78a"))])
+      (:commit . "f0662e0c69130b6b147f5ebc3923a2caa9fac7c1"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2551,13 +2551,13 @@
       (:authors ("Martin Edström" . "meedstrom@runbox.eu"))
       (:commit . "07094dac902e452d59533e4d01e8177afaa0cfd1"))])
  (org-modern
-  . [(1 15 0 20260818 3) ((emacs (29 1)) (org (9 6)) (compat (31)))
+  . [(1 15 0 20261116 4) ((emacs (29 1)) (org (9 6)) (compat (31)))
      "Modern looks for Org" tar
      ((:url . "https://github.com/minad/org-modern")
       (:keywords "outlines" "hypermedia" "text")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "d106d02cf045cc968c09989e9c48e0f2b44c574c"))])
+      (:commit . "5cf5879b0c46218cacbfbd68ac78aa84d1a3abf2"))])
  (org-notify
   . [(0 1 4 0 20261012 0) ((emacs (25 1)))
      "Notifications for Org-mode" tar

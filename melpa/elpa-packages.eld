@@ -70,6 +70,7 @@
   (add-node-modules-path :url "https://github.com/codesuki/add-node-modules-path")
   (addressbook-bookmark :url "https://github.com/thierryvolpiatto/addressbook-bookmark")
   (adif :url "https://github.com/K6SM/adif-mode")
+  (admin-delux :url "https://codeberg.org/boosja/admin-delux.el")
   (ado-mode :url "https://github.com/louabill/ado-mode")
   (adoc-mode :url "https://github.com/bbatsov/adoc-mode")
   (advent-mode :url "https://github.com/vkazanov/advent-mode")

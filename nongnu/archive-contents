@@ -287,12 +287,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "c0cab0b0423fadf63bdf0f08bd2b74eb0139b893"))])
  (csv2ledger
-  . [(1 5 5) ((emacs (29 1)) (csv-mode (1 24)))
+  . [(1 6) ((emacs (29 1)) (csv-mode (1 24)))
      "Convert csv files to ledger entries" tar
      ((:url . "https://codeberg.org/joostkremers/csv2ledger")
       (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
       (:authors ("Joost Kremers" . "joostkremers@fastmail.fm"))
-      (:commit . "7b095112e7a0a4cbe58e665129c3b2d227f3c96e"))])
+      (:commit . "ec888b00419d9b136cf81d4fc1c2d38b02790bb5"))])
  (cyberpunk-theme
   . [(1 22) nil "Cyberpunk Color Theme" tar
      ((:url . "https://github.com/n3mo/cyberpunk-theme.el")
