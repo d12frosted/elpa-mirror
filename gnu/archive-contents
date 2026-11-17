@@ -311,12 +311,12 @@
       (:authors ("Amy Pillow" . "amypillow@lavache.com"))
       (:commit . "08e1c84dee28f87010f50cb4e9a48c0798c8912b"))])
  (breadcrumb
-  . [(1 0 1) ((emacs (28 1)) (project (0 9 8)))
+  . [(1 1 0) ((emacs (28 1)) (project (0 9 8)))
      "project and imenu-based breadcrumb paths" tar
      ((:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/breadcrumb.html")
-      (:commit . "ff5fb77e2556c42aee9f1131f824bdfb955d861f"))])
+      (:commit . "f636f2643a2492f350d7c3624b8e6b9ed9bd2a7f"))])
  (brief
   . [(5 92) ((nadvice (0 3)) (cl-lib (0 5)))
      "Brief Editor Emulator (Brief Mode)" tar

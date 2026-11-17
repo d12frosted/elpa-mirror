@@ -3,6 +3,16 @@ files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
 Changelog (recent):
 [11-2026]
+  - Alignment rules added for:
+    * io item lists,
+    * result keyword for functions,
+    * extent_specifier for array ranges,
+    * do concurrent statement,
+    * use, public and private statements and
+    * procedure and generic binding lists.
+  - Indentation for old-style labelled do loops added.
+  - Syntax highlighting for keywords goto and continue, and for label
+    references added.
   - Header in TOC buffer added which shows the name of the associated buffer.
   - Abbrev expansion at start of `f90-ts-indent-and-complete-line' added.
     In particular, TAB-based indentation and completion functions also check

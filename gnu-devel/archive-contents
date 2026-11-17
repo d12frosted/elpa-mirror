@@ -332,12 +332,12 @@
       (:authors ("Amy Pillow" . "amypillow@lavache.com"))
       (:commit . "08e1c84dee28f87010f50cb4e9a48c0798c8912b"))])
  (breadcrumb
-  . [(1 0 1 0 20260804 20) ((emacs (28 1)) (project (0 9 8)))
+  . [(1 1 0 0 20261116 0) ((emacs (28 1)) (project (0 9 8)))
      "project and imenu-based breadcrumb paths" tar
      ((:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/breadcrumb.html")
-      (:commit . "bcf7f1d1c102f8430c017d66aeee5d12e26585a4"))])
+      (:commit . "f636f2643a2492f350d7c3624b8e6b9ed9bd2a7f"))])
  (brief
   . [(5 92 0 20240823 62608) ((nadvice (0 3)) (cl-lib (0 5)))
      "Brief Editor Emulator (Brief Mode)" tar
@@ -515,12 +515,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 2 0 0 20261112 17) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 2 0 0 20261116 27) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "22cb3ff7b14821d98a5be6b324357a21bc46fef3"))])
+      (:commit . "340855bfa7a42658535b3637fca96787372c5f2e"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -2498,13 +2498,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261116 995) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261116 996) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "f0662e0c69130b6b147f5ebc3923a2caa9fac7c1"))])
+      (:commit . "c0ed3248e9b1ff1310d0fa3d9f022208bebfcd7e"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
