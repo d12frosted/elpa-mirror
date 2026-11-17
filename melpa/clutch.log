@@ -2,10 +2,10 @@
  • Building package clutch
 From https://github.com/LuciusChen/clutch
 Updating /mnt/store/melpa/working/clutch/
-Checking out 12ed43f170f6a0fae7d25e4fe4221617d3490f30
+Checking out d8b52162cb66faefd3fc500bcfb9590923949f02
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clutch/
-  to /tmp/clutch-QptpmS/clutch-20261111.709/
+  to /tmp/clutch-wc40fZ/clutch-20261117.1407/
     clutch-backend.el -> clutch-backend.el
     clutch-connection.el -> clutch-connection.el
     clutch-db-jdbc.el -> clutch-db-jdbc.el
@@ -15,6 +15,7 @@ Copying files (->) and directories (=>)
     clutch-diagnostics.el -> clutch-diagnostics.el
     clutch-document.el -> clutch-document.el
     clutch-edit.el -> clutch-edit.el
+    clutch-er.el -> clutch-er.el
     clutch-mongodb.el -> clutch-mongodb.el
     clutch-object.el -> clutch-object.el
     clutch-query.el -> clutch-query.el
@@ -25,26 +26,27 @@ Copying files (->) and directories (=>)
     clutch-ui.el -> clutch-ui.el
     clutch-viz.el -> clutch-viz.el
     clutch.el -> clutch.el
-Created clutch-20261111.709.tar containing:
-  clutch-20261111.709/
-  clutch-20261111.709/clutch-backend.el
-  clutch-20261111.709/clutch-connection.el
-  clutch-20261111.709/clutch-db-jdbc.el
-  clutch-20261111.709/clutch-db-mysql.el
-  clutch-20261111.709/clutch-db-pg.el
-  clutch-20261111.709/clutch-db-sqlite.el
-  clutch-20261111.709/clutch-diagnostics.el
-  clutch-20261111.709/clutch-document.el
-  clutch-20261111.709/clutch-edit.el
-  clutch-20261111.709/clutch-mongodb.el
-  clutch-20261111.709/clutch-object.el
-  clutch-20261111.709/clutch-pkg.el
-  clutch-20261111.709/clutch-query.el
-  clutch-20261111.709/clutch-redis.el
-  clutch-20261111.709/clutch-result.el
-  clutch-20261111.709/clutch-schema.el
-  clutch-20261111.709/clutch-sql.el
-  clutch-20261111.709/clutch-ui.el
-  clutch-20261111.709/clutch-viz.el
-  clutch-20261111.709/clutch.el
-Built clutch in 5.609s, finished at 2026-11-17T12:24:36+0000
+Created clutch-20261117.1407.tar containing:
+  clutch-20261117.1407/
+  clutch-20261117.1407/clutch-backend.el
+  clutch-20261117.1407/clutch-connection.el
+  clutch-20261117.1407/clutch-db-jdbc.el
+  clutch-20261117.1407/clutch-db-mysql.el
+  clutch-20261117.1407/clutch-db-pg.el
+  clutch-20261117.1407/clutch-db-sqlite.el
+  clutch-20261117.1407/clutch-diagnostics.el
+  clutch-20261117.1407/clutch-document.el
+  clutch-20261117.1407/clutch-edit.el
+  clutch-20261117.1407/clutch-er.el
+  clutch-20261117.1407/clutch-mongodb.el
+  clutch-20261117.1407/clutch-object.el
+  clutch-20261117.1407/clutch-pkg.el
+  clutch-20261117.1407/clutch-query.el
+  clutch-20261117.1407/clutch-redis.el
+  clutch-20261117.1407/clutch-result.el
+  clutch-20261117.1407/clutch-schema.el
+  clutch-20261117.1407/clutch-sql.el
+  clutch-20261117.1407/clutch-ui.el
+  clutch-20261117.1407/clutch-viz.el
+  clutch-20261117.1407/clutch.el
+Built clutch in 10.637s, finished at 2026-11-17T16:55:10+0000
