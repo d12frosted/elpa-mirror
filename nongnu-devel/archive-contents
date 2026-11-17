@@ -982,7 +982,7 @@
       (:authors ("David Andersson" . "l.david.anderssonsverige.nu"))
       (:commit . "72f556524b88e9d30dc7fc5b0dc32078c166fda7"))])
  (gptel
-  . [(0 9 9 6 0 20261115 43)
+  . [(0 9 9 6 0 20261116 45)
      ((emacs (27 1)) (transient (0 7 8)) (compat (30 1 0 0)))
      "Interact with ChatGPT or other LLMs" tar
      ((:url . "https://github.com/karthink/gptel")
@@ -991,7 +991,7 @@
 		   . "karthik.chikmagalur@gmail.com")
       (:authors
        ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
-      (:commit . "169d1543c5e64d158bd89263a9d50caf91ab1249"))])
+      (:commit . "0b0aad0b19f8f0bc86ea8cfb1dbe2f02b4ea43de"))])
  (graphql-mode
   . [(1 0 0 0 20261031 40) ((emacs (25 1)))
      "Major mode for editing GraphQL schemas" tar
@@ -1994,12 +1994,12 @@
       (:authors ("John Olsson" . "john@cryon.se"))
       (:commit . "d61acae1ddb6830f98dbd9d2e82a9fb42833bd1b"))])
  (subed
-  . [(1 5 4 0 20261112 13) ((emacs (25 1)))
+  . [(1 5 4 0 20261116 16) ((emacs (25 1)))
      "A major mode for editing subtitles" tar
      ((:url . "https://github.com/sachac/subed")
       (:keywords "convenience" "files" "hypermedia" "multimedia")
       (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-      (:commit . "6752329239d01ccf6ad62546f8bddc6884eb5208"))])
+      (:commit . "3a86b1c9dff65c82e5fd9cd7be1ce2aa7eb7c480"))])
  (sweeprolog
   . [(0 27 6 0 20261113 8) ((emacs (27 1)) (compat (29 1 4 2)))
      "Embedded SWI-Prolog" tar
