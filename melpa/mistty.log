@@ -2,55 +2,59 @@
  • Building package mistty
 From https://github.com/szermatt/mistty
 Updating /mnt/store/melpa/working/mistty/
-Checking out 8c71878159c75eacc9399be3d822d7d4b7c88724
+Checking out 3ac8573b056392e18cc1fe4b27bd7a4e81fee2cf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mistty/
-  to /tmp/mistty-IzCd1A/mistty-20261107.852/
+  to /tmp/mistty-THoxZi/mistty-20261118.1200/
     mistty-accum-macros.el -> mistty-accum-macros.el
     mistty-accum.el -> mistty-accum.el
     mistty-alacritty.el -> mistty-alacritty.el
     mistty-changeset.el -> mistty-changeset.el
+    mistty-custom.el -> mistty-custom.el
+    mistty-eterm.el -> mistty-eterm.el
     mistty-install.el -> mistty-install.el
     mistty-kbd.el -> mistty-kbd.el
     mistty-launch.el -> mistty-launch.el
     mistty-log.el -> mistty-log.el
+    mistty-nav.el -> mistty-nav.el
     mistty-osc-colors.el -> mistty-osc-colors.el
     mistty-osc7.el -> mistty-osc7.el
     mistty-project.el -> mistty-project.el
+    mistty-prompt.el -> mistty-prompt.el
     mistty-queue.el -> mistty-queue.el
     mistty-scrolline.el -> mistty-scrolline.el
-    mistty-term-alacritty.el -> mistty-term-alacritty.el
-    mistty-term-base.el -> mistty-term-base.el
-    mistty-term-eterm.el -> mistty-term-eterm.el
+    mistty-sync.el -> mistty-sync.el
     mistty-term.el -> mistty-term.el
     mistty-undo.el -> mistty-undo.el
     mistty-util.el -> mistty-util.el
     mistty.el -> mistty.el
     mistty.texi -> mistty.texi
 Generating mistty.info
-Created mistty-20261107.852.tar containing:
-  mistty-20261107.852/
-  mistty-20261107.852/dir
-  mistty-20261107.852/mistty-accum-macros.el
-  mistty-20261107.852/mistty-accum.el
-  mistty-20261107.852/mistty-alacritty.el
-  mistty-20261107.852/mistty-changeset.el
-  mistty-20261107.852/mistty-install.el
-  mistty-20261107.852/mistty-kbd.el
-  mistty-20261107.852/mistty-launch.el
-  mistty-20261107.852/mistty-log.el
-  mistty-20261107.852/mistty-osc-colors.el
-  mistty-20261107.852/mistty-osc7.el
-  mistty-20261107.852/mistty-pkg.el
-  mistty-20261107.852/mistty-project.el
-  mistty-20261107.852/mistty-queue.el
-  mistty-20261107.852/mistty-scrolline.el
-  mistty-20261107.852/mistty-term-alacritty.el
-  mistty-20261107.852/mistty-term-base.el
-  mistty-20261107.852/mistty-term-eterm.el
-  mistty-20261107.852/mistty-term.el
-  mistty-20261107.852/mistty-undo.el
-  mistty-20261107.852/mistty-util.el
-  mistty-20261107.852/mistty.el
-  mistty-20261107.852/mistty.info
-Built mistty in 14.091s, finished at 2026-11-18T07:01:53+0000
+Created mistty-20261118.1200.tar containing:
+  mistty-20261118.1200/
+  mistty-20261118.1200/dir
+  mistty-20261118.1200/mistty-accum-macros.el
+  mistty-20261118.1200/mistty-accum.el
+  mistty-20261118.1200/mistty-alacritty.el
+  mistty-20261118.1200/mistty-changeset.el
+  mistty-20261118.1200/mistty-custom.el
+  mistty-20261118.1200/mistty-eterm.el
+  mistty-20261118.1200/mistty-install.el
+  mistty-20261118.1200/mistty-kbd.el
+  mistty-20261118.1200/mistty-launch.el
+  mistty-20261118.1200/mistty-log.el
+  mistty-20261118.1200/mistty-nav.el
+  mistty-20261118.1200/mistty-osc-colors.el
+  mistty-20261118.1200/mistty-osc7.el
+  mistty-20261118.1200/mistty-pkg.el
+  mistty-20261118.1200/mistty-project.el
+  mistty-20261118.1200/mistty-prompt.el
+  mistty-20261118.1200/mistty-queue.el
+  mistty-20261118.1200/mistty-scrolline.el
+  mistty-20261118.1200/mistty-sync.el
+  mistty-20261118.1200/mistty-term.el
+  mistty-20261118.1200/mistty-undo.el
+  mistty-20261118.1200/mistty-util.el
+  mistty-20261118.1200/mistty.el
+  mistty-20261118.1200/mistty.info
+Built mistty in 8.447s, finished at 2026-11-18T15:47:28+0000
