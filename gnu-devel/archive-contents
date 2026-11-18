@@ -769,12 +769,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "5a0cd5ccb650d7bba1c1ea02cf67b71d7cfa6e9a"))])
  (denote
-  . [(4 2 3 0 20261113 194) ((emacs (28 1)))
+  . [(4 2 3 0 20261117 197) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "f3cad80f1d834cf954803740fad4275dfc56d940"))])
+      (:commit . "4325f026b486162948bb37b61020cfa70abace5e"))])
  (denote-journal
   . [(0 3 0 0 20261113 4) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -1055,13 +1055,13 @@
       (:authors ("Leo Liu" . "sdl.web@gmail.com"))
       (:commit . "98cbae5d8c378ad14d612d7c88a78484c49a80b8"))])
  (ebdb
-  . [(0 8 22 0 20261115 7) ((emacs (25 1)) (seq (2 15)))
+  . [(0 8 23 0 20261117 0) ((emacs (25 1)) (seq (2 15)))
      "Contact management package" tar
      ((:url . "https://github.com/girzel/ebdb")
       (:keywords "convenience" "mail")
       (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
       (:authors ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-      (:commit . "7f7f9578a61b5f230e2ab0cd7740a50d8d802ab6"))])
+      (:commit . "1257d3033e1365111864d71c00d61ba8dde392ec"))])
  (ebdb-gnorb
   . [(1 0 2 0 20221221 75324) ((gnorb (1 1 0)) (ebdb (0 2)))
      "Utilities for connecting EBDB to Gnorb" tar
@@ -1093,13 +1093,13 @@
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
       (:commit . "4850e9c7a465684a0fdb79a6be83055e0ef9537b"))])
  (ef-themes
-  . [(2 2 1 0 20261112 54) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(2 2 1 0 20261117 55) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
      ((:url . "https://github.com/protesilaos/ef-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "716d365d0cf2ad3d855c6879a476857bc5fa57d2"))])
+      (:commit . "46f327b8dbff4cb27085243f19347d62a1531932"))])
  (eglot
   . [(1 26 0 20261115 9)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))
@@ -1720,7 +1720,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 3 2 0 20261115 8) ((emacs (28)))
+  . [(9 3 2 0 20261117 10) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1730,7 +1730,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "bc28743ebf1f5f3d52ae92c2a1b89ef717fa73aa"))])
+      (:commit . "9d2416e91ac8ef0a6a2b9b6dd91e584f762cf3b2"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2498,13 +2498,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261116 996) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261118 1019) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "c0ed3248e9b1ff1310d0fa3d9f022208bebfcd7e"))])
+      (:commit . "077dbc3be961ef34fba5c46440ccaea5e97e2e80"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar

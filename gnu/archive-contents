@@ -990,13 +990,13 @@
       (:authors ("Leo Liu" . "sdl.web@gmail.com"))
       (:commit . "f155d19c528e27f8f6c72f0d75f652edbdcab37f"))])
  (ebdb
-  . [(0 8 22) ((emacs (25 1)) (seq (2 15)))
+  . [(0 8 23) ((emacs (25 1)) (seq (2 15)))
      "Contact management package" tar
      ((:url . "https://github.com/girzel/ebdb")
       (:keywords "convenience" "mail")
       (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
       (:authors ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-      (:commit . "b96e5470c54503eab2159e69c822648ad55e6915"))])
+      (:commit . "1257d3033e1365111864d71c00d61ba8dde392ec"))])
  (ebdb-gnorb
   . [(1 0 2) ((gnorb (1 1 0)) (ebdb (0 2)))
      "Utilities for connecting EBDB to Gnorb" tar
