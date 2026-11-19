@@ -11,8 +11,9 @@ equations.
 
 Usage:
 
-  M-x typst-overlay-mode      enable in the current buffer
-  M-x typst-overlay-refresh   re-render overlays manually
+  M-x typst-overlay-mode          enable in the current buffer
+  M-x typst-overlay-refresh       re-render overlays manually
+  C-u M-x typst-overlay-refresh   compile every equation again
 
 Edited equations are rendered again once you stop typing; see
 `typst-overlay-idle-refresh-delay'.

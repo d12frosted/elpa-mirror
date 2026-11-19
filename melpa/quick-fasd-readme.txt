@@ -1,18 +1,22 @@
-The quick-fasd Emacs package integrates the Fasd tool within the Emacs
-environment. Fasd, a command-line utility, enhances the productivity of users
-by providing fast access to frequently used files and directories. Inspired
-by tools such as autojump, z, and v, Fasd functions by maintaining a dynamic
-index of files and directories you access, allowing you to reference them
-quickly from the command line.
+The `quick-fasd' package integrates the `fasd' command-line utility into
+Emacs. The `fasd' cli tracks frequently and recently accessed files and
+directories, ranking them by frecency (frequency and recency). Instead of
+navigating through directory hierarchies or typing full paths, `quick-fasd'
+can quickly find previously accessed files and directories.
 
-After installing quick-fasd in Emacs, you can easily navigate your file
-system directly within Emacs by using Fasd's fast-access capabilities. For
-example, you can open recently accessed files or quickly jump to frequently
-used directories without leaving the Emacs environment.
+The main advantage of `quick-fasd' is that it allows Emacs and the terminal
+to share the same Fasd navigation history. For example, a directory
+frequently visited from the terminal can be quickly accessed from Emacs, and
+files opened in Emacs become available for navigation from the terminal.
 
-Here's how the package works:
-- `quick-fasd-mode' adds a hook to `find-file-hook' and `dired-mode-hook' to
-  automatically add all visited files and directories to Fasd's database.
-- The user can invoke the `quick-fasd-find-path' function, which prompts for
-  input and display available candidates from the Fasd index, enabling rapid
-  and efficient file navigation.
+After enabling `quick-fasd-mode':
+
+- It automatically adds all visited files and directories to the local Fasd
+  database.
+- 'M-x quick-fasd-find-path' provides interactive prompts to filter and
+  select candidates from the Fasd index. This allows you to open recent files
+  and jump to frequent directories without leaving the editor.
+- When called from the minibuffer, the `(quick-fasd-find-path)' function
+  appends the selected path to the prompt for easier completion.
+
+URL: https://github.com/jamescherti/quick-fasd.el
