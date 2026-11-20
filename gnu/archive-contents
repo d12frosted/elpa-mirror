@@ -719,12 +719,12 @@
       (:authors ("Phil Sainty" . "psainty@orcon.net.nz"))
       (:commit . "a763ec1e5c2987efea3ce2ee6d9c979f56ab6528"))])
  (denote
-  . [(4 2 3) ((emacs (28 1)))
+  . [(4 3 0) ((emacs (28 1)))
      "Simple notes with an efficient file-naming scheme" tar
      ((:url . "https://github.com/protesilaos/denote")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "9fd6692a32a99e236c377f12f114b77a91417ac2"))])
+      (:commit . "4ba614dfa3e4443d7ae76e6316292aee2909fb3b"))])
  (denote-journal
   . [(0 3 0) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for daily journaling with Denote" tar
@@ -1028,13 +1028,13 @@
       (:authors ("Eduardo Ochs" . "eduardoochs@gmail.com"))
       (:commit . "9aa4aca967ea30262b50a9510b1bcd0dc400e1b5"))])
  (ef-themes
-  . [(2 2 1) ((emacs (28 1)) (modus-themes (5 0 0)))
+  . [(2 3 0) ((emacs (28 1)) (modus-themes (5 0 0)))
      "Colorful and legible themes" tar
      ((:url . "https://github.com/protesilaos/ef-themes")
       (:keywords "faces" "theme" "accessibility")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "e1f617607a5f0692b398365dcd8412ba1e98ccb3"))])
+      (:commit . "0682217085244de7b3e8aba81496abe4b70a61bd"))])
  (eglot
   . [(1 26)
      ((emacs (26 3)) (eldoc (1 16 0)) (external-completion (0 1))

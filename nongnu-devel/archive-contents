@@ -93,6 +93,15 @@
       (:keywords "languages" "arduino")
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:commit . "b2ffd8441851659cb1cc844156073967729585e5"))])
+ (au-themes
+  . [(0 4 0 0 20261119 1) ((emacs (29 1)) (modus-themes (5 2 0)))
+     "Sensory-safe themes for autism and neurodivergence" tar
+     ((:url . "https://github.com/szymonwilczek/au-themes")
+      (:keywords "faces" "themes" "accessibility" "autism"
+		 "neurodivergence")
+      (:maintainer "Szymon Wilczek" . "swilczek.lx@gmail.com")
+      (:authors ("Szymon Wilczek" . "swilczek.lx@gmail.com"))
+      (:commit . "d63b9325fb43a4a05c15de40ef28f8d9ba5e3b77"))])
  (auto-dim-other-buffers
   . [(2 2 3 0 20260731 2) ((emacs (27 1)))
      "Makes windows without focus less prominent" tar
@@ -730,15 +739,15 @@
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
       (:commit . "85f8f2ea4c4aa354ac65067b7c4d32e3274b284b"))])
  (fj
-  . [(0 53 0 20261105 43)
-     ((emacs (29 1)) (compat (31)) (fedi (0 5)) (tp (0 8))
+  . [(0 54 0 20261119 46)
+     ((emacs (29 1)) (compat (31)) (fedi (0 6)) (tp (0 8))
       (transient (0 10 0)) (magit (4 3 8)))
      "Client for Forgejo instances" tar
      ((:url . "https://codeberg.org/martianh/fj.el")
       (:keywords "git" "convenience")
       (:maintainer "Marty Hiatt" . "martianh@disroot.org")
       (:authors ("Marty Hiatt" . "martianh@disroot.org"))
-      (:commit . "37c57a02478bb4de0f2afa2f68c2be7a2e80c7d4"))])
+      (:commit . "ef47a7b4ca4c4c53e5545826728b485a495e359d"))])
  (flamegraph
   . [(0 2 0 20260609 2) ((emacs (30 1)))
      "Flame graphs for Emacs's native profiler and folded stacks files"
@@ -1342,7 +1351,7 @@
       (:authors ("Jon Oddie" . "j.j.oddie@gmail.com"))
       (:commit . "d0928626b4711dcf9f8f90439d23701118724199"))])
  (magit
-  . [(4 7 2 0 20261113 4)
+  . [(4 7 2 0 20261117 6)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (magit-section (4 7)) (seq (2 24)) (transient (0 13))
       (with-editor (3 6)))
@@ -1354,9 +1363,9 @@
        ("Kyle Meyer" . "kyle@kyleam.com"))
       (:authors ("Marius Vollmer" . "marius.vollmer@gmail.com")
 		("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "4402e972bb2b6df2dad25118d8a638fa5a9b3e5b"))])
+      (:commit . "5e21bac5304c931cccbe16073758e2c464e40298"))])
  (magit-section
-  . [(4 7 2 0 20261113 4)
+  . [(4 7 2 0 20261117 6)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Sections for read-only buffers" tar
@@ -1365,7 +1374,7 @@
 		   . "emacs.magit@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
-      (:commit . "4402e972bb2b6df2dad25118d8a638fa5a9b3e5b"))])
+      (:commit . "5e21bac5304c931cccbe16073758e2c464e40298"))])
  (markdown-mode
   . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
@@ -1410,11 +1419,11 @@
       (:authors ("Stefan Kangas" . "stefankangas@gmail.com"))
       (:commit . "ed42ae8333d801c841ecf80fb5e4957badb99b51"))])
  (meow
-  . [(1 5 0 0 20260915 68) ((emacs (27 1)))
+  . [(1 5 0 0 20261118 69) ((emacs (27 1)))
      "Yet Another modal editing" tar
      ((:url . "https://www.github.com/DogLooksGood/meow")
       (:keywords "convenience" "modal-editing")
-      (:commit . "8aebed9f8cd8d865501b780e63acbeef55da231b"))])
+      (:commit . "f9612a164c638e88d343e98a529a4d83e597bfdc"))])
  (minibar
   . [(0 3 0 20230414 114052) ((emacs (27 2)))
      "Modular status bar in minibuffer" tar
@@ -1723,13 +1732,13 @@
       (:authors ("Frédéric Perrin" . "fredericperrinreselfr"))
       (:commit . "ae60e11c96cc1767f05ce0cab6a917240ce2e37a"))])
  (project-nix-store
-  . [(0 13 0 0 20261107 7) ((emacs (29 1)))
+  . [(0 13 0 0 20261119 9) ((emacs (29 1)))
      "Project backend for Nix store" tar
      ((:url . "https://github.com/jian-lin/project-nix-store")
       (:keywords "nix" "nix-store" "project" "tools")
       (:maintainer "Lin Jian" . "me@linj.tech")
       (:authors ("Lin Jian" . "me@linj.tech"))
-      (:commit . "f7206059aa3c44323e70c6611eabdc5949e10b80"))])
+      (:commit . "8437d5ccd58fe3ad1c32a4444b85644f3f7f81a6"))])
  (projectile
   . [(3 5 0 -4 0 20260930 66) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
@@ -1739,12 +1748,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
  (proof-general
-  . [(4 6 -4 0 20261109 409) ((emacs (25 2)))
+  . [(4 6 -4 0 20261118 418) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "e09cd62ada58d5e38986a81101cffe1be28e527d"))])
+      (:commit . "f0460033ef60baa04a989f565a79d5f871196df4"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -1994,12 +2003,12 @@
       (:authors ("John Olsson" . "john@cryon.se"))
       (:commit . "d61acae1ddb6830f98dbd9d2e82a9fb42833bd1b"))])
  (subed
-  . [(1 5 4 0 20261116 16) ((emacs (25 1)))
+  . [(1 5 5 0 20261118 1) ((emacs (25 1)))
      "A major mode for editing subtitles" tar
      ((:url . "https://github.com/sachac/subed")
       (:keywords "convenience" "files" "hypermedia" "multimedia")
       (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-      (:commit . "3a86b1c9dff65c82e5fd9cd7be1ce2aa7eb7c480"))])
+      (:commit . "14dec0bd1121a7cb29ec32e628ecb66b17af13e4"))])
  (sweeprolog
   . [(0 27 6 0 20261113 8) ((emacs (27 1)) (compat (29 1 4 2)))
      "Embedded SWI-Prolog" tar

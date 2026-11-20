@@ -100,3 +100,15 @@ III.  Options
   F. Modes for Elfeed string
      `timu-line-elfeed-modes' controls in which modes the custom
      Elfeed string is displayed.
+
+  G. Cache time for external commands
+     The vc branch and the Mu4e mail count come from external commands
+     (`git' and `mu').  Their results are reused instead of running the
+     commands on every mode-line update.  This variable controls for how
+     many seconds:
+
+     - `timu-line-cache-time' - default value is 5
+
+     The branch of a remote (Tramp) buffer is not refreshed on a timer.
+     It is looked up once and again after the buffer is reverted, the
+     Dired buffer is re-read or Magit refreshes.

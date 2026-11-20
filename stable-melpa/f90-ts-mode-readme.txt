@@ -3,6 +3,11 @@ files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
 Changelog (recent):
 [11-2026]
+  - Support for tree-sitter core 0.22.6 (for example used by Debian) added.
+    The bugs within the core library and particularly this version are a
+    nightmare and some workarounds might be pretty slow.  See
+    `f90-ts--indent-full-reparse' for more details.
+    Please report any problems!
   - Alignment rules added for:
     * io item lists,
     * result keyword for functions,

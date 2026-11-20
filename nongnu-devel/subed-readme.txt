@@ -310,6 +310,15 @@ use-package configuration
   │         )
   └────
 
+  To generate or update `subed-autoloads.el', use `make autoloads' in
+  your subed checkout directory, or use
+
+  `cd /your/path/to/subed/subed; emacs --batch --eval
+  "(loaddefs-generate \".\" \"subed-autoloads.el\")"'
+
+  Note that you are generating it from the `subed/' subdirectory in the
+  project source code.
+
 
 [use-package] <https://github.com/jwiegley/use-package>
 
