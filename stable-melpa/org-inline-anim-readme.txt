@@ -3,7 +3,7 @@ buffers.
 
 Usage:
 
-Download org-inline-anim.el and insall it using package.el.
+Download org-inline-anim.el and install it using package.el.
 
   (package-install-file "/path-to-download-dir/org-inline-anim.el")
 
