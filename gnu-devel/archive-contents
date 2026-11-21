@@ -2896,13 +2896,13 @@
       (:authors ("Feng Shu" . "tumashu@163.com"))
       (:commit . "55d9b324831b0fc79ff62f1c6f21aad72341a114"))])
  (python
-  . [(0 30 0 20260928 55) ((emacs (29 1)) (compat (29 1 1 0)))
+  . [(0 30 0 20261120 57) ((emacs (29 1)) (compat (29 1 1 0)))
      "Python's flying circus support for Emacs" tar
      ((:url . "https://github.com/fgallina/python.el")
       (:keywords "languages")
       (:maintainer nil . "emacs-devel@gnu.org")
       (:authors ("Fabián E. Gallina" . "fgallina@gnu.org"))
-      (:commit . "fd5f183f5d4588cc5b52e8f8acf3afde2cb0003e"))])
+      (:commit . "0f36c102a857239f4d04364b64d48f800215bbbe"))])
  (qrencode
   . [(1 7 -2 2 0 20261105 1) ((emacs (25 1))) "QRCode encoder" tar
      ((:url . "https://github.com/ruediger/qrencode-el")

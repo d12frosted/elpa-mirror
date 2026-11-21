@@ -64,7 +64,7 @@ To reduce  speed we use `isearch-repeat-on-direction-change' and
 ;; Files:
 
 - first-search.el - common functionality for other files.
-- first-search-{dired,package,buffermenu,bookmarks,recentf}.el -
+- first-search-{dired,package,buffermenu,bookmarks,recentf}.el --
   define user available minor modes for specific major modes.
 
 ;; Other packages from author:
@@ -87,3 +87,5 @@ To reduce  speed we use `isearch-repeat-on-direction-change' and
 - TON (Telegram) address: UQC8rjJFCHQkfdp7KmCkTZCb5dGzLFYe2TzsiZpfsnyTFt9D
 
 ;; TODO:
+- add option to search: normal, from start at activcation, from
+ start for every character
