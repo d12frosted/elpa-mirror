@@ -3,7 +3,7 @@
 VM is a mail reader that runs under GNU Emacs. It was
 written as an alternative to the Emacs RMAIL mail reader by Kyle
 Jones. VM is highly configurable and easy to use. It supports POP and
-IMAP mail servers, understands MIME, and handles mail folders in the
+IMAP mail servers, supports MIME, and handles mail folders in the
 standard UNIX mailbox format and the BABYL format used by the RMAIL
 mailer. It has a powerful virtual folder facility to facilitate
 searching as well as more advanced handling of multiple mail folders.

@@ -7,7 +7,6 @@ sources to the `consult-buffer` command.
 
 + Package name (GNU ELPA): `consult-denote`
 + Official manual: <https://protesilaos.com/emacs/consult-denote>
-+ Change log: <https://protesilaos.com/emacs/consult-denote-changelog>
 + Git repository: <https://github.com/protesilaos/consult-denote>
 + Backronym: Consult-Orchestrated Navigation and Selection of
   Unambiguous Targets...denote.

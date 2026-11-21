@@ -6681,7 +6681,7 @@ section 22.14
   `denote-get-keywords-function'
         Function to return the Denote file keywords. The function is
         called with one argument, the file path, and should return the
-        keywords as a list of strings or `nil'.
+        keywords as a single string or `nil'.
   `denote-get-path-by-id-function'
         Function to return file path corresponding to an identifier. The
         function is called with one argument, the identifier. The
