@@ -3,12 +3,14 @@ files, based on Emacs's built-in tree-sitter support (requires Emacs 29+)
 
 Changelog (recent):
 [11-2026]
+  - Alignment of rhs-operands in operator expressions added.
   - Support for tree-sitter core 0.22.6 (for example used by Debian) added.
     The bugs within the core library and particularly this version are a
     nightmare and some workarounds might be pretty slow.  See
     `f90-ts--indent-full-reparse' for more details.
     Please report any problems!
   - Alignment rules added for:
+    * rhs alignment of operands in operator expressions
     * io item lists,
     * result keyword for functions,
     * extent_specifier for array ranges,
@@ -33,12 +35,13 @@ Changelog (recent):
   - Alignment rules for case statements of select case blocks added.
   - Alignment rules for trailing comments within continued lines as well as
     those following a statement added.
+
 [10-2026]
   - Extend/reduce variants for mark region operations based on siblings
     (first, last, previous, next) added.
-  - Package f90-ts-nav replaced by improved f90-ts-toc providing a side panel with a
-    table of content of a f90 buffer, see `MANUAL.md' for details.  This
-    optional package requires its own use-package statement.
+  - Package f90-ts-nav replaced by improved f90-ts-toc providing a side
+    panel with a table of content of a f90 buffer, see `MANUAL.md' for
+    details.  This optional package requires its own use-package statement.
   - Alignment rules for improved indentation of variable declarations with
     initialisation added.
   - Infinite loop caused by `f90-ts-indent-delete-trailing-whitespace' fixed.
@@ -124,7 +127,12 @@ Bugs and features:
   https://github.com/mscfd/emacs-f90-ts-mode/issues
 
 Notes:
-- Emacs 31 supports 0.26, and the mode runs in both configurations.
-- Emacs 30.x must be linked against tree-sitter 0.25.x at runtime.
-- Emacs 29 support has been tested with treesitter 0.20.8.
+- Emacs 31.1: supports 0.26, and the mode runs in both configurations.
+- Emacs 30.x: should be linked against tree-sitter 0.25.x at runtime.
+              Version 0.22.6 is supported as well, but has a major bug in
+              the incremental reparse function, avoided by some extra full
+              reparsing runs.
+- Emacs 29.x: the mode runs with tree-sitter 0.20.8.  But some potentially
+              expensive workarounds are required to avoid bugs.
+
 For details see MANUAL at https://github.com/mscfd/emacs-f90-ts-mode
