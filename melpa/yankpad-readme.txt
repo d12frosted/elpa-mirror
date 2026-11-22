@@ -46,6 +46,12 @@ behaviour by setting `yankpad-descriptive-list-treatment' to nil, or change
 descriptive lists to use `abbrev-mode' by setting the variable to 'abbrev
 instead.
 
+Snippets can also contain a list of values to choose from with
+`completing-read'.  Place a `#+ATTR_YANKPAD' keyword directly above the list
+and use <name> in the snippet text to mark where the selected values should
+be inserted.  Items written as "- value :: description" show the description
+as an annotation in the completion interface.
+
 For further customization, please see the Github page: https://github.com/Kungsgeten/yankpad
 
 Here's an example of what yankpad.org could look like:
