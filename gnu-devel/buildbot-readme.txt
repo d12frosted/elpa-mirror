@@ -55,7 +55,7 @@ as `buildbot-host'):
 
   ┌────
   │ (add-to-list 'package-archives
-  │ 	     ("elpa-devel" . "https://elpa.gnu.org/devel/"))
+  │              ("elpa-devel" . "https://elpa.gnu.org/devel/"))
   │ (package-refresh-contents)
   │ (package-install 'buildbot)
   └────

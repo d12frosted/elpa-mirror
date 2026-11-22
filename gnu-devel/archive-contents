@@ -389,13 +389,13 @@
       (:authors ("Artur Malabarba" . "emacs@endlessparentheses.com"))
       (:commit . "3eaaa92f981e034da6ea874420238a1b5058cce6"))])
  (buildbot
-  . [(0 0 1 0 20230726 134747) ((emacs (28)))
-     "A Buildbot client for emacs" tar
+  . [(0 0 1 0 20261122 1) ((emacs (28))) "A Buildbot client for emacs"
+     tar
      ((:url . "https://g.ypei.me/buildbot.el.git")
       (:keywords "buildbot" "continuous integration")
       (:maintainer "Yuchen Pei" . "id@ypei.org")
       (:authors ("Yuchen Pei" . "id@ypei.org"))
-      (:commit . "d614eea91ca5717c2b0019dae8c85e6a24873f39"))])
+      (:commit . "fb0660ee2e8223be1bbedb591ea1ffa27eedd74d"))])
  (calibre
   . [(1 5 2 0 20260313 14906) ((emacs (27 1)) (compat (29 1 4 1)))
      "Interact with Calibre libraries from Emacs" tar
@@ -1630,13 +1630,13 @@
        ("Michelangelo Rodriguez" . "michelangelo.rodriguez@gmail.com"))
       (:commit . "f5deabe3b490fa72365922ce76f6df3dd0b5a27c"))])
  (greenbar
-  . [(1 2 260317 0 20260317 232500) ((emacs (27 1)))
+  . [(1 2 261121 0 20261121 0) ((emacs (27 1)))
      "Mark comint output with \"greenbar\" background" tar
      ((:keywords "faces" "terminals")
       (:maintainer "Michael R. Mauger" . "michael@mauger.com")
       (:authors ("Michael R. Mauger" . "michael@mauger.com"))
       (:url . "https://elpa.gnu.org/packages/greenbar.html")
-      (:commit . "eedbec6a0c56be403fdbe0b1f38a4acd4f11d09b"))])
+      (:commit . "0bc2ee574cfe92f8981e2570f8adc3f8b1007b6f"))])
  (gtags-mode
   . [(2 0 0 0 20261120 1) ((emacs (30)))
      "GNU Global integration with xref, project and imenu" tar
@@ -2500,13 +2500,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261121 1073) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261121 1074) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "ecb59ab8b438b7673b6bdaee7de1ca6a379feb4a"))])
+      (:commit . "1221cb4ab1129e5bd9c3ece797eaf6bd1005f29d"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
