@@ -820,12 +820,12 @@
       (:authors ("Lucas Quintana" . "lmq10@protonmail.com"))
       (:commit . "7ae1f43470fc375c8add5f8c78f8e7d1d7c2da42"))])
  (denote-sequence
-  . [(0 3 3 0 20261016 1) ((emacs (28 1)) (denote (4 0 0)))
+  . [(0 3 3 0 20261121 4) ((emacs (28 1)) (denote (4 0 0)))
      "Sequence notes or Folgezettel with Denote" tar
      ((:url . "https://github.com/protesilaos/denote-sequence")
       (:maintainer "Protesilaos" . "info@protesilaos.com")
       (:authors ("Protesilaos" . "info@protesilaos.com"))
-      (:commit . "2f9d669c44659b0ddf0ef0604382448bb7426a09"))])
+      (:commit . "c87b7dc1daa1915abf95ce0db787c47c79176cb6"))])
  (denote-silo
   . [(0 3 2 0 20261016 5) ((emacs (28 1)) (denote (4 0 0)))
      "Convenience functions for using Denote in multiple silos" tar
@@ -1161,7 +1161,7 @@
       (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
       (:commit . "583951606e4e19fd53acd8c5691210b9acb524d7"))])
  (ellama
-  . [(1 33 2 0 20261120 1)
+  . [(1 33 2 0 20261121 3)
      ((emacs (28 1)) (llm (0 31 1)) (plz (0 8)) (transient (0 7))
       (compat (29 1)) (yaml (1 2 3)))
      "Tool for interacting with LLMs" tar
@@ -1169,7 +1169,7 @@
       (:keywords "help" "local" "tools")
       (:maintainer "Sergey Kostyaev" . "sskostyaev@gmail.com")
       (:authors ("Sergey Kostyaev" . "sskostyaev@gmail.com"))
-      (:commit . "6dee58ebb4e25c8bf98d21a302264a5f51c8180f"))])
+      (:commit . "ee82febfcc410e7da09dacf290b205344161be85"))])
  (emacs-gc-stats
   . [(1 4 2 0 20231206 152254) ((emacs (25 1)))
      "Collect Emacs GC statistics" tar
@@ -1722,7 +1722,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 3 2 0 20261120 21) ((emacs (28)))
+  . [(9 3 2 0 20261121 23) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1732,7 +1732,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "eca7fa4a72fcc76fb175a70ad2d08bed007c35c0"))])
+      (:commit . "b2b4bab2ca9144ae6e6ae1b03f5cb1211de28d32"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2500,13 +2500,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261119 1040) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261121 1073) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "e80b80e52287f78889705a2025f133034e0827db"))])
+      (:commit . "ecb59ab8b438b7673b6bdaee7de1ca6a379feb4a"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -3702,7 +3702,7 @@
       (:url . "https://elpa.gnu.org/packages/transcribe.html")
       (:commit . "2c2d493d5488f3b444d2a771ab443589fcc72c13"))])
  (transient
-  . [(0 13 9 0 20261113 8)
+  . [(0 13 9 0 20261121 9)
      ((emacs (28 1)) (compat (31 1)) (cond-let (1 1)) (llama (1 0))
       (seq (2 24)))
      "Transient commands" tar
@@ -3712,7 +3712,7 @@
 		   . "emacs.transient@jonas.bernoulli.dev")
       (:authors
        ("Jonas Bernoulli" . "emacs.transient@jonas.bernoulli.dev"))
-      (:commit . "93423bb0c97aea87d49c50676ee63d1e5817c787"))])
+      (:commit . "168066e21e77edf5b14d30ebf8b0d81bc710c352"))])
  (transient-cycles
   . [(2 1 0 20260625 0) ((emacs (29 1)))
      "Define command variants with transient cycling" tar
