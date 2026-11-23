@@ -1218,7 +1218,7 @@
   (discover :url "https://github.com/mickeynp/discover.el")
   (discover-clj-refactor :url "https://github.com/maio/discover-clj-refactor.el")
   (discover-js2-refactor :url "https://github.com/NicolasPetton/discover-js2-refactor")
-  (discover-my-major :url "https://framagit.org/steckerhalter/discover-my-major.git")
+  (discover-my-major :url "https://github.com/steckerhalter/discover-my-major")
   (dispass :url "https://github.com/ryuslash/dispass.el")
   (display-theme :url "https://github.com/kawabata/emacs-display-theme")
   (display-wttr :url "https://git.sr.ht/~josegpt/display-wttr")
