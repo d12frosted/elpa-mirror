@@ -56,5 +56,5 @@ purpose.  For daily work, `testcover-audit-project-report' and the
 
 All user-facing configuration is grouped under `testcover-audit'.
 
-The batch test runner and its module-reload helper are provided by
-`testcover-audit-test.el' (see `testcover-audit-test-run').
+Tests live under `test/' and are run by the shared suite (`make test');
+there is no package-level batch runner.
