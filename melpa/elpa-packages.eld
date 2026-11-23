@@ -1387,6 +1387,7 @@
   (eff :url "https://github.com/oxidase/eff")
   (efinger :url "https://git.andros.dev/andros/efinger.el.git")
   (efire :url "https://github.com/joaotavora/efire")
+  (efzf :url "https://github.com/yoshinari-nomura/efzf")
   (eg :url "https://github.com/davep/eg.el")
   (egalgo :url "https://github.com/ROCKTAKEY/egalgo")
   (egg :url "https://github.com/byplayer/egg")
