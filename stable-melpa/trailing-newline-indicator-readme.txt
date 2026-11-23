@@ -1,5 +1,5 @@
-`trailing-newline-indicator' provides a minor mode that displays a visual
-indicator in the left margin for the trailing newline at the end of a file.
+`trailing-newline-indicator' provides a minor mode that displays inline
+ghost text at the end of a file for the trailing newline.
 This helps highlight the empty visual line that appears due to the final
 newline character.
 

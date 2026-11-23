@@ -878,13 +878,13 @@
       (:authors ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
       (:commit . "a83ea986982b2d09d150456028a9f1e73658333a"))])
  (diff-hl
-  . [(1 11 2 0 20261001 4) ((cl-lib (0 2)) (emacs (27 1)))
+  . [(1 11 2 0 20261122 6) ((cl-lib (0 2)) (emacs (27 1)))
      "Highlight uncommitted changes using VC" tar
      ((:url . "https://github.com/dgutov/diff-hl")
       (:keywords "vc" "diff")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
       (:authors ("Dmitry Gutov" . "dmitry@gutov.dev"))
-      (:commit . "8dfb5c27ea43b8c7ac1c008bb97090ad4f059285"))])
+      (:commit . "b0c04cf21a02351958f3b6fe40e0b28b1515b9bb"))])
  (diffview
   . [(1 0 0 20230224 111651) nil "View diffs in side-by-side format"
      tar
@@ -1055,13 +1055,13 @@
       (:authors ("Leo Liu" . "sdl.web@gmail.com"))
       (:commit . "98cbae5d8c378ad14d612d7c88a78484c49a80b8"))])
  (ebdb
-  . [(0 8 23 0 20261120 2) ((emacs (25 1)) (seq (2 15)))
+  . [(0 8 23 0 20261122 3) ((emacs (25 1)) (seq (2 15)))
      "Contact management package" tar
      ((:url . "https://github.com/girzel/ebdb")
       (:keywords "convenience" "mail")
       (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
       (:authors ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-      (:commit . "8195b4acbe3a1f648db43391188c7dcef99213f6"))])
+      (:commit . "ef2e5dbd8e309831a1a27b5b9d6d2d88b558df68"))])
  (ebdb-gnorb
   . [(1 0 2 0 20221221 75324) ((gnorb (1 1 0)) (ebdb (0 2)))
      "Utilities for connecting EBDB to Gnorb" tar
@@ -1185,11 +1185,11 @@
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-es.html")
       (:commit . "a2c2c167837cef08a1b8f86f5eb9864f93699300"))])
  (emacs-lisp-intro-nl
-  . [(0 0 20261107 56) nil "ELisp intro manual in NL" tar
+  . [(0 0 20261122 57) nil "ELisp intro manual in NL" tar
      ((:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-nl.html")
-      (:commit . "c4cb6163c793ae595b569a6db41013bcfd1383ca"))])
+      (:commit . "bf7604f363b327963e294b8b97dcfbcd785b634c"))])
  (embark
   . [(1 2 0 20260812 23) ((emacs (29 1)) (compat (31)))
      "Conveniently act on minibuffer completions" tar
@@ -1722,7 +1722,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 3 2 0 20261121 23) ((emacs (28)))
+  . [(9 3 2 0 20261122 25) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1732,7 +1732,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "b2b4bab2ca9144ae6e6ae1b03f5cb1211de28d32"))])
+      (:commit . "679d0bcc4863e36555719570353d9f338b52a81b"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -1992,13 +1992,13 @@
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
       (:commit . "7e30b492ec594e641727fb31d07291e767d0897a"))])
  (leaf
-  . [(4 5 5 0 20261103 20) ((emacs (24 1)))
+  . [(4 5 5 0 20261122 21) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar
      ((:url . "https://github.com/conao3/leaf.el")
       (:keywords "lisp" "settings")
       (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
       (:authors ("Naoya Yamashita" . "conao3@gmail.com"))
-      (:commit . "d70d8d3109c5630a90fd90fbb81a1b735bf3c78b"))])
+      (:commit . "ab9f56cdbefcb539f84184de976716c122adceb2"))])
  (lentic
   . [(0 12 0 20240303 95600)
      ((emacs (25)) (m-buffer (0 13)) (dash (2 5 0)))
@@ -2500,13 +2500,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261121 1074) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261122 1081) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "1221cb4ab1129e5bd9c3ece797eaf6bd1005f29d"))])
+      (:commit . "3ddb8ad25f4422db4e4b95b32b933228062cfd13"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -3882,7 +3882,7 @@
       (:authors ("Andrii Kolomoiets" . "andreyk.mad@gmail.com"))
       (:commit . "aec2ee7733c38e55d7406c362b9fd5485b21299c"))])
  (vc-jj
-  . [(0 5 0 20260727 66)
+  . [(0 6 0 20261122 1)
      ((emacs (28 1)) (compat (30 1)) (project (0 11 2)))
      "VC backend for the Jujutsu version control system" tar
      ((:url . "https://codeberg.org/emacs-jj-vc/vc-jj.el")
@@ -3891,7 +3891,7 @@
 		   ("Kristoffer Balintona" . "krisbalintona@gmail.com"))
       (:authors ("Rudolf Schlatte" . "rudi@constantly.at")
 		("Kristoffer Balintona" . "krisbalintona@gmail.com"))
-      (:commit . "17310449644cc527dfa6b8ca5320de4c33d1c7f3"))])
+      (:commit . "26d93de27fe1fa046dcd88e15656de07d5718978"))])
  (vcard
   . [(0 2 2 0 20230718 145809) ((emacs (27 1)))
      "Package for handling vCard files" tar

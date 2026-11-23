@@ -42,9 +42,9 @@
   ⁃ `vc-annotate'
   ⁃ `log-view-modify-change-comment'
 
-  Additionally, vc-jj aims to provide jujutsu-specific conveniences and
+  Additionally, vc-jj aims to provide Jujutsu-specific conveniences and
   commands.  For example, in Log View buffers, there are commands to
-  help users manipulate revision logs in a jujutsu-friendly way,
+  help users manipulate revision logs in a Jujutsu-friendly way,
   directly within Log View buffers: `vc-jj-log-view-bookmark-set',
   `vc-jj-log-view-abandon-change', `vc-jj-log-view-edit-change' and
   more.
@@ -77,11 +77,11 @@
 
   Jujutsu is a distributed version control system that is separated from
   the format in which files are stored on-disk.  Currently, the only
-  storage backend jujutsu supports is Git, although other storage
+  storage backend Jujutsu supports is Git, although other storage
   backends may be supported in the future.
 
-  Since version 0.34.0, jujutsu repositories are "colocated" by default.
-  Earlier versions of jujutsu may colocate a Git repository with `jj git
+  Since version 0.34.0, Jujutsu repositories are "colocated" by default.
+  Earlier versions of Jujutsu may colocate a Git repository with `jj git
   clone --colocate REPOSITORY-URL'.  Colocated repositories are ones
   that contain both a `.jj' and a `.git' directory in the repository
   root, allowing users to use both Jujutsu and Git commands in the same
@@ -94,34 +94,34 @@
 2.1 Jujutsu terminology and concepts
 ────────────────────────────────────
 
-  To those used to other version control systems, like Git, jujutsu's
+  To those used to other version control systems, like Git, Jujutsu's
   version control model may be unfamiliar.
 
-  Below is an attempt at a brief description of jujutsu-specific
+  Below is an attempt at a brief description of Jujutsu-specific
   terminology and concepts.
 
   In Jujutsu, there are both "commits" and "changes."  In Git, the
   primary unit of history is the commit, which is immutable and
-  identified by a commit hash.  In jujutsu, the primary unit is the
-  change.  A jujutsu "*commit*" is the same as in Git: a snapshot in
+  identified by a commit hash.  In Jujutsu, the primary unit is the
+  change.  A Jujutsu "*commit*" is the same as in Git: a snapshot in
   time of the repository.  In Jujutsu, "*revision*" can be used
   interchangeably with "commit."  A *"change"*, on the other hand, is
-  unique to jujutsu: it can be thought of as a /logical unit of work/.
+  unique to Jujutsu: it can be thought of as a /logical unit of work/.
   A change is like the entire evolution of a commit as it changes over
   time.  Each change has an underlying commit.
-
-  As the user modifies the repository, all changes are automatically
-  recorded and all non-ignored files are automatically tracked.
-  Consequently, unlike Git, there is no straging area or check-in
-  operation.  Instead, all modifications occur in the current change —
-  the "*working copy*."  As files are edited, added, and deleted,
-  jujutsu will take *snapshots* of the repository and automatically
-  *rewrite* the underlying commit of the working copy, keeping the
-  change intact but changing the corresponding underlying commit.
 
   Every change has a corresponding change ID and every commit has a
   corresponding commit ID.  Most jj commands accept both change IDs and
   commit IDs.
+
+  As the user modifies the repository, all changes are automatically
+  recorded and all non-ignored files are automatically tracked.
+  Consequently, unlike Git, there is no staging area or check-in
+  operation.  Instead, all modifications occur in the current change —
+  the "*working copy*."  As files are edited, added, and deleted,
+  Jujutsu will take *snapshots* of the repository and automatically
+  *rewrite* the underlying commit of the working copy, keeping the
+  change intact but changing the corresponding underlying commit.
 
   Because of the conceptual differences between Git and Jujutsu,
   commands that assume a stage/commit workflow behave differently or are
@@ -134,19 +134,26 @@
   more natural to make changes in a repository by rewriting, playing
   with, and modifying the change log.
 
-  Finally, in Jujutsu, there are *bookmarks*.  Although each git
-  *branch* corresponds to a Jujutsu bookmark and vice versa, a bookmark
-  is merely an alias or named pointer to a commit.  (Bookmarks
-  automatically follow a commit if it gets rewritten.)  The working copy
-  (current change) may be on a bookmark's commit, but it is not
-  "attached" to it in the way a commit in Git corresponds to a certain
-  branch: bookmarks do not move when new changes are made atop them.
-  Users familiar with Mercurial will find that Jujutsu bookmarks are
-  more similar to [Mercurial bookmarks] than Git branches.
+  Finally, in Jujutsu, there are *bookmarks*.  Although each Git
+  *branch* has a corresponding Jujutsu bookmark and vice versa (in
+  colocated repositories), a bookmark is merely an alias, or named
+  pointer, to a commit.  Although bookmarks are pointers to commits,
+  when a commit with a bookmark is rewritten, the bookmark automatically
+  moves to the new commit, so bookmarks can effectively be treated as
+  pointers to changes.
 
-  Users may read more about the concepts and terms used in jujutsu here:
+  In contrast to Git, the working copy (current change) may be on a
+  bookmark's commit, but it is not "attached" to it in the way a Git
+  commit is attached to a branch: in Jujutsu, there is no currently
+  checked out or active bookmark.  As such, bookmarks do not
+  automatically advance when new changes are created atop the commit
+  they point to, unlike Git branches.  Users familiar with Mercurial
+  will find that Jujutsu bookmarks are more similar to [Mercurial
+  bookmarks] than Git branches.
+
+  Users may read more about the concepts and terms used in Jujutsu here:
   <https://docs.jj-vcs.dev/latest/>.  In particular, a glossary of all
-  jujutsu-specific terms can be found here:
+  Jujutsu-specific terms can be found here:
   <https://docs.jj-vcs.dev/latest/glossary/>.
 
 
@@ -173,15 +180,65 @@
   The code in file `vc-jj.el' is organized according to the structure
   set out in the preamble of the file `vc.el' in the Emacs source tree.
 
-  Test code coverage can be checked via the [Eldev] tool and [coverage]:
-  in a shell, run `eldev test --undercover simplecov,dontsend' in the
-  project root directory, then in Emacs open `vc-jj.el' and activate
-  `coverage-mode'.
+  Vc-jj uses Emacs's built-in Bug Reference mode (see [(emacs) Bug
+  Reference]) to buttonize references to this project's Codeberg issues
+  and PRs in Emacs-lisp mode buffers.  References have the form
+  `KEYWORD#NUMBER', where `KEYWORD' is one of `bug', `Bug', `BUG',
+  `issue', `Issue', `ISSUE', `pull', `Pull', `PULL', `pr', or `PR'.
+  Issue keywords (`bug', `issue') link to Codeberg issues, and PR
+  keywords (`pull', `pr') link to Codeberg PRs.  To follow a button,
+  place point on it and press `C-c RET', or use `M-x
+  bug-reference-push-button'.
 
+
+[(emacs) Bug Reference]
+<https://www.gnu.org/software/emacs/manual/html_node/emacs/Bug-Reference.html>
+
+
+3.2 Testing
+───────────
+
+  All tests are written in `vc-jj-tests.el' with the built-in ERT
+  package (Emacs Lisp Regression Testing).  To run all the tests, open
+  the `vc-jj-tests.el' file in Emacs, evaluate the buffer by pressing
+  `C-c C-e', then press `M-x ert RET t RET'.  For more information on
+  ERT, see the [ERT manual].
+
+  Alternatively, test coverage can be checked in the command line via
+  the [Eldev] tool, which isolates your personal Emacs configuration
+  from the Emacs instance used to run tests, helping distinguish between
+  project bugs and personal configuration problems.  First, install the
+  Eldev executable [as described in the Eldev manual].  Then in a shell
+  whose current working directory is the project root, run `eldev test'
+  to run all tests or `eldev test TEST1 TEST2' to run the tests named
+  `TEST1' and `TEST2'.  Eldev also helps to easily run tests on other
+  versions of Emacs; see the [corresponding manual section] for how to
+  do so.
+
+  Additionally, if installed, the [coverage.el] Emacs package can be
+  used alongside Eldev to highlight lines in the project files by color
+  according to whether they are covered by the existing tests.  In a
+  shell, run `eldev test --undercover simplecov,dontsend' in the project
+  root directory, then open `vc-jj.el' in Emacs and enable the
+  `coverage-mode' minor mode.  You should now see lines highlighted
+  green (covered) and red (not covered).  See the [associated Eldev
+  manual section] for more information on integration with coverage.el.
+
+
+[ERT manual] <https://www.gnu.org/software/emacs/manual/html_node/ert/>
 
 [Eldev] <https://emacs-eldev.github.io/eldev/>
 
-[coverage] <https://github.com/trezona-lecomte/coverage>
+[as described in the Eldev manual]
+<https://emacs-eldev.github.io/eldev/#installation>
+
+[corresponding manual section]
+<https://emacs-eldev.github.io/eldev/#different-emacs-versions>
+
+[coverage.el] <https://github.com/trezona-lecomte/coverage>
+
+[associated Eldev manual section]
+<https://emacs-eldev.github.io/eldev/#undercover-plugin>
 
 
 4 Other Emacs packages for Jujutsu
@@ -189,20 +246,30 @@
 
   The scope of the `vc-jj.el' project is to add jj support to the Emacs
   built-in `vc' and `project' libraries.  In case you look for a package
-  with more specialized jujutsu support, here are some that might fit
+  with more specialized Jujutsu support, here are some that might fit
   the bill:
 
+  [0WD0/majutsu]
+        “Majutsu provides a Magit-style interface for Jujutsu (jj),
+        offering an efficient way to interact with JJ repositories from
+        within Emacs.”
   [bolivier/jj-mode.el]
         “Jujutsu version control mode for Emacs inspired by Magit”
   [bennyandresen/jujutsu.el]
         “An Emacs interface for jujutsu, inspired by magit and humbly
         not attempting to match it in scope.”
   [~puercopop/jujutsushi]
-        “A emacs interface to jujutsu”
+        “An Emacs UI to jujutsu”
+  [Xylenox/majjic]
+        “jjui + magit-section inspired jj ui for Emacs”
 
+
+[0WD0/majutsu] <https://github.com/0WD0/majutsu>
 
 [bolivier/jj-mode.el] <https://github.com/bolivier/jj-mode.el>
 
 [bennyandresen/jujutsu.el] <https://github.com/bennyandresen/jujutsu.el>
 
 [~puercopop/jujutsushi] <https://git.sr.ht/~puercopop/jujutsushi>
+
+[Xylenox/majjic] <https://github.com/Xylenox/majjic>

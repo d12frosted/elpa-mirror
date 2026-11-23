@@ -3594,7 +3594,7 @@
       (:authors ("Andrii Kolomoiets" . "andreyk.mad@gmail.com"))
       (:commit . "d044448965d31ca8214f8bca48487e4d9b9d9a0f"))])
  (vc-jj
-  . [(0 5) ((emacs (28 1)) (compat (29 4)))
+  . [(0 6) ((emacs (28 1)) (compat (30 1)) (project (0 11 2)))
      "VC backend for the Jujutsu version control system" tar
      ((:url . "https://codeberg.org/emacs-jj-vc/vc-jj.el")
       (:keywords "vc" "tools")
@@ -3602,7 +3602,7 @@
 		   ("Kristoffer Balintona" . "krisbalintona@gmail.com"))
       (:authors ("Rudolf Schlatte" . "rudi@constantly.at")
 		("Kristoffer Balintona" . "krisbalintona@gmail.com"))
-      (:commit . "13b00216330c381179659f5210472fe975c2805d"))])
+      (:commit . "e3cbce6985efffaf0ef5f28338d3145bc53dfd1e"))])
  (vcard
   . [(0 2 2) ((emacs (27 1))) "Package for handling vCard files" tar
      ((:keywords "vcard" "mail" "news")

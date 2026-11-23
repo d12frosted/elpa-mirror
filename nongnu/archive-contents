@@ -92,14 +92,14 @@
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:commit . "b2ffd8441851659cb1cc844156073967729585e5"))])
  (au-themes
-  . [(0 4 0) ((emacs (29 1)) (modus-themes (5 2 0)))
+  . [(0 4 1) ((emacs (29 1)) (modus-themes (5 2 0)))
      "Sensory-safe themes for autism and neurodivergence" tar
      ((:url . "https://github.com/szymonwilczek/au-themes")
       (:keywords "faces" "themes" "accessibility" "autism"
 		 "neurodivergence")
       (:maintainer "Szymon Wilczek" . "swilczek.lx@gmail.com")
       (:authors ("Szymon Wilczek" . "swilczek.lx@gmail.com"))
-      (:commit . "9c20af3d68146fd8cc325302023d88817fce1f90"))])
+      (:commit . "ac31d5ca03ce474cc6f8bc046ba77f3b51ff9530"))])
  (auto-dim-other-buffers
   . [(2 2 3) ((emacs (27 1)))
      "Makes windows without focus less prominent" tar
@@ -637,12 +637,12 @@
       (:authors ("Sylvain Benner" . "sylvain.benner@gmail.com"))
       (:commit . "3c65fecd9917a41eaf6460f22187e2323821f3ce"))])
  (evil-matchit
-  . [(5 0 0) ((emacs (27 1))) "Vim matchit ported to Evil" tar
+  . [(5 0 1) ((emacs (27 1))) "Vim matchit ported to Evil" tar
      ((:url . "http://github.com/redguardtoo/evil-matchit")
       (:keywords "matchit" "vim" "evil")
       (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
       (:authors ("Chen Bin" . "chenbin.sh@gmail.com"))
-      (:commit . "4cb8dd3d811ecb2abd774b491223ac5460dcdd5e"))])
+      (:commit . "d3777fe1984b081537f6410c3f907ff1d24c6225"))])
  (evil-nerd-commenter
   . [(3 6 1) ((emacs (26 1)))
      "Comment/uncomment lines efficiently. Like Nerd Commenter in Vim"
