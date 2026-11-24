@@ -1,4 +1,7 @@
-This package provides `morlock-mode' which highlights additional
+This package is no longer maintained.  As of Emacs 32, most tweaks
+have been upstreamed.  The rest can be replicated as shown below.
+
+This package provides `morlock-mode', which highlights additional
 expressions in Emacs Lisp mode.
 
 Symbols are highlighted if their `font-lock-keyword' symbol

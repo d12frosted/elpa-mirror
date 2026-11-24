@@ -3723,7 +3723,7 @@
   (moonshot :url "https://github.com/ageldama/moonshot")
   (morganey-mode :url "https://github.com/morganey-lang/morganey-mode")
   (morgentau-theme :url "https://github.com/Melchizedek6809/morgentau-theme")
-  (morlock :url "https://github.com/tarsius/morlock")
+  (morlock :url "https://github.com/emacsattic/morlock")
   (morrowind-theme :url "https://github.com/SamuelBanya/morrowind-theme")
   (mos-mode :url "https://github.com/themkat/mos-mode")
   (mosey :url "https://github.com/alphapapa/mosey.el")
