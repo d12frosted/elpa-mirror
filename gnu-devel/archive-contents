@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261118 39) ((emacs (28 1)))
+  . [(14 2 0 0 20261123 40) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "92eb90e12a2d2aa98b91486603e202cb08e6cd0b"))])
+      (:commit . "68258f4bcdb090bea39c56424ddd90327651fd6b"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1185,11 +1185,11 @@
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-es.html")
       (:commit . "a2c2c167837cef08a1b8f86f5eb9864f93699300"))])
  (emacs-lisp-intro-nl
-  . [(0 0 20261123 58) nil "ELisp intro manual in NL" tar
+  . [(0 0 20261123 60) nil "ELisp intro manual in NL" tar
      ((:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-nl.html")
-      (:commit . "27fa8a32470f7911a75a1ae70edb92597529a06c"))])
+      (:commit . "54b22ec32c44cdc4b096a0ee8631dce4223c8d45"))])
  (embark
   . [(1 2 0 20260812 23) ((emacs (29 1)) (compat (31)))
      "Conveniently act on minibuffer completions" tar
@@ -1388,14 +1388,14 @@
       (:url . "https://elpa.gnu.org/packages/flylisp.html")
       (:commit . "7295025f4c0571013142dfb9cc1a893fff79904b"))])
  (flymake
-  . [(1 4 8 0 20261028 0)
+  . [(1 4 8 0 20261123 1)
      ((emacs (26 1)) (eldoc (1 14 0)) (project (0 11 1)))
      "A universal on-the-fly syntax checker" tar
      ((:keywords "c" "languages" "tools")
       (:maintainer "Spencer Baugh" . "sbaugh@janestreet.com")
       (:authors ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
       (:url . "https://elpa.gnu.org/packages/flymake.html")
-      (:commit . "47557cebb4f84553afc43b25c45c912e8b6e14b4"))])
+      (:commit . "5c48bd78bdb5666553372b8cebbd7b85170fbca8"))])
  (flymake-clippy
   . [(1 1 0 0 20250323 141048) ((emacs (27)))
      "Flymake backend for Clippy" tar
@@ -1722,7 +1722,7 @@
       (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com"))
       (:commit . "84a9db01eff1fcc52ad054c5ad3c22316739573f"))])
  (hyperbole
-  . [(9 3 2 0 20261122 25) ((emacs (28)))
+  . [(9 3 2 0 20261123 26) ((emacs (28)))
      "GNU Hyperbole: The Everyday Hypertextual Information Manager"
      tar
      ((:url . "http://www.gnu.org/software/hyperbole")
@@ -1732,7 +1732,7 @@
       (:maintainer ("Robert Weiner" . "rsw@gnu.org")
 		   ("Mats Lidell" . "matsl@gnu.org"))
       (:authors ("Robert Weiner" . "rsw@gnu.org"))
-      (:commit . "679d0bcc4863e36555719570353d9f338b52a81b"))])
+      (:commit . "3e14aa96188921d30e3a2c3f14017b53553deed7"))])
  (ibuffer-sidebar
   . [(1 0 0 0 20260718 2) ((emacs (29 1))) "Sidebar for `ibuffer'" tar
      ((:url . "https://github.com/jojojames/ibuffer-sidebar")
@@ -2500,13 +2500,13 @@
       (:authors ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
       (:commit . "e271a8ec938929b726331236cf56d1c44571122e"))])
  (org
-  . [(10 0 -1 0 20261122 1081) ((emacs (28 2)) (compat (31)))
+  . [(10 0 -1 0 20261123 1090) ((emacs (28 2)) (compat (31)))
      "Outline-based notes management and organizer" tar
      ((:url . "https://orgmode.org")
       (:keywords "outlines" "hypermedia" "calendar" "text")
       (:maintainer "Ihor Radchenko" . "yantar92@posteo.net")
       (:authors ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-      (:commit . "3ddb8ad25f4422db4e4b95b32b933228062cfd13"))])
+      (:commit . "4c976322ed609ea9169034750f02f4acafb7f150"))])
  (org-contacts
   . [(1 3 0 20260924 20) ((emacs (29 1)) (org (9 7)))
      "Contacts management system for Org mode" tar
@@ -2579,14 +2579,14 @@
       (:authors ("Amy Pillow" . "amypillow@lavache.com"))
       (:commit . "47b78418fed535c3e0e0350422e76fccd31a65ba"))])
  (org-remark
-  . [(1 3 0 0 20260531 4) ((emacs (27 1)) (org (9 4)))
+  . [(1 3 0 0 20261123 6) ((emacs (27 1)) (org (9 4)))
      "Highlight & annotate text, Info, EPUB, EWW" tar
      ((:url . "https://github.com/nobiot/org-remark")
       (:keywords "org-mode" "annotation" "note-taking"
 		 "marginal-notes" "wp")
       (:maintainer "Noboru Ota" . "me@nobiot.com")
       (:authors ("Noboru Ota" . "me@nobiot.com"))
-      (:commit . "6f8193c4997c734c39ccf814636c4e5d10eb42d1"))])
+      (:commit . "ce00a4cda3aeaa02626b90b5d019fefb5490ef4d"))])
  (org-transclusion
   . [(1 4 0 0 20260417 100318) ((emacs (27 1)) (org (9 4)))
      "Transclude text content via links" tar
