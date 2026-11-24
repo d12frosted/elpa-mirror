@@ -54,6 +54,11 @@ create  modified version,  `firstly-search-fun-match-text-property'
 function that search  only in text which  have specified properties
 with specified values.
 
+Isearch use post-command-hook to decide whether to pass-through key
+to major-mode isearch keys actually in overriding-terminal-local-map,
+isearch-mode-map used just as a source and reference.
+After many attempts best way found is to advice post-command-hook itself.
+
 Many functions use text properties, to investigate them use:
   M-: (print (text-properties-at (point)))
 
