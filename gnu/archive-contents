@@ -1772,13 +1772,13 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "bccb08062a3372629015bcd2c197490b7d005f37"))])
  (jit-spell
-  . [(0 6) ((emacs (28 1)) (compat (31 1)))
+  . [(0 6 1) ((emacs (28 1)) (compat (31 1)))
      "Just-in-time spell checking" tar
      ((:url . "https://github.com/astoff/jit-spell")
       (:keywords "text")
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
-      (:commit . "493237accb3759b9ca22b1346a90cceae08d4853"))])
+      (:commit . "c92e8cb43a98a8ef3fbe36b4db22230762b8cea3"))])
  (js2-mode
   . [(20231224) ((emacs (24 1)) (cl-lib (0 5)))
      "Improved JavaScript editing mode" tar

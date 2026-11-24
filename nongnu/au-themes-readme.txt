@@ -7,8 +7,8 @@
 [https://github.com/szymonwilczek/au-themes/actions/workflows/test.yml/badge.svg]
 [https://img.shields.io/badge/license-GPL–3.0–or–later-blue.svg]
 
-Go to the [light] or the [dark] themes, [installation], [usage] or the
-[list of families].
+Go to the [light] or the [dark] themes, [installation], [usage], the
+[list of families] or the [community].
 
 Calm, low-glare colour themes. Made first of all for autistic people,
 and for anyone who finds most themes too loud to read for long.
@@ -36,6 +36,8 @@ puzzle piece.
 [usage] See section Usage
 
 [list of families] See section Themes
+
+[community] See section Community
 
 
 Screenshots
@@ -234,6 +236,46 @@ How the colours are chosen
 [tests/README.org] <file:tests/README.org>
 
 [REFERENCES.org] <file:REFERENCES.org>
+
+
+Community
+═════════
+
+  New themes and fixes start from what people tell us in [Discussions]:
+
+  • [Propose a theme] from a mood, a place or a season. You do not need
+    to pick the colours; we work them out with you.
+  • [Tell us] when a theme is hard to read or tiring, and where.
+  • [Suggest a feature] for the package, or [ask a question].
+  • Follow [What's cooking] to see what we are working on.
+
+  Bugs go to the [issue tracker].
+
+  If the themes help you, [sponsoring] gives us the time for new
+  families.
+
+
+[Discussions] <https://github.com/szymonwilczek/au-themes/discussions>
+
+[Propose a theme]
+<https://github.com/szymonwilczek/au-themes/discussions/categories/theme-proposals>
+
+[Tell us]
+<https://github.com/szymonwilczek/au-themes/discussions/categories/theme-feedback>
+
+[Suggest a feature]
+<https://github.com/szymonwilczek/au-themes/discussions/categories/ideas>
+
+[ask a question]
+<https://github.com/szymonwilczek/au-themes/discussions/categories/q-a>
+
+[What's cooking]
+<https://github.com/szymonwilczek/au-themes/discussions/7>
+
+[issue tracker]
+<https://github.com/szymonwilczek/au-themes/issues/new/choose>
+
+[sponsoring] <https://github.com/sponsors/szymonwilczek>
 
 
 License

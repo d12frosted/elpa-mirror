@@ -94,14 +94,14 @@
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:commit . "b2ffd8441851659cb1cc844156073967729585e5"))])
  (au-themes
-  . [(0 4 1 0 20261122 3) ((emacs (29 1)) (modus-themes (5 2 0)))
+  . [(0 4 2 0 20261123 0) ((emacs (29 1)) (modus-themes (5 2 0)))
      "Sensory-safe themes for autism and neurodivergence" tar
      ((:url . "https://github.com/szymonwilczek/au-themes")
       (:keywords "faces" "themes" "accessibility" "autism"
 		 "neurodivergence")
       (:maintainer "Szymon Wilczek" . "swilczek.lx@gmail.com")
       (:authors ("Szymon Wilczek" . "swilczek.lx@gmail.com"))
-      (:commit . "33982c14dceb3c8a3d46ffdfbe39dba42c6c8253"))])
+      (:commit . "f7c5fb93d03eb3fe6efd3038b0f510986a1fe4e5"))])
  (auto-dim-other-buffers
   . [(2 2 3 0 20260731 2) ((emacs (27 1)))
      "Makes windows without focus less prominent" tar
@@ -1384,13 +1384,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "e2e2bc753b4330f85b6ea7e62cd0552e8ea47b76"))])
  (markdown-ts-appear
-  . [(0 4 0 0 20261109 4) ((emacs (31 1)))
+  . [(0 4 1 0 20261124 0) ((emacs (31 1)))
      "Reveal Markdown source at point" tar
      ((:url . "https://github.com/Thysrael/markdown-ts-appear")
       (:keywords "text" "convenience")
       (:maintainer "Thysrael" . "thysrael@163.com")
       (:authors ("Thysrael" . "thysrael@163.com"))
-      (:commit . "60b5a5082d1594170fe119cf14bedd64232261c5"))])
+      (:commit . "6d1b95e57a04c938fb39b0c61a04e9dbacbae1ff"))])
  (mastodon
   . [(2 1 8 0 20261022 85)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
@@ -1496,13 +1496,13 @@
       (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
       (:commit . "2c77e7e0b7540efbb20ccaee3557ef90a5dc77f0"))])
  (nov
-  . [(0 5 0 0 20261022 5) ((esxml (0 3 6)) (emacs (25 1)))
+  . [(0 5 0 0 20261123 6) ((esxml (0 3 6)) (emacs (25 1)))
      "Featureful EPUB reader mode" tar
      ((:url . "https://depp.brause.cc/nov.el")
       (:keywords "hypermedia" "multimedia" "epub")
       (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
       (:authors ("Vasilij Schneidermann" . "mail@vasilij.de"))
-      (:commit . "b1fdcbd41c037ab50dce29db878f2ab226ed66c3"))])
+      (:commit . "ac62554d90a24939b980a3a43564c2bc093fcf2b"))])
  (oblivion-theme
   . [(0 1 0 20260108 134901) ((emacs (24 1)))
      "A port of GEdit oblivion theme" tar

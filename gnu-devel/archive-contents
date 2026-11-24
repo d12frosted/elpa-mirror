@@ -1892,13 +1892,13 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "bccb08062a3372629015bcd2c197490b7d005f37"))])
  (jit-spell
-  . [(0 6 0 20261109 0) ((emacs (28 1)) (compat (31 1)))
+  . [(0 6 1 0 20261124 0) ((emacs (28 1)) (compat (31 1)))
      "Just-in-time spell checking" tar
      ((:url . "https://github.com/astoff/jit-spell")
       (:keywords "text")
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
-      (:commit . "493237accb3759b9ca22b1346a90cceae08d4853"))])
+      (:commit . "c92e8cb43a98a8ef3fbe36b4db22230762b8cea3"))])
  (js2-mode
   . [(20231224 0 20260627 14) ((emacs (24 1)) (cl-lib (0 5)))
      "Improved JavaScript editing mode" tar
@@ -2561,14 +2561,14 @@
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
       (:commit . "5cf5879b0c46218cacbfbd68ac78aa84d1a3abf2"))])
  (org-notify
-  . [(0 1 4 0 20261012 0) ((emacs (25 1)))
+  . [(0 1 4 0 20261124 1) ((emacs (25 1)))
      "Notifications for Org-mode" tar
      ((:url . "https://github.com/p-m/org-notify")
       (:keywords "notification" "todo-list" "alarm" "reminder"
 		 "pop-up" "calendar")
       (:maintainer "Peter Münster" . "pm@a16n.net")
       (:authors ("Peter Münster" . "pm@a16n.net"))
-      (:commit . "a5188cedf99c365a9e5dc3c41b53515c4ca90776"))])
+      (:commit . "46811adf0930cea168b9d764a37b8c1cd5870f50"))])
  (org-real
   . [(1 0 12 0 20260303 182338)
      ((emacs (26 1)) (boxy (2 0)) (org (9 3)))
