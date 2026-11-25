@@ -1,4 +1,4 @@
-2027  (added at 2026-11-24)
+2027  (added at 2026-11-25)
 
 What:
 - Russian holidays

@@ -48,7 +48,11 @@ Features:
 - Tag-line fontification: tag line shown in red when editing notes
 - Unicode box-drawing dashboard separators (tiles-fancy-separators)
 - In-memory cache with mtime invalidation for fast repeated access
+- Subfolders for new notes (tiles-year-subfolders), e.g. YYYY/MM/
 - Org dynamic blocks for embedding note lists/contents in org files
+- Optional archiving of the web pages notes link to, as WARC files
+  next to the notes, with a built-in viewer for them.  Off by
+  default; turn it on with (setq tiles-archive-urls t).
 
 Global keybindings (under C-c m):
   C-c m m   - Dashboard (tiles-show-notes)
@@ -79,7 +83,10 @@ Dashboard keybindings:
   +         - Load next batch of notes
   0         - Stitch displayed notes (respects reordering)
   l         - New note (same as C-c m n)
+  w         - Copy note to the kill ring (markup kept)
+  W         - Copy note to the kill ring as plain text
   g         - Refresh
+  G         - Rescan all notes from disk (tiles-rescan)
   q         - Quit
 
 Capture keybindings:
@@ -121,6 +128,9 @@ Other commands (M-x):
   tiles-list-keywords - Browse all unique keywords with occurrence counts
   tiles-list-rename - Rename keyword under cursor across all notes (R in keyword list)
   tiles-clear-cache - Force reload of all note data from disk
+  tiles-rescan      - Re-read every note and rebuild the indices (G)
+  tiles-warc-open   - Open a WARC web archive in the viewer
+  tiles-warc-capture - Save a web page in a new WARC archive
   tiles-show-notes  - Open the dashboard (also C-c m m)
   tiles-new         - Create a new note (also C-c m n)
   tiles-capture     - Alias for tiles-new
@@ -142,6 +152,26 @@ Update blocks with C-c C-x C-u, insert with C-c C-x x.
 
 Changelog:
 
+  0.6   - Optional archiving of linked web pages: with
+          (setq tiles-archive-urls t), saving a note downloads the
+          pages it links to into WARC files in warc/ next to the
+          notes, lists them below the note's tag line, and opens them
+          in a built-in viewer (Org or EWW view, main-content reading
+          mode, record list).  Off by default.  Exclusions via
+          tiles-archive-exclude-hosts and tiles-archive-exclude-file-types;
+          tiles-warc-capture saves any page by hand.  The WARC code,
+          formerly the separate warcel package, is part of tiles.el, so
+          TILES stays a single file; it now requires Emacs 29.1.
+          tiles-year-subfolders accepts a format-time-string template
+          such as "%Y/%m", and changing a note's date moves it to the
+          matching subfolder.  tiles-rescan (G in the dashboard)
+          re-reads every note.  W in the dashboard copies a note as
+          plain text.  required-one-of tag mode accepts patterns,
+          (regexp RE).  tiles-files dblocks take :link-from-btag.
+          Fixes: dashboard columns line up by display width (wide
+          characters such as CJK no longer break alignment); focus-mode
+          margins take the frame's background instead of showing as
+          gray bars.
   0.5.2 - Keyword search now supports AND (/) and NOT (!) alongside the
           existing space-as-OR.  Tag rename: R in the tag list renames a
           tag across all notes (parallel to keyword rename).  New

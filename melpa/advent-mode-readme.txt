@@ -6,7 +6,7 @@ Advent of Code helper mode.
 
  - Manage the AoC session cookie
 
- - Optionally persist the cookie in =.authinfo=
+ - Optionally read the cookie from .authinfo
 
  - Create a new AoC day (with boilerplate files)
 
