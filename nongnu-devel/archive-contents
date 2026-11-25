@@ -1017,12 +1017,12 @@
       (:authors ("Alexey Kutepov" . "reximkut@gmail.com"))
       (:commit . "2e9f99c41fe8ef0557e9ea0f3b94ef50c68b5557"))])
  (gruvbox-theme
-  . [(1 30 3 0 20261110 3) ((autothemer (0 2 19)))
+  . [(1 30 5 0 20261124 0) ((autothemer (0 2 19)))
      "A retro-groove colour theme for Emacs" tar
      ((:url . "https://github.com/greduan/emacs-theme-gruvbox")
       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
       (:authors ("Jason Milkins" . "jasonm23@gmail.com"))
-      (:commit . "351a3ced876fe0b294398ef6bb37c8b7b8a246a7"))])
+      (:commit . "ba1f46df59a323e6580d75d980a8ce9c59f2c10a"))])
  (guru-mode
   . [(1 0 0 20211025 115715) nil "Become an Emacs guru" tar
      ((:url . "https://github.com/bbatsov/guru-mode")
@@ -1037,11 +1037,11 @@
       (:keywords "markup" "languages" "html")
       (:commit . "3bb4a96535eb5c81dbe6a43bfa8d67a778d449c0"))])
  (haskell-mode
-  . [(17 5 0 20261016 73) ((emacs (25 1))) "A Haskell editing mode"
+  . [(17 5 0 20261124 74) ((emacs (25 1))) "A Haskell editing mode"
      tar
      ((:url . "https://github.com/haskell/haskell-mode")
       (:keywords "haskell" "cabal" "ghc" "repl" "languages")
-      (:commit . "f957090cfb2fb8757a06750c6438561b21419f86"))])
+      (:commit . "f8309349a87c14150a4dfec4171db7c22dc6fda3"))])
  (haskell-tng-mode
   . [(0 0 1 0 20230522 221126) ((emacs (27 1)) (popup (0 5 3)))
      "Major mode for editing Haskell" tar
@@ -1929,11 +1929,11 @@
       (:authors ("Christopher Wellons" . "wellons@nullprogram.com"))
       (:commit . "2777955684eb8724757014de03e7834640d37423"))])
  (slime
-  . [(2 32 -4 0 20261108 83) ((emacs (24 3)) (macrostep (0 9)))
+  . [(2 32 -4 0 20261124 84) ((emacs (24 3)) (macrostep (0 9)))
      "Superior Lisp Interaction Mode for Emacs" tar
      ((:url . "https://github.com/slime/slime")
       (:keywords "languages" "lisp" "slime")
-      (:commit . "26cdc8bb6182f4b17b803573721546af705caf0a"))])
+      (:commit . "77e704daee0931afcb137a525c7d011f97f22e0e"))])
  (sly
   . [(1 0 43 0 20261028 155) ((emacs (24 5)))
      "Sylvester the Cat's Common Lisp IDE" tar

@@ -974,12 +974,12 @@
       (:authors ("Alexey Kutepov" . "reximkut@gmail.com"))
       (:commit . "13e13ea1e2ebd146f279058970835b35de811531"))])
  (gruvbox-theme
-  . [(1 30 3) ((autothemer (0 2)))
+  . [(1 30 5) ((autothemer (0 2 19)))
      "A retro-groove colour theme for Emacs" tar
      ((:url . "https://github.com/greduan/emacs-theme-gruvbox")
       (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
       (:authors ("Jason Milkins" . "jasonm23@gmail.com"))
-      (:commit . "b34b8c0d9fe84190bb69cf084d7354d5e948fd94"))])
+      (:commit . "ba1f46df59a323e6580d75d980a8ce9c59f2c10a"))])
  (guru-mode
   . [(1 0) nil "Become an Emacs guru" tar
      ((:url . "https://github.com/bbatsov/guru-mode")
