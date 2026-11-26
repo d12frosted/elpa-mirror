@@ -7,8 +7,8 @@ saves full conversation transcripts as Markdown or org-mode files in
 `.agent-shell/transcripts/' directories within your projects, or in
 directories configured via `agent-recall-extra-transcript-dirs'.  Over
 time these accumulate into a rich knowledge base of AI interactions,
-but there's no built-in way to search across them or resume past
-conversations.
+with native session listing and resuming supplied by agent-shell.
+Recall adds cross-project archive search and transcript-based resume.
 
 agent-recall maintains a persistent index of all transcripts,
 provides fast full-text search powered by ripgrep, and can resume
