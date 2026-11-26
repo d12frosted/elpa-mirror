@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261123 40) ((emacs (28 1)))
+  . [(14 2 0 0 20261125 41) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "68258f4bcdb090bea39c56424ddd90327651fd6b"))])
+      (:commit . "ad30d2b43133432df6f566d776f98b4accb5bafc"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -1228,7 +1228,7 @@
       (:authors ("Jorgen Schäfer" . "forcer@forcix.cx"))
       (:commit . "6f704fd3c12f35e059700aaeb43ae64c35ad81b2"))])
  (emureader
-  . [(0 4 0 0 20261124 13) ((emacs (26 1)))
+  . [(0 4 0 0 20261125 15) ((emacs (26 1)))
      "General-purpose document reader" tar
      ((:url . "https://codeberg.org/MonadicSheep/emureader")
       (:keywords "lisp" "files" "tools")
@@ -1236,7 +1236,7 @@
 		   ("Tushar" . "tusharhero@sdf.org"))
       (:authors ("Divya Ranjan Pattanaik" . "divya@dialetheia.xyz")
 		("Tushar" . "tusharhero@sdf.org"))
-      (:commit . "3d6fe505b99193f588f4fa24c3e5fc843c411ac7"))])
+      (:commit . "1a28db01658fb8ad9dd07351bf43059e182c653b"))])
  (engrave-faces
   . [(0 3 1 0 20240421 82802) ((emacs (27 1)))
      "Convert font-lock faces to other formats" tar

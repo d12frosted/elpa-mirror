@@ -229,7 +229,7 @@
       (:url . "https://elpa.nongnu.org/nongnu/cdlatex.html")
       (:commit . "fac070f0164ac9f5859cb4cccba7d29a65c337f3"))])
  (cider
-  . [(2 1 0 -4 0 20261111 180)
+  . [(2 1 0 -4 0 20261125 195)
      ((emacs (28)) (clojure-mode (5 19)) (compat (30))
       (parseedn (1 2 1)) (queue (0 2)) (spinner (1 7)) (seq (2 22))
       (sesman (0 3 2)) (transient (0 4 1)))
@@ -243,7 +243,7 @@
 		("Artur Malabarba" . "bruce.connor.am@gmail.com")
 		("Hugo Duncan" . "hugo@hugoduncan.org")
 		("Steve Purcell" . "steve@sanityinc.com"))
-      (:commit . "2c0e6104d2468f559cc182e940eed102cd319d07"))])
+      (:commit . "ca81045c50637d567c4daa10106a9927f8869355"))])
  (clojure-mode
   . [(5 24 0 0 20261107 0) ((emacs (27 1)))
      "Major mode for Clojure code" tar
@@ -1376,13 +1376,13 @@
        ("Jonas Bernoulli" . "emacs.magit@jonas.bernoulli.dev"))
       (:commit . "7a05d472033fdb1786640e6571d2601d98d90b60"))])
  (markdown-mode
-  . [(2 9 -3 0 20261022 28) ((emacs (28 1)))
+  . [(2 9 -3 0 20261125 30) ((emacs (28 1)))
      "Major mode for Markdown-formatted text" tar
      ((:url . "https://jblevins.org/projects/markdown-mode/")
       (:keywords "markdown" "github flavored markdown" "itex")
       (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
-      (:commit . "e2e2bc753b4330f85b6ea7e62cd0552e8ea47b76"))])
+      (:commit . "6a3ba88f18e0b3d4a736e2490d795a9b03967d85"))])
  (markdown-ts-appear
   . [(0 4 1 0 20261124 0) ((emacs (31 1)))
      "Reveal Markdown source at point" tar
@@ -1740,13 +1740,13 @@
       (:authors ("Lin Jian" . "me@linj.tech"))
       (:commit . "8437d5ccd58fe3ad1c32a4444b85644f3f7f81a6"))])
  (projectile
-  . [(3 5 0 -4 0 20260930 66) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20261125 102) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "4d2be8680fe445c4ca88177f0ed838051cadfe58"))])
+      (:commit . "4e654e7604a061bea3c204923d84e837a0ce117d"))])
  (proof-general
   . [(4 6 -4 0 20261118 418) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
@@ -1788,13 +1788,13 @@
 		("Fanael Linithien" . "fanael4@gmail.com"))
       (:commit . "f40ece58df8b2f0fb6c8576b527755a552a5e763"))])
  (raku-mode
-  . [(0 2 1 0 20250930 115108) ((emacs (24 4)))
+  . [(0 2 1 0 20261125 7) ((emacs (24 4)))
      "Major mode for editing Raku code" tar
      ((:url . "https://github.com/hinrik/perl6-mode")
       (:keywords "languages")
       (:maintainer "Hinrik rn Sigurðsson" . "hinrik.sig@gmail.com")
       (:authors ("Hinrik rn Sigurðsson" . "hinrik.sig@gmail.com"))
-      (:commit . "d06baaa2e881470dddb97193713f9f0a278942ad"))])
+      (:commit . "4e6d5625bfc3ab2e09d3019ecaf3bfa59e4cc4e8"))])
  (recomplete
   . [(0 2 0 20260504 120143)
      ((emacs (29 1)) (with-command-redo (0 1)))
