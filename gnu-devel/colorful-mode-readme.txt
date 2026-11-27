@@ -27,11 +27,11 @@
       • `rgb' / `rgba'
       • `hsl' / `hsla'
       • `oklab' / `oklch'
-      • `@define-color' CSS-specific variables /(used only in gtk's CSS
-        files)/
+      • `@define-color' gtk's CSS-specific variables
       • `var()' CSS-specific variables
-    • LaTeX colors: `gray', `rbg', `RGB', `HTML'
+    • LaTeX colors: `gray', `rgb', `RGB', `HTML'
     • ANSI Shell color codes /(partially)/
+    • LSP's documentColor (via eglot)
   • Convert current color at point or in the current region to other
     formats such as hexadecimal or color names *(only available for some
     colors)* with mouse click support.
@@ -114,6 +114,8 @@
   • `colorfu-convert-and-copy-color' Convert color at point to another
     format and copy it to the kill ring.
   • `colorful-mode' Buffer-local minor mode.
+  • `colorful-lsp-mode' Buffer-local minor mode for highlighting LSP
+    server's documentColor colors.
   • `global-colorful-mode' Global minor mode.
 
 
@@ -129,7 +131,25 @@
 4 Setups and Guides
 ═══════════════════
 
-4.1 Enabling colors to specifics major-modes
+4.1 Enabling highlighting with LSP
+──────────────────────────────────
+
+  Starting v1.3.0, `colorful-mode' supports highlighting colors using
+  LSP's `textDocument/documentColor' via eglot (asynchronously), to
+  enable it turn on `colorful-lsp-mode' in a buffer with eglot enabled
+  and colorful-mode will use LSP highlighting when the current server
+  supports it, otherwise it will fallback to the default regexp
+  highlighting.
+
+  Also you can use hooks in `colorful-lsp-mode' to enable it when eglot
+  is used:
+
+  ┌────
+  │ (add-hook 'eglot-managed-mode-hook #'colorful-lsp-mode)
+  └────
+
+
+4.2 Enabling colors to specifics major-modes
 ────────────────────────────────────────────
 
   If you want to use CSS rgb() colors outside CSS-mode derived modes,

@@ -1740,20 +1740,20 @@
       (:authors ("Lin Jian" . "me@linj.tech"))
       (:commit . "8437d5ccd58fe3ad1c32a4444b85644f3f7f81a6"))])
  (projectile
-  . [(3 5 0 -4 0 20261125 106) ((emacs (28 1)) (compat (30)))
+  . [(3 5 0 -4 0 20261126 111) ((emacs (28 1)) (compat (30)))
      "Manage and navigate projects in Emacs easily" tar
      ((:url . "https://github.com/bbatsov/projectile")
       (:keywords "project" "convenience")
       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
-      (:commit . "e26235eaae9cdd3885f198e8c50ede93eef76adc"))])
+      (:commit . "bd728f32948f428471626f44b680ac1c6a0e0381"))])
  (proof-general
-  . [(4 6 -4 0 20261118 418) ((emacs (25 2)))
+  . [(4 6 -4 0 20261126 431) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "f0460033ef60baa04a989f565a79d5f871196df4"))])
+      (:commit . "b23eac58cb45beb69601e0bd46799e5374580185"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"
@@ -2003,12 +2003,12 @@
       (:authors ("John Olsson" . "john@cryon.se"))
       (:commit . "d61acae1ddb6830f98dbd9d2e82a9fb42833bd1b"))])
  (subed
-  . [(1 5 5 0 20261118 1) ((emacs (25 1)))
+  . [(1 5 5 0 20261126 8) ((emacs (25 1)))
      "A major mode for editing subtitles" tar
      ((:url . "https://github.com/sachac/subed")
       (:keywords "convenience" "files" "hypermedia" "multimedia")
       (:maintainer "Sacha Chua" . "sacha@sachachua.com")
-      (:commit . "14dec0bd1121a7cb29ec32e628ecb66b17af13e4"))])
+      (:commit . "6f378602fb115d21f8c18f106bd4041ee1a6b7da"))])
  (sweeprolog
   . [(0 27 6 0 20261113 8) ((emacs (27 1)) (compat (29 1 4 2)))
      "Embedded SWI-Prolog" tar

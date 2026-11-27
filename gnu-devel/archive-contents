@@ -173,13 +173,13 @@
       (:authors ("John Wiegley" . "jwiegley@gmail.com"))
       (:commit . "93be69563f6f25ee48977878110de3912b1d6d72"))])
  (auctex
-  . [(14 2 0 0 20261126 43) ((emacs (28 1)))
+  . [(14 2 0 0 20261126 44) ((emacs (28 1)))
      "Integrated environment for *TeX*" tar
      ((:url . "https://www.gnu.org/software/auctex/")
       (:keywords "tex" "latex" "texinfo" "context" "doctex"
 		 "preview-latex")
       (:maintainer nil . "auctex-devel@gnu.org")
-      (:commit . "d60acb62d61f537c24444384c2054a6db6fc2bd5"))])
+      (:commit . "edceb130c012bf7f03540f2e8ea26df1ef9cd15a"))])
  (auctex-cont-latexmk
   . [(0 3 0 20261024 11) ((emacs (29 3)) (auctex (14 0 5)))
      "run latexmk continuously, report errors via Flymake" tar
@@ -486,15 +486,14 @@
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
       (:commit . "b99013b81712edbb94fdb57cce083d32ad06fbb8"))])
  (colorful-mode
-  . [(1 2 6 0 20261016 2)
-     ((emacs (28 1)) (compat (31)) (cl-lib (1 0)))
+  . [(1 2 6 0 20261126 10) ((emacs (28 1)) (compat (31)) (seq (2)))
      "Preview any color in your buffer in real time" tar
      ((:url . "https://github.com/DevelopmentCool2449/colorful-mode")
       (:keywords "faces" "tools" "matching" "convenience")
       (:maintainer ("Jen-Chieh" . "jcs090218@gmail.com")
 		   ("Elias G. Perez" . "eg642616@gmail.com"))
       (:authors ("Elias G. Perez" . "eg642616@gmail.com"))
-      (:commit . "e834189f13c7b8add86fd419b3c243dd9afa90e9"))])
+      (:commit . "2f42b8fdfb94f052162a7c5496089077e0e8da1e"))])
  (comint-mime
   . [(0 7 0 20241116 123039)
      ((emacs (28 1)) (compat (29 1)) (mathjax (0 1)))
@@ -515,12 +514,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 2 0 0 20261125 31) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 2 0 0 20261126 36) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "733a5aec9c9446ad8ae61765404e79bb85a60fe9"))])
+      (:commit . "194eabe9ee43e4b1911dd842070cb50e4a67d741"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -1228,7 +1227,7 @@
       (:authors ("Jorgen Schäfer" . "forcer@forcix.cx"))
       (:commit . "6f704fd3c12f35e059700aaeb43ae64c35ad81b2"))])
  (emureader
-  . [(0 4 0 0 20261125 15) ((emacs (26 1)))
+  . [(0 4 0 0 20261126 17) ((emacs (26 1)))
      "General-purpose document reader" tar
      ((:url . "https://codeberg.org/MonadicSheep/emureader")
       (:keywords "lisp" "files" "tools")
@@ -1236,7 +1235,7 @@
 		   ("Tushar" . "tusharhero@sdf.org"))
       (:authors ("Divya Ranjan Pattanaik" . "divya@dialetheia.xyz")
 		("Tushar" . "tusharhero@sdf.org"))
-      (:commit . "1a28db01658fb8ad9dd07351bf43059e182c653b"))])
+      (:commit . "00da02285e7606d890e3ebaab3c3e2895703371b"))])
  (engrave-faces
   . [(0 3 1 0 20240421 82802) ((emacs (27 1)))
      "Convert font-lock faces to other formats" tar
@@ -3935,13 +3934,13 @@
 		("Wilson Snyder" . "wsnyder@wsnyder.org"))
       (:commit . "240ea4d15c654808823c7188d7ecba5c219a8c1f"))])
  (vertico
-  . [(2 15 0 20261011 1) ((emacs (29 1)) (compat (31)))
+  . [(2 15 0 20261126 2) ((emacs (29 1)) (compat (31)))
      "VERTical Interactive COmpletion" tar
      ((:url . "https://github.com/minad/vertico")
       (:keywords "convenience" "files" "matching" "completion")
       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
       (:authors ("Daniel Mendler" . "mail@daniel-mendler.de"))
-      (:commit . "c60d80215d19b4b36c0ba49599b6815ed35f2ac1"))])
+      (:commit . "6976caba3c83799e54d3e2647f6dee79f18869b2"))])
  (vertico-posframe
   . [(0 9 2 0 20260906 2)
      ((emacs (26 0)) (posframe (1 4 0)) (vertico (2 6)))
