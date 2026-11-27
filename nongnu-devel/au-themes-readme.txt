@@ -127,14 +127,17 @@ From source
 Usage
 ─────
 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-   Command                   What it does                             
-  ────────────────────────────────────────────────────────────────────
-   `au-themes-select'        pick a theme with live preview           
-   `au-themes-select-light'  pick from light themes only              
-   `au-themes-select-dark'   pick from dark themes only               
-   `au-themes-toggle'        switch between last light and dark theme 
-  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   Command                        What it does                               
+  ───────────────────────────────────────────────────────────────────────────
+   `au-themes-select'             pick a theme with live preview             
+   `au-themes-select-light'       pick from light themes only                
+   `au-themes-select-dark'        pick from dark themes only                 
+   `au-themes-load-random'        load a random theme (`C-u' picks polarity) 
+   `au-themes-load-random-light'  load a random light theme                  
+   `au-themes-load-random-dark'   load a random dark theme                   
+   `au-themes-toggle'             switch between last light and dark theme   
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
   With [consult] installed, the preview goes through `consult-theme'.
   Without it, a theme is previewed once its full name is in the

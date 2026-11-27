@@ -38,32 +38,27 @@ _Recent breaking changes:_
     `loopy-iter-bare-commands' were removed. Used
     `loopy-iter-bare-names' instead.
   • The deprecated user option `loopy-default-flags' was removed.
+  • The `while' and `until' commands now only take a single condition to
+    be consistent with `never' and `always'.  To get the old of effect
+    of passing multiple conditions, wrap the multiple conditions in
+    `and'.
+  • `find' now warns when treating sharp-quoted functions specially.
+    This feature will be removed in the future in favor of passing an
+    evaluated expression (which is unambiguous). In the interim, it now
+    treats some literal function values differently during compilation,
+    including macros that expand into sharp-quoted forms.
+  • `set' now signals an error if no value is given.  Previously, it set
+    the variable to `nil'.
+• Version 0.16.1:
+  • No breaking changes
 • Version 0.16.0:
   • Using accumulation commands with different initial values for the
     same variable now signals an error instead of a warning.
   • Aliases made obsolete in version 0.14.0 have been removed.  They can
     still be added manually to `loopy-parsers'.
   • `while' and `until' now signal a warning when receiving multiple
-    conditions.  In the future, this will be an error.
-• Version 0.15.0:
-  • Loopy now requires at least Emacs version 28.1, increased from
-    version 27.1.
-  • `set' now warns when it is not given a value.  In the future, it
-    will signal an error.
-  • `loopy-command-parsers' and `loopy-aliases' are deprecated in favor
-    of a single hash table in the new user option `loopy-parsers'.  This
-    simplified the code for adding the `override' special marco
-    argument.
-  • `loopy-iter-bare-special-macro-arguments' and
-    `loopy-iter-bare-commands' are deprecated in favor of the single
-    variable `loopy-iter-bare-names'.
-  • `when' and `unless' are now implemented separately, fixing when the
-    commands are aliased.
-  • Modifications to an implied `loopy-result' in `finally-do' will now
-    be included in the implied return value of the macro.
-  • `loopy-default-flags' is made obsolete to avoid conflicts between
-    libraries.  Using a wrapping macro instead, such as the one given in
-    Changelog or the Org/Info documentation.
+    conditions.  In the future, this will be an error to be consistent
+    with `never' and `always'.
 • See the [change log] for less recent changes.
 
 
