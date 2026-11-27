@@ -1,36 +1,21 @@
-   A major mode for editing Extempore code. See the Extempore project page at
-   http://github.com/digego/extempore for more details.
+A major mode for editing Extempore code (https://extemporelang.github.io).
 
- Installation
+With Extempore's nREPL transport (the default), the mode starts Eglot with
+Extempore's language server, `extempore lsp', which connects to a running
+Extempore's nREPL server (found through a .nrepl-port file, else port
+7888).  That gives evaluation with each result shown at its form, errors
+marked as diagnostics, completion, eldoc from hover, and formatting.
 
-   Available through MELPA:
+The most important commands are
 
-   M-x `package-install' RET `extempore-mode' RET
+  C-M-x      `extempore-send-dwim': evaluate the top-level form at point,
+             or the region
+  C-c C-k    `extempore-send-buffer'
+  C-c C-b    `extempore-interrupt'
+  C-c C-z    `extempore-switch-to-process-buffer': start Extempore in a
+             buffer, or go to it
 
-   If you don't want to get it from MELPA, just download the file and use
-   `package-install-file'
+For an Extempore older than its nREPL server, set `extempore-transport' to
+`legacy' and connect to its eval server on port 7099 with C-c C-j.
 
-   (package-install-file "/path/to/extempore-mode.el")
-
-
- Configuration
-
-   (optional) if you don't want to have to answer the "directory" prompt
-   every time you call `extempore-run', you can set the `extempore-path'
-   variable - note the trailing "/" - either in your init file or through the
-   customisation interface
-
-   (setq extempore-path "/path/to/extempore/")
-
-
- Usage
-
-   The most important commands are:
-
-     M-x `extempore-connect' (C-c C-j)
-
-     M-x `switch-to-extempore' (C-c C-z)
-
-     M-x `extempore-send-dwim' (C-M-x)
-
-   For more usage instructions, see README.md
+See README.md for more.
