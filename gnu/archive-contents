@@ -484,12 +484,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "50b9ec928193f339c3c2ae20f088ea62cc82bb9d"))])
  (company
-  . [(1 3 0) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 3 1) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "db7f60efdf8364e66161cb8a8ea9bb703ab37247"))])
+      (:commit . "2f4512331742305aa39168cecf84588e6b476a0a"))])
  (company-ebdb
   . [(1 1) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -1865,13 +1865,13 @@
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
       (:commit . "7e30b492ec594e641727fb31d07291e767d0897a"))])
  (leaf
-  . [(4 5 5) ((emacs (24 1)))
+  . [(4 5 6) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar
      ((:url . "https://github.com/conao3/leaf.el")
       (:keywords "lisp" "settings")
       (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
       (:authors ("Naoya Yamashita" . "conao3@gmail.com"))
-      (:commit . "7cc38f9739eadc569b1179fabe7f7893167105da"))])
+      (:commit . "aab780a2689788fb7198292982eb64111f1d7d6b"))])
  (lentic
   . [(0 12) ((emacs (25)) (m-buffer (0 13)) (dash (2 5 0)))
      "One buffer as a view of another" tar

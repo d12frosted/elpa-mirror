@@ -514,12 +514,12 @@
        ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
       (:commit . "3b2233120d33943b8af65fec6257f0c16ad3c6fd"))])
  (company
-  . [(1 3 0 0 20261127 1) ((emacs (26 1)) (posframe (1 5 1)))
+  . [(1 3 1 0 20261127 2) ((emacs (26 1)) (posframe (1 5 1)))
      "Modular text completion framework" tar
      ((:url . "http://company-mode.github.io/")
       (:keywords "abbrev" "convenience" "matching")
       (:maintainer "Dmitry Gutov" . "dmitry@gutov.dev")
-      (:commit . "4e869fe70f44786a99a9201a34e552d14b2d2a2c"))])
+      (:commit . "5d7219f10fec6f3de37e05b606ef92269505aeed"))])
  (company-ebdb
   . [(1 1 0 20221221 74915) ((company (0 9 4)) (ebdb (0 2)))
      "company-mode completion backend for EBDB in message-mode" tar
@@ -1227,7 +1227,7 @@
       (:authors ("Jorgen Schäfer" . "forcer@forcix.cx"))
       (:commit . "6f704fd3c12f35e059700aaeb43ae64c35ad81b2"))])
  (emureader
-  . [(0 4 0 0 20261126 17) ((emacs (26 1)))
+  . [(0 4 0 0 20261128 18) ((emacs (26 1)))
      "General-purpose document reader" tar
      ((:url . "https://codeberg.org/MonadicSheep/emureader")
       (:keywords "lisp" "files" "tools")
@@ -1235,7 +1235,7 @@
 		   ("Tushar" . "tusharhero@sdf.org"))
       (:authors ("Divya Ranjan Pattanaik" . "divya@dialetheia.xyz")
 		("Tushar" . "tusharhero@sdf.org"))
-      (:commit . "00da02285e7606d890e3ebaab3c3e2895703371b"))])
+      (:commit . "7da7e24e3e44cf14d892c387b3bddaec48f63d5b"))])
  (engrave-faces
   . [(0 3 1 0 20240421 82802) ((emacs (27 1)))
      "Convert font-lock faces to other formats" tar
@@ -1348,14 +1348,14 @@
       (:authors ("Lawrence Mitchell" . "wence@gmx.li"))
       (:commit . "4e192f6e03bc96f996923b307248b7d5b1d398fa"))])
  (ffs
-  . [(0 2 3 0 20261024 2) ((emacs (27 1)))
+  . [(0 2 3 0 20261127 3) ((emacs (27 1)))
      "Form feed-separated plain text presentations" tar
-     ((:url . "https://git.kelar.org/~bandali/ffs")
+     ((:url . "https://www.shemshak.org/~amin/ffs")
       (:keywords "convenience" "focus" "narrowing" "outlines"
 		 "presentation" "text")
       (:maintainer "Amin Bandali" . "bandali@gnu.org")
       (:authors ("Amin Bandali" . "bandali@gnu.org"))
-      (:commit . "c0a4d72ec9e7ebf08e371fbc0b052ce973b126ba"))])
+      (:commit . "6c1e840354f357fa1fcea89c00ceaba2267524a8"))])
  (filechooser
   . [(0 3 0 0 20261108 1) ((emacs (28 1)) (compat (29 1)))
      "An xdg-desktop-portal filechooser" tar
@@ -1991,13 +1991,13 @@
       (:authors ("Enrico Flor" . "enrico@eflor.net"))
       (:commit . "7e30b492ec594e641727fb31d07291e767d0897a"))])
  (leaf
-  . [(4 5 5 0 20261122 21) ((emacs (24 1)))
+  . [(4 5 6 0 20261128 0) ((emacs (24 1)))
      "Simplify your init.el configuration, extended use-package" tar
      ((:url . "https://github.com/conao3/leaf.el")
       (:keywords "lisp" "settings")
       (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
       (:authors ("Naoya Yamashita" . "conao3@gmail.com"))
-      (:commit . "ab9f56cdbefcb539f84184de976716c122adceb2"))])
+      (:commit . "aab780a2689788fb7198292982eb64111f1d7d6b"))])
  (lentic
   . [(0 12 0 20240303 95600)
      ((emacs (25)) (m-buffer (0 13)) (dash (2 5 0)))

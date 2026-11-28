@@ -8,5 +8,5 @@ default the form feed character (`^L`).
 - Package name (GNU ELPA): `ffs`
 - Manual: <https://www.shemshak.org/~amin/ffs/ffs.html>
 - NEWS: <https://www.shemshak.org/~amin/ffs/NEWS>
-- Git repository: <https://git.kelar.org/~bandali/ffs>
+- Git repository: <https://www.shemshak.org/~amin/ffs>
 - Backronyms: fabulous foolproof slides - for freedom's sake - ffs flips slides

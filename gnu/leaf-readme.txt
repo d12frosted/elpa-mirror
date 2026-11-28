@@ -1,75 +1,9 @@
-			       ━━━━━━━━━
-				LEAF.EL
-			       ━━━━━━━━━
+                               ━━━━━━━━━
+                                LEAF.EL
+                               ━━━━━━━━━
 
 
-			    <2018-10-25 Thu>
-
-
-Table of Contents
-─────────────────
-
-1. Description
-2. Install
-3. Usage
-4. Customize
-5. Syntax
-6. Basic keywords
-.. 1. none (keyword)
-.. 2. :require keyword
-.. 3. :package, :ensure keywords
-.. 4. :preface, :init, :config keywords
-.. 5. :defer-config keyword
-.. 6. :commands keyword
-.. 7. :after keyword
-.. 8. :bind, :bind* keywords
-.. 9. :bind-keymap, :bind-keymap* keywords
-7. Configure variables keywords
-.. 1. :custom, :custom*, :custom-face keywords
-.. 2. :pre-setq, :setq, :setq-default keywords
-.. 3. :setf, :push, :pre-setf, :pre-push keywords
-8. Configure list keywords
-.. 1. :mode, :interpreter keywords
-.. 2. :magic, :magic-fallback keywords
-.. 3. :hook keyword
-.. 4. :load-path, :load-path* keywords
-9. Condition keywords
-.. 1. :disabled keyword
-.. 2. :if, :when, :unless keywords
-.. 3. :emacs<, :emacs<=, :emacs=, :emacs>, :emacs>= keywords
-10. Byte compile keywords
-.. 1. :defun, :defvar keywords
-11. Documentation keywords
-.. 1. :doc, :req, :tag, :file, :url keywords
-12. Misc keywords
-.. 1. :global-minor-mode keyword
-.. 2. :advice, :advice-remove keywords
-.. 3. :pl-pre-setq, :pl-setq, :pl-setq-default, :pl-custom keywords
-13. System keywords
-.. 1. :leaf-protect keyword
-.. 2. :leaf-defer keyword
-.. 3. :leaf-autoload keyword
-.. 4. :leaf-defun keyword
-.. 5. leaf-defvar
-14. Tips
-.. 1. leaf-find feature
-15. Information
-.. 1. Donation
-.. 2. Community
-.. 3. Contribution
-..... 1. leaf.el mechanism
-..... 2. Adding new keywords
-.. 4. Migration
-..... 1. leaf v3.0 to v4.0
-..... 2. leaf v2.0 to v3.0
-..... 3. leaf v1.0 to v2.0
-.. 5. License
-.. 6. Author
-.. 7. Contributors
-.. 8. Special Thanks
-
-
-
+                            <2018-10-25 Thu>
 
 
 1 Description
@@ -104,7 +38,7 @@ Table of Contents
   │ ;;    :preface
   │ ;;    :when :unless :if
   │ ;;    :emacs< :emacs<= :emacs= :emacs> :emacs>=
-  │ ;;    :ensure :package :feather :straight :el-get
+  │ ;;    :ensure :package :vc :feather :straight :el-get
   │ ;;    :after
   │ ;;    :commands
   │ ;;    :bind :bind*
@@ -156,8 +90,8 @@ Table of Contents
   │ (eval-and-compile
   │   (customize-set-variable
   │    'package-archives '(("org" . "https://orgmode.org/elpa/")
-  │ 		       ("melpa" . "https://melpa.org/packages/")
-  │ 		       ("gnu" . "https://elpa.gnu.org/packages/")))
+  │                        ("melpa" . "https://melpa.org/packages/")
+  │                        ("gnu" . "https://elpa.gnu.org/packages/")))
   │   (package-initialize)
   │   (unless (package-installed-p 'leaf)
   │     (package-refresh-contents)
@@ -188,13 +122,13 @@ Table of Contents
   │   :doc "define customization properties of builtins"
   │   :tag "builtin" "internal"
   │   :custom ((user-full-name . "Naoya Yamashita")
-  │ 	   (user-mail-address . "conao3@gmail.com")
-  │ 	   (user-login-name . "conao3")
-  │ 	   (truncate-lines . t)
-  │ 	   (menu-bar-mode . t)
-  │ 	   (tool-bar-mode . nil)
-  │ 	   (scroll-bar-mode . nil)
-  │ 	   (indent-tabs-mode . nil)))
+  │            (user-mail-address . "conao3@gmail.com")
+  │            (user-login-name . "conao3")
+  │            (truncate-lines . t)
+  │            (menu-bar-mode . t)
+  │            (tool-bar-mode . nil)
+  │            (scroll-bar-mode . nil)
+  │            (indent-tabs-mode . nil)))
   │ 
   │ (leaf autorevert
   │   :doc "revert buffers when files on disk change"
@@ -208,7 +142,7 @@ Table of Contents
   │   :emacs>= 24.3
   │   :ensure t
   │   :bind (("M-n" . flycheck-next-error)
-  │ 	 ("M-p" . flycheck-previous-error))
+  │          ("M-p" . flycheck-previous-error))
   │   :custom ((flycheck-emacs-lisp-initialize-packages . t))
   │   :hook (emacs-lisp-mode-hook lisp-interaction-mode-hook)
   │   :config
@@ -351,9 +285,9 @@ Table of Contents
   │        :config (leaf-init))
   │      (prog1 'leaf
   │        (when leaf-workable-p
-  │ 	 (leaf-pre-init)
-  │ 	 (require 'leaf)
-  │ 	 (leaf-init))))
+  │          (leaf-pre-init)
+  │          (require 'leaf)
+  │          (leaf-init))))
   │ 
   │     ;; 'nil will be just ignored it
   │     ((leaf leaf
@@ -456,27 +390,53 @@ Table of Contents
   │     ;; If installation fails, update local cache and retry to install.
   │     ((leaf-handler-package macrostep macrostep nil)
   │      (if (package-installed-p 'macrostep)
-  │ 	 (package--update-selected-packages '(macrostep) nil)
+  │          (package--update-selected-packages '(macrostep) nil)
   │        (unless (assoc 'macrostep package-archive-contents)
-  │ 	 (package-refresh-contents))
+  │          (package-refresh-contents))
   │        (condition-case err
-  │ 	   (package-install 'macrostep)
-  │ 	 (error
-  │ 	  (condition-case err
-  │ 	      (progn
-  │ 		(package-refresh-contents)
-  │ 		(package-install 'macrostep))
-  │ 	    (error
-  │ 	     (display-warning 'leaf
-  │ 			      (format "In `macrostep' block, failed to :package of macrostep.  Error msg: %s"
-  │ 				      (error-message-string err)))))))))))
+  │            (package-install 'macrostep)
+  │          (error
+  │           (condition-case err
+  │               (progn
+  │                 (package-refresh-contents)
+  │                 (package-install 'macrostep))
+  │             (error
+  │              (display-warning 'leaf
+  │                               (format "In `macrostep' block, failed to :package of macrostep.  Error msg: %s"
+  │                                       (error-message-string err)))))))))))
   └────
 
 
 [leaf-keywords.el] <https://github.com/conao3/leaf-keywords.el>
 
 
-6.4 :preface, :init, :config keywords
+6.4 :vc keyword
+───────────────
+
+  `:vc' provide `package-vc-install' frontend.
+
+  ┌────
+  │ (cort-deftest-with-macroexpand leaf/vc
+  │   '(((leaf bbdb
+  │        :vc ( :url "https://git.savannah.nongnu.org/git/bbdb.git"
+  │              :lisp-dir "lisp"))
+  │      (prog1 'bbdb
+  │        (leaf-handler-vc bbdb
+  │          (bbdb
+  │           (:url "https://git.savannah.nongnu.org/git/bbdb.git" :lisp-dir "lisp")))))
+  │ 
+  │     ((leaf *bbdb-custom*
+  │        :vc (bbdb
+  │             :url "https://git.savannah.nongnu.org/git/bbdb.git"
+  │             :lisp-dir "lisp"))
+  │      (prog1 '*bbdb-custom*
+  │        (leaf-handler-vc *bbdb-custom*
+  │          (bbdb
+  │           (:url "https://git.savannah.nongnu.org/git/bbdb.git" :lisp-dir "lisp")))))))
+  └────
+
+
+6.5 :preface, :init, :config keywords
 ─────────────────────────────────────
 
   These keywords are provided to directly describe elisp with various
@@ -508,9 +468,9 @@ Table of Contents
   │      (prog1 'leaf
   │        (preface-init)
   │        (when (some-condition)
-  │ 	 (package-preconfig)
-  │ 	 (require 'leaf)
-  │ 	 (package-init))))
+  │          (package-preconfig)
+  │          (require 'leaf)
+  │          (package-init))))
   │ 
   │     ;; multi sexp will be accepted
   │     ((leaf leaf
@@ -525,33 +485,33 @@ Table of Contents
   │        (leaf-pre-init)
   │        (leaf-pre-init-after)
   │        (when
-  │ 	   (some-condition)
-  │ 	 (package-preconfig)
-  │ 	 (require 'leaf)
-  │ 	 (package-init))))
+  │            (some-condition)
+  │          (package-preconfig)
+  │          (require 'leaf)
+  │          (package-init))))
   │ 
   │     ;; you can use `progn' if you prefer it
   │     ((leaf leaf
   │        :preface (progn
-  │ 		  (leaf-pre-init)
-  │ 		  (leaf-pre-init-after))
+  │                   (leaf-pre-init)
+  │                   (leaf-pre-init-after))
   │        :when (some-condition)
   │        :require t
   │        :init (package-preconfig)
   │        :config (package-init))
   │      (prog1 'leaf
   │        (progn
-  │ 	 (leaf-pre-init)
-  │ 	 (leaf-pre-init-after))
+  │          (leaf-pre-init)
+  │          (leaf-pre-init-after))
   │        (when
-  │ 	   (some-condition)
-  │ 	 (package-preconfig)
-  │ 	 (require 'leaf)
-  │ 	 (package-init))))))
+  │            (some-condition)
+  │          (package-preconfig)
+  │          (require 'leaf)
+  │          (package-init))))))
   └────
 
 
-6.5 :defer-config keyword
+6.6 :defer-config keyword
 ─────────────────────────
 
   `:defer-config' is similar to `:config', but with `eval-after-load' as
@@ -565,8 +525,8 @@ Table of Contents
   │      (prog1 'leaf
   │        (leaf-pre-init)
   │        (eval-after-load 'leaf
-  │ 	 (progn
-  │ 	   (leaf-init)))))
+  │          (progn
+  │            (leaf-init)))))
   │ 
   │     ((leaf leaf
   │        :init (leaf-init)
@@ -576,13 +536,13 @@ Table of Contents
   │      (prog1 'leaf
   │        (leaf-init)
   │        (eval-after-load 'leaf
-  │ 	 (progn
-  │ 	   (leaf-pre-init)
-  │ 	   (leaf-pre-init-after)))))))
+  │          (progn
+  │            (leaf-pre-init)
+  │            (leaf-pre-init-after)))))))
   └────
 
 
-6.6 :commands keyword
+6.7 :commands keyword
 ─────────────────────
 
   `commands' keyword configures `autoload' for its leaf-block name.
@@ -597,8 +557,8 @@ Table of Contents
   │      (prog1 'leaf
   │        (autoload #'leaf "leaf" nil t)
   │        (eval-after-load 'leaf
-  │ 	 '(progn
-  │ 	    (leaf-init)))))
+  │          '(progn
+  │             (leaf-init)))))
   │ 
   │     ;; multi symbols will be accepted
   │     ((leaf leaf
@@ -627,7 +587,7 @@ Table of Contents
   └────
 
 
-6.7 :after keyword
+6.8 :after keyword
 ──────────────────
 
   `:after' keyword configure loading order.
@@ -644,9 +604,9 @@ Table of Contents
   │        :config (leaf-browser-init))
   │      (prog1 'leaf-browser
   │        (eval-after-load 'leaf
-  │ 	 '(progn
-  │ 	    (require 'leaf-browser)
-  │ 	    (leaf-browser-init)))))
+  │          '(progn
+  │             (require 'leaf-browser)
+  │             (leaf-browser-init)))))
   │ 
   │     ;; multi symbols will be accepted
   │     ((leaf leaf-browser
@@ -655,11 +615,11 @@ Table of Contents
   │        :config (leaf-browser-init))
   │      (prog1 'leaf-browser
   │        (eval-after-load 'orglyth
-  │ 	 '(eval-after-load 'org
-  │ 	    '(eval-after-load 'leaf
-  │ 	       '(progn
-  │ 		  (require 'leaf-browser)
-  │ 		  (leaf-browser-init)))))))
+  │          '(eval-after-load 'org
+  │             '(eval-after-load 'leaf
+  │                '(progn
+  │                   (require 'leaf-browser)
+  │                   (leaf-browser-init)))))))
   │ 
   │     ;; multi symbols in list will be accepted
   │     ((leaf leaf-browser
@@ -668,11 +628,11 @@ Table of Contents
   │        :config (leaf-browser-init))
   │      (prog1 'leaf-browser
   │        (eval-after-load 'orglyth
-  │ 	 '(eval-after-load 'org
-  │ 	    '(eval-after-load 'leaf
-  │ 	       '(progn
-  │ 		  (require 'leaf-browser)
-  │ 		  (leaf-browser-init)))))))
+  │          '(eval-after-load 'org
+  │             '(eval-after-load 'leaf
+  │                '(progn
+  │                   (require 'leaf-browser)
+  │                   (leaf-browser-init)))))))
   │ 
   │     ;; duplicated symbol will be ignored
   │     ((leaf leaf-browser
@@ -681,11 +641,11 @@ Table of Contents
   │        :config (leaf-browser-init))
   │      (prog1 'leaf-browser
   │        (eval-after-load 'orglyth
-  │ 	 '(eval-after-load 'org
-  │ 	    '(eval-after-load 'leaf
-  │ 	       '(progn
-  │ 		  (require 'leaf-browser)
-  │ 		  (leaf-browser-init)))))))
+  │          '(eval-after-load 'org
+  │             '(eval-after-load 'leaf
+  │                '(progn
+  │                   (require 'leaf-browser)
+  │                   (leaf-browser-init)))))))
   │ 
   │     ;; if specified t, assume leaf--name specified
   │     ((leaf leaf-browser
@@ -694,13 +654,13 @@ Table of Contents
   │        :config (leaf-browser-init))
   │      (prog1 'leaf-browser
   │        (eval-after-load 'leaf-browser
-  │ 	 '(progn
-  │ 	    (require 'leaf-browser)
-  │ 	    (leaf-browser-init)))))))
+  │          '(progn
+  │             (require 'leaf-browser)
+  │             (leaf-browser-init)))))))
   └────
 
 
-6.8 :bind, :bind* keywords
+6.9 :bind, :bind* keywords
 ──────────────────────────
 
   `:bind' and `:bind*' provide frontend for keybind manager.
@@ -740,14 +700,14 @@ Table of Contents
   │        (declare-function isearch-moccur "color-moccur")
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   ("M-o" . isearch-moccur)
-  │ 		   ("M-O" . isearch-moccur-all)))))
+  │                    ("M-o" . isearch-moccur)
+  │                    ("M-O" . isearch-moccur-all)))))
   │ 
   │     ;; multi cons-cell in list will be accepted
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      ("M-o" . isearch-moccur)
-  │ 	      ("M-O" . isearch-moccur-all)))
+  │               ("M-o" . isearch-moccur)
+  │               ("M-O" . isearch-moccur-all)))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -756,29 +716,29 @@ Table of Contents
   │        (declare-function isearch-moccur "color-moccur")
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   ("M-o" . isearch-moccur)
-  │ 		   ("M-O" . isearch-moccur-all)))))
+  │                    ("M-o" . isearch-moccur)
+  │                    ("M-O" . isearch-moccur-all)))))
   │ 
   │     ;; bind to nil to unbind shortcut
   │     ((leaf color-moccur
   │        :bind (("M-s" . nil)
-  │ 	      ("M-s o" . isearch-moccur)
-  │ 	      ("M-s i" . isearch-moccur-all)))
+  │               ("M-s o" . isearch-moccur)
+  │               ("M-s i" . isearch-moccur-all)))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
   │        (declare-function isearch-moccur "color-moccur")
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (leaf-keys (("M-s")
-  │ 		   ("M-s o" . isearch-moccur)
-  │ 		   ("M-s i" . isearch-moccur-all)))))
+  │                    ("M-s o" . isearch-moccur)
+  │                    ("M-s i" . isearch-moccur-all)))))
   │ 
   │     ;; nested cons-cell list will be accepted
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      (("M-o" . isearch-moccur)
-  │ 	       (("M-O" . isearch-moccur-all))
-  │ 	       ("M-s" . isearch-moccur-some))))
+  │               (("M-o" . isearch-moccur)
+  │                (("M-O" . isearch-moccur-all))
+  │                ("M-s" . isearch-moccur-some))))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -789,16 +749,16 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (declare-function isearch-moccur-some "color-moccur")
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   ("M-o" . isearch-moccur)
-  │ 		   ("M-O" . isearch-moccur-all)
-  │ 		   ("M-s" . isearch-moccur-some)))))
+  │                    ("M-o" . isearch-moccur)
+  │                    ("M-O" . isearch-moccur-all)
+  │                    ("M-s" . isearch-moccur-some)))))
   │ 
   │     ;; use keyword at first element to bind specific map
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      (:isearch-mode-map
-  │ 	       ("M-o" . isearch-moccur)
-  │ 	       ("M-O" . isearch-moccur-all))))
+  │               (:isearch-mode-map
+  │                ("M-o" . isearch-moccur)
+  │                ("M-O" . isearch-moccur-all))))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -808,18 +768,18 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (defvar isearch-mode-map)
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   (:isearch-mode-map
-  │ 		    :package color-moccur
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all))))))
+  │                    (:isearch-mode-map
+  │                     :package color-moccur
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all))))))
   │ 
   │     ;; specific map at top-level will be accepted
   │     ((leaf color-moccur
   │        :bind
   │        ("M-s O" . moccur)
   │        (:isearch-mode-map
-  │ 	("M-o" . isearch-moccur)
-  │ 	("M-O" . isearch-moccur-all)))
+  │         ("M-o" . isearch-moccur)
+  │         ("M-O" . isearch-moccur-all)))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -829,18 +789,18 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (defvar isearch-mode-map)
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   (:isearch-mode-map
-  │ 		    :package color-moccur
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all))))))
+  │                    (:isearch-mode-map
+  │                     :package color-moccur
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all))))))
   │ 
   │     ;; use :package to deffering :isearch-mode-map declared
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      (:isearch-mode-map
-  │ 	       :package isearch
-  │ 	       ("M-o" . isearch-moccur)
-  │ 	       ("M-O" . isearch-moccur-all))))
+  │               (:isearch-mode-map
+  │                :package isearch
+  │                ("M-o" . isearch-moccur)
+  │                ("M-O" . isearch-moccur-all))))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -850,18 +810,18 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (defvar isearch-mode-map)
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   (:isearch-mode-map
-  │ 		    :package isearch
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all))))))
+  │                    (:isearch-mode-map
+  │                     :package isearch
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all))))))
   │ 
   │     ;; you can use symbol instead of keyword to specify map
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      (isearch-mode-map
-  │ 	       :package isearch
-  │ 	       ("M-o" . isearch-moccur)
-  │ 	       ("M-O" . isearch-moccur-all))))
+  │               (isearch-mode-map
+  │                :package isearch
+  │                ("M-o" . isearch-moccur)
+  │                ("M-O" . isearch-moccur-all))))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -871,15 +831,15 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (defvar isearch-mode-map)
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   (isearch-mode-map
-  │ 		    :package isearch
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all))))))
+  │                    (isearch-mode-map
+  │                     :package isearch
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all))))))
   │ 
   │     ;; you can use vectors to remap etc
   │     ((leaf swiper
-  │ 	:ensure t
-  │ 	:bind (([remap isearch-forward] . swiper)))
+  │         :ensure t
+  │         :bind (([remap isearch-forward] . swiper)))
   │      (prog1 'swiper
   │        (unless (fboundp 'swiper) (autoload #'swiper "swiper" nil t))
   │        (declare-function swiper "swiper")
@@ -888,7 +848,7 @@ Table of Contents
   │        (leaf-keys (([remap isearch-forward] . swiper)))))
   │ 
   │     ((leaf files
-  │ 	:bind (([(control ?x) (control ?f)] . find-file)))
+  │         :bind (([(control ?x) (control ?f)] . find-file)))
   │      (prog1 'files
   │        (unless (fboundp 'find-file) (autoload #'find-file "files" nil t))
   │        (declare-function find-file "files")
@@ -913,13 +873,13 @@ Table of Contents
   │        (autoload #'isearch-moccur "color-moccur" nil t)
   │        (autoload #'isearch-moccur-all "color-moccur" nil t)
   │        (leaf-keys* (("M-s O" . moccur)
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all)))))))
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all)))))))
   └────
 
 
-6.9 :bind-keymap, :bind-keymap* keywords
-────────────────────────────────────────
+6.10 :bind-keymap, :bind-keymap* keywords
+─────────────────────────────────────────
 
   `:bind-keymap' and `:bind-keymap*' provide frontend for keybind
   manager for binding keymap.
@@ -953,14 +913,14 @@ Table of Contents
   │        (declare-function isearch-moccur "color-moccur")
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   ("M-o" . isearch-moccur)
-  │ 		   ("M-O" . isearch-moccur-all)))))
+  │                    ("M-o" . isearch-moccur)
+  │                    ("M-O" . isearch-moccur-all)))))
   │ 
   │     ;; multi cons-cell in list will be accepted
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      ("M-o" . isearch-moccur)
-  │ 	      ("M-O" . isearch-moccur-all)))
+  │               ("M-o" . isearch-moccur)
+  │               ("M-O" . isearch-moccur-all)))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -969,29 +929,29 @@ Table of Contents
   │        (declare-function isearch-moccur "color-moccur")
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   ("M-o" . isearch-moccur)
-  │ 		   ("M-O" . isearch-moccur-all)))))
+  │                    ("M-o" . isearch-moccur)
+  │                    ("M-O" . isearch-moccur-all)))))
   │ 
   │     ;; bind to nil to unbind shortcut
   │     ((leaf color-moccur
   │        :bind (("M-s" . nil)
-  │ 	      ("M-s o" . isearch-moccur)
-  │ 	      ("M-s i" . isearch-moccur-all)))
+  │               ("M-s o" . isearch-moccur)
+  │               ("M-s i" . isearch-moccur-all)))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
   │        (declare-function isearch-moccur "color-moccur")
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (leaf-keys (("M-s")
-  │ 		   ("M-s o" . isearch-moccur)
-  │ 		   ("M-s i" . isearch-moccur-all)))))
+  │                    ("M-s o" . isearch-moccur)
+  │                    ("M-s i" . isearch-moccur-all)))))
   │ 
   │     ;; nested cons-cell list will be accepted
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      (("M-o" . isearch-moccur)
-  │ 	       (("M-O" . isearch-moccur-all))
-  │ 	       ("M-s" . isearch-moccur-some))))
+  │               (("M-o" . isearch-moccur)
+  │                (("M-O" . isearch-moccur-all))
+  │                ("M-s" . isearch-moccur-some))))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -1002,16 +962,16 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (declare-function isearch-moccur-some "color-moccur")
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   ("M-o" . isearch-moccur)
-  │ 		   ("M-O" . isearch-moccur-all)
-  │ 		   ("M-s" . isearch-moccur-some)))))
+  │                    ("M-o" . isearch-moccur)
+  │                    ("M-O" . isearch-moccur-all)
+  │                    ("M-s" . isearch-moccur-some)))))
   │ 
   │     ;; use keyword at first element to bind specific map
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      (:isearch-mode-map
-  │ 	       ("M-o" . isearch-moccur)
-  │ 	       ("M-O" . isearch-moccur-all))))
+  │               (:isearch-mode-map
+  │                ("M-o" . isearch-moccur)
+  │                ("M-O" . isearch-moccur-all))))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -1021,18 +981,18 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (defvar isearch-mode-map)
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   (:isearch-mode-map
-  │ 		    :package color-moccur
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all))))))
+  │                    (:isearch-mode-map
+  │                     :package color-moccur
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all))))))
   │ 
   │     ;; specific map at top-level will be accepted
   │     ((leaf color-moccur
   │        :bind
   │        ("M-s O" . moccur)
   │        (:isearch-mode-map
-  │ 	("M-o" . isearch-moccur)
-  │ 	("M-O" . isearch-moccur-all)))
+  │         ("M-o" . isearch-moccur)
+  │         ("M-O" . isearch-moccur-all)))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -1042,18 +1002,18 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (defvar isearch-mode-map)
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   (:isearch-mode-map
-  │ 		    :package color-moccur
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all))))))
+  │                    (:isearch-mode-map
+  │                     :package color-moccur
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all))))))
   │ 
   │     ;; use :package to deffering :isearch-mode-map declared
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      (:isearch-mode-map
-  │ 	       :package isearch
-  │ 	       ("M-o" . isearch-moccur)
-  │ 	       ("M-O" . isearch-moccur-all))))
+  │               (:isearch-mode-map
+  │                :package isearch
+  │                ("M-o" . isearch-moccur)
+  │                ("M-O" . isearch-moccur-all))))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -1063,18 +1023,18 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (defvar isearch-mode-map)
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   (:isearch-mode-map
-  │ 		    :package isearch
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all))))))
+  │                    (:isearch-mode-map
+  │                     :package isearch
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all))))))
   │ 
   │     ;; you can use symbol instead of keyword to specify map
   │     ((leaf color-moccur
   │        :bind (("M-s O" . moccur)
-  │ 	      (isearch-mode-map
-  │ 	       :package isearch
-  │ 	       ("M-o" . isearch-moccur)
-  │ 	       ("M-O" . isearch-moccur-all))))
+  │               (isearch-mode-map
+  │                :package isearch
+  │                ("M-o" . isearch-moccur)
+  │                ("M-O" . isearch-moccur-all))))
   │      (prog1 'color-moccur
   │        (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
   │        (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
@@ -1084,15 +1044,15 @@ Table of Contents
   │        (declare-function isearch-moccur-all "color-moccur")
   │        (defvar isearch-mode-map)
   │        (leaf-keys (("M-s O" . moccur)
-  │ 		   (isearch-mode-map
-  │ 		    :package isearch
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all))))))
+  │                    (isearch-mode-map
+  │                     :package isearch
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all))))))
   │ 
   │     ;; you can use vectors to remap etc
   │     ((leaf swiper
-  │ 	:ensure t
-  │ 	:bind (([remap isearch-forward] . swiper)))
+  │         :ensure t
+  │         :bind (([remap isearch-forward] . swiper)))
   │      (prog1 'swiper
   │        (unless (fboundp 'swiper) (autoload #'swiper "swiper" nil t))
   │        (declare-function swiper "swiper")
@@ -1101,7 +1061,7 @@ Table of Contents
   │        (leaf-keys (([remap isearch-forward] . swiper)))))
   │ 
   │     ((leaf files
-  │ 	:bind (([(control ?x) (control ?f)] . find-file)))
+  │         :bind (([(control ?x) (control ?f)] . find-file)))
   │      (prog1 'files
   │        (unless (fboundp 'find-file) (autoload #'find-file "files" nil t))
   │        (declare-function find-file "files")
@@ -1120,8 +1080,8 @@ Table of Contents
   │        (autoload #'isearch-moccur "color-moccur" nil t)
   │        (autoload #'isearch-moccur-all "color-moccur" nil t)
   │        (leaf-keys* (("M-s O" . moccur)
-  │ 		    ("M-o" . isearch-moccur)
-  │ 		    ("M-O" . isearch-moccur-all)))))))
+  │                     ("M-o" . isearch-moccur)
+  │                     ("M-O" . isearch-moccur-all)))))))
   └────
 
 
@@ -1140,7 +1100,7 @@ Table of Contents
   You can of course set multiple variables and set the evaluation result
   of the S expression to a variable.
 
-  The value set to `custom-face' should also be quoed to emphasize
+  The value set to `custom-face' should also be quoted to emphasize
   uniformity as `leaf'.
 
   ┌────
@@ -1156,39 +1116,39 @@ Table of Contents
   │        (foo-package-to-lambda   . (lambda (elm) (message elm))))
   │      (prog1 'foo-package
   │        (custom-set-variables
-  │ 	'(foo-package-to-enable t "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-disable nil "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-symbol 'symbol "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-function #'ignore "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-lambda (lambda (elm) (message elm)) "Customized with leaf in foo-package block"))))
+  │         '(foo-package-to-enable t "Customized with leaf in foo-package block")
+  │         '(foo-package-to-disable nil "Customized with leaf in foo-package block")
+  │         '(foo-package-to-symbol 'symbol "Customized with leaf in foo-package block")
+  │         '(foo-package-to-function #'ignore "Customized with leaf in foo-package block")
+  │         '(foo-package-to-lambda (lambda (elm) (message elm)) "Customized with leaf in foo-package block"))))
   │ 
   │     ;; multi cons-cell in list will be accepted
   │     ((leaf foo-package
   │        :custom ((foo-package-to-enable   . t)
-  │ 		(foo-package-to-disable  . nil)
-  │ 		(foo-package-to-symbol   . 'symbol)
-  │ 		(foo-package-to-function . #'ignore)
-  │ 		(foo-package-to-lambda   . (lambda (elm) (message elm)))))
+  │                 (foo-package-to-disable  . nil)
+  │                 (foo-package-to-symbol   . 'symbol)
+  │                 (foo-package-to-function . #'ignore)
+  │                 (foo-package-to-lambda   . (lambda (elm) (message elm)))))
   │      (prog1 'foo-package
   │        (custom-set-variables
-  │ 	'(foo-package-to-enable t "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-disable nil "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-symbol 'symbol "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-function #'ignore "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-lambda (lambda (elm) (message elm)) "Customized with leaf in foo-package block"))))
+  │         '(foo-package-to-enable t "Customized with leaf in foo-package block")
+  │         '(foo-package-to-disable nil "Customized with leaf in foo-package block")
+  │         '(foo-package-to-symbol 'symbol "Customized with leaf in foo-package block")
+  │         '(foo-package-to-function #'ignore "Customized with leaf in foo-package block")
+  │         '(foo-package-to-lambda (lambda (elm) (message elm)) "Customized with leaf in foo-package block"))))
   │ 
   │     ;; distribution feature is supported
   │     ((leaf foo-package
   │        :custom (((to-enable1 to-enable2 to-enable3) . t)
-  │ 		((to-disable1 to-disable2 to-disable3) . nil)))
+  │                 ((to-disable1 to-disable2 to-disable3) . nil)))
   │      (prog1 'foo-package
   │        (custom-set-variables
-  │ 	'(to-enable1 t "Customized with leaf in foo-package block")
-  │ 	'(to-enable2 t "Customized with leaf in foo-package block")
-  │ 	'(to-enable3 t "Customized with leaf in foo-package block")
-  │ 	'(to-disable1 nil "Customized with leaf in foo-package block")
-  │ 	'(to-disable2 nil "Customized with leaf in foo-package block")
-  │ 	'(to-disable3 nil "Customized with leaf in foo-package block"))))
+  │         '(to-enable1 t "Customized with leaf in foo-package block")
+  │         '(to-enable2 t "Customized with leaf in foo-package block")
+  │         '(to-enable3 t "Customized with leaf in foo-package block")
+  │         '(to-disable1 nil "Customized with leaf in foo-package block")
+  │         '(to-disable2 nil "Customized with leaf in foo-package block")
+  │         '(to-disable3 nil "Customized with leaf in foo-package block"))))
   │ 
   │     ;; and mix specification is accepted
   │     ((leaf foo-package
@@ -1196,18 +1156,18 @@ Table of Contents
   │        (foo-package-to-function . #'ignore)
   │        ((to-symbol1 to-symbol2) . 'baz)
   │        (((to-enable1 to-enable2 to-enable3) . t)
-  │ 	((to-disable1 to-disable2 to-disable3) . nil)))
+  │         ((to-disable1 to-disable2 to-disable3) . nil)))
   │      (prog1 'foo-package
   │        (custom-set-variables
-  │ 	'(foo-package-to-function #'ignore "Customized with leaf in foo-package block")
-  │ 	'(to-symbol1 'baz "Customized with leaf in foo-package block")
-  │ 	'(to-symbol2 'baz "Customized with leaf in foo-package block")
-  │ 	'(to-enable1 t "Customized with leaf in foo-package block")
-  │ 	'(to-enable2 t "Customized with leaf in foo-package block")
-  │ 	'(to-enable3 t "Customized with leaf in foo-package block")
-  │ 	'(to-disable1 nil "Customized with leaf in foo-package block")
-  │ 	'(to-disable2 nil "Customized with leaf in foo-package block")
-  │ 	'(to-disable3 nil "Customized with leaf in foo-package block"))))))
+  │         '(foo-package-to-function #'ignore "Customized with leaf in foo-package block")
+  │         '(to-symbol1 'baz "Customized with leaf in foo-package block")
+  │         '(to-symbol2 'baz "Customized with leaf in foo-package block")
+  │         '(to-enable1 t "Customized with leaf in foo-package block")
+  │         '(to-enable2 t "Customized with leaf in foo-package block")
+  │         '(to-enable3 t "Customized with leaf in foo-package block")
+  │         '(to-disable1 nil "Customized with leaf in foo-package block")
+  │         '(to-disable2 nil "Customized with leaf in foo-package block")
+  │         '(to-disable3 nil "Customized with leaf in foo-package block"))))))
   │ 
   │ (cort-deftest-with-macroexpand leaf/custom-face
   │ '(
@@ -1233,17 +1193,17 @@ Table of Contents
   │     ;; multi cons-cell in list will be accepted
   │     ((leaf foo-package
   │        :custom* ((foo-package-to-enable   t)
-  │ 		 (foo-package-to-disable  nil)
-  │ 		 (foo-package-to-symbol   'symbol)
-  │ 		 (foo-package-to-function #'ignore)
-  │ 		 (foo-package-to-lambda   (lambda (elm) (message elm)))))
+  │                  (foo-package-to-disable  nil)
+  │                  (foo-package-to-symbol   'symbol)
+  │                  (foo-package-to-function #'ignore)
+  │                  (foo-package-to-lambda   (lambda (elm) (message elm)))))
   │      (prog1 'foo-package
   │        (custom-set-variables
-  │ 	'(foo-package-to-enable t "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-disable nil "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-symbol 'symbol "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-function #'ignore "Customized with leaf in foo-package block")
-  │ 	'(foo-package-to-lambda (lambda (elm) (message elm)) "Customized with leaf in foo-package block"))))))
+  │         '(foo-package-to-enable t "Customized with leaf in foo-package block")
+  │         '(foo-package-to-disable nil "Customized with leaf in foo-package block")
+  │         '(foo-package-to-symbol 'symbol "Customized with leaf in foo-package block")
+  │         '(foo-package-to-function #'ignore "Customized with leaf in foo-package block")
+  │         '(foo-package-to-lambda (lambda (elm) (message elm)) "Customized with leaf in foo-package block"))))))
   └────
 
 
@@ -1286,7 +1246,7 @@ Table of Contents
   │     ;; multi cons-cell in list will be accepted
   │     ((leaf alloc
   │        :setq ((gc-cons-threshold . 536870912)
-  │ 	      (garbage-collection-messages . t))
+  │               (garbage-collection-messages . t))
   │        :require t)
   │      (prog1 'alloc
   │        (require 'alloc)
@@ -1296,7 +1256,7 @@ Table of Contents
   │     ;; use backquote and comma to set result of sexp
   │     ((leaf alloc
   │        :setq `((gc-cons-threshold . ,(* 512 1024 1024))
-  │ 	       (garbage-collection-messages . t))
+  │                (garbage-collection-messages . t))
   │        :require t)
   │      (prog1 'alloc
   │        (require 'alloc)
@@ -1317,7 +1277,7 @@ Table of Contents
   │     ;; :pre-setq setq before `require'
   │     ((leaf alloc
   │      :pre-setq `((gc-cons-threshold . ,(* 512 1024 1024))
-  │ 		 (garbage-collection-messages . t))
+  │                  (garbage-collection-messages . t))
   │      :require t)
   │    (prog1 'alloc
   │      (setq gc-cons-threshold 536870912)
@@ -1329,7 +1289,7 @@ Table of Contents
   │     ;; :setq-default to `setq-default'
   │     ((leaf alloc
   │        :setq-default `((gc-cons-threshold . ,(* 512 1024 1024))
-  │ 		       (garbage-collection-messages . t))
+  │                        (garbage-collection-messages . t))
   │        :require t)
   │      (prog1 'alloc
   │        (require 'alloc)
@@ -1351,7 +1311,7 @@ Table of Contents
   │     ;; :setf require cons-cell list ONLY.
   │     ((leaf alloc
   │        :setf ((gc-cons-threshold . 536870912)
-  │ 	      (garbage-collection-messages . t))
+  │               (garbage-collection-messages . t))
   │        :require t)
   │      (prog1 'alloc
   │        (require 'alloc)
@@ -1363,7 +1323,7 @@ Table of Contents
   │     ((leaf emacs
   │        :setf
   │        (((alist-get "gnu" package-archives) . "http://elpa.gnu.org/packages/")
-  │ 	((alist-get 'vertical-scroll-bars default-frame-alist) . nil)))
+  │         ((alist-get 'vertical-scroll-bars default-frame-alist) . nil)))
   │      (prog1 'emacs
   │        (setf (alist-get "gnu" package-archives) "http://elpa.gnu.org/packages/")
   │        (setf (alist-get 'vertical-scroll-bars default-frame-alist) nil)))))
@@ -1373,7 +1333,7 @@ Table of Contents
   │     ;; :setf require cons-cell list ONLY.
   │     ((leaf emacs
   │        :push ((package-archives . '("melpa" . "https://melpa.org/packages/"))
-  │ 	      (auto-mode-alist . '("\\.jpe?g\\'" . image-mode))))
+  │               (auto-mode-alist . '("\\.jpe?g\\'" . image-mode))))
   │      (prog1 'emacs
   │        (push '("melpa" . "https://melpa.org/packages/") package-archives)
   │        (push '("\\.jpe?g\\'" . image-mode) auto-mode-alist)))))
@@ -1441,7 +1401,7 @@ Table of Contents
   │     ;; open .html with `web-mode' and .js and .phtml with `web-strict-mode'
   │     ((leaf web-mode
   │        :mode ("\\.html\\'"
-  │ 	      (("\\.js\\'" "\\.p?html?\\'") . web-strict-mode)))
+  │               (("\\.js\\'" "\\.p?html?\\'") . web-strict-mode)))
   │      (prog1 'web-mode
   │        (autoload #'web-mode "web-mode" nil t)
   │        (autoload #'web-strict-mode "web-mode" nil t)
@@ -1455,7 +1415,7 @@ Table of Contents
   │        :mode "\\.gp$")
   │      (prog1 'gnuplot
   │        (unless (fboundp 'gnuplot-mode)
-  │ 	 (autoload #'gnuplot-mode "gnuplot" nil t))
+  │          (autoload #'gnuplot-mode "gnuplot" nil t))
   │        (declare-function gnuplot-mode "gnuplot")
   │        (add-to-list 'auto-mode-alist '("\\.gp$" . gnuplot-mode))))))
   │ 
@@ -1495,8 +1455,8 @@ Table of Contents
   │        (autoload #'pdf-view-mode "pdf-tools" nil t)
   │        (add-to-list 'magic-mode-alist '("%PDF" . pdf-view-mode))
   │        (eval-after-load 'pdf-tools
-  │ 	 '(progn
-  │ 	    (pdf-tools-install)))))))
+  │          '(progn
+  │             (pdf-tools-install)))))))
   │ 
   │ (cort-deftest-with-macroexpand leaf/magic-fallback
   │   '(
@@ -1509,8 +1469,8 @@ Table of Contents
   │        (autoload #'pdf-view-mode "pdf-tools" nil t)
   │        (add-to-list 'magic-fallback-mode-alist '("%PDF" . pdf-view-mode))
   │        (eval-after-load 'pdf-tools
-  │ 	 '(progn
-  │ 	    (pdf-tools-install)))))))
+  │          '(progn
+  │             (pdf-tools-install)))))))
   └────
 
 
@@ -1534,8 +1494,8 @@ Table of Contents
   │        (declare-function ace-jump-mode "ace-jump-mode")
   │        (add-hook 'cc-mode-hook #'ace-jump-mode)
   │        (eval-after-load 'ace-jump-mode
-  │ 	 '(progn
-  │ 	    (ace-jump-mode)))))
+  │          '(progn
+  │             (ace-jump-mode)))))
   │ 
   │     ;; multi symbols will be accepted
   │     ((leaf ace-jump-mode
@@ -1568,7 +1528,7 @@ Table of Contents
   │        :hook dired-mode-hook)
   │      (prog1 'dired-filter
   │        (unless (fboundp 'dired-filter-mode)
-  │ 	 (autoload #'dired-filter-mode "dired-filter" nil t))
+  │          (autoload #'dired-filter-mode "dired-filter" nil t))
   │        (declare-function dired-filter-mode "dired-filter")
   │        (add-hook 'dired-mode-hook #'dired-filter-mode)))
   │ 
@@ -1627,7 +1587,7 @@ Table of Contents
   │     ;; multi strings in list will be accepted
   │     ((leaf leaf
   │        :load-path ("~/.emacs.d/elpa-archive/leaf.el/"
-  │ 		   "~/.emacs.d/elpa-archive/leaf-browser.el/")
+  │                    "~/.emacs.d/elpa-archive/leaf-browser.el/")
   │        :require t
   │        :config (leaf-init))
   │      (prog1 'leaf
@@ -1639,8 +1599,8 @@ Table of Contents
   │     ;; nested strings is supported
   │     ((leaf leaf
   │        :load-path ("~/.emacs.d/elpa-archive/leaf.el/"
-  │ 		   ("~/.emacs.d/elpa-archive/leaf.el/"
-  │ 		    "~/.emacs.d/elpa-archive/leaf-browser.el/"))
+  │                    ("~/.emacs.d/elpa-archive/leaf.el/"
+  │                     "~/.emacs.d/elpa-archive/leaf-browser.el/"))
   │        :require t
   │        :config (leaf-init))
   │      (prog1 'leaf
@@ -1652,10 +1612,10 @@ Table of Contents
   │     ;; duplicated value is ignored
   │     ((leaf leaf
   │        :load-path ("~/.emacs.d/elpa-archive/leaf.el/"
-  │ 		   ("~/.emacs.d/elpa-archive/leaf.el/"
-  │ 		    ("~/.emacs.d/elpa-archive/leaf.el/"
-  │ 		     ("~/.emacs.d/elpa-archive/leaf.el/"
-  │ 		      ("~/.emacs.d/elpa-archive/leaf.el/")))))
+  │                    ("~/.emacs.d/elpa-archive/leaf.el/"
+  │                     ("~/.emacs.d/elpa-archive/leaf.el/"
+  │                      ("~/.emacs.d/elpa-archive/leaf.el/"
+  │                       ("~/.emacs.d/elpa-archive/leaf.el/")))))
   │        :require t
   │        :config (leaf-init))
   │      (prog1 'leaf
@@ -1667,8 +1627,8 @@ Table of Contents
   │     ((leaf leaf
   │        :load-path ("~/.emacs.d/elpa-archive/leaf.el/")
   │        :load-path `(,(mapcar (lambda (elm)
-  │ 			       (concat "~/.emacs.d/elpa-archive/" elm "/"))
-  │ 			     '("leaf.el" "leaf-broser.el" "orglyth.el")))
+  │                                (concat "~/.emacs.d/elpa-archive/" elm "/"))
+  │                              '("leaf.el" "leaf-broser.el" "orglyth.el")))
   │        :require t
   │        :config (leaf-init))
   │      (prog1 'leaf
@@ -1786,9 +1746,9 @@ Table of Contents
   │        :config (leaf-init))
   │      (prog1 'leaf
   │        (if leafp
-  │ 	   (progn
-  │ 	     (require 'leaf)
-  │ 	     (leaf-init)))))
+  │            (progn
+  │              (require 'leaf)
+  │              (leaf-init)))))
   │ 
   │     ;; multi sexp will accepted and eval them in `and'
   │     ((leaf leaf
@@ -1797,9 +1757,9 @@ Table of Contents
   │        :config (leaf-init))
   │      (prog1 'leaf
   │        (if (and leafp leaf-avairablep (window-system))
-  │ 	   (progn
-  │ 	     (require 'leaf)
-  │ 	     (leaf-init)))))
+  │            (progn
+  │              (require 'leaf)
+  │              (leaf-init)))))
   │ 
   │     ;; you can use other condition keywords same time
   │     ((leaf leaf
@@ -1809,10 +1769,10 @@ Table of Contents
   │        :config (leaf-init))
   │      (prog1 'leaf
   │        (when leaf-browserp
-  │ 	 (if (and leafp leaf-avairablep (window-system))
-  │ 	     (progn
-  │ 	       (require 'leaf)
-  │ 	       (leaf-init))))))
+  │          (if (and leafp leaf-avairablep (window-system))
+  │              (progn
+  │                (require 'leaf)
+  │                (leaf-init))))))
   │ 
   │     ;; you want eval sexp before any conditions, you can use :preface
   │     ((leaf leaf
@@ -1826,10 +1786,10 @@ Table of Contents
   │        (add-to-list 'load-path "~/.emacs.d/elpa-archive/leaf.el/")
   │        (leaf-load)
   │        (when leaf-browserp
-  │ 	 (if (and leafp leaf-avairablep (window-system))
-  │ 	     (progn
-  │ 	       (require 'leaf)
-  │ 	       (leaf-init))))))))
+  │          (if (and leafp leaf-avairablep (window-system))
+  │              (progn
+  │                (require 'leaf)
+  │                (leaf-init))))))))
   │ 
   │ (cort-deftest-with-macroexpand leaf/when
   │   '(
@@ -1840,8 +1800,8 @@ Table of Contents
   │        :config (leaf-init))
   │      (prog1 'leaf
   │        (when leafp
-  │ 	 (require 'leaf)
-  │ 	 (leaf-init))))))
+  │          (require 'leaf)
+  │          (leaf-init))))))
   │ 
   │ (cort-deftest-with-macroexpand leaf/unless
   │   '(
@@ -1852,8 +1812,8 @@ Table of Contents
   │        :config (leaf-init))
   │      (prog1 'leaf
   │        (unless leafp
-  │ 	 (require 'leaf)
-  │ 	 (leaf-init))))))
+  │          (require 'leaf)
+  │          (leaf-init))))))
   └────
 
 
@@ -1875,7 +1835,7 @@ Table of Contents
   │        :config (leaf-keywords-init))
   │      (prog1 'leaf-keywords
   │        (when (version< "24.4" emacs-version)
-  │ 	 (leaf-keywords-init))))
+  │          (leaf-keywords-init))))
   │ 
   │     ;; number will be accepted
   │     ((leaf leaf-keywords
@@ -1883,7 +1843,7 @@ Table of Contents
   │        :config (leaf-keywords-init))
   │      (prog1 'leaf-keywords
   │        (when (version< "24.4" emacs-version)
-  │ 	 (leaf-keywords-init))))
+  │          (leaf-keywords-init))))
   │ 
   │     ;; quoted number will be accepted
   │     ((leaf leaf-keywords
@@ -1891,7 +1851,7 @@ Table of Contents
   │        :config (leaf-keywords-init))
   │      (prog1 'leaf-keywords
   │        (when (version< "24.4" emacs-version)
-  │ 	 (leaf-keywords-init))))
+  │          (leaf-keywords-init))))
   │ 
   │     ;; quoted string will be accepted
   │     ((leaf leaf-keywords
@@ -1899,7 +1859,7 @@ Table of Contents
   │        :config (leaf-keywords-init))
   │      (prog1 'leaf-keywords
   │        (when (version< "24.4" emacs-version)
-  │ 	 (leaf-keywords-init))))
+  │          (leaf-keywords-init))))
   │ 
   │     ;; one argument list will be accepted
   │     ((leaf leaf-keywords
@@ -1907,7 +1867,7 @@ Table of Contents
   │        :config (leaf-keywords-init))
   │      (prog1 'leaf-keywords
   │        (when (version< "24.4" emacs-version)
-  │ 	 (leaf-keywords-init))))
+  │          (leaf-keywords-init))))
   │ 
   │     ;; one argument list will be accepted
   │     ((leaf leaf-keywords
@@ -1915,7 +1875,7 @@ Table of Contents
   │        :config (leaf-keywords-init))
   │      (prog1 'leaf-keywords
   │        (when (version< "24.4" emacs-version)
-  │ 	 (leaf-keywords-init))))))
+  │          (leaf-keywords-init))))))
   └────
 
 
@@ -2126,7 +2086,7 @@ Table of Contents
   │     ;; cons-cell used to controll autoload package
   │     ((leaf autorevert
   │        :global-minor-mode ((global-auto-revert-mode . autorevert)
-  │ 			   (show-paren-mode . paren)))
+  │                            (show-paren-mode . paren)))
   │      (prog1 'autorevert
   │        (unless (fboundp 'global-auto-revert-mode) (autoload #'global-auto-revert-mode "autorevert" nil t))
   │        (unless (fboundp 'show-paren-mode) (autoload #'show-paren-mode "paren" nil t))
@@ -2149,7 +2109,7 @@ Table of Contents
   │     ;; mix specification will be accepted
   │     ((leaf autoinsert
   │        :global-minor-mode (auto-insert-mode
-  │ 			   ((line-number-mode column-number-mode) . simple)))
+  │                            ((line-number-mode column-number-mode) . simple)))
   │      (prog1 'autoinsert
   │        (unless (fboundp 'auto-insert-mode) (autoload #'auto-insert-mode "autoinsert" nil t))
   │        (unless (fboundp 'line-number-mode) (autoload #'line-number-mode "simple" nil t))
@@ -2205,15 +2165,15 @@ Table of Contents
   │     ((leaf leaf
   │        :preface
   │        (defun matu (x)
-  │ 	 (princ (format ">>%s<<" x))
-  │ 	 nil)
+  │          (princ (format ">>%s<<" x))
+  │          nil)
   │        (defun matu-around0 (f &rest args)
-  │ 	 (prog2
-  │ 	     (princ "around0 ==>")
-  │ 	     (apply f args)
-  │ 	   (princ "around0 <==")))
+  │          (prog2
+  │              (princ "around0 ==>")
+  │              (apply f args)
+  │            (princ "around0 <==")))
   │        (defun matu-before0 (&rest args)
-  │ 	 (princ "before0:"))
+  │          (princ "before0:"))
   │        :advice
   │        (:around matu matu-around0)
   │        (:before matu matu-before0))
@@ -2221,18 +2181,18 @@ Table of Contents
   │        (autoload #'matu-around0 "leaf" nil t)
   │        (autoload #'matu-before0 "leaf" nil t)
   │        (defun matu (x)
-  │ 	 (princ
-  │ 	  (format ">>%s<<" x))
-  │ 	 nil)
+  │          (princ
+  │           (format ">>%s<<" x))
+  │          nil)
   │        (defun matu-around0
-  │ 	   (f &rest args)
-  │ 	 (prog2
-  │ 	     (princ "around0 ==>")
-  │ 	     (apply f args)
-  │ 	   (princ "around0 <==")))
+  │            (f &rest args)
+  │          (prog2
+  │              (princ "around0 ==>")
+  │              (apply f args)
+  │            (princ "around0 <==")))
   │        (defun matu-before0
-  │ 	   (&rest args)
-  │ 	 (princ "before0:"))
+  │            (&rest args)
+  │          (princ "before0:"))
   │        (advice-add 'matu :around #'matu-around0)
   │        (advice-add 'matu :before #'matu-before0)))
   │ 
@@ -2240,33 +2200,33 @@ Table of Contents
   │     ((leaf leaf
   │        :preface
   │        (defun matu (x)
-  │ 	 (princ (format ">>%s<<" x))
-  │ 	 nil)
+  │          (princ (format ">>%s<<" x))
+  │          nil)
   │        (defun matu-around0 (f &rest args)
-  │ 	 (prog2
-  │ 	     (princ "around0 ==>")
-  │ 	     (apply f args)
-  │ 	   (princ "around0 <==")))
+  │          (prog2
+  │              (princ "around0 ==>")
+  │              (apply f args)
+  │            (princ "around0 <==")))
   │        (defun matu-before0 (&rest args)
-  │ 	 (princ "before0:"))
+  │          (princ "before0:"))
   │        :advice ((:around matu matu-around0)
-  │ 		(:before matu matu-before0)))
+  │                 (:before matu matu-before0)))
   │      (prog1 'leaf
   │        (autoload #'matu-around0 "leaf" nil t)
   │        (autoload #'matu-before0 "leaf" nil t)
   │        (defun matu (x)
-  │ 	 (princ
-  │ 	  (format ">>%s<<" x))
-  │ 	 nil)
+  │          (princ
+  │           (format ">>%s<<" x))
+  │          nil)
   │        (defun matu-around0
-  │ 	   (f &rest args)
-  │ 	 (prog2
-  │ 	     (princ "around0 ==>")
-  │ 	     (apply f args)
-  │ 	   (princ "around0 <==")))
+  │            (f &rest args)
+  │          (prog2
+  │              (princ "around0 ==>")
+  │              (apply f args)
+  │            (princ "around0 <==")))
   │        (defun matu-before0
-  │ 	   (&rest args)
-  │ 	 (princ "before0:"))
+  │            (&rest args)
+  │          (princ "before0:"))
   │        (advice-add 'matu :around #'matu-around0)
   │        (advice-add 'matu :before #'matu-before0)))
   │ 
@@ -2274,48 +2234,48 @@ Table of Contents
   │     ((leaf leaf
   │        :preface
   │        (defun matu (x)
-  │ 	 (princ (format ">>%s<<" x))
-  │ 	 nil)
+  │          (princ (format ">>%s<<" x))
+  │          nil)
   │        (defun matu-around0 (f &rest args)
-  │ 	 (prog2
-  │ 	     (princ "around0 ==>")
-  │ 	     (apply f args)
-  │ 	   (princ "around0 <==")))
+  │          (prog2
+  │              (princ "around0 ==>")
+  │              (apply f args)
+  │            (princ "around0 <==")))
   │        (defun matu-before0 (&rest args)
-  │ 	 (princ "before0:"))
+  │          (princ "before0:"))
   │        :advice ((:around matu matu-around0)
-  │ 		(:before matu matu-before0)
-  │ 		(:around matu (lambda (f &rest args)
-  │ 				(prog2
-  │ 				    (princ "around1 ==>")
-  │ 				    (apply f args)
-  │ 				  (princ "around1 <=="))))))
+  │                 (:before matu matu-before0)
+  │                 (:around matu (lambda (f &rest args)
+  │                                 (prog2
+  │                                     (princ "around1 ==>")
+  │                                     (apply f args)
+  │                                   (princ "around1 <=="))))))
   │      (prog1 'leaf
   │        (autoload #'matu-around0 "leaf" nil t)
   │        (autoload #'matu-before0 "leaf" nil t)
   │        (defun matu
-  │ 	   (x)
-  │ 	 (princ
-  │ 	  (format ">>%s<<" x))
-  │ 	 nil)
+  │            (x)
+  │          (princ
+  │           (format ">>%s<<" x))
+  │          nil)
   │        (defun matu-around0
-  │ 	   (f &rest args)
-  │ 	 (prog2
-  │ 	     (princ "around0 ==>")
-  │ 	     (apply f args)
-  │ 	   (princ "around0 <==")))
+  │            (f &rest args)
+  │          (prog2
+  │              (princ "around0 ==>")
+  │              (apply f args)
+  │            (princ "around0 <==")))
   │        (defun matu-before0
-  │ 	   (&rest args)
-  │ 	 (princ "before0:"))
+  │            (&rest args)
+  │          (princ "before0:"))
   │        (advice-add 'matu :around #'matu-around0)
   │        (advice-add 'matu :before #'matu-before0)
   │        (advice-add 'matu :around (function
-  │ 				  (lambda
-  │ 				    (f &rest args)
-  │ 				    (prog2
-  │ 					(princ "around1 ==>")
-  │ 					(apply f args)
-  │ 				      (princ "around1 <==")))))))))
+  │                                   (lambda
+  │                                     (f &rest args)
+  │                                     (prog2
+  │                                         (princ "around1 ==>")
+  │                                         (apply f args)
+  │                                       (princ "around1 <==")))))))))
   │ 
   │ (cort-deftest-with-macroexpand leaf/advice-remove
   │   '(
@@ -2333,7 +2293,7 @@ Table of Contents
   │     ;; multi lists like ({{adviced-function}} {{advice-function}}) in list will be accepted
   │     ((leaf leaf
   │        :advice-remove ((matu matu-around0)
-  │ 		       (matu matu-before0)))
+  │                        (matu matu-before0)))
   │      (prog1 'leaf
   │        (autoload #'matu-before0 "leaf" nil t)
   │        (autoload #'matu-around0 "leaf" nil t)
@@ -2359,24 +2319,24 @@ Table of Contents
   ┌────
   │ (("leaf-sql"
   │   :secret-sql-connection-alist (("Postgres/d125q"
-  │ 				 (sql-product 'postgres)
-  │ 				 (sql-user "d125q")
-  │ 				 (sql-password "password")
-  │ 				 (sql-server "server")
-  │ 				 (sql-port 5432)
-  │ 				 (sql-database "database"))
-  │ 				("MySQL/d125q"
-  │ 				 (sql-product 'mysql)
-  │ 				 (sql-user "d125q")
-  │ 				 (sql-password "password")
-  │ 				 (sql-server "server")
-  │ 				 (sql-port 3306)
-  │ 				 (sql-database "database"))))
+  │                                  (sql-product 'postgres)
+  │                                  (sql-user "d125q")
+  │                                  (sql-password "password")
+  │                                  (sql-server "server")
+  │                                  (sql-port 5432)
+  │                                  (sql-database "database"))
+  │                                 ("MySQL/d125q"
+  │                                  (sql-product 'mysql)
+  │                                  (sql-user "d125q")
+  │                                  (sql-password "password")
+  │                                  (sql-server "server")
+  │                                  (sql-port 3306)
+  │                                  (sql-database "database"))))
   │  ("leaf-erc"
   │   :secret-erc-password           "password"
   │   :secret-erc-nickserv-passwords ((freenode (("nick-one" . "password")
-  │ 					     ("nick-two" . "password")))
-  │ 				  (DALnet   (("nickname" . "password"))))
+  │                                              ("nick-two" . "password")))
+  │                                   (DALnet   (("nickname" . "password"))))
   │   :secret-erc-user-full-name     "Naoya Yamashita"
   │   :secret-erc-nick               "conao3")))
   └────
@@ -2412,7 +2372,7 @@ Table of Contents
   │        (sql-connection-alist . some-plstore))
   │      (prog1 'sql
   │        (custom-set-variables
-  │ 	'(sql-connection-alist (leaf-handler-auth sql sql-connection-alist some-plstore) "Customized in leaf `sql' from plstore `some-plstore'"))))
+  │         '(sql-connection-alist (leaf-handler-auth sql sql-connection-alist some-plstore) "Customized in leaf `sql' from plstore `some-plstore'"))))
   │ 
   │     ;; Emulate customizing `erc-password' and `erc-nickserv-passwords'
   │     ;; with values taken from `some-plstore', and `erc-user-full-name'
@@ -2423,18 +2383,18 @@ Table of Contents
   │        ((erc-user-full-name erc-nick) . another-plstore))
   │      (prog1 'erc
   │        (custom-set-variables
-  │ 	'(erc-password           (leaf-handler-auth erc erc-password some-plstore) "Customized in leaf `erc' from plstore `some-plstore'")
-  │ 	'(erc-nickserv-passwords (leaf-handler-auth erc erc-nickserv-passwords some-plstore) "Customized in leaf `erc' from plstore `some-plstore'")
-  │ 	'(erc-user-full-name     (leaf-handler-auth erc erc-user-full-name another-plstore) "Customized in leaf `erc' from plstore `another-plstore'")
-  │ 	'(erc-nick               (leaf-handler-auth erc erc-nick another-plstore) "Customized in leaf `erc' from plstore `another-plstore'"))))
+  │         '(erc-password           (leaf-handler-auth erc erc-password some-plstore) "Customized in leaf `erc' from plstore `some-plstore'")
+  │         '(erc-nickserv-passwords (leaf-handler-auth erc erc-nickserv-passwords some-plstore) "Customized in leaf `erc' from plstore `some-plstore'")
+  │         '(erc-user-full-name     (leaf-handler-auth erc erc-user-full-name another-plstore) "Customized in leaf `erc' from plstore `another-plstore'")
+  │         '(erc-nick               (leaf-handler-auth erc erc-nick another-plstore) "Customized in leaf `erc' from plstore `another-plstore'"))))
   │ 
   │     ;; you can use symbol to configure with `leaf-default-plstore'.
   │     ((leaf erc
   │        :pl-custom erc-nick erc-password)
   │      (prog1 'erc
   │        (custom-set-variables
-  │ 	'(erc-nick     (leaf-handler-auth erc erc-nick leaf-default-plstore) "Customized in leaf `erc' from plstore `leaf-default-plstore'")
-  │ 	'(erc-password (leaf-handler-auth erc erc-password leaf-default-plstore) "Customized in leaf `erc' from plstore `leaf-default-plstore'"))))))
+  │         '(erc-nick     (leaf-handler-auth erc erc-nick leaf-default-plstore) "Customized in leaf `erc' from plstore `leaf-default-plstore'")
+  │         '(erc-password (leaf-handler-auth erc erc-password leaf-default-plstore) "Customized in leaf `erc' from plstore `leaf-default-plstore'"))))))
   │ 
   │ (cort-deftest-with-macroexpand leaf/pl-setq
   │   '(
@@ -2444,7 +2404,7 @@ Table of Contents
   │        (sql-connection-alist . some-plstore))
   │      (prog1 'sql
   │        (setq sql-connection-alist
-  │ 	     (leaf-handler-auth sql sql-connection-alist some-plstore))))
+  │              (leaf-handler-auth sql sql-connection-alist some-plstore))))
   │     ;; Emulate setting `erc-password' and `erc-nickserv-passwords'
   │     ;; with values taken from `some-plstore', and `erc-user-full-name'
   │     ;; and `erc-nick' with values taken from `another-plstore'.
@@ -2490,7 +2450,7 @@ Table of Contents
   │        :config (leaf-init))
   │      (prog1 'leaf
   │        (leaf-handler-leaf-protect leaf
-  │ 	 (leaf-init))))
+  │          (leaf-init))))
   │ 
   │     ((leaf leaf
   │        :leaf-protect nil
@@ -2503,18 +2463,18 @@ Table of Contents
   │        :config (leaf-init))
   │      (prog1 'leaf
   │        (leaf-handler-leaf-protect leaf
-  │ 	 (leaf-init))))
+  │          (leaf-init))))
   │ 
   │     ((leaf-handler-leaf-protect leaf
   │        (leaf-load)
   │        (leaf-init))
   │      (condition-case err
-  │ 	 (progn
-  │ 	   (leaf-load)
-  │ 	   (leaf-init))
+  │          (progn
+  │            (leaf-load)
+  │            (leaf-init))
   │        (error
-  │ 	(leaf-error "Error in `leaf' block.  Error msg: %s"
-  │ 		    (error-message-string err)))))))
+  │         (leaf-error "Error in `leaf' block.  Error msg: %s"
+  │                     (error-message-string err)))))))
   └────
 
 
@@ -2531,9 +2491,9 @@ Table of Contents
 
   ┌────
   │ (defcustom leaf-defer-keywords (cdr '(:dummy
-  │ 				      :bind :bind*
-  │ 				      :mode :interpreter :magic :magic-fallback
-  │ 				      :hook :commands))
+  │                                       :bind :bind*
+  │                                       :mode :interpreter :magic :magic-fallback
+  │                                       :hook :commands))
   │   "Specifies a keyword to perform a deferred load.
   │ `leaf' blocks are lazily loaded by their package name
   │ with values for these keywords."
@@ -2547,8 +2507,8 @@ Table of Contents
   │      (prog1 'leaf
   │        (autoload #'leaf "leaf" nil t)
   │        (eval-after-load 'leaf
-  │ 	 '(progn
-  │ 	    (leaf-init)))))
+  │          '(progn
+  │             (leaf-init)))))
   │ 
   │     ((leaf leaf
   │        :leaf-defer nil
@@ -2578,8 +2538,8 @@ Table of Contents
   │      (prog1 'leaf
   │        (autoload #'leaf "leaf" nil t)
   │        (eval-after-load 'leaf
-  │ 	 '(progn
-  │ 	    (leaf-init)))))
+  │          '(progn
+  │             (leaf-init)))))
   │ 
   │     ((leaf leaf
   │        :leaf-autoload nil
@@ -2587,8 +2547,8 @@ Table of Contents
   │        :config (leaf-init))
   │      (prog1 'leaf
   │        (eval-after-load 'leaf
-  │ 	 '(progn
-  │ 	    (leaf-init)))))))
+  │          '(progn
+  │             (leaf-init)))))))
   └────
 
 
@@ -2606,8 +2566,8 @@ Table of Contents
   │   '(((leaf annotate
   │       :commands annotate-mode
   │       :bind (("C-c a a" . annotate-annotate)
-  │ 	     ("C-c a ]" . annotate-next-annotation)
-  │ 	     ("C-c a [" . annotate-previous-anotation)))
+  │              ("C-c a ]" . annotate-next-annotation)
+  │              ("C-c a [" . annotate-previous-anotation)))
   │      (prog1 'annotate
   │        (unless (fboundp 'annotate-annotate) (autoload #'annotate-annotate "annotate" nil t))
   │        (unless (fboundp 'annotate-next-annotation) (autoload #'annotate-next-annotation "annotate" nil t))
@@ -2618,22 +2578,22 @@ Table of Contents
   │        (declare-function annotate-previous-anotation "annotate")
   │        (declare-function annotate-mode "annotate")
   │        (leaf-keys
-  │ 	(("C-c a a" . annotate-annotate)
-  │ 	 ("C-c a ]" . annotate-next-annotation)
-  │ 	 ("C-c a [" . annotate-previous-anotation)))))
+  │         (("C-c a a" . annotate-annotate)
+  │          ("C-c a ]" . annotate-next-annotation)
+  │          ("C-c a [" . annotate-previous-anotation)))))
   │ 
   │     ((leaf annotate
   │        :leaf-autoload nil
   │        :leaf-defun nil
   │        :commands annotate-mode
   │        :bind (("C-c a a" . annotate-annotate)
-  │ 	      ("C-c a ]" . annotate-next-annotation)
-  │ 	      ("C-c a [" . annotate-previous-anotation)))
+  │               ("C-c a ]" . annotate-next-annotation)
+  │               ("C-c a [" . annotate-previous-anotation)))
   │      (prog1 'annotate
   │        (leaf-keys
-  │ 	(("C-c a a" . annotate-annotate)
-  │ 	 ("C-c a ]" . annotate-next-annotation)
-  │ 	 ("C-c a [" . annotate-previous-anotation)))))))
+  │         (("C-c a a" . annotate-annotate)
+  │          ("C-c a ]" . annotate-next-annotation)
+  │          ("C-c a [" . annotate-previous-anotation)))))))
   └────
 
 
