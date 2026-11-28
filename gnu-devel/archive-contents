@@ -332,12 +332,12 @@
       (:authors ("Amy Pillow" . "amypillow@lavache.com"))
       (:commit . "08e1c84dee28f87010f50cb4e9a48c0798c8912b"))])
  (breadcrumb
-  . [(1 1 0 0 20261116 0) ((emacs (28 1)) (project (0 9 8)))
+  . [(1 1 0 0 20261127 4) ((emacs (28 1)) (project (0 9 8)))
      "project and imenu-based breadcrumb paths" tar
      ((:maintainer "João Távora" . "joaotavora@gmail.com")
       (:authors ("João Távora" . "joaotavora@gmail.com"))
       (:url . "https://elpa.gnu.org/packages/breadcrumb.html")
-      (:commit . "f636f2643a2492f350d7c3624b8e6b9ed9bd2a7f"))])
+      (:commit . "194f206ee956203a72d5992ee072d4d131fc76ba"))])
  (brief
   . [(5 92 0 20240823 62608) ((nadvice (0 3)) (cl-lib (0 5)))
      "Brief Editor Emulator (Brief Mode)" tar
@@ -1184,11 +1184,11 @@
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-es.html")
       (:commit . "a2c2c167837cef08a1b8f86f5eb9864f93699300"))])
  (emacs-lisp-intro-nl
-  . [(0 0 20261124 62) nil "ELisp intro manual in NL" tar
+  . [(0 0 20261127 63) nil "ELisp intro manual in NL" tar
      ((:maintainer "Matto Fransen" . "matto@matto.nl")
       (:authors ("Matto Fransen" . "matto@matto.nl"))
       (:url . "https://elpa.gnu.org/packages/emacs-lisp-intro-nl.html")
-      (:commit . "96ab262f60a918ba151e246b37801d6276f15909"))])
+      (:commit . "448d7c082b7a16e3185254d2a2bb82518b9d1c3c"))])
  (embark
   . [(1 2 0 20260812 23) ((emacs (29 1)) (compat (31)))
      "Conveniently act on minibuffer completions" tar
@@ -2252,14 +2252,14 @@
       (:url . "https://elpa.gnu.org/packages/minibuffer-line.html")
       (:commit . "aa52e9402052363bddd4ea3d1d82195c692fb977"))])
  (minimail
-  . [(0 5 0 20260513 113502)
+  . [(0 5 0 20261127 3)
      ((emacs (30 1)) (compat (31)) (transient (0 12)))
      "Simple, non-blocking IMAP email client" tar
      ((:url . "https://codeberg.org/astoff/minimail")
       (:keywords "mail")
       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
       (:authors ("Augusto Stoffel" . "arstoffel@gmail.com"))
-      (:commit . "5834c3e09d36fe7901e8dcd14f2dac36d70fe5cf"))])
+      (:commit . "482e678202ace44ba73c69fe652a219ae1fac693"))])
  (minimap
   . [(1 4 0 20201201 162630) nil
      "Sidebar showing a \"mini-map\" of a buffer" tar

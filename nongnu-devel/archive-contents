@@ -94,14 +94,14 @@
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:commit . "b2ffd8441851659cb1cc844156073967729585e5"))])
  (au-themes
-  . [(0 4 3 0 20261126 1) ((emacs (29 1)) (modus-themes (5 2 0)))
+  . [(0 4 4 0 20261127 0) ((emacs (29 1)) (modus-themes (5 2 0)))
      "Sensory-safe themes for autism and neurodivergence" tar
      ((:url . "https://github.com/szymonwilczek/au-themes")
       (:keywords "faces" "themes" "accessibility" "autism"
 		 "neurodivergence")
       (:maintainer "Szymon Wilczek" . "swilczek.lx@gmail.com")
       (:authors ("Szymon Wilczek" . "swilczek.lx@gmail.com"))
-      (:commit . "f53851778226c081e092e0f4f0da5ec9d25e04c1"))])
+      (:commit . "d42e42436ecb4990e6462704ebf3ab234820d5c9"))])
  (auto-dim-other-buffers
   . [(2 2 3 0 20260731 2) ((emacs (27 1)))
      "Makes windows without focus less prominent" tar
@@ -1384,13 +1384,13 @@
       (:authors ("Jason R. Blevins" . "jblevins@xbeta.org"))
       (:commit . "6a3ba88f18e0b3d4a736e2490d795a9b03967d85"))])
  (markdown-ts-appear
-  . [(0 4 1 0 20261124 0) ((emacs (31 1)))
+  . [(0 4 1 0 20261127 9) ((emacs (31 1)))
      "Reveal Markdown source at point" tar
      ((:url . "https://github.com/Thysrael/markdown-ts-appear")
       (:keywords "text" "convenience")
       (:maintainer "Thysrael" . "thysrael@163.com")
       (:authors ("Thysrael" . "thysrael@163.com"))
-      (:commit . "6d1b95e57a04c938fb39b0c61a04e9dbacbae1ff"))])
+      (:commit . "2e8fc1c80ba5b7fe20efd7ecdf3b9002b23413c5"))])
  (mastodon
   . [(2 1 8 0 20261022 85)
      ((emacs (29 1)) (compat (31)) (persist (0 8)) (tp (0 8)))
@@ -1748,12 +1748,12 @@
       (:authors ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
       (:commit . "bf8bbc0f2f88ad90bfb69f4c72d290babb18774c"))])
  (proof-general
-  . [(4 6 -4 0 20261126 431) ((emacs (25 2)))
+  . [(4 6 -4 0 20261127 440) ((emacs (25 2)))
      "A generic Emacs interface for proof assistants" tar
      ((:url . "https://proofgeneral.github.io/")
       (:maintainer nil
 		   . "proof-general-maintainers@groupes.renater.fr")
-      (:commit . "b23eac58cb45beb69601e0bd46799e5374580185"))])
+      (:commit . "f15e4bf82c596268949f0da16530f031edcefa0e"))])
  (prop-menu
   . [(0 1 2 0 20150728 51803) ((emacs (24 3)) (cl-lib (0 5)))
      "Create and display a context menu based on text and overlay properties"

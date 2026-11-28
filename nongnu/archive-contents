@@ -92,14 +92,14 @@
       (:maintainer "stardiviner" . "numbchild@gmail.com")
       (:commit . "b2ffd8441851659cb1cc844156073967729585e5"))])
  (au-themes
-  . [(0 4 3) ((emacs (29 1)) (modus-themes (5 2 0)))
+  . [(0 4 4) ((emacs (29 1)) (modus-themes (5 2 0)))
      "Sensory-safe themes for autism and neurodivergence" tar
      ((:url . "https://github.com/szymonwilczek/au-themes")
       (:keywords "faces" "themes" "accessibility" "autism"
 		 "neurodivergence")
       (:maintainer "Szymon Wilczek" . "swilczek.lx@gmail.com")
       (:authors ("Szymon Wilczek" . "swilczek.lx@gmail.com"))
-      (:commit . "6b2bb3828e5e9773f641ad33f66dab8d5612e578"))])
+      (:commit . "d42e42436ecb4990e6462704ebf3ab234820d5c9"))])
  (auto-dim-other-buffers
   . [(2 2 3) ((emacs (27 1)))
      "Makes windows without focus less prominent" tar
